@@ -1,0 +1,53 @@
+\documentclass[12pt, a4paper, oneside]{article} % Paper size, default font size and one-sided paper
+%\graphicspath{{./Figures/}} % Specifies the directory where pictures are stored
+%\usepackage[dcucite]{harvard}
+%\usepackage{tikz}
+%\usetikzlibrary{shapes, shadows, arrows}
+%\usepackage{rotating}
+%\usepackage{setspace}
+%\usepackage{pdflscape}
+%\usepackage[flushleft]{threeparttable}
+%\usepackage{multirow}
+\usepackage[comma, sort&compress]{natbib}% Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+\usepackage{graphicx}
+%\bibliographystyle{plainnat}
+\bibliographystyle{agsm}
+\usepackage[colorlinks = true, citecolor = blue, linkcolor = blue]{hyperref}
+%\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+%\renewcommand[\harvardurl]{URL: \url}
+\begin{document}
+\title{Regime Change}
+\author{Rob Hayward\footnote{University of Brighton Business School, Lewes Road, Brighton, BN2 4AT; Telephone 01273 642586.  rh49@brighton.ac.uk}} 
+\date{\today}
+\maketitle
+\begin{abstract}
+The progression from an economic situation characterised by \emph{hedge financing} through \emph{speculative financing} and into \emph{Ponzi financing} is something that cannot be observed.  However, there are certain outcomes that are more or less likely in each regime and a method of \emph{Hidden Markov Models} (HMM) can be used to uncover the most likely regimes from the outcomes. This would be extremely useful for policymakers as it would help to identify those times when the economy was vulnerable to crash shocks and funding stops.  
+\end{abstract}
+
+\section{The Minsky Model}
+The Minsky model of endogenously increasing financial fragility has rightly received increased attention in the aftermath of the 2007 - 2008 global financial crisis.  The model suggest that a period of economic stability will provide the condidtions for a gradual transition of lending within the economy from one characterised as \emph{hedge} though that which is more \emph{speculative} and into something that can be desribed as {Ponzi}.  Under hedge financing the level of debt will not tend to extend beyond the ability to repay interest and principal; under specuative lending debt-to-equity ratios start to rise and the level of borrowing relative to income is elevated to a point where it becomes difficult to repay principal without asset price apprecation; under the Ponzi lending there is insufficient revenue to repay principal or interest and asset price appreciation or increased borrowing is necessary to mantain the debt. 
+
+While this is a plausible description of rising financial fragility, it is often difficult to determine at what position the economy is in the financial cycle.  While measuring debt-to-equity ratios and the scale of bank lending may provide some indication about the regime that is in place, it is clear that financial services business evolve in ways that make loand counting in inadequate. The recent financial crisis showed that innovations like \emph{Collateralised Debt Obligations (CDO)} can allow an increase in debt that does not directly in bank lending.  
+
+\section{Hidden Markov Models}
+These models are used extensively in biometrics to analyse genome structure.  In particular, they are used to assess the underlying regime that is influencing the gene strcture. 
+
+\href{http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter10.html}{Chapter 10 Biometric Text on HMM}
+has an excellent overview of markov HMM and the R code necessary. One component of this that could be of interest is the assertion in on-line bimetrixs text that it is a problem to find the underlying state that produced the DNA outcome.  The equivalent of this for the crash model is to find the underlying Minsky state that produced the market activity. 
+
+This is the folder for builing the regime-switching model. The three latent states are the periods of shock, of calm and of crisis.  These are unseen but may be identified by other variables (such as the level of international risk aversion (VIX) or the state of domestic political uncertainty (see that buy at Yale???)).  Alternatively, it may be possible to draw the states from the data and compare the information that is supplied by the data with that from what is known about politicla and economic developments at the time.  It is also possible to assess the probability that there will be a switch from one regime to another.  This is a Markov-swithing model. 
+
+The motivation for this research is to help to identify regimes and therefore help authorities determine the risk of financial crisis or crash. Use the FX market to get a broader understanding of some of the forces at work.
+
+\section{Literature Review}
+The use of the VIX index to identify times of risk aversion can make the period of crisis an observable state of the world. This is about a regime-switching model. This will treat the states of the world to be unobservable and to fit a regime-switching model (build like that of Hamilton (1989).  These notes from Ghysels.  There are two states of the world:  crisis and moderation.  If the system is in a crisis, it stays there with probability p; it switches to moderation with probability $1-p$.  If in moderation, the system stays there with a probability q and switches to crisis with probability $1-q$.  If the probabilities change over time, there is no longer a \emph{homogenous Markov Chain}. Ghysels has a seasonal dummy for the probabilities that represent the months or quarters.  
+
+\section{Methods}
+\subsection{Data}
+The data are a sample of CEE carry trades that have been compiled from raw exchange rate and interest rate data.  They show a range of possible carry trades that could have been conducted. 
+
+The data are constructed with the function \emph{forp} in the \emph{Raw.R} file.  
+
+\section{Results}
+Three regimes can be identified: number one, the cautious period; number two, the time when carry positions are being built; number three, the crash.  This works for PLNUSD, HUFEUR. 
+\end{document}
