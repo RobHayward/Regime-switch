@@ -4,6 +4,7 @@
 %\usepackage{tikz}
 %\usetikzlibrary{shapes, shadows, arrows}
 %\usepackage{rotating}
+\usepackage{amsmath}
 %\usepackage{setspace}
 %\usepackage{pdflscape}
 %\usepackage[flushleft]{threeparttable}
@@ -38,6 +39,60 @@ has an excellent overview of markov HMM and the R code necessary. One component 
 This is the folder for builing the regime-switching model. The three latent states are the periods of shock, of calm and of crisis.  These are unseen but may be identified by other variables (such as the level of international risk aversion (VIX) or the state of domestic political uncertainty (see that buy at Yale???)).  Alternatively, it may be possible to draw the states from the data and compare the information that is supplied by the data with that from what is known about politicla and economic developments at the time.  It is also possible to assess the probability that there will be a switch from one regime to another.  This is a Markov-swithing model. 
 
 The motivation for this research is to help to identify regimes and therefore help authorities determine the risk of financial crisis or crash. Use the FX market to get a broader understanding of some of the forces at work.
+
+From Maatin's speech (can be deleted later).  In a \emph{mixture model}, each observation is assumed to be drawn from a number of distinct sub populations.  These can be called \emph{component distributions}.  The distribution from which the component is drawn is not immediately observable and is therefore represented as a \emph{latent state}. 
+
+A mixture distribution is defined as 
+\begin{equation}
+p(Y_1 = y) = \sum_{i - 1}^N p(Y_t = y|S_t = i)P(S_t = i)
+\end{equation}
+where,
+\begin{itemize}
+\item $S_t \in {1, \dots, N}$ denotes the latent state or class of observation t
+\item $P(S_t = i)$ denots the probability of the latent state t equals i 
+\item $p(Y_t = y|S_t = i)$ denotes the density of observation of $Y_t$ conditional on latent state being $S_t = i$.
+\end{itemize}
+\section{Perth Water Example}
+
+In the Perth water example that Maatin presented, there are three different models (level, linear and quadratic).  The change model assumes that there is one or more discrete change points.  It may be the mean, trend or other parameters that change. The transition matrix defines the change points.  
+
+\begin{equation*}
+\begin{pmatrix}
+p_1 & 1 - p_1 \\
+0 & 1
+\end{pmatrix}
+\end{equation*}
+Where $p_1$ is the probability that the system will be in state 1.  One there is a switch to state two.  This matrix can be extended for multiple states. What is interesting in the modesl or Perth water flow are that there is a transition to a second state where there is a lower mean and a lower standard deviation. Therefore, the water level is lower and the variability of the water is less. 
+
+Ask Maarten how it determines whether the states can switch back and forth or stay fixed?  It looks as if the answer to this question is the transition matrix can be restricted to ensure that this happens.  On page 21 of Maarten's report, it says that, in the EM algorithum, probabilities initialised as 0 or 1 will remain there.  However, this does not happen with the bull and bear market example.  Why???
+
+There is an example of this method in the analysis of SP 500 regimes: Gains with low volatuility and losses with high volatility.  
+
+It may be possible to start from the distribution of the returns in the period of crisis and the period of calm and then to move to the identification of transition process.  This would be like the slide 9 of Maarten's London R presentation. 
+
+In the \emph{dependent mixture model} states are assumed to be statistically dependent.  This is consistent with the Minsky theory that the period of calm creates the conditions for the crash. The process underlying the state transitions is a \emph{homogenous first order Markov process}  (look this up for additional definition).  This process is completely defined by the initial state probabilities.  
+
+\begin{equation*}
+P(S_1 = 1), \dots P(S_1 = N)
+\end{equation*}
+and the state transition matrix, 
+
+\begin{equation*}
+\begin{pmatrix}
+P(S_t = 1|S_{t-1}=1) & P(S_t = 2|S_{t-1}=1) & \dots & P(S_t = N|S_{t-1}=1)\\
+P(S_t = 1|S_{t-1}=2) & P(S_t = 2|S_{t-1}=2) & \dots & P(S_t = N|S_{t-1}=2)\\
+\vdots & \vdots & \ddots & \vdots \\
+P(S_t = 1|S_{t-1}=N) & P(S_t = 2|S_{t-1}=N) & \dots & P(S_t = N|S_{t-1}=N)
+\end{pmatrix}
+\end{equation*}
+
+The models are estimated using the Expectation-Maximisation (EM) or numerical optimisation (when parmeters are constrained).  The dependent mixture model is made up of three sub models:  
+\begin{enumerate}
+\item The prior model: $P(S_1|x, \theta_{prior})$
+\item The transition model: $P(S_t|x, S_{t-1}, \theta_{trans})$
+\item The response model: $P(Y_t| S_t, x, \theta_{resp})$
+\end{enumerate}
+ See Maarten's notes to see how these are implemented.  
 
 \section{Literature Review}
 The use of the VIX index to identify times of risk aversion can make the period of crisis an observable state of the world. This is about a regime-switching model. This will treat the states of the world to be unobservable and to fit a regime-switching model (build like that of Hamilton (1989).  These notes from Ghysels.  There are two states of the world:  crisis and moderation.  If the system is in a crisis, it stays there with probability p; it switches to moderation with probability $1-p$.  If in moderation, the system stays there with a probability q and switches to crisis with probability $1-q$.  If the probabilities change over time, there is no longer a \emph{homogenous Markov Chain}. Ghysels has a seasonal dummy for the probabilities that represent the months or quarters.  
