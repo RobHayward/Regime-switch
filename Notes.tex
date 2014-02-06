@@ -101,7 +101,18 @@ The use of the VIX index to identify times of risk aversion can make the period 
 \subsection{Data}
 The data are a sample of CEE carry trades that have been compiled from raw exchange rate and interest rate data.  They show a range of possible carry trades that could have been conducted. 
 
-The data are constructed with the function \emph{forp} in the \emph{Raw.R} file.  
+The data are constructed with the function \emph{forp} in the \emph{Raw.R} file. This programme will create a sample of carry-trade profits from the inputs that will provide a funding currency from the set of US dollar, Euro, Swiss Franc and Japanese yen; an investment currency from the set of CEE countries provided; a time period of 1 month or 3 months.  Is there any need for any others funding curencies?  I don't think so!   It is possible to add other investment currencies.  There is ISK, TRY and NOK as reference.  It would be possible to have shorter time periods for the carry trade.   This would require the addition of the appropriate times series for LIBOR or deposit rates.  
+
+The forumla for the carry can be taken from the doctorate. 
+
+\subsection{Regime selection}
+There are three states or regimes: the first is caution, the second is build and the third is caution. These three regimes or states loosely correspond to the three stages of financial instability: hedge finance, speculative finance and Ponzie finance. It is assumed that the Ponzie stage swiftly turns into a crash. 
+
+Maybe put the R details in an appendix. 
+
+The returns are modeled as a simple model of the level of returns and the standard deviation around this level.  it is assumed that there are three different regimes so the level and the standard deviation around this level is allowed to change with the regime.  
+
+Three regimes are identfied with the 1-month investment in Polish zloty funded by US dollars.  These regimes are 
 
 \section{Results}
 Three regimes can be identified: number one, the cautious period; number two, the time when carry positions are being built; number three, the crash.  This works for PLNUSD, HUFEUR. 

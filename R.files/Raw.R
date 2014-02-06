@@ -34,7 +34,7 @@ depmixS4::summary(fm2)
 # State 2 Crash
 # State 3 Caution
 # plot
-tPPLNUSD <- as.ts(PPLNUSD)
+tPPLNUSD <- as.ts(PPLNUSD, start = c(2000, 01), frequency = 12)
 posterior(fm2)[,1]
 # What dates are system 2?
 da$DATE[which(posterior(fm2)[,1] == 2)]
@@ -43,6 +43,8 @@ pbear <- as.ts(posterior(fm2)[, 2])
 tsp(pbear) <- tsp(tPPLNUSD)
 plot(cbind(tPPLNUSD, pbear), main = 
        "Posterior probability of state 2 (volatile, negative markets).")
+# This does not work because of the time series properties of the fx data that
+# is daily.  Would be nice to have the dates.  
 # states
 mapbear <- as.ts(posterior(fm2)[, 1] == 2)
 tsp(mapbear) <- tsp(tPPLNUSD)
@@ -60,3 +62,11 @@ fm2@response
 # regimes were in place.  It would be good to check the relationship between
 # Length of time in state 1 and the size of the crash.  This can be a 
 # hypothesis
+pdf("Figures/Test", paper= "a4", title = "PLN-USD Carry")
+par(mfrow = c(4,1))
+plot(PPLNUSD, main = "PLN carry log returns", type = 'l')
+abline(h = 0)
+plot(pst[,2], type = 'l', main = "Probability in State 1: Build")
+plot(pst[,3], type = 'l', main = "Probability in State 2: Crash")
+plot(pst[,4], type = 'l', main = "Probability in State 3: Caution")
+dev.off()

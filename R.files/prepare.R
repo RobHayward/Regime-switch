@@ -1,7 +1,7 @@
 rm(list = ls())
-da <- read.csv("UIPdata2.csv", header = TRUE)
+da <- read.csv("Data/UIPdata2.csv", header = TRUE)
 da$DATE <- as.Date(da$DATE, format = "%d/%m/%Y")
-head(da)
+tail(da)
 str(da)
 # call(prepare.R) # If needed------------------------------
 require(zoo) # for lagging series
@@ -25,7 +25,7 @@ forp <- function(fx, b, m){
   return(g)
 }
 a <- forp("HUF", "EUR", 1)
-head(a$data)
+tail(a$data)
 #This is an attempt to create a list of data that can be tested.  The test
 # is in Raw.R
 datalist <- list()
