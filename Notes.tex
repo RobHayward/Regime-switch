@@ -22,7 +22,8 @@
 \date{\today}
 \maketitle
 \begin{abstract}
-The progression from an economic situation characterised by \emph{hedge financing} through \emph{speculative financing} and into \emph{Ponzi financing} is something that cannot be observed.  However, there are certain outcomes that are more or less likely in each regime and a method of \emph{Hidden Markov Models} (HMM) can be used to uncover the most likely regimes from the outcomes. This would be extremely useful for policymakers as it would help to identify those times when the economy was vulnerable to crash shocks and funding stops.  
+Hyman Minsky suggested that financial instability would proceed through an evolution from stability where lending was characterised by \emph{hedge financing} into more fragile regimes of \emph{speculative financing} and \emph{Ponzi financing}.    Though this process is not directly observable, there are outcomes that are more likely to be observed in each of these regimes.  Analysedk-down of \emph{uncovered interest partiy} (UIP) called the \emph{carry-trade} it is possible to identify these regimes.  Return characteristics change as financial instability develops so that the process can be modeled as a Markov chain where the states are unobserved but the outcome that is conditional on the state is used to uncover the parameters.  This is a version of the latent variable approach where the the states are related throuogh the Markov process. Identifying the financial state allows is used as a means of understanding more about financial instability. 
+
 \end{abstract}
 
 \section{The Minsky Model}
@@ -97,6 +98,8 @@ The models are estimated using the Expectation-Maximisation (EM) or numerical op
 \section{Literature Review}
 The use of the VIX index to identify times of risk aversion can make the period of crisis an observable state of the world. This is about a regime-switching model. This will treat the states of the world to be unobservable and to fit a regime-switching model (build like that of Hamilton (1989).  These notes from Ghysels.  There are two states of the world:  crisis and moderation.  If the system is in a crisis, it stays there with probability p; it switches to moderation with probability $1-p$.  If in moderation, the system stays there with a probability q and switches to crisis with probability $1-q$.  If the probabilities change over time, there is no longer a \emph{homogenous Markov Chain}. Ghysels has a seasonal dummy for the probabilities that represent the months or quarters.  
 
+\href{http://members.home.nl/jeroenvermunt/dias2010.pdf}{Mixture Hidden Markov Models} Hidden models help to calafify the regime under which securities trade. Model takes into account the unobserved hetrogeneity across time. This could could be extended to space (for different countries).  
+
 \section{Methods}
 \subsection{Data}
 The data are a sample of CEE carry trades that have been compiled from raw exchange rate and interest rate data.  They show a range of possible carry trades that could have been conducted. 
@@ -112,7 +115,19 @@ Maybe put the R details in an appendix.
 
 The returns are modeled as a simple model of the level of returns and the standard deviation around this level.  it is assumed that there are three different regimes so the level and the standard deviation around this level is allowed to change with the regime.  
 
-Three regimes are identfied with the 1-month investment in Polish zloty funded by US dollars.  These regimes are 
+Three regimes are identfied with the 1-month investment in Polish zloty funded by US dollars.  These regimes are:  caution, carry-build and crash. 
+
+\subsection{Wikipedia}
+From wikipedia.  \href{http://en.wikipedia.org/wiki/Hidden_Markov_model}{Hidden Markov Models}.  The system is a Markov process.  There are unobserved, hidden states.  The Markov property A Markov chain satisfied the Markov property.  That means that it depends only on the current state.  It has no memory. \emph{Brownian motion}, for example, is a Markov process. In a Markov chain, the state is observed and the transition probabilities are the onl;y parameter.  In a HMM, each state has a probability distribution over the possible outcomes.  These can be called \emph{tokens}.  A series of \emph{tokens} can tell us someting about the states.   A hidden Markov model is a generalisation of the mixture model where hidden or latent variables are related through a Markov process. These latent variables comntrol the outcome token. A mixture model is a model with sub-populations where the observations do not allow identification of the sub populations.  A mixture model has a mixture distribution. A mixture distribution is a distribtion of a random variable that is derived from a number of random variales that are related to each other. If the variable is continuous, this is a mixture density.  The \emph{mixture components} are combined together to form the mixture distribution with certain \emph{mixture weights}.  Discrete are sometimes call \emph{compound distributions}.  There is a difference between adding together two normal distributons (where there will be a new normal with a new mean) and the mixture distibution (where there will be twin peaks).  
+
+\href{http://members.home.nl/jeroenvermunt/dias2010.pdf}{Mixture Hidden Markov Models}  The observed response $y_{it}$ is the return of stock market $i$ at time $t$.  There are also two latent variables:  a time-constant discrete latent variable and a time-varying discrete latent variable.  The former is denoted by $w \in {1, \dots, S}$ captures unobserved hetoegeneity across markets; $z_t \in {1,2}$ is a two-state, time-varying latent variable. 
+
+$f(y_{it}|z_t)$ is assumed to have a multivariate normal density function. This distribution is characterised by $\theta_k = (\mu_k, \sigma_k^2)$.  Excluding the states $w$, there are the initial state probabilities to be determined, the 2 transition probabilities and the conditional mean and conditional variance to be estimated.  Thsi is done by Maximum likelihood using the log-likelihood function $l(\varphi, y) = \sum_{i=1}^n log f(y_i; \varphi)$. This is a problem that can be solved with the \emph{Expectation-Maximization (EM) algorithm}.  Dempster, Laird and Rubin (1977).  The E step computes the joint conditional distribution of the latent variables given the data and the current provisional estimates of the model parameters. The M step ML methods are used to update the parameters using the estimated densities of the latent variables as weights. For hidden Markov models, as special variant of the EM algorithm is proposed (called \emph{the forward-backward} or \emph{Baum-Welch} alogorithm (Baum et al 1970).   
+
+The markets are categorised as either \emph{bull} or \emph{bear} markets. This is consistent with the return volatility of markets.  About 25\% of the returns are in the bear markets. The evidence that the culster of markets that are closer to emerging markets are more liekly to be in a bear market than the devloped markets. In addition, it shows that there is persistence.  Once a market is in a particular regime (z) it is likely to stay there. Cluster 2 shows a lower propensity to move to a bear market from a bull market.  This is consistent with what is known about emerging markets.  The picture of the estimated posterior bull market regime is shown for emerging and deveped markets.  It shows that emerging markets are more likely to suffer bear markets.  
+
+
+
 
 \section{Results}
 Three regimes can be identified: number one, the cautious period; number two, the time when carry positions are being built; number three, the crash.  This works for PLNUSD, HUFEUR. 
