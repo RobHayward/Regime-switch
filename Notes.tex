@@ -128,6 +128,43 @@ The markets are categorised as either \emph{bull} or \emph{bear} markets. This i
 
 The second paper (on rating agencies - incuded in the "other" folder.  Uses the mixture model against the alternative of a pure Markov chain. In the pure Markov chain, the future depends only on the present.  However, with the mixture model, the future depends on the past.  This means that it is impant to know which of the latent sub-groups the firm is in as this will tell you more about the probability of default.  This knowledge will be based on the whole sample of ratings. There are A and Q processs.  What determines whether the rating evolves according to A or Q?  It appears to be partly the result of the industry.  The wholesale and retail trades are the most dynamic. There is clearly a hetrogeneity that is ignored by the standard Markov model of rating migration. 
 
+Notes from the \href{http://www.comp.leeds.ac.uk/roger/HiddenMarkovModels/html_dev/main.html}{Leeds notes}.  The aim is to find patterns in time. This uses the examle of seaweed and traffic lights.  For the traffic lights, there is a state machine where the different states follow each other. Each state is dependent only on the previous state. This is a deterministic system. The weather is not deterministic.  There may be three states:  wet, cloudy and sunny. The Makov assumption says that the state depends only on the previous state. This is a simplification that makes the problem easier to solve.  Some information may be lost with the simplifcation. The Markov process moves from state to state, depending only on the previous n states.  This is called an \emph{order n model}, where n is the number of states affecting the choice of the next state. With the weather example there are 9 possible transformations $(M^2)$.  The probability of each transition is assigned  a probability called \emph{state transition probability}.  These are collected into a \emph{state transition matrix}. The probabilities do not vary with time.  This is a (unrealistic) assumption. To start the system, there is a \emph{vector of initial probabilities}.  This is the $\pi$ vector.  
+
+The first order Markov process has three elements: 
+\begin{enumerate}
+\item states
+\item $\pi$ vector
+\item state tansmition matrix
+\end{enumerate}
+ Sometimes the Markov model is not sufficient to fully describe the process.  In the weather example, the weather may not be observable but seaweed is evident.  There is a probabilistic relationship between the seaweed and the weather.  More realistic is the identification of hidden states of the mouth through the sounds that can be identified.  The observables are related to the hidden states. It is assumed that the hidden states (the weather) are modelled by a simple first order Markov process.  The connections between the hidden states and the observable states represent the probability of generating a particular observed state given that the Markov process is in a particular state.  This is the \emph{confustion matrix} which gives the probabilites of observable states given a particular hidden state. 
+ 
+The Hidden Markov Model (HMM) is a tripple $(\pi, A, B)$ where, 
+\begin{enumerate}
+\item $\pi$ Vector of initial state probabilities
+\item $A = (a_{ij})$ the state transition matrix $Pr(x_{it}|x_{jt-1})$
+\item $B = (b_{ij})$ the confusion matrix $Pr(y_i|x_j)$
+\end{enumerate}
+
+Once a system can be described as HMM, three problems can be solved. 
+\begin{enumerate}
+\item finding the probability of an observed sequence given a HMM (evaluation)
+\item finding the sequence of hidden states that most probably generated the obsered sequence (decoding)
+\item generating a HMM given a sequencde of observed observations (learning)
+\end{enumerate}
+
+\subsection{Evaluation}
+There are a number of HMM with sets of $(\pi, A, B)$ tripples, which HMM geneated the given sequence?  For example, there may be 'summer model' and a 'winter model' and it may then be possible to determine the season from the seaweed sequence. The \emph{Forward algorithm} is used to calculate the probability of an observation sequence given a particular HMM and hence the most probable HMM.  In speech recognition, the HMM represent different words and the most likey HMM determines the word. 
+
+\subsection{Decoding}
+It is most usual to find the hidden states that generated the observed sequence.  Finding the hidden states is important because they are not directly observable.  A blind hermit may feel the seaweed but cannot see the weather. The \emph{Viterbi algorithm}.  This could also be used to determine the syntactic class of words (noune, verb etc) from the words themselves.  
+
+\subsection{Learning}
+This is the most difficult task.  Take a set of observations and fit the most probable HMM . The \emph{Forward-backward algorithm is used when the A and B matrices are not directly (empirically) measurable.  
+
+\section{Forward Algorithm}
+With three states, three observations and the parameters of the model known, the aim is to find the most likely hidden sequence.  It would be possible to find each possible sequence and sum the probabilities.  
+
+
 
 
 
