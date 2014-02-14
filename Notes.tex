@@ -22,14 +22,14 @@
 \date{\today}
 \maketitle
 \begin{abstract}
-Hyman Minsky suggested that financial instability would proceed through an evolution from stability where lending was characterised by \emph{hedge financing} into more fragile regimes of \emph{speculative financing} and \emph{Ponzi financing}.    Though this process is not directly observable, there are outcomes that are more likely to be observed in each of these regimes.  Analysedk-down of \emph{uncovered interest partiy} (UIP) called the \emph{carry-trade} it is possible to identify these regimes.  Return characteristics change as financial instability develops so that the process can be modeled as a Markov chain where the states are unobserved but the outcome that is conditional on the state is used to uncover the parameters.  This is a version of the latent variable approach where the the states are related throuogh the Markov process. Identifying the financial state allows is used as a means of understanding more about financial instability. 
+Hyman Minsky argued that financial system would tend to evolve from a system characterised by \emph{hedge financing} into more fragile regimes of \emph{speculative financing} and \emph{Ponzi financing}.  Though this process is not directly observable, there are financial market outcomes that are more likely to be observed in each of these regimes.  Analysis of the returns to the attempt to take advantage of deviations from \emph{uncovered interest partiy} (UIP), called the \emph{carry-trade}, make it possible to identify these regimes.  Return characteristics change as financial instability develops so that the process can be modeled as a Markov chain where the states are unobserved but the outcome that is conditional on the state is used to uncover the parameters.   Identifying the financial state allows is used as a means of understanding more about financial instability. 
 
 \end{abstract}
 
 \section{The Minsky Model}
-The Minsky model of endogenously increasing financial fragility has rightly received increased attention in the aftermath of the 2007 - 2008 global financial crisis.  The model suggest that a period of economic stability will provide the condidtions for a gradual transition of lending within the economy from one characterised as \emph{hedge} though that which is more \emph{speculative} and into something that can be desribed as {Ponzi}.  Under hedge financing the level of debt will not tend to extend beyond the ability to repay interest and principal; under specuative lending debt-to-equity ratios start to rise and the level of borrowing relative to income is elevated to a point where it becomes difficult to repay principal without asset price apprecation; under the Ponzi lending there is insufficient revenue to repay principal or interest and asset price appreciation or increased borrowing is necessary to mantain the debt. 
+The Minsky model of endogenously increasing financial fragility has rightly received increased attention in the aftermath of the 2007 - 2008 global financial crisis.  The model suggests that a period of economic stability will provide the condidtions for a gradual transition of lending within the economy from one characterised as \emph{hedge} though that which is more \emph{speculative} and into something that can be desribed as {Ponzi}.  Under hedge financing the level of debt will not tend to extend beyond the ability to repay interest and principal; under specuative lending debt-to-equity ratios start to rise and the level of borrowing relative to income is elevated to a point where it becomes difficult to repay principal without asset price apprecation; under the Ponzi lending there is insufficient revenue to repay principal or interest and asset price appreciation or increased borrowing is necessary to mantain the debt. The Ponzi period tends to 
 
-While this is a plausible description of rising financial fragility, it is often difficult to determine at what position the economy is in the financial cycle.  While measuring debt-to-equity ratios and the scale of bank lending may provide some indication about the regime that is in place, it is clear that financial services business evolve in ways that make loand counting in inadequate. The recent financial crisis showed that innovations like \emph{Collateralised Debt Obligations (CDO)} can allow an increase in debt that does not directly in bank lending.  
+While this is a plausible description of rising financial fragility, it is often difficult to determine at what position the economy is in the financial cycle.  While measuring debt-to-equity ratios and the scale of bank lending may provide some indication about the regime that is in place, this is imprecise and it is clear that financial services business evolve in ways that make loand counting in inadequate. The recent financial crisis showed that innovations like \emph{Collateralised Debt Obligations (CDO)} can allow an increase in debt that does not directly in bank lending.  
 
 \section{Hidden Markov Models}
 These models are used extensively in biometrics to analyse genome structure.  In particular, they are used to assess the underlying regime that is influencing the gene strcture. 
@@ -37,10 +37,13 @@ These models are used extensively in biometrics to analyse genome structure.  In
 \href{http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter10.html}{Chapter 10 Biometric Text on HMM}
 has an excellent overview of markov HMM and the R code necessary. One component of this that could be of interest is the assertion in on-line bimetrixs text that it is a problem to find the underlying state that produced the DNA outcome.  The equivalent of this for the crash model is to find the underlying Minsky state that produced the market activity. 
 
-This is the folder for builing the regime-switching model. The three latent states are the periods of shock, of calm and of crisis.  These are unseen but may be identified by other variables (such as the level of international risk aversion (VIX) or the state of domestic political uncertainty (see that buy at Yale???)).  Alternatively, it may be possible to draw the states from the data and compare the information that is supplied by the data with that from what is known about politicla and economic developments at the time.  It is also possible to assess the probability that there will be a switch from one regime to another.  This is a Markov-swithing model. 
+This is the folder for builing the regime-switching model. The three latent states are the periods of shock, of calm and of crisis.  These are unseen but may be identified by other variables (such as the level of international risk aversion (VIX) or the state of domestic political uncertainty (see that buy at Yale???)).  Alternatively, it may be possible to draw the states from the data and compare the information that is supplied by the data with that from what is known about political and economic developments at the time.  It is also possible to assess the probability that there will be a switch from one regime to another.  This is a Markov-swithing model. 
 
 The motivation for this research is to help to identify regimes and therefore help authorities determine the risk of financial crisis or crash. Use the FX market to get a broader understanding of some of the forces at work.
 
+Some additional motivtions are necessary. There is some scope to try copy the analysis of Asian stock market with the identification of different states.  This eventully divided the markets into something that looked like developed and less developed. Look into this.  It could that fixed and flexible exchange rate regimes would help to explain something about this choice of exchange rate arrangement.  It may also be the case that thiss can divide the regimes into financially robust and financially fragile. 
+
+There are two ways to try to identify the regimes: use external indicators such as the VIX index or other indications of domestic economic or political uncertaintly; use the internatl structure of the data to identify the periods through which the finncial system  is evolving. 
 From Maatin's speech (can be deleted later).  In a \emph{mixture model}, each observation is assumed to be drawn from a number of distinct sub populations.  These can be called \emph{component distributions}.  The distribution from which the component is drawn is not immediately observable and is therefore represented as a \emph{latent state}. 
 
 A mixture distribution is defined as 
@@ -55,7 +58,7 @@ where,
 \end{itemize}
 \section{Perth Water Example}
 
-In the Perth water example that Maatin presented, there are three different models (level, linear and quadratic).  The change model assumes that there is one or more discrete change points.  It may be the mean, trend or other parameters that change. The transition matrix defines the change points.  
+In the Perth water example that Maatin presented, there are three different models (level, linear and quadratic).  The change model assumes that there is one or more discrete change points.  It may be the mean, trend of other parameters that change. The transition matrix defines the change points.  
 
 \begin{equation*}
 \begin{pmatrix}
@@ -63,7 +66,7 @@ p_1 & 1 - p_1 \\
 0 & 1
 \end{pmatrix}
 \end{equation*}
-Where $p_1$ is the probability that the system will be in state 1.  One there is a switch to state two.  This matrix can be extended for multiple states. What is interesting in the modesl or Perth water flow are that there is a transition to a second state where there is a lower mean and a lower standard deviation. Therefore, the water level is lower and the variability of the water is less. 
+Where $p_1$ is the probability that the system will be in state 1.  Otherwise, there is a switch to state two.  This matrix can be extended for multiple states. What is interesting in the modesl or Perth water flow are that there is a transition to a second state where there is a lower mean and a lower standard deviation. Therefore, the water level is lower and the variability of the water is less. 
 
 Ask Maarten how it determines whether the states can switch back and forth or stay fixed?  It looks as if the answer to this question is the transition matrix can be restricted to ensure that this happens.  On page 21 of Maarten's report, it says that, in the EM algorithum, probabilities initialised as 0 or 1 will remain there.  However, this does not happen with the bull and bear market example.  Why???
 
@@ -95,10 +98,13 @@ The models are estimated using the Expectation-Maximisation (EM) or numerical op
 \end{enumerate}
  See Maarten's notes to see how these are implemented.  
 
-\section{Literature Review}
+\section{Literature}
 The use of the VIX index to identify times of risk aversion can make the period of crisis an observable state of the world. This is about a regime-switching model. This will treat the states of the world to be unobservable and to fit a regime-switching model (build like that of Hamilton (1989).  These notes from Ghysels.  There are two states of the world:  crisis and moderation.  If the system is in a crisis, it stays there with probability p; it switches to moderation with probability $1-p$.  If in moderation, the system stays there with a probability q and switches to crisis with probability $1-q$.  If the probabilities change over time, there is no longer a \emph{homogenous Markov Chain}. Ghysels has a seasonal dummy for the probabilities that represent the months or quarters.  
 
+Can the probabilities change over time?  This may be the result of changes in the resilience of the financial system. 
 \href{http://members.home.nl/jeroenvermunt/dias2010.pdf}{Mixture Hidden Markov Models} Hidden models help to calafify the regime under which securities trade. Model takes into account the unobserved hetrogeneity across time. This could could be extended to space (for different countries).  
+
+Can the systemm be used to compare to fixed and floating exchange rates. 
 
 \section{Methods}
 \subsection{Data}
