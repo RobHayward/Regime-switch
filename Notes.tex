@@ -97,6 +97,31 @@ The models are estimated using the Expectation-Maximisation (EM) or numerical op
 \item The response model: $P(Y_t| S_t, x, \theta_{resp})$
 \end{enumerate}
  See Maarten's notes to see how these are implemented.  
+ 
+\subsection{Agn Timmerman (2011)}
+Looking at how abrupt changes in regime can lead to changes in the way that the system works.  The different regimes can be associated with different underlying distribution of returns.  This can allow the understnding of the non-liner and non--normal distribution within  normal or linear framework.  At the extreme, the regime switch model can incorporate a \emph{jump model} with one change and time-varying parameter models that have a large number of regimes.
+
+The broad framework for the model is to model a discrete state $s_t \in \{0,1,\dots k \}$
+\begin{equation}
+y_t = \mu_{s_t} + \phi_{s_t} y_{t-1} + \sigma_{s_t} \varepsilon_t, \quad \varepsilon_t \sim iid(0,1) 
+\end{equation}
+
+The process governing the underlying regime must also be defined. 
+
+\begin{equation}
+Pr(s_t = 0| s_{t-1} = 0) = p_{00} \quad \text{and} \quad Pr(s_t = 1| s_{t-1} = 1) = p_{11}
+\end{equation}
+
+More generally, the trsition could be time-varying and could be dependent on the time spent in the regime.  See Durland and McCurdy (1994) for time or Diebold, Lee nd Weinbch (1994) for examples where the trnsition probabilities depend on some other state variables.  For example, the interest rate spread.   Could the VIX index or other factors be used?  Vix index would indicate heightened international tension as one element that affects the probability of transforming from one state to the next.  This is very similar to the bubble bursting so any information that improves the ability to identify bubbles bursting would be beneficial.  
+
+In this case $p_{ij}(t) = \Phi(z_t)$, where $z_t$ is the conditioning informtion and $\Phi$ could be a logit or probit model.  
+
+
+
+\subsection{Hamilton, Palgrave}
+From the Hamilton paper for the Plagrave dictionary, the transition matrix will determine the probility of switching from one regime to another.  If the transition has $b_{22} = 1$ this implies that the regime switch is permanent. More likely, it will be temporary. 
+ 
+The use of the regime-switch allows the transition from one regime to another to be the result of something that is more than just a deterministic process. There are a number of ways that this model could be expanded.  Dueker has a model where the degrees of freedom from a Student-t distribution change with the regime.  
 
 \section{Literature}
 The use of the VIX index to identify times of risk aversion can make the period of crisis an observable state of the world. This is about a regime-switching model. This will treat the states of the world to be unobservable and to fit a regime-switching model (build like that of Hamilton (1989).  These notes from Ghysels.  There are two states of the world:  crisis and moderation.  If the system is in a crisis, it stays there with probability p; it switches to moderation with probability $1-p$.  If in moderation, the system stays there with a probability q and switches to crisis with probability $1-q$.  If the probabilities change over time, there is no longer a \emph{homogenous Markov Chain}. Ghysels has a seasonal dummy for the probabilities that represent the months or quarters.  
