@@ -34,6 +34,7 @@ for(i in c("HUF", "PLN")){
   a <- forp(i, "EUR", 1)
 datalist[i] <- list(name = a$data) 
 }
+name
 names(datalist)
 head(datalist$PLN)
 # This now works.

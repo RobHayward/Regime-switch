@@ -6,7 +6,7 @@ PPLNUSD <- a$data$p
 # This works with PHUFEUR.  Now try PPLNUSD
 require(depmixS4)
 mod <- depmix(PPLNUSD ~ 1, data = da, ns = 2, 
-              trst = c(0.9, 0.1, 0, 1), inst = c(1,0))
+              trst = c(0.9, 0.1, 0.8, 0.2), inst = c(1,0))
 set.seed(1)
 fm <- fit(mod, verbose = FALSE)
 summary(fm)
@@ -63,10 +63,14 @@ fm2@response
 # Length of time in state 1 and the size of the crash.  This can be a 
 # hypothesis
 pdf("Figures/Test", paper= "a4", title = "PLN-USD Carry")
-par(mfrow = c(4,1))
+par(mfrow = c(2,2))
+# mfrow = c(4,1)) does not work.  Why? 
+pst$Date <- index(PPLNUSD)
+# This just adds a date series for the ppi file (the same as PPLNUSD)
 plot(PPLNUSD, main = "PLN carry log returns", type = 'l')
-abline(h = 0)
-plot(pst[,2], type = 'l', main = "Probability in State 1: Build")
-plot(pst[,3], type = 'l', main = "Probability in State 2: Crash")
-plot(pst[,4], type = 'l', main = "Probability in State 3: Caution")
+abline(h = 1)
+plot(pst[,2] ~ pst$Date, type = 'l', main = "Probability in State 1: Build")
+plot(pst[,3] ~ pst$Date, type = 'l', main = "Probability in State 2: Crash")
+plot(pst[,4] ~ pst$Date, type = 'l', main = "Probability in State 3: Caution")
 dev.off()
+
