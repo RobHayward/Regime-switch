@@ -62,8 +62,8 @@ fm2@response
 # regimes were in place.  It would be good to check the relationship between
 # Length of time in state 1 and the size of the crash.  This can be a 
 # hypothesis
-pdf("Figures/Test", paper= "a4", title = "PLN-USD Carry")
-par(mfrow = c(2,2))
+pdf("Figures/PLNUSD.pdf", paper= "a4", title = "PLN-USD Carry")
+par(mfrow = c(4,1))
 # mfrow = c(4,1)) does not work.  Why? 
 pst$Date <- index(PPLNUSD)
 # This just adds a date series for the ppi file (the same as PPLNUSD)

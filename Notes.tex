@@ -1,5 +1,4 @@
 \documentclass[12pt, a4paper, oneside]{article} % Paper size, default font size and one-sided paper
-%\graphicspath{{./Figures/}} % Specifies the directory where pictures are stored
 %\usepackage[dcucite]{harvard}
 %\usepackage{tikz}
 %\usetikzlibrary{shapes, shadows, arrows}
@@ -11,25 +10,26 @@
 %\usepackage{multirow}
 \usepackage[comma, sort&compress]{natbib}% Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
 \usepackage{graphicx}
+\graphicspath{{./Figures/}} % Specifies the directory where pictures are stored
 %\bibliographystyle{plainnat}
 \bibliographystyle{agsm}
 \usepackage[colorlinks = true, citecolor = blue, linkcolor = blue]{hyperref}
 %\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
-%\renewcommand[\harvardurl]{URL: \url}
 \begin{document}
+%\renewcommand[\harvardurl]{URL: \url}
 \title{Regime Change}
 \author{Rob Hayward\footnote{University of Brighton Business School, Lewes Road, Brighton, BN2 4AT; Telephone 01273 642586.  rh49@brighton.ac.uk}} 
 \date{\today}
 \maketitle
 \begin{abstract}
-Hyman Minsky argued that financial system would tend to evolve from a system characterised by \emph{hedge financing} into more fragile regimes of \emph{speculative financing} and \emph{Ponzi financing}.  Though this process is not directly observable, there are financial market outcomes that are more likely to be observed in each of these regimes.  Analysis of the returns to the attempt to take advantage of deviations from \emph{uncovered interest partiy} (UIP), called the \emph{carry-trade}, make it possible to identify these regimes.  Return characteristics change as financial instability develops so that the process can be modeled as a Markov chain where the states are unobserved but the outcome that is conditional on the state is used to uncover the parameters.   Identifying the financial state allows is used as a means of understanding more about financial instability. 
+Hyman Minsky argued that financial instability would increase through an evolution that ran from stability to precarious instability, from one characterised by \emph{hedge financing} into successively more fragile regimes of \emph{speculative financing} and \emph{Ponzi financing}.  Though this process is not directly observable, there are financial market outcomes that are more likely to be observed in each of these regimes.  Analysis of \emph{carry trade} returns, the attempt to take advantage of deviations from \emph{uncovered interest partiy} (UIP), are used to identify the stages of increasing financial fragility.  Return characteristics change as financial instability develops so that the process can be modeled as a Markov chain where the states are unobserved but the outcome that are conditional on each state can be used to uncover the parameters of a Hiden Markov Model (HMM).   Identifying financial states can be used to aid understanding of financial system vulnerabilities. 
 
 \end{abstract}
 
 \section{The Minsky Model}
 The Minsky model of endogenously increasing financial fragility has rightly received increased attention in the aftermath of the 2007 - 2008 global financial crisis.  The model suggests that a period of economic stability will provide the condidtions for a gradual transition of lending within the economy from one characterised as \emph{hedge} though that which is more \emph{speculative} and into something that can be desribed as {Ponzi}.  Under hedge financing the level of debt will not tend to extend beyond the ability to repay interest and principal; under specuative lending debt-to-equity ratios start to rise and the level of borrowing relative to income is elevated to a point where it becomes difficult to repay principal without asset price apprecation; under the Ponzi lending there is insufficient revenue to repay principal or interest and asset price appreciation or increased borrowing is necessary to mantain the debt. The Ponzi period tends to 
 
-While this is a plausible description of rising financial fragility, it is often difficult to determine at what position the economy is in the financial cycle.  While measuring debt-to-equity ratios and the scale of bank lending may provide some indication about the regime that is in place, this is imprecise and it is clear that financial services business evolve in ways that make loand counting in inadequate. The recent financial crisis showed that innovations like \emph{Collateralised Debt Obligations (CDO)} can allow an increase in debt that does not directly in bank lending.  
+While this is a plausible description of rising financial fragility, it is often difficult to determine at what position the economy is at in the financial cycle.  While measuring debt-to-equity ratios and the scale of bank lending may provide some indication about the regime that is in place, this is imprecise and it is clear that financial services business evolve in ways that make loan counting in inadequate.\footnote{The recent financial crisis showed that innovations like \emph{Collateralised Debt Obligations (CDO)} can allow an increase in debt that does not directly in bank lending.}   
 
 \section{Hidden Markov Models}
 These models are used extensively in biometrics to analyse genome structure.  In particular, they are used to assess the underlying regime that is influencing the gene strcture. 
@@ -201,4 +201,33 @@ With three states, three observations and the parameters of the model known, the
 
 \section{Results}
 Three regimes can be identified: number one, the cautious period; number two, the time when carry positions are being built; number three, the crash.  This works for PLNUSD, HUFEUR. 
+
+The R files work as follows: prepare.R loads the data and creates the profits function; Raw(test).R will test data. 
+
+\subsection{PLNUSD}
+For the 1-month PLN-USD carry trade sample, a three stage HMM is fitted.  The parameters of the models are 
+
+\begin{tabular}{l | l l}
+State & Mean & SD \\
+\hline
+State 1 & 1.0109 & 0.0309\\
+State 2 & 0.9317 & 0.0486\\
+State 3 & 1.040982 & 0.0432\\
+\end{tabular}
+
+These figures have to extracted in some way 
+
+The pattern is 
+%\begin{figure}
+%\centering
+%\includegraphics{PLNUSD}
+%\end{figure}
+% There are some issues with the creation of this figure.  It works in la tex stand alone.  
+
+The periods that are identified as those associated with the crash are July 2008 to January 2009 and April and May 2010.  
+
+The Raw.R file works with the PLNUSD.  It gives the dates and the parameters of the model but it does not produce the pdf for the figures. Now this needs to be automated so that tables and figure can be produced automatically. Test on a couple of others. 
+
+\subsection{HUFUSD}
+This does not seem to work as well as the PLN.  
 \end{document}
