@@ -37,6 +37,9 @@ It is against this backdrop that a fuller appreciation of the build up of risk a
 
 While this is a plausible description of rising financial fragility, it is often difficult to determine at what position the economy is at in the financial cycle.  While measuring debt-to-equity ratios and the scale of bank lending may provide some indication about the regime that is in place, this is imprecise and it is clear that financial services business evolve in ways that make loan counting in inadequate.\footnote{The recent financial crisis showed that innovations like \emph{Collateralised Debt Obligations (CDO)} can allow an increase in debt that does not directly in bank lending.}   
 
+\subsection{Tapering and the Fed}
+There are a number of studies that have looked at the effect of a change in Fed policy on capital flows to emerging markets.  For examp le, \citep{IMFLatam} argue that Fed tapering while not necessarily leading to capital outflow, could generate \emph{new risk premium shocks}.  These use a panel VAR method to assess the effect of US monetary policy since 1990 on capital flows to 38 emerging economies.  Similarly, \citep{NYFedtaper} assess how changes in global risk aversion affects carry trade activities.  They find that the initial signal from the US central bank in Fed Chairman Bernanke's May 22 2013 testimony to Congress coinciced with an increase in global risk aversion which affected global asset prices. They use the approach presented by \citep{MertensSVAR} to estimate the effect of policy changes by using a two-stage least squares appraoch to identify the SVAR model of asset price changes.  By identifying the performance of exchange rates without a change in risk aversion, they find that nearly half of the depreciation of a basket of 45 carry trade currencies with the largest one-month interest rate relative to a basket of the US dollar and other equally low rate currencies is explained by the increased risk aversion. Using a similar method they find that nearly all the decline in Emerging market equities is attributable to the increase in risk aversion. 
+
 \section{Hidden Markov Models}
 These models are used extensively in biometrics to analyse genome structure.  In particular, they are used to assess the underlying regime that is influencing the gene strcture. 
 
@@ -236,6 +239,12 @@ The periods that are identified as those associated with the crash are July 2008
 
 The Raw.R file works with the PLNUSD.  It gives the dates and the parameters of the model but it does not produce the pdf for the figures. Now this needs to be automated so that tables and figure can be produced automatically. Test on a couple of others. 
 
-\subsection{HUFUSD}
-This does not seem to work as well as the PLN.  
+\section{Conclusions}
+There are a number of ways that these methods can be used. 
+\begin{itemize}
+\item Looking at the changes in the probability that there is a crash and assessing the relationship between these changes and domestic and international events.  The doestic could be political opnion polls or central bank policy; the internatinal could be international risk or changes in Fed policy.  
+\end{itemize}
+
+\bibliography{myrefs}
+
 \end{document}
