@@ -1,12 +1,10 @@
-# Depmix in a loop 
+rm(list = ls())
+# Use prepare.R to load data and function "forp"
+a <- forp("PLN", "EUR", 1)
+PPLNEUR <- a$data$p
 library(depmixS4)
 library(TTR)
 library(xts)
-for(i in c("HUF", "PLN"){
-a <- forp(i, "EUR", 1)
-}
-profit <- a$data$p
-
 mod <- depmix(PPLNUSD ~ 1, nstates = 3, data = da)
 set.seed(2)
 fm2 <- fit(mod, verbose = FALSE)
@@ -42,3 +40,4 @@ plot(pst[,2] ~ pst$Date, type = 'l', main = "Probability in State 1: Caution")
 plot(pst[,3] ~ pst$Date, type = 'l', main = "Probability in State 2: Build")
 plot(pst[,4] ~ pst$Date, type = 'l', main = "Probability in State 3: Crash")
 dev.off()
+
