@@ -1,6 +1,6 @@
 rm(list = ls())
 # Use prepare.R to load data and function "forp"
-a <- forp("PLN", "USD", 1)
+a <- forp("PLN", "EUR", 1)
 PPLNUSD <- a$data$p
 # The following function will estimate the mixed model.  There are two regimes
 # This works with PHUFEUR.  Now try PPLNUSD
