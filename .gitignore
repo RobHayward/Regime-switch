@@ -1,7 +1,6 @@
 .Rproj.user
 .Rhistory
 .RData
-testtikz.pdf
-Notes.pdf
-Notes.synctex.gz
-Notes.log
+.synctex.gz
+.log
+.pdf
