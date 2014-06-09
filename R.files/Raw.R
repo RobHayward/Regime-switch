@@ -21,13 +21,12 @@ pst[,1]
 #-------------------------------
 library(TTR)
 library(xts)
-# load SP500 returns
 plot(PPLNUSD, main = "PLN carry log returns", type = 'l')
 # The aim is to identify the bull and bear markets. 
 # First set up the model (mod). This is a model 
 # of the log return with two states. Then fit the model.   
 mod <- depmix(PPLNUSD ~ 1, nstates = 3, data = da)
- set.seed(2)
+ set.seed(3)
 fm2 <- fit(mod, verbose = FALSE)
 depmixS4::summary(fm2)
 # state 1 Build carry

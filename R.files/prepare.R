@@ -79,4 +79,6 @@ predict(fm2@response[[3]][[1]])[1]
 
 class(fm2@response)
 names(fm2@response)
-list
+fm2@response
+
+  
