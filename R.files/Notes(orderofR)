@@ -1,3 +1,7 @@
 Note
 Use prepare.R first. This contains the functions to download the data and the function forp to calculate the forward profits given the funding currency, investment currency and the time.  
 Use Raw.R to carry out the HMM analysis. 
+
+Raw.R will create the estimates and the graphs if the funding and investment currencies are changed. There are no inputs as yet. 
+------------
+What is prepare2.R  ???
