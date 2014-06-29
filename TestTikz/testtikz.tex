@@ -32,7 +32,8 @@ This is a file to practice the TiKz package.  Much of this comes from the minima
 
 \begin{figure}
 \begin{tikzpicture}
-\tikzstyle{decision} = [circle, draw, fill = yellow!30]
+\tikzstyle{decision} = [circle, draw, fill = yellow!30, minimum height = 8mm, 
+  text width = 5em, text centered];
 \tikzstyle{line} = [draw, -stealth, thick]
 \tikzstyle{line2} = [draw, -stealth, ultra thick]
 \tikzstyle{line3} = [draw, -stealth, dashed, thick]
@@ -41,34 +42,34 @@ This is a file to practice the TiKz package.  Much of this comes from the minima
 	text width = 5em, text centered]
 \tikzstyle{block} = [draw, rectangle, fill = blue!30, text width = 8em, 
 	text centered, minimum height = 15mm, node distance = 8em]
-\node [block](Normal){Normal};
-\node [block, left of  = Normal, xshift = -5em] (Crisis){Crisis}; 
-%\node [elli, above of = Normal, yshift = 10em] (Return) {Return};
-\node [block, right  of = Normal, xshift =5em] (Shock){Shock};
-\node [decision, below of = Normal, yshift = -10em, align = center]
-(Build) {Positions \\ Built}; 
-\node [decision, below of = Crisis, yshift = -10em](Crash) {The Crash};
-\node [decision, below of = Shock, yshift = -10em, align = center](Caution) 
-{Calm \\and \\Caution};
+\node [block](Build){Build};
+\node [block, left of  = Build, xshift = -5em] (Caution){Caution}; 
+\node [block, right  of = Build, xshift =5em] (Crash){Crash};
+\node [decision, below of = Build, yshift = -10em, align = center]
+(Build2) {High Return \\ Small Risk}; 
+\node [decision, below of = Crash, yshift = -10em](Crash2) {Loss \\ High Risk};
+\node [decision, below of = Caution, yshift = -10em, align = center](Caution2) 
+{Small \\ Return \\ Average \\ Risk};
 %arrows 
-\path [line3] (Crisis) -- (Crash);
-\path [line3] (Normal) -- (Build);
-\path [line2] (Shock) -- node [yshift = 3em] {Speculative Lending} (Normal);
-\path [line2] (Normal) -- node [yshift = 3em]  {Ponzi Lending} (Crisis);
-\path [line4] (Crisis) -- (Build);
-\path [line4] (Crisis) -- (Caution);
-\path [line4] (Normal) -- (Crash);
-\path [line4] (Normal) -- (Caution);
-\path [line4] (Shock) -- (Crash);
-\path [line4] (Shock) -- (Build);
-\node [align = left, left of = Crisis, xshift = -5em] {Unobserved \\ States};
-\node [align = left, left of = Crash, xshift = -5em] {Observed \\ Returns};
+\path [line3] (Caution) -- (Caution2);
+\path [line3] (Build) -- (Build2);
+\path [line3] (Crash) -- (Crash2);
+\path [line2] (Build) -- node [yshift = 3em] {Ponzie Lending} (Crash);
+\path [line2] (Caution) -- node [yshift = 3em]  {Speculative Lending} (Build);
+\path [line4] (Caution) -- (Build2);
+\path [line4] (Caution) -- (Crash2);
+\path [line4] (Build) -- (Crash2);
+\path [line4] (Build) -- (Caution2);
+\path [line4] (Crash) -- (Caution2);
+\path [line4] (Crash) -- (Build2);
+\node [align = left, left of = Caution, xshift = -5em] {Unobserved \\ States};
+\node [align = left, left of = Caution2, xshift = -5em] {Observed \\ Returns};
 %\path [line] (decision1) -| node [yshift = 0.5em, 
 % 	xshift = 8em] {YES} (process 1);
-\path [line3] (Shock) -- (Caution); 
+%\path [line3] (Crash) -- (Caution); 
 % 	xshift = -8em] {NO} (process 2);
 \end{tikzpicture}
-\caption{Carry Trade: Regime Change}
+%\caption{Carry Trade: Regime Change}
 \end{figure}
 
 

@@ -1,3 +1,4 @@
+require(depmixS4)
 set.seed(3)
 inv <- c("HUF", "PLN", "CZK", "RON", "RUB", "TRY", "BGN", 
          "NOK", "ISK", "UAH", "HRK")
@@ -16,8 +17,9 @@ for(i in inv){
   table[3,i] <- getpars(fm2)[9]
   table[4,i] <- getpars(fm2)[10]
   list2[[i]] <- list(pars = getpars(fm2), logLik(fm2), 
-                     posterior = posterior(fm2))
+                     posterior = posterior(fm2), profit = a$profit)
 }
+# table 2 will order the state by size of the return (highest first for "calm")
 table2 <- matrix(1, nrow = 4, ncol = length(inv))
 rownames(table2) <- c("Calm", "SD1", "Crash", "sd2") 
 colnames(table2) <- inv
@@ -31,7 +33,8 @@ for(i in inv){
    table2[3:4, i] <- table[3:4, i]
  }
 }
-table
+regimetable <- xtable(table2, digits = 4)
+regimetable
 table2
 list <- list(c(inv))
 str(list)
@@ -66,21 +69,23 @@ par(mfrow = c(3,1))
 legend(0.65, 10, c("Calm", "Crash", "Total"), lty = c(1, 1, 1), 
        col = c("red", "blue", "black")) 
 }
-i = "CZ"
+---------------------------------------------------------
+# Create the probability charts
+# First add the date index to list2 posterior.  
+i = "TRY"
 # Change this for 1 month EUR funded carry
-a <- forp(i, "EUR", 1)
-title <- paste("Profits from ", a$fx, "-", a$fund, a$period, sep= "")
-# The following line will save a pdf in Figures for use
+title <- paste("Profits from ", i, "-", "EUR", "1M", sep= "")
 # pdf("Figures/PLNUSD.pdf", paper= "a4", title = "PLN-USD Carry")
-par(mfrow = c(3,1))
-# Get the date index
-list2$HUF$posterior$Date <- index(a$profit)
-# This just adds a date series for the ppi file (the same as PPLNUSD)
-plot(a$profit, main = title, type = 'l')
+par(mfcol = c(3,2))
+plot(list2[[i]]$profit, main = title, ylab = "Profits", xlab = "Date")
 abline(h = 1)
-plot(list2$HUF$posterior$S1 ~ list2$HUF$posterior$Date, type = 'l', 
-     main = "Probability in State 1: Calm")
-plot(list2$HUF$posterior$S2 ~ list2$HUF$posterior$Date, type = 'l', 
-     main = "Probability in State 2: Crash")
-# Use this line if pdf if used. 
+plot(list2[[i]]$posterior$S1, type = 'l', main = "Probability of State Calm", 
+     ylab = "Probability", xlab = "Date")
+plot(list2[[i]]$posterior$S2, type = 'l', main = "Probability of State Crash", 
+     ylab = "Probability", xlab = "Date")
+# The following line will save a pdf in Figures for use
 # dev.off()
+
+# Get the date index
+# This just adds a date series for the ppi file (the same as PPLNUSD)
+

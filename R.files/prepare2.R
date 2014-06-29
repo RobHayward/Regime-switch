@@ -1,9 +1,14 @@
-# This is an update with the new data that runs to end 2013.  Vix has been removed. 
+# This is an update with the new data that runs to end 2013.  
+# Vix has been removed. 
 rm(list = ls())
+require("zoo")
 da <- read.csv("Data/CEEUIP.csv", header = TRUE, stringsAsFactors = FALSE)
 da$Date <- as.Date(da$Date, format = "%d/%m/%Y")
-head(da)
+# add USD
 str(da)
+USD <- rep(1, length.out = nrow(da))
+da$USD <- USD
+head(da)
 # call(prepare.R) # If needed------------------------------
 require(zoo) # for lagging series
 require(xtable) # to create table
@@ -27,21 +32,3 @@ forp <- function(fx, b, m){
 }
 a <- forp("HUF", "EUR", 1)
 head(a$data)
-title <- paste("Profits from ", a$fx, "-", a$fund, a$period, sep= "")
-hist(a$profit, prob = TRUE, main = title, xlab = "Profit")
-lines(density(a$profit, na.rm = TRUE), col = 'red', lwt = 2)
-#This is an attempt to create a list of data that can be tested.  The test
-# is in Raw.R
-datalist <- list()
-for(i in c("HUF", "PLN")){
-  name <- paste(i, "EuR", sep = "")
-  a <- forp(i, "EUR", 1)
-datalist[i] <- list(name = a$data) 
-}
-names(datalist)
-head(datalist$PLN)
-# This now works.
-datalist[[2]][1][[8]]
-# to choose the second item in list, first row and eight element.
-plot(datalist$HUF$p, main = title)
-abline(h = 1, col = 'red')

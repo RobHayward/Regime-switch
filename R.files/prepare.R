@@ -28,8 +28,8 @@ forp <- function(fx, b, m){
 require(depmixS4)
 a <- forp("HUF", "EUR", 1)
 tail(a$data)
-#This is an attempt to create a list of data that can be tested.  The test
-# is in Raw.R
+#This is an attempt to create a list of data that can be tested.  
+# The test is in Raw.R
 i <- "UAH"
 for(i in c("HUF", "PLN")){
   name <- paste(i, "EuR", sep = "")
@@ -75,10 +75,12 @@ plot(datalist$HUF$p, main = "HUFEUR")
 
 fm2@response[[2]][1][1]
 # this will give the mean.  I want sd I don't know how to get that.  
-predict(fm2@response[[3]][[1]])[1]
-
+predict(fm2@response[[1]][[1]])[1]
+fm2@response
+predict(fm2@response[[3]][[2]])[1]
+predict(fm2@response)@se.fit
 class(fm2@response)
-names(fm2@response)
+fm2@response
 fm2@response
 
   

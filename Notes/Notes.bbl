@@ -1,5 +1,11 @@
 \begin{thebibliography}{xx}
 
+\harvarditem{Ahmed \harvardand\ Zlate}{2014}{Ahmed2014}
+Ahmed, S. \harvardand\ Zlate, A.  \harvardyearleft 2014\harvardyearright ,
+  `Capital flows to emerging market economies: A brave new world?', {\em
+  Journal of International Money and Finance} (0),~--.
+\newline\harvardurl{http://www.sciencedirect.com/science/article/pii/S0261560614000928}
+
 \harvarditem{Alexander~Klemm \harvardand\ Sosa}{2014}{IMFLatam}
 Alexander~Klemm, A.~M. \harvardand\ Sosa, S.  \harvardyearleft
   2014\harvardyearright , Taper tantrum or tedium: How will the normalization
@@ -8,9 +14,49 @@ Alexander~Klemm, A.~M. \harvardand\ Sosa, S.  \harvardyearleft
   pp.~37 -- 46.
 \newline\harvardurl{http://www.imf.org/external/pubs/ft/reo/2014/whd/eng/pdf/wreo0414.pdf}
 
+\harvarditem{Avdjiev \harvardand\ Zeng}{2014}{Avdjiev2014}
+Avdjiev, S. \harvardand\ Zeng, Z.  \harvardyearleft 2014\harvardyearright ,
+  `Creidt growth, monetary policy, and economic activity in a three-regime tvar
+  model', {\em BIS Working Papers} (449).
+\newline\harvardurl{http://www.bis.org/publ/work449.htm}
+
+\harvarditem{Azaraidis \harvardand\ Smith}{1998}{Azaraidis}
+Azaraidis, C. \harvardand\ Smith, B.  \harvardyearleft 1998\harvardyearright ,
+  `Financial intermediation and regime switching in busiess cycles', {\em
+  American Economic Review} {\bf 88},~516 -- 536.
+
+\harvarditem{Balke}{2000}{Balke}
+Balke, N.~S.  \harvardyearleft 2000\harvardyearright , `Credit and economic
+  acivity: Creddit regimes and nonlinear propogation of shocks', {\em The
+  Review of Economics and Statistics} {\bf 82}(2),~344 -- 349.
+
 \harvarditem{Berglof}{2010}{EBRD}
 Berglof, E.  \harvardyearleft 2010\harvardyearright , Recovery and reform,
   Transition report, EBRD.
+
+\harvarditem{Bernanke \harvardand\ Gertler}{1989}{BernankeGertlerAgency}
+Bernanke, B. \harvardand\ Gertler, M.  \harvardyearleft 1989\harvardyearright ,
+  `Agency costs, net worth and business fluctuations', {\em American Economic
+  Review} {\bf 79}(1),~14 -- 31.
+
+\harvarditem[Bernanke et~al.]{Bernanke, Gertler \harvardand\
+  Gilchrist}{1996}{BernankeGertler}
+Bernanke, B., Gertler, M. \harvardand\ Gilchrist, S.  \harvardyearleft
+  1996\harvardyearright , `The financial accelerator and the flight to
+  quality', {\em Review of Economics and Statistics} {\bf 78}(1),~1 -- 15.
+
+\harvarditem[Bernanke et~al.]{Bernanke, Gertler \harvardand\
+  Gilchrist}{1999}{Bernanke1999chapter}
+Bernanke, B., Gertler, M. \harvardand\ Gilchrist, S.  \harvardyearleft
+  1999\harvardyearright , Chapter 21 the financial accelerator in a
+  quantitative business cycle framework, {\em in} `Handbook of Macroeconomics',
+  Vol.~1, pp.~1341--1393.
+
+\harvarditem[Brunnermeier et~al.]{Brunnermeier, Nagel \harvardand\
+  Pedersen}{2008}{BrunnermeierCarry}
+Brunnermeier, M., Nagel, S. \harvardand\ Pedersen, L.  \harvardyearleft
+  2008\harvardyearright , `Carry trades and currency crashes', {\em NBER
+  Working Papers} (14473).
 
 \harvarditem{Brunnermeier \harvardand\ Pedersen}{2009}{BrunnermeierLiquidity}
 Brunnermeier, M. \harvardand\ Pedersen, L.  \harvardyearleft
@@ -21,6 +67,24 @@ Brunnermeier, M. \harvardand\ Pedersen, L.  \harvardyearleft
 Calvo, G.~A.  \harvardyearleft 1998\harvardyearright , `Capital flows and
   capital-market crises {:} the simple economics of sudden stops', {\em Journal
   of Applied Economcs} {\bf 1}.
+
+\harvarditem[Ceruttie et~al.]{Ceruttie, Claessens \harvardand\
+  Ratnovski}{2014}{Cerutti2014}
+Ceruttie, E., Claessens, S. \harvardand\ Ratnovski, L.  \harvardyearleft
+  2014\harvardyearright , `Global liquiity and drivers of cross-border bank
+  flows', {\em IMF Working Paper} {\bf 14}(69).
+
+\harvarditem{{\em Cross-border banking and global liquidity}}{2014}{Bruno2014}
+{\em Cross-border banking and global liquidity}  \harvardyearleft
+  2014\harvardyearright .
+\newblock mimeo, Princeton University.
+
+\harvarditem[Dempster et~al.]{Dempster, Laird \harvardand\
+  Rubin}{1977}{dempster1977maximum}
+Dempster, A.~P., Laird, N.~M. \harvardand\ Rubin, D.~B.  \harvardyearleft
+  1977\harvardyearright , `Maximum likelihood from incomplete data via the em
+  algorithm', {\em Journal of the Royal Statistical Society. Series B
+  (Methodological)} pp.~1--38.
 
 \harvarditem{Dornbusch \harvardand\ Werner}{1995}{DornbuschSS}
 Dornbusch, R. \harvardand\ Werner, A.  \harvardyearleft 1995\harvardyearright ,
@@ -60,6 +124,12 @@ Krugman, P., ed.  \harvardyearleft 2000\harvardyearright , {\em Currency
 Reinhart, C. \harvardand\ Rogoff, K.  \harvardyearleft 2009\harvardyearright ,
   {\em This Time is Different: Eight Centuries of Financial Folly}, Princeton
   University Press, Princeton.
+
+\harvarditem{Rey}{2013}{Rey2013}
+Rey, H.  \harvardyearleft 2013\harvardyearright , Dilemma not trilemma. the
+  global financial cycle and monetary policy independence, {\em in}
+  `Proceedings of the Federal Reseve Bank of Kansas City Economic Symposium in
+  Jackson Hole'.
 
 \harvarditem{Schwartz \harvardand\ Simons}{1991}{Schwartzavailability}
 Schwartz, H. \harvardand\ Simons, A.  \harvardyearleft 1991\harvardyearright ,

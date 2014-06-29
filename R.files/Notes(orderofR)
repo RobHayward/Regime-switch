@@ -1,7 +1,25 @@
 Note
-Use prepare.R first. This contains the functions to download the data and the function forp to calculate the forward profits given the funding currency, investment currency and the time.  
-Use Raw.R to carry out the HMM analysis. 
+Use prepare2.R first. This contains the functions to download the data and the function forp to calculate the forward profits given the funding currency, investment currency and the time.  
+Use Raw.R to carry out the HMM analysis. It will also add a column of 1s for the USD. 
 
 Raw.R will create the estimates and the graphs if the funding and investment currencies are changed. There are no inputs as yet. 
-------------
-What is prepare2.R  ???
+-----------------------
+Test2state.R will loop through funding currencies to produce tables and graphs for 2 regimes. 
+
+Use getpars(fm2) to get parameters
+table has the parameters in order (state 1, state 2 etc)
+table2 has calm and crisis. 
+list has a list of the calm and crisis returns
+list2 has parameters and Loglikelihood
+
+Use slot.names(???) to get the slots for an S4 object.
+http://stackoverflow.com/questions/4713968/r-what-are-slots
+http://stackoverflow.com/questions/4143611/sources-on-s4-objects-methods-and-programming-in-r
+
+=========================
+Depmix is the vignette. 
+=======================
+Chapter10.R and viterbi.R cover the alogos
+
+Raw(test).R has some experiments. 
+
