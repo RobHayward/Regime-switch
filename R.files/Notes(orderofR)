@@ -6,6 +6,8 @@ Raw.R will create the estimates and the graphs if the funding and investment cur
 -----------------------
 Test2state.R will loop through funding currencies to produce tables and graphs for 2 regimes. 
 
+2StageFundTab.R create the table in Notes.tex for the two regimes that are analysed. 
+
 Use getpars(fm2) to get parameters
 table has the parameters in order (state 1, state 2 etc)
 table2 has calm and crisis. 

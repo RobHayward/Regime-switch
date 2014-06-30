@@ -1,18 +1,18 @@
 # This is an update with the new data that runs to end 2013.  
 # Vix has been removed. 
 rm(list = ls())
-require("zoo")
+require(zoo) # for lagging series
 da <- read.csv("Data/CEEUIP.csv", header = TRUE, stringsAsFactors = FALSE)
 da$Date <- as.Date(da$Date, format = "%d/%m/%Y")
 # add USD
-str(da)
 USD <- rep(1, length.out = nrow(da))
 da$USD <- USD
 head(da)
-# call(prepare.R) # If needed------------------------------
-require(zoo) # for lagging series
+str(da)
 require(xtable) # to create table
-# This calculates forward rate and the profits and creates data frame--------
+# This calculates forward rate and the carry profits, and then returns
+# a list with the data.frame, the funding, investment and period as well as
+# the carry profits series--------
 forp <- function(fx, b, m){
   M <- paste(m, "MD", sep = "")
   ra1 <- paste(fx, M, sep = "")

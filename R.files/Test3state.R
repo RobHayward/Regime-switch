@@ -36,10 +36,7 @@ for(i in inv){
    table2[3:4, i] <- table[3:4, i]
  }
 }
-2stageEURtable <- table2
-2stageUSDtable <- table2
-2stageCHFtable <- table2
-2stageJPYtable <- table2
+-------------Create tables for funding currencies
 regimetable <- xtable(table2, digits = 4)
 regimetable
 table2
