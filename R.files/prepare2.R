@@ -30,5 +30,6 @@ forp <- function(fx, b, m){
   g <- list(data = daz, fx = fx, fund = b, period = M, profit = daz[,8])
   return(g)
 }
-a <- forp("HUF", "EUR", 1)
-head(a$data)
+#Test it
+# a <- forp("HUF", "EUR", 1)
+# head(a$data)
