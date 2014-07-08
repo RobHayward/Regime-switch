@@ -7,7 +7,6 @@ inv <- c("HUF", "PLN", "CZK", "RON", "TRY", "BGN",
 fund <- c("EUR", "USD", "CHF", "JPY")
 funding <- list(c(fund))
 list4 <- list(c(fund))
-list4
 for(j in fund){
 # create a matrix for the parameters of the two models
 table <- matrix(1, nrow = 6, ncol = length(inv))
@@ -63,24 +62,12 @@ for(i in inv){
 table3
 funding[[j]] <- table3
 list4[[j]] <- list3
-}
+# Put tables together, calculate mean and assess.
 str(funding)
-# RUB does not work in CHF.  
-# correct CHF for the removal of RUB. 
-funding$JPY
-a <- rep(NA, 6)
-str(list4)
-funding$CHF <- cbind(funding$CHF, rep(0, 6))
-colnames(funding$CHF) <- inv
-funding$CHF <- funding$CHF[,c(1,2,3, 4, 11, 5, 6, 7, 8, 9, 10)]
+# 
 table4 <- rbind(funding$EUR, funding$USD, funding$CHF, funding$JPY)
-rowMeans(table4)
+table4 <- cbind(table4, rowMeans(table4))
+table4
+colnames(table4) <- c(inv, "Mean")
 regimetable <- xtable(table4, digits = 4)
 regimetable
-table3
-m <- matrix(1:9, nrow = 3)
-m[,2] <- c(1, 2, 3)
-m
-m <- cbind(m, c(1, 2, 4))
-m <- m[,c(1, 4, 2, 3)]
-m
