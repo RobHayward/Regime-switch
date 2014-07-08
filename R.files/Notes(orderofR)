@@ -1,10 +1,22 @@
 Note
 Use prepare2.R first. This contains the functions to download the data and the function forp to calculate the forward profits given the funding currency, investment currency and the time.  
-Use Raw.R to carry out the HMM analysis. It will also add a column of 1s for the USD. 
+
+Use Raw.R to carry out the HMM analysis. It will also add a column of 1s for the USD.  This is an example of what can be done. 
+
+The 3StageFundTab.R will loop through funding currencies to calculate profits against each of the investment currencies.  The EEK and LVL do not work.  The RUB does not work against the CHF.  
+
+T
+ 
 
 Raw.R will create the estimates and the graphs if the funding and investment currencies are changed. There are no inputs as yet. 
 -----------------------
 Test2state.R will loop through funding currencies to produce tables and graphs for 2 regimes. 
+
+the "funding"" list collects the profits from the regimes. 
+list4 is a list of each of the funding currencies with the parameters, Loglikelihood, posterior states and probabilities. There is also a zoo profit series for charting.  
+
+****Now want to extract the parameters of the transition matrix****
+This is done in trans.R
 
 2StageFundTab.R create the table in Notes.tex for the two regimes that are analysed. 
 

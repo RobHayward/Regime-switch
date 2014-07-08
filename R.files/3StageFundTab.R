@@ -1,13 +1,15 @@
 require(depmixS4)
 set.seed(3)
 # EEK and LVL do not seem to work. Is it the NAs? 
-inv <- c("HUF", "PLN", "CZK", "RON", "RUB", "TRY", "BGN", 
+# RUB does not work with CHF
+inv <- c("HUF", "PLN", "CZK", "RON", "TRY", "BGN", 
          "NOK", "ISK", "UAH", "HRK")
 fund <- c("EUR", "USD", "CHF", "JPY")
 funding <- list(c(fund))
+list4 <- list(c(fund))
+list4
 for(j in fund){
 # create a matrix for the parameters of the two models
-list2 <- list(c(inv))
 table <- matrix(1, nrow = 6, ncol = length(inv))
 rownames(table) <- c("mean1", "sd1", "mean2", "sd2", 
                      "mean3", "sd3") 
@@ -15,7 +17,7 @@ colnames(table) <- inv
 list3 <- list(c(inv))
 for(i in inv){
   # EUR 1 month
-  a <- forp(i, "EUR", 1)
+  a <- forp(i, j, 1)
   profit <- a$data$p
   mod3 <- depmix(profit ~ 1, nstates = 3, data = da)
   fm3 <- fit(mod3, verbose = FALSE)
@@ -31,10 +33,9 @@ for(i in inv){
   list3[[i]]$posterior$Date <- index(list3[[i]]$profit)
 }
 # table 2 will order the state by size of the return (highest first for "calm")
-table
 table3 <- matrix(1, nrow = 6, ncol = length(inv))
-rownames(table2) <- c("Calm", "SD1", "Build", "SD2", "Crash", "SD3") 
-colnames(table2) <- inv
+rownames(table3) <- c("Calm", "SD1", "Build", "SD2", "Crash", "SD3") 
+colnames(table3) <- inv
 for(i in inv){
   if(table[1, i] < table[3, i] & table[1, i] < table[5, i]) {
     table3[5:6, i] <- table[1:2, i]
@@ -59,11 +60,27 @@ for(i in inv){
   }
   
 }
+table3
 funding[[j]] <- table3
+list4[[j]] <- list3
 }
 str(funding)
-head(funding$EUR)
-table3 <- rbind(funding$EUR, funding$USD, funding$CHF, funding$JPY)
-regimetable <- xtable(table3, digits = 4)
+# RUB does not work in CHF.  
+# correct CHF for the removal of RUB. 
+funding$JPY
+a <- rep(NA, 6)
+str(list4)
+funding$CHF <- cbind(funding$CHF, rep(0, 6))
+colnames(funding$CHF) <- inv
+funding$CHF <- funding$CHF[,c(1,2,3, 4, 11, 5, 6, 7, 8, 9, 10)]
+table4 <- rbind(funding$EUR, funding$USD, funding$CHF, funding$JPY)
+rowMeans(table4)
+regimetable <- xtable(table4, digits = 4)
 regimetable
 table3
+m <- matrix(1:9, nrow = 3)
+m[,2] <- c(1, 2, 3)
+m
+m <- cbind(m, c(1, 2, 4))
+m <- m[,c(1, 4, 2, 3)]
+m

@@ -12,8 +12,8 @@ library(xts)
 # First set up the model (mod). This is a model 
 # of the log return with two states. Then fit the model.   
 set.seed(3)
-mod2 <- depmix(PPLNUSD ~ 1, nstates = 2, data = da)               
-mod3 <- depmix(PPLNUSD ~ 1, nstates = 3, data = da)
+mod2 <- depmix(PPLNEUR ~ 1, nstates = 2, data = da)               
+mod3 <- depmix(PPLNEUR ~ 1, nstates = 3, data = da)
 # it is possible to set the staring values at this point. 
 # trstart = transition start.
 # instart = prior probabilities
@@ -32,7 +32,7 @@ depmixS4::summary(fm3)
 # What dates are system 2?
 # Change state to crash
 da$Date[which(posterior(fm2)[,1] == 2)]
-da$Date[which(posterior(fm3)[,1] == 2)]
+da$Date[which(posterior(fm3)[,1] == 1)]
 getpars(fm2)
 getpars(fm3)[13]
 pst2 <- posterior(fm2)
@@ -42,10 +42,10 @@ pst3 <- posterior(fm3)
 # pdf("Figures/PLNUSD.pdf", paper= "a4", title = "PLN-USD Carry")
 par(mfrow = c(4,1))
 # mfrow = c(4,1)) does not work.  Why? 
-pst2$Date <- index(PPLNUSD)
-pst3$Date <- index(PPLNUSD)
+pst2$Date <- index(PPLNEUR)
+pst3$Date <- index(PPLNEUR)
 # This just adds a date series for the ppi file (the same as PPLNUSD)
-plot(PPLNUSD, main = "PLN carry log returns", type = 'l')
+plot(PPLNEUR, main = "PLN carry log returns", type = 'l')
 abline(h = 1)
 plot(pst3[,2] ~ pst2$Date, type = 'l', main = "Probability in State 1: Build")
 plot(pst3[,3] ~ pst2$Date, type = 'l', main = "Probability in State 2: Crash")

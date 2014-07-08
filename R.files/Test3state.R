@@ -28,7 +28,7 @@ for(i in inv){
 }
 # table 2 will order the state by size of the return (highest first for "calm")
 table
-table2 <- matrix(1, nrow = 6, ncol = length(inv))
+table3 <- matrix(1, nrow = 6, ncol = length(inv))
 rownames(table3) <- c("Calm", "SD1", "Build", "SD2", "Crash", "SD3") 
 colnames(table3) <- inv
 for(i in inv){
@@ -56,9 +56,15 @@ if(table[5, i] < table[1, i] & table[5, i] < table[3, i]) {
 
 } 
 str(list3)
-table3
 rowMeans(table3)
-i = "HUF"
+# Need a vector or exchange rate regimese
+# COmpare performance by exchange rate regime
+# What other comparisons can be carried out? 
+fxregime <- c(2, 3, 3, 2, 2, 3, 1, 3, 3, 2, 2)
+# where 1 is fixed, 2 is controlled and 3 is floating
+table3 <- rbind(table3, fxregime)
+rowMeans(table3[,which(table3[7,] == 3)])
+rowMeans(table3[,which(table3[7,] == 2)])
 # -------------Create tables for funding currencies
 regimetable <- xtable(table3, digits = 4)
 regimetable
