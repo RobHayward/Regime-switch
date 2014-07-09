@@ -59,9 +59,10 @@ for(i in inv){
   }
   
 }
-table3
+
 funding[[j]] <- table3
 list4[[j]] <- list3
+}
 # Put tables together, calculate mean and assess.
 str(funding)
 # 
