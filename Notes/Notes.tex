@@ -428,6 +428,8 @@ The parameters of the 2 regime model are given in Table \ref{tabref:2StateProb}.
 \end{table}
 \end{landscape}
 
+
+
 What is really needed here in the results are:
 \begin{itemize}
 \item A table with all the returns from the two or three regimes (using different bases).  Retruns can be compared in each of the regimes (which are similar, which are different? 
@@ -441,16 +443,9 @@ The allocation of the regimes is based on two principles:  the crash should have
 
 In this case, the only profitable trades are those in the period of build.  However, unsually, this is also the time of greatest risk (if risk is defined as the standared deviation of these returns).  
 
-The transion matrix is 
+Here are some examples of the returns that are acheived in each of the states and the transition matrix that goes along with them.  
 
- \begin{centering}
- \begin{tabular}{l c c c}
- & to Build & to Crash & to Fear\\
- From Build & 0.83 & 0.00 & 0.17\\
- from Crash & 0.00 & 0.40 & 0.60\\
- from Fear & 0.55 & 0.10 & 0.34
- \end{tabular}
- \end{centering}
+ 
  
 We need to look at these matrices to identify how realisetic the model is. 
 
@@ -462,16 +457,150 @@ Three regimes can be identified: number one, the cautious period; number two, th
 
 The R files work as follows: prepare.R loads the data and creates the profits function; Raw(test).R will test data. 
 
-\subsection{PLNUSD}
-For the 1-month PLN-USD carry-trade sample, a three stage HMM is fitted.  The parameters of the models are 
+\subsubsection{HUFEUR}
+There are very large differences between the returns that are achieved in each of these regimes: in the period of caution, UIP holds; in the period when specualtive postitions are in place, a return of 7\% is achieved for little addtiional risk; in the crash there is an average loss of just less than 4\% and an increase in risk. 
 
-\begin{tabular}{l | l l}
-State & Mean & SD \\
-\hline
-State 1 & 1.0109 & 0.0309\\
-State 2 & 0.9317 & 0.0486\\
-State 3 & 1.040982 & 0.0432\\
-\end{tabular}
+\begin{centering}
+ \begin{tabular}{l c c c}
+ & Caution & Build & Crash \\
+ \hline
+ Mean & 1.0004 & 1.0731 & 0.9672\\
+ St-Dev & 0.0398 & 0.0342 & 0.1109\\
+ \end{tabular}
+ \end{centering}
+
+The transition matrix is less consistent with the FIH:  it is possible to move from a regime of caution to one of crash; from build, it is more likely that there will be a return to caution than a crash; the crash can return to building without moving to the cautious phase.   
+
+ \begin{centering}
+ \begin{tabular}{l c c c}
+ & to Caution & to Build & to Crash\\
+ \hline
+ from Caution & 0.7474 & 0.1913 & 0.0513\\
+ from Build & 0.7515 & 0.2485 & 0.0000\\
+ from Crash & 0.0000 & 0.2214 & 0.7786
+ \end{tabular}
+ \end{centering}
+
+\subsubsection{HUFCHF}
+The level of risk in the carry trade funded by CHF is lower than that when the EUR is used.  The difference between the perild of crash and caution is quite modest in terms of average returns but is concetrated on the level of risk.  
+
+\begin{centering}
+ \begin{tabular}{l c c c}
+ & Caution & Build & Crash \\
+ \hline
+ Mean & 1.0025 & 1.0521 & 0.9946\\
+ St-Dev & 0.0161 & 0.0131 & 0.0491\\
+ \end{tabular}
+ \end{centering}
+
+Once the crash, characterised as the more volatile period, begins, the regime is likely to be maintained.  This may mean that a transition model better represents the evolutin of financial instability in this market. It requires a transfer function to represent a step increase in risk. 
+
+ \begin{centering}
+ \begin{tabular}{l c c c}
+ & to Caution & to Build & to Crash\\
+ \hline
+ from Caution & 0.9105 & 0.0521 & 0.0374\\
+ from Build & 0.6652 & 0.3348 & 0.0000\\
+ from Crash & 0.0000 & 0.0807 & 0.9193
+ \end{tabular}
+ \end{centering}
+ 
+
+subsubsection{HUFJPY}
+The level of risk is the key differential between the carry trade profits that are achieved in each of the regimes.  The returns that are achieved are fairly modest but the risk is much higher in the period when there is a crash.   
+
+\begin{centering}
+ \begin{tabular}{l c c c}
+ & Caution & Build & Crash \\
+ \hline
+ Mean & 1.0119 & 1.0149 & 0.9985\\
+ St-Dev & 0.0440 & 0.0225 & 0.0671\\
+ \end{tabular}
+ \end{centering}
+
+Once the crash, characterised as the more volatile period, begins, the regime is likely to be maintained.  This may mean that a transition model better represents the evolutin of financial instability in this market. It requires a transfer function to represent a step increase in risk. 
+
+ \begin{centering}
+ \begin{tabular}{l c c c}
+ & to Caution & to Build & to Crash\\
+ \hline
+ from Caution & 0.0001 & 0.9732 & 0.0267\\
+ from Build & 0.8552 & 0.1448 & 0.0000\\
+ from Crash & 0.0215 & 0.0000 & 0.9785
+ \end{tabular}
+ \end{centering}
+ \subsubsection{PLNEUR}
+Again, the data from the transition matrix suggests that it may be better to model this as a step increase in risk that happens after the financial crisis.  it may be that the system can be characterised as having either four or six regimes divided into pre and post financial crisis periods. 
+
+\begin{centering}
+ \begin{tabular}{l c c c}
+ & Caution & Build & Crash \\
+ \hline
+ Mean & 0.9952 & 1.0255 & 0.9719\\
+ St-Dev & 0.1119 & 0.0490 & 0.0518\\
+ \end{tabular}
+ \end{centering}
+
+It is encouraigng that the transition matrix suggests that it is most likely that regimes remain where they are.  If there is a state of "caution", there is 85\% probability that the state will remian cautious; there is just less than 15\% chance that there will be a switch to a regime when speculative positions are built.  Once in the "Build" regime, there is just over 95\% chance that this will be maintained and there is a 4\% chance that there will be a crash.  
+
+ \begin{centering}
+ \begin{tabular}{l c c c}
+ & to Caution & to Build & to Crash\\
+ \hline
+ from Caution & 0.8531 & 0.1469 & 0.0000\\
+ from Build & 0.0000 & 0.9569 & 0.0431\\
+ from Crash & 0.2726 & 0.0000 & 0.7274
+ \end{tabular}
+ \end{centering}
+ 
+\subsubsection{RONEUR}
+The differences between the carry-trade returns that are achieved in these three regimes are relatively modest.  A return of just less than 6\% is achieved in the period when speculative positions are being build.  The periods of caution and crash are not much different, though there is some increase in risk in the crash phase. 
+
+\begin{centering}
+ \begin{tabular}{l c c c}
+ & Caution & Build & Crash \\
+ \hline
+ Mean & 1.0007 & 1.0569 & 0.9956\\
+ St-Dev & 0.0341 & 0.0404 & 0.0874\\
+ \end{tabular}
+ \end{centering}
+
+The periods of caution and crash predominate. However, once the crash phase is established, it is mantained.  It would be interesting to see the proportion of time that is spent in each of these regimes.  
+
+ \begin{centering}
+ \begin{tabular}{l c c c}
+ & to Caution & to Build & to Crash\\
+ \hline
+ from Caution & 0.7474 & 0.1913 & 0.0513\\
+ from Build & 0.7515 & 0.2485 & 0.0000\\
+ from Crash & 0.0000 & 0.2214 & 0.7786
+ \end{tabular}
+ \end{centering}
+
+\subsubsection{ISKEUR}
+There are large losses and high risk in the perild of crash.  There are very small return and low risk in the period of caution. 
+
+
+\begin{centering}
+ \begin{tabular}{l c c c}
+ & Caution & Build & Crash \\
+ \hline
+ Mean & 1.0033 & 1.0106 & 0.9386\\
+ St-Dev & 0.0100 & 0.0572 & 0.1791\\
+ \end{tabular}
+ \end{centering}
+
+The crash seems to come from a position of caution.  The figure suggest that it is difficult to distinguish between the periods of caution and build.  This may be a case where the two-regime model provides a better fit. 
+
+ \begin{centering}
+ \begin{tabular}{l c c c}
+ & to Caution & to Build & to Crash\\
+ \hline
+ from Caution & 0.3476 & 0.5951 & 0.0573\\
+ from Build & 0.0947 & 0.9053 & 0.0000\\
+ from Crash & 0.2089 & 0.0000 & 0.7911
+ \end{tabular}
+ \end{centering}
 
 \begin{figure}[h!]
 \centering

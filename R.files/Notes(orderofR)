@@ -5,7 +5,7 @@ Use Raw.R to carry out the HMM analysis. It will also add a column of 1s for the
 
 The 3StageFundTab.R will loop through funding currencies to calculate profits against each of the investment currencies.  The EEK and LVL do not work.  The RUB does not work against the CHF.  
 
-T
+Trans.R will create tables of the regime parameters and transition matrix parameters. 
  
 
 Raw.R will create the estimates and the graphs if the funding and investment currencies are changed. There are no inputs as yet. 
