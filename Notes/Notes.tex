@@ -7,7 +7,7 @@
 %\usepackage{setspace}
 \usepackage{pdflscape}
 %\usepackage[flushleS]{threeparttable}
-%\usepackage{multirow}
+\usepackage{multirow}
 \usepackage[comma, sort&compress]{natbib}% Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
 \usepackage{graphicx}
 \graphicspath{{./Figures/}} % Specifies the directory where pictures are stored
@@ -23,73 +23,71 @@
 \date{\today}
 \maketitle
 \begin{abstract}
-Hyman Minsky argued that financial instability would increase through an evolution that ran from stability to precarious instability, from one characterised by \emph{hedge financing} into successively more fragile regimes of \emph{speculative financing} and \emph{Ponzi financing}.  Though this process is not directly observable, there are financial market outcomes that are more likely to be prevalent in each of these regimes.  Analysis of \emph{carry trade} returns, the attempt to take advantage of deviations from \emph{uncovered interest partiy} (UIP), is used to identify the stages of increasing financial fragility.  Return characteristics change as financial instability develops so that the process can be modeled as a Markov chain where the states are unobserved but the outcomest are conditional on  the financial regime.  The parameters of a Hiden Markov Model (HMM) can be used to aid understanding of evolution in the vlunerabilty of the financial system.  %some additional points on bubbles and conclusions can be added.  
+Hyman Minsky argued that financial instability would increase with an evolution that ran from caition through increasing specilation into one of precarious instability, from one characterised by \emph{hedge financing} into successively more fragile regimes of \emph{speculative financing} and \emph{Ponzi financing}.  Though this process is not directly observable, there are financial market outcomes that are more likely to be prevalent in each of these regimes.  Analysis of \emph{carry trade} returns, the attempt to take advantage of deviations from \emph{uncovered interest partiy} (UIP), is used to identify the stages of increasing financial fragility.  Return characteristics change as financial instability develops so that the process can be modeled as a Markov chain where the states are unobserved but the outcomest are conditional on  the financial regime.  The parameters of a Hiden Markov Model (HMM) can be used to aid understanding of evolution in the vlunerabilty of the financial system, the factors that can influence the level of instability and may provide real-time indicators about the level of financial risk. 
 
 \end{abstract}
 
 \section{Introduction}
-International financial conditions following the 2007-08 crisis have fuelled the growth of investments in emerging and transition economies by providing large amount of funding-currency liquidity and relatively attractive investment oppoprtunities. However, the indiction from Federal Reserve Chairmn Ben Bernanke on May 22nd and December 18th 2013, hinting that the central bank would cut back its pace of liquidity inject by gradully reducing its monthly bond purchase triggered a sharp sell-off in emerging bond and equity markets as well as their associated currencies.  This market reaction has brought attention back to relationship between US monetary policy and the flow of capital to emerging economies.  
+As size of international capital flow has increased and become subject to less constraint, countries have faced repeated struggles with financial instability.  An inflow of capital from outside can appear superficially attractive but its arrival can shape institutions, economic development and political opinion and portfolio flows can disappear even more swiftly than they arrive.  Financial systems of transition and emerging economies are less developed than those of the the international finance centres and therefore there is scope in these places for the financial sector to increase relative to overall level of economic activity as well as in absolute terms.  This process can attract financial entities from more developed economies. \citet{ONBcarry} and \citet{EBRD} survey the expansion of Euro area banks into the Central and Eastern European trasition economies; \citet{Gabor} discusses the political economy of this \emph{financialization} where the financial system expands to new sections of the economy.  
 
-There is also a debate over whether it is monetary policy that is important or the level of international risk aversion or even the supply of global liquidity. There are also question about how factors such as the level of financial development, exchange rate regime and cultural elements affect the susceptibility to external influences.  There seem to be three types of influence:  monetary policy, internatiknal risk aversion and the financial health of banking systems in international financial centres.  This has drawn attention to the effect of a change in Fed policy may have on capital flows to emerging and transition markets.  
-
-\citet{Cerutti2014} ask three questions:  what drives global liquidity. where does the global liquidity cycle originate and how can the borrowing country manage its exposure to global liquidity? The focus is on cross-border banking flows. GLobal liquidity is affected by uncertainty and risk aversion.  This can be be captured by the VIX index of S\&P 500 option volatilities;\footnote{This used frequently, see for example, \citet{Rey2013}}.US domestic conditions also affect the supply of international liquidity, \citet{Bruno2014} suggests the Tbill-EuroDollar (TED) spread or credit growth as a measure for credit conditions in US banking; Monetary policy, as measured by short-term interest rates is also important 
-
-\citet{Cerutti2014} find that finds that uncertainty and risk-aversion are highly correlated across countries. However, bank conditions and monetary policy actions in countries outside the US can also have an influence. They have three specific findings:  an increase in the VIX index and reduction in US dealer bank leverage and a rise in the term premia reduce cross border bank lending.  There is also a small interest rate effec.  In a comparison of the effect of US and European domestic credit conditions and monetary policy affect lending to Asia (to remove regional influence).  Leverage conditions and TED spreads in Europe are more important for lending to Asia.  US interest rate features are the most important. They conclude that while the US drives the global liquidity cycle through its monetary policy, other financial centers (particualrly European) affect the financial cycle through the conditions of their banks. This suggests that global liquidity is affected by global financial conditions rather than monetary policy (though, they are of course related). 
-
-\href{http://www.federalreserve.gov/pubs/feds/2014/201446/201446abs.html}{Fed Paper} \citet{FTS} analyse Flight-to-Safety (FTS) episodes for 23 countries as identified from stock and equity returns.  These episodes comprise less than 3\% of the sample of daily data that runs from January 1980 to January 2012. Most of the events are country specific and are associated with an increase in the VIX index and the TED spread.  They are also associated with falls in consumer sentiment indices and appreciations of the yen, swiss franc and US dollar. Financial, basic materials and industrial industries under-perform in FTS periods while telecoms outperform; money market instruments, corproate bonds and commodity prices (other than precious metals) face abnormal negative returns, hedge funds (particularly "event-driven" display negative FTS beta.  Liquidity deteriorates on FTS days in bond and equity markets. Economic growth and inflation decline in the year after a FTS event. 
-
-\href{http://www.imf.org/external/pubs/cat/longres.aspx?sk=41655.0}{IMF:  Impact of Fed tapering annoncement on emerging markets}.  Using daily data on exchange rates, stock prics and emerging market bonds, \citet{Tapering} finds that exchange rates and bonds were less affected by international liquidity shocks than stock markets and were more likely to reflect domestic fundamentals (stronger macroeconomic fundamentals and policy as well as more developed financial markets. 
-
-\citet{Ahmed2014} studies the determinants of private capital flows to emerging markets, finding that growth, interest rate differentials and global risk appetite are important.  They find that capital flows have been more sensitive to interest rate differentials since the crisis. There is also some evidnece that quantitative easing has had some effect on capital flows. 
-
-There is evidence that the international financial cycle is increasingly global.  Rey 2013, Obstfeldt 2014 and Bruno and Shin 2014.  \href{http://www.voxeu.org/article/primer-global-liquidity}{VOX: GLobal Financial Liquidity}. For example, there is evidence the correlation of cross-broder credit growth has increased since the 1990s. Funds increasingly flow from the finacial centers to the rest of the world. As such, the G4 (term used by VOX - Claessens and Ratnovski as US, Eurozone, UK and Japan), credit and liquidity condictions affect the rest of the world. How is global liqudity measured? Global liqudity is "those credit supply factors in financial center economies that affect the provision of cross-broder credit".  Under this definition, it is specific to global funding liquidity. It is different from financial market liquidity. Therefore, financial conditions and polcy in G4 countries affect financial conditions globally. 
-
-%Need to go back and look at this paper in more detail. 
-
-
- \citet{IMFLatam} use a panel VAR method to assess the effect of US monetary policy since 1990 on capital flows to 38 emerging economies, finding evidence that Fed tapering while not necessarily leading to capital outflow, could generate \emph{new risk premium shocks}.   Similarly, \citet{NYFedtaper} assesses changes in global risk aversion on strategies that borrow low interest rates to invest in higher yields.  They find that the initial signal from the US central bank in Fed Chairman Bernanke's May 22 2013 testimony to Congress coinciced with an increase in global risk aversion which affected global asset prices. They use the approach presented by \citet{MertensSVAR} to estimate the effect of policy changes by using a two-stage least squares appraoch to identify the SVAR model of asset price changes.  By identifying the performance of exchange rates without a change in risk aversion, they find that nearly half of the depreciation of a basket of 45 carry-trade currencies with the largest one-month interest rate relative to a basket of the US dollar and other equally low rate currencies is explained by the increased risk aversion. Using a similar method they find that nearly all the decline in Emerging market equities is attributable to the increase in risk aversion.
-
-
-\subsection{CEE}
-Economies in transition have faced repeated struggles with financial instability.  The pressure to open economies to international finance has exacerbated this risk as it has added a huge stock of international financial capital to the potential flow that can enter during the country during the optimistic expansionary stage with more significant and adverse consequences when the it retreats.
-
-When economies are in trasition, economic norms and institutions are changing and it becomes easy to downplay the likelihood that previous economic shocks will be repeated.  The idea that conditions are new gains weight.  Financial system tend to be less developed and therefore there is scope for finance to increase in absolute terms as well as relative to overall level of economic activity.  This process can attract financial entities from more developed economies. \citet{ONBcarry} and \citet{EBRD} surbvey the expansion of Euro area banks into the Central and Eastern European trasition economies; \citet{Gabor} discusses the political economy of this \emph{financialization} where the financial system expands to new sections of the economy.  
-
-Money flows in and it can retreat just as swiftly.  The evolution of financial risk is familiar. \citet{DornbuschSS}, \citet{CalvoSS} and \citet{KrugmanSS} have been associated with the term \emph{sudden stop} to emphasise the importane of the inflow that takes place before the currency crisis in understanding the disruptive effects of the reversal.   
+Money flows in and it can retreat just as swiftly.  The evolution of financial risk is familiar. \citet{DornbuschSS}, \citet{CalvoSS} and \citet{KrugmanSS} have been associated with the term \emph{sudden stop} to emphasise the importance of the inflow that takes place before the currency crisis in understanding the disruptive effects of the reversal.   
 
 %other references 
  %Abiad, A., 2003. Early-Warning Systems: A Survey and and a Regime-Switching Approach. IMF Working Paper No.03/32. International Monetary Fund.
  %Aziz, J., Caramazza, F., Salgado, R., 2000. Currency Crises: In Search of Common Elements. IMF Working Paper No.00/67. International Monetary Fund
  %Calvo, G., 2000. Balance-of-Payments Crises in Emerging Markets: Large Capital Inflows and Sovereign Governments, in: Krugman, P. (Ed.), Currency Crises, University of Chicago Press, Chicago, Illinois,
- \href{http://mpra.ub.uni-muenchen.de/383/}{http://mpra.ub.uni-muenchen.de/383/}
+% \href{http://mpra.ub.uni-muenchen.de/383/}{http://mpra.ub.uni-muenchen.de/383/}
 
-As such, there is increased skepticism about the benefit of the free flow of international capital since the dispuptive currency crises spilt from Mexico through Asia, Russia and other parts of the world in the 1990s.  In addition, the story of \emph{global imbalances} and the phenomenon of developing China lending to the US flies in face of the theory that suggests that rich developed countries will aid the progress of the less developed by providing the funding for deepening of capital.  
+%As such, there is increased skepticism about the benefit of the free flow of international capital since the dispuptive currency crises spilt from Mexico through Asia, Russia and other parts of the world in the 1990s.  In addition, the story of \emph{global imbalances} and the phenomenon of developing China lending to the US flies in face of the theory that suggests that rich developed countries will aid the progress of the less developed by providing the funding for deepening of capital.  
 
+%Bernanke speaking to Joint Economic Committee on 22-May-13.  Speaking about moderating asset purchase, but not yet. 
+%http://www.federalreserve.gov/newsevents/testimony/bernanke20130522a.htm
+
+International financial conditions following the 2007-08 crisis have fuelled the growth of investments in emerging and transition economies by providing large amount of funding-currency liquidity and relatively attractive investment oppoprtunities. However, the indiction from Federal Reserve Chairmn Ben Bernanke on May 22nd 2013, hinting that the central bank would cut back its pace of liquidity inject by gradully reducing its monthly bond purchase triggered a sharp sell-off in emerging bond and equity markets as well as their associated currencies.  This market reaction has drawn attention to the risks associated with international capital flows  as well as the relationship between US monetary policy and the flow of capital to transition and emerging economies.  Amongst the debating points are questions about the relationship between capital flows and US monetary policy, international liquidity and the appetite for risk amongst international investors. What is the relationship between international and domestic factors in the evolution of currency crises? 
+
+\citet{Cerutti2014} ask three questions:  what drives global liquidity. where does the global liquidity cycle originate and how can the borrowing country manage its exposure to global liquidity? The focus is on cross-border banking flows. Global liquidity is affected by uncertainty and risk aversion.  \citet{Cerutti2014} find that finds that uncertainty and risk-aversion are highly correlated across countries. However, bank conditions and monetary policy actions in countries outside the US can also have an influence. They have three specific findings:  an increase in the VIX index and reduction in US dealer bank leverage and a rise in the term premia reduce cross border bank lending.  There is also a small interest rate effect.  In a comparison of the effect of US and European domestic credit conditions and monetary policy affect lending to Asia (to remove regional influence).  Leverage conditions and TED spreads in Europe are more important for lending to Asia.  US interest rate features are the most important. They conclude that while the US drives the global liquidity cycle through its monetary policy, other financial centers (particualrly European) affect the financial cycle through the conditions of their banks. This suggests that global liquidity is affected by global financial conditions rather than monetary policy (though, they are of course related). 
+
+%\href{http://www.federalreserve.gov/pubs/feds/2014/201446/201446abs.html}{Fed Paper} 
+By contrast, \citet{FTS} analyse Flight-to-Safety (FTS) episodes for 23 countries as identified from stock and equity returns.  These episodes comprise less than 3\% of the sample of daily data that runs from January 1980 to January 2012.  They find that most of the events are country specific and are associated with an increase in the VIX index and the TED spread.\footnote{The VIX index is an index of implied volatility on options from the S\&P 500 index, the TED spread is the spread between the treasury bill and the Euro-dollar rate.  They are used as measures of international risk aversion.  The first reflects increased demand for option protection against large moves in the main US stock market, the second shows the difference in short-term borrowing costs for the US government and a representative financial institution.}  These FTS eposodes are also associated with lower levels of consumer sentiment, appreciation of the  Yen, Swiss franc and US dollar funding currencies. %Financial, basic materials and industrial industries under-perform in FTS periods while telecoms outperform; money market instruments, corproate bonds and commodity prices (other than precious metals) face abnormal negative returns, hedge funds (particularly "event-driven" display negative FTS beta.  Liquidity deteriorates on FTS days in bond and equity markets. 
+Economic growth and inflation decline in the year after a FTS event. 
+
+%\href{http://www.imf.org/external/pubs/cat/longres.aspx?sk=41655.0}{IMF:  Impact of Fed tapering annoncement on emerging markets}.  
+There is variety in the way that US monetary shocks affect transition and emerging economies.  Using daily data on exchange rates, stock prics and emerging market bonds, \citet{Tapering} finds that exchange rates and bonds were less affected by international liquidity shocks than stock markets.  They also find that stronger domestic macroeconomic fundamentals, more prudent financial policy and deeper financial markets provide some insulation against US monetary policy shocks. 
+
+Consistent with the evidence of an interplay between monetary policy and international risk, \citet{Ahmed2014} studies the determinants of private capital flows to emerging markets, finding that economic growth, interest rate differentials and the level of global risk appetite are all important.  They find that capital flows have been more sensitive to interest rate differentials since the financial crisis of 2007-08. There is also some evidnece that quantitative easing has had some effect on capital flows. 
+
+ \citet{IMFLatam} use a panel VAR method to assess the effect of US monetary policy since 1990 on capital flows to 38 emerging economies, finding evidence that Fed tapering while not necessarily leading to capital outflow, could generate \emph{new risk premium shocks}.   Similarly, \citet{NYFedtaper} assesses changes in global risk aversion on strategies that borrow low interest rates to invest in higher yields.  They find that the initial signal from the US central bank in Fed Chairman Bernanke's May 22 2013 testimony to Congress coinciced with an increase in global risk aversion which affected global asset prices. %They use the approach presented by \citet{MertensSVAR} to estimate the effect of policy changes by using a two-stage least squares appraoch to identify the SVAR model of asset price changes.  
+By identifying the performance of exchange rates without a change in risk aversion, they find that nearly half of the depreciation of a basket of 45 carry-trade currencies with the largest one-month interest rate relative to a basket of the US dollar and other equally low rate currencies is explained by the increased risk aversion. Using a similar method they find that nearly all the decline in Emerging market equities is attributable to the increase in risk aversion.
+
+There is evidence that the international financial cycle is increasingly global \citet{Rey2013}, \citep{Obstfeld2013} and \citet{Bruno2013}.  %\href{http://www.voxeu.org/article/primer-global-liquidity}{VOX: GLobal Financial Liquidity}. 
+For example, there is evidence the correlation of cross-broder credit growth has increased since the 1990s and that, funds increasingly flow from the finacial centers to the rest of the world. As such \citet{Cerutti2014} find that credit and liquidity contractions in  the US, Eurozone, UK and Japan affect the rest of the world. Credit supply in financial center economies affect the provision of cross-broder credit.  This is what they call \emph{global funding liquidity}, a feature that affects financial conditions globally. 
+
+The theme of this recent research is of an interplay between international and domestic factors.  It is clear that there are a range of features, 
+including economic, institutional and cultural that can affect this interation and teh evolution of interaction of international financial risk. 
 \subsection{Carry trade}
-In general, international currency flows are running from developed economies to developing but, during the period of crisis.These periods of currency crisis, flight-to-quality (FTQ) or flight-to-safety (FTS), are periods when international currency flows rapidly reverse. One specific part of the range of international capital flows that has attracted particular attention and one  that can represent all the other portfolio flows is the \emph{carry-trade}.  This is the attempt to take advantage of the break down in \emph{uncovered interest partity} (UIP)\footnote{See xxx for an overview of the breakdown in UIP and .... for more on the carry trade} by funding an investment in relatively high yielding transition currencies with a low interest base.  UIP is the theory that interest rate differentials between currencies shoud be matched by an equal expectation that the low rate currency will appreciate against the higher rate until expected returns from the activity are reduced to just a compensation for taking risk. The base currencies are the US dollar, the Euro, the Swiss franc and the Japanese yen.  These are the safe-haven currencies used in \citet{HabibStracca}, and they are base units that are found to appreciate during periods of FTS in \citet{FTS}.   The carry-trade transfers credit booms in developed economies to the rest of the world and draws developed financial institutions up against the emerging financial institutions in other countries. The carry-trade also represents a broader proxy for international portfolio flows.   
+One specific part of the range of international capital flows that has attracted particular attention and one  that can represent all the other portfolio flows is the \emph{carry-trade}.  This is the attempt to take advantage of the break down in \emph{uncovered interest partity} (UIP)\footnote{See xxx for an overview of the breakdown in UIP and .... for more on the carry trade} by funding an investment in relatively high yielding transition currencies with a low interest base.  UIP is the theory that interest rate differentials between currencies shoud be matched by an equal expectation that the low rate currency will appreciate against the higher rate until expected returns from the activity are reduced to just a compensation for taking risk. The base currencies are the US dollar, the Euro, the Swiss franc and the Japanese yen.  These are the safe-haven currencies used in \citet{HabibStracca}, and they are base units that are found to appreciate during periods of FTS in \citet{FTS}.   T
 
-There is wide spread evidence that UIP does not hold on average but this does not mean that excess returns are possible.  It is suggested that these returns disappear with a more multifacetted assessment of risk is taken.  Most noteably, the small risk of a large loss, so-called \emph{crash risk} is either something that is to be avoided by most investors who are willing to pay to transfer this risk to other entities or is something that mis-perceived by myopic, over-confident economic agents suffereing behavioural biases.  
+There is wide spread evidence that UIP does not hold on average but this does not mean that excess returns are possible.  These returns disappear with a more multifacetted assessment of risk is taken.  Most noteably, the small risk of a large loss, so-called \emph{crash risk} is either something that is to be avoided by most investors who are willing to pay to transfer this risk to other entities or is something that mis-perceived by myopic, over-confident economic agents suffereing behavioural biases.  
 
-For example, \citet{BrunnermeierCarry} analyses a sample of carry trades and finds that the returns are characterised by negative skew and a larger than normal risk of extreme loss;\citet{JurekCrash} assess the cost of purchasing option protection against crash-risk and finds that it covers a proportion of the excess returns that seem to be generated by the carry-trade; %\citet{Hayward} 
-compares carry returns in period of calm and periods of crisis (as measured by elevated levels of the VIX index) and finds that carry returns a negative, skewed and fat-tailed when international risk aversion is heightened.  
+For example, \citet{BrunnermeierCarry} analyses a sample of carry trades and find that the returns are characterised by negative skew and a larger than normal risk of extreme loss; \citet{JurekCrash} assess the cost of purchasing option protection against crash-risk and finds that it covers a proportion of the excess returns that seem to be generated by the carry-trade; \citet{Hayward2013} compares carry returns in period of calm and periods of crisis (as measured by elevated levels of the VIX index) and finds that carry returns a negative, skewed and fat-tailed when international risk aversion is heightened.  
 
 %Do the next two paragraphs set up the dicotomy between the domestic factors and the international (flight-to-quality) factors?  THere are a range of facts:  EM debt rose from 650bn in 2001 to 6.9tn in 2013 according to BIS data.  
 
-
 \subsection{The instability cycle}
-The aim of this study is to understand more about the evolution of financial instability.  What are the factors that surround a move from caution to the building of risk and what are the factors that are associated with the movement from risk-building to collapse?  What are the main theories that presented.  We have spoken about Krugmand and Fisher.  However, Minsky provides a very powerful description of the financial instability cycle.   There have been a number of attempts to identify levels of finacial risk.  This has clearly become even more of an issue since the financial crisis. Referenes (BIS etc measurements????).  For example, \citet{IFCMeasure}.  The IMF have developed a range of \emph{Financial Soundness Indications} (IMF 2006).     Also - Hawkins and Klau (2000), Nelson and Perli (2005) and Gray et al (2007).  There are six main strands:  the real sector, including fiscal position and inflation; the corporate sector, specifically the level of debt and overseas exposure; the ability of the household sector to weather downturns; the external sector, including the foreign exchange position and the capital account; the financial sector; finacial markets. 
+The aim of this study is to understand more about the evolution of internatonal financial instability by studying the carry trade in a number of European transition and emerging economies. There are two related areas of interest:  the factors that trigger a crash, reversal or sudden-stop; the way that the financial system evolves to the point where the crash is likely to take place.  There have been a number of attempts to identify levels of finacial risk.  This has clearly become even more of an issue since the financial crisis.  For example, \citet{IFCMeasure}.  The IMF have developed a range of \emph{Financial Soundness Indications} (IMF 2006).     Also - Hawkins and Klau (2000), Nelson and Perli (2005) and Gray et al (2007).  There are six main strands:  the real sector, including fiscal position and inflation; the corporate sector, specifically the level of debt and overseas exposure; the ability of the household sector to weather downturns; the external sector, including the foreign exchange position and the capital account; the financial sector; finacial markets. 
 
 %A number of studies applied the early warning indicator methods initially developed in the literature for currency and balance of payments crises to banking crises. Earlier work includes, among others, Calvo et al (1993), Eichengreen et al (1996), Turner and Goldstein (1996) Frankel and Rose (1996). Demirgüç-Kunt and Detragiache (1997) use a multivariate Logit approach to identify determinants of banking crises in a large panel of developing and industrialised countries: slow GDP growth and high inflation, vulnerability to sudden capital outflows, low liquidity in the banking sector, a high share of credit to the private sector, past credit growth, explicit deposit insurance and weak institutions. Kaminsky and Reinhardt (1999) identify early warning indicators of twin (banking and balance of payments) crises, such as credit and equity prices, by looking at the ability of such variables to predict crises 12 or 24 months ahead, while minimising the noise3  to signal ratio. Borio and Lowe (2002) and Borio and Drehmann (2009) build on the techniques developed by Kaminsky and Reinhardt (1999). Like the latter, they define threshold values for the indicators, but unlike them, they look at cumulative processes rather than just growth rates over one year, they use ex ante information (ie information which was available to the policymaker prior to the crisis) and, for the first time, they consider combinations of indicators and look at multiple time horizons. BIS Goodhart 2006%
 
+However, While measuring debt-to-equity ratios and the scale of bank lending may provide some indication about the regime that is in place, this is imprecise and it is clear that financial services business evolve in ways that make loan counting  inadequate.The recent financial crisis showed that innovations like \emph{Collateralised Debt Obligations (CDO)} can allow an increase in debt that does not directly in bank lending. There are two ways to try to identify the regimes: use external indicators such as the VIX index or other indications of domestic economic or political uncertaintly; use the internatl structure of the data to identify the periods through which the financial system  is evolving.  
 
-How can the evolution of financial conditions be assessed?  While measuring debt-to-equity ratios and the scale of bank lending may provide some indication about the regime that is in place, this is imprecise and it is clear that financial services business evolve in ways that make loan counting  inadequate.The recent financial crisis showed that innovations like \emph{Collateralised Debt Obligations (CDO)} can allow an increase in debt that does not directly in bank lending. There are two ways to try to identify the regimes: use external indicators such as the VIX index or other indications of domestic economic or political uncertaintly; use the internatl structure of the data to identify the periods through which the financial system  is evolving.  
+\subsection{Stops, transitions or evolution of financial instabilitys}
+While the sudden-stop picture of international financial crisis identifies two regimes of caution and crash, there are at least two other possible patterns that could be envisaged.  The first is a simple transition from a peroid of caution to a period of crash or permanent instability.  The second is an evolution of financial risk through a process of caution, building of speuclative positions and crash. 
 
-\subsection{Minsky's Financial Instatility Hypothesis}
 Minsky's \emph{Financial Instability Hypothesis} (FIH) presents a model of endogenous financial crisis where a period of economic calm creates the conditions for more adventorous and risky financial behaviour that increases the fragility of the system.  Minsky identified three phases of financing:  hedge, speculative and Ponzie.  
 
 In the first of these the system is stable as lending is not excessive, borrowers are cautious and revenues are generally sufficient to ensure that repayments of principal and interest can be made from current income.  This period may be framed by memories of past financial crisis and the economic hardships that are associated with it.  Violent economic shocks are among the range of possible outcomes that can readily be envisaged by creditors and debtors, encouraging them to be cautious and risk-averse. 
 
-However, in the absense of economic shocks these memories of hardship fade further into the background and all parts of the economic and financial system become more prepared to take risks.  Lending becomes more speculative; decision-making gives less weight to the possibility of extereme outcomes and more weight to the immediate experience of economic calm.  The increase in lending tends to improve immediate economic conditions:  business investment and consumer spending increase if lending is broad-based; asset prices will rise where lending is directed towards financial investment.  The increase in economic activity that comes from this expansion in credit will feedback to improve immediate economic conditions, exacerbating the sense of well-being and undermining the arguments of those preaching more cautious behaviour.  POsitive feedback effects cause a non-linear relationship between credit growth and economic activity and between credit and asset prices. 
+However, in the absense of economic shocks these memories of hardship fade further into the background and all parts of the economic and financial system become more prepared to take risks.  Lending becomes more speculative; decision-making gives less weight to the possibility of extereme outcomes and more weight to the immediate experience of economic calm.  The increase in lending tends to improve immediate economic conditions:  business investment and consumer spending increase if lending is broad-based; asset prices will rise where lending is directed towards financial investment.  The increase in economic activity that comes from this expansion in credit will feedback to improve immediate economic conditions, exacerbating the sense of well-being and undermining the arguments of those preaching more cautious behaviour.  Positive feedback effects cause a non-linear relationship between credit growth and economic activity and between credit and asset prices. 
 
 \citet{Bernanke1999chapter}, \citet{BernankeGertler} and \citet{Azaraidis} present models where there is a non-linear relationship between  the provision of credit and the level of economic activity. \citet{BernankeGertlerAgency} provide a model where balance sheet dynamics affect the business cycle through a reduction in the agency cost of business investments and \citet{Balke} has a non-linear model of credit shocks.  \citet{Avdjiev2014} use a three regime TVAR model to identify the non-linearities in credit market shocks.  They find that credit shocks have the creates impact when output growth is above its long-term trend. 
 
@@ -101,7 +99,7 @@ The conditions are now in place for the bubble to burst in a violent reversal.  
 
 
 \subsection{International portfolio flows and financial stability}
-As the financial system evolves from a position of caution into one where risk is being built and finanlly into a precarious state where conditions are ripe for a collapse, the nature of the returns to the carry-trade will change. During the period of caution returns are close to normal and there may be justa compensation for taking risk, as financial institutions start to increase the weight of transition and emerging market assets, the returns will tend to increase to reflect the fact that the building of carry positions will add a capital appreciation in the exchange rate to the interest rate carry. During the crash, there are losses and extreme risk.   
+As the financial system evolves from a position of caution into one where risk is being built and finanlly into a precarious state where conditions are ripe for a collapse, the nature of the returns to the carry-trade will change. During the period of caution returns are close to normal and there may be just a compensation for taking risk, as financial institutions start to increase the weight of transition and emerging market assets, the returns will tend to increase to reflect the fact that the building of carry positions will add a capital appreciation in the exchange rate to the interest rate carry. During the crash, there are losses and extreme risk.   
 
 The probability a particular type of return depends on the nature of the financial regime.   The regimes of financial instability are not observed.  However, the returns to the carry trade will change as the regime changes. This study aims to identify the nature of the underlying financial regime by using the returns to the carry trade to estimate the evolution of underlying conditions as they move from cautious into the period when speculative positions are build and then into the financial crash. 
 
@@ -153,7 +151,11 @@ Figure \ref{figref:HMM} shows the system.  The unobserved financial regimes are 
 \end{landscape}
 
 \section{The Hidden Markov Model (HMM)}
-Makov assumption says that the state depends only on the previous state. This is a simplification that makes the problem easier to solve.  Some information may be lost with the simplifcation. The Markov process moves from state to state, depending only on the previous n states.  This is called an \emph{order n model}, where n is the number of states affecting the choice of the next state. The probability of each transition is assigned  a probability called \emph{state transition probability}.  These are collected into a \emph{state transition matrix}. The probabilities do not vary with time.  This is a (unrealistic) assumption. However, it is an assumption that can be relaxed (see below).  To start the system, there is a \emph{vector of initial probabilities}.  This is the $\pi$ vector.  These are set randomly in the current case and this random starting point can be changed so that outcomes can be compared to asssess the importance of the starting point for the results. Presumably, the starting points could also be set if there were a strong opinion on the regime that begins the time period. For example, the data begin in 1990.  Is this a time  of calm, build or crash? 
+For each country under consideration, it can be assumed that there are either two or three financial regimes.  These will be \emph{caution} and \emph{crash} in the bi-modal system of the sudden-stop or discrete transition; and, \emph{caution}, \emph{build} and \emph{crash} in one where there is an evolution of financial instability. To start the system, there is a \emph{vector of initial probabilities}.  This is the $\pi$ vector that determines where the system starts.  
+
+The evolution of financial regimes can be seen as a first-order Markov process that moves from state to state depending only on the previous state.  The likelihood of a transition from one state to another can be assigned a probability called a\emph{state transition probability}.  These can be collected into a \emph{state transition matrix}. For the two-regime model, the transitions will determine the probability of crashing and the length fo the crash regime; for the transition model, there is a switch between two states and no return to caution; for the three-regime model the matrix will show the probability of moving from caution, to build to crash.   
+
+%These are set randomly in the current case and this random starting point can be changed so that outcomes can be compared to asssess the importance of the starting point for the results. Presumably, the starting points could also be set if there were a strong opinion on the regime that begins the time period. For example, the data begin in 1990.  Is this a time  of calm, build or crash? 
 
 The first order Markov process has three elements: 
 \begin{enumerate}
@@ -161,7 +163,9 @@ The first order Markov process has three elements:
 \item $\pi$ vector
 \item state tansmition matrix
 \end{enumerate}
- Sometimes the Markov model is not sufficient to fully describe the process.    There is a probabilistic relationship between the returns that are evident and the underlying state of the financial system.  The observables are related to the hidden states. It is assumed that the hidden states of the financial system are modelled by a simple first order Markov process.  The connections between the hidden states and the observable states represent the probability of generating a particular observed state given that the Markov process is in a particular state.  
+
+However, in this case the underlying financial regimes are not observable.  
+The Markov model is not sufficient to fully describe the process. There is a probabilistic relationship between the carry-trade returns that are seen and the underlying state of the financial system.  The observables are related to the hidden states. While it is assumed that the hidden regimes of the financial system are modelled by a simple first order Markov process, the connections between the hidden states and the observable states are the probability of generating a particular observed return given that the Markov process is in a particular regime.  
  
 In our case it is assumed that the hidden states representing the evolution of financial conditions according to Minsky's Financial Instability Hypothesis evolve in a way that can be modeled by simple, first-order Markov process. 
  
@@ -173,7 +177,7 @@ The Hidden Markov Model (HMM) is a tripple $(\pi, A, B)$ where,
 \end{enumerate}
 
 \subsection{The HMM model}
-The carry-trade returns are characterised as a \emph{mixture model}, each observation is assumed to be drawn from a number of distinct sub populations.  These can be called \emph{component distributions}.  The distribution from which the component is drawn is not immediately observable and is therefore represented as a \emph{latent state}.  Here the state is the unknown financial regime.  
+It is assumed that the carry-trade returns can be characterised as a \emph{mixture model}, each observation of the carry-trade profit is assumed to be drawn from a number of distinct sub-populations.  These can be called \emph{component distributions}.  The distribution from which the component is drawn is not immediately observable and is therefore represented as a \emph{latent state}.  Here the state is the unknown financial regime.  The financial regime determines the carry-trade return that is seen. 
 
 A mixture distribution is defined as 
 \begin{equation}
@@ -181,12 +185,19 @@ p(Y_1 = y) = \sum_{i - 1}^N p(Y_t = y|S_t = i)P(S_t = i)
 \end{equation}
 where,
 \begin{itemize}
+\item $Y$ is the vector of carry-trade returns
+\item $y$ is the particular carry-trade return that is observed
 \item $S_t \in {1, \dots, N}$ is the regime of observation t
 \item $P(S_t = i)$ denots the probability that the regime is equals to i 
 \item $p(Y_t = y|S_t = i)$ denotes the density of observation of $Y_t$ conditional on regime being $S_t = i$.
 \end{itemize}
 
-In the \emph{dependent mixture model} states are assumed to be statistically dependent.  This is consistent with the Minsky theory that the period of calm creates the conditions for the crash. The process underlying the state transitions is a \emph{homogenous first order Markov process}  (look this up for additional definition).  This process is completely defined by the initial state probabilities.  
+\citet{depmixS4} call this a \emph{dependent mixture model} where the regimes are assumed to be statistically dependent.  This is consistent with the Minsky theory that the period of calm creates the conditions for the crash. The process underlying the state transitions is a \emph{homogenous first order Markov process}  (look this up for additional definition).  This process is completely defined by the initial state probabilities.  
+
+It is assumed that there are three states; the retruns that are associated with each of the regimes area ssumed to be represented by a normal distribution. THe initial state probabilities are given by the probabilities found in crash model or Hayward (confirmed by the FTS findings).  The transition matrix is estimated from the data (see section ?)
+
+$f(y_{it}|z_t)$ is assumed to have a multivariate normal density function. This distribution is characterised by $\theta_k = (\mu_k, \sigma_k^2)$.
+
 
 \begin{equation*}
 P(S_1 = 1), \dots P(S_1 = N)
@@ -202,7 +213,6 @@ P(S_t = 1|S_{t-1}=N) & P(S_t = 2|S_{t-1}=N) & \dots & P(S_t = N|S_{t-1}=N)
 \end{pmatrix}
 \end{equation*}
 
-The models are estimated using the Expectation-Maximisation (EM) or numerical optimisation (when parmeters are constrained).  The dependent mixture model is made up of three sub models:  
 \begin{enumerate}
 \item The prior model: $P(S_1|x, \theta_{prior})$
 \item The transition model: $P(S_t|x, S_{t-1}, \theta_{trans})$
@@ -212,99 +222,58 @@ The models are estimated using the Expectation-Maximisation (EM) or numerical op
 The prior states the probability of being in each of the financial regimes; the transition model is the probability of moving from one financial state to another; the response model is the relationship between the carry returns and the financial state.  
 
 
-\subsection{Formal model}
-\href{http://en.wikipedia.org/wiki/Hidden_Markov_model}{Hidden Markov Models}.  
 
-It is assumed that there are three states; the retruns that are associated with each of the regimes area ssumed to be represented by a normal distribution. THe initial state probabilities are given by the probabilities found in crash model or Hayward (confirmed by the FTS findings).  The transition matrix is estimated from the data (see section ?)
+\subsection{Estimation of the parameters}
+The dependent mixture model is made up of three sub models as outlined above. 
+In addition to estimating parameters for the mean and standard deviation  of the normal distribution for the three types of carry-trade return, the initial state probabilities, that assess the likelihood of being in a particular regime at the start of the time perild, the transitional probabilities, that show the likelihood of moving from one regime to another, and the conditional probabilities that a particular return will be seen given a particular financial state have to be estimated.  
+%The models are estimated using the Expectation-Maximisation (EM) algorithm. \footnote{ or numerical optimisation (when parmeters are constrained)}. 
 
-\section{The Algo}
-$f(y_{it}|z_t)$ is assumed to have a multivariate normal density function. This distribution is characterised by $\theta_k = (\mu_k, \sigma_k^2)$.  Excluding the states $w$, there are the initial state probabilities to be determined, the 2 transition probabilities and the conditional mean and conditional variance to be estimated.  Thsi is done by Maximum likelihood using the log-likelihood function $l(\varphi, y) = \sum_{i=1}^n log f(y_i; \varphi)$. This is a problem that can be solved with the \emph{Expectation-Maximization (EM) algorithm} \citet{dempster1977maximum}. The E step computes the joint conditional distribution of the latent variables given the data and the current provisional estimates of the model parameters. The M step ML methods are used to update the parameters using the estimated densities of the latent variables as weights. For hidden Markov models, as special variant of the EM algorithm is proposed (called \emph{the forward-backward} or \emph{Baum-Welch} alogorithm (Baum et al 1970).   
+This is done by Maximum likelihood using the log-likelihood function $l(\varphi, y) = \sum_{i=1}^n log f(y_i; \varphi)$. This is a problem that can be solved with the \emph{Expectation-Maximization (EM) algorithm} \citet{dempster1977maximum}. The Expectation step computes the joint conditional distribution of the latent variables given the data and the current provisional estimates of the model parameters. In other words, given a financial regime to begin the process, probabilities of traforming from this starting regime to another and the likelihood of observing the carry-trade return given a particular regime, the most likely sequence of regimes can be uncovered. 
 
-Notes from the \href{http://www.comp.leeds.ac.uk/roger/HiddenMarkovModels/html_dev/main.html}{Leeds notes}.  The aim is to find patterns in time. This uses the examle of seaweed and traffic lights.  For the traffic lights, there is a state machine where the different states follow each other. Each state is dependent only on the previous state. This is a deterministic system. The weather is not deterministic.  There may be three states:  wet, cloudy and sunny. The 
+The Maximixation step updates the parameters using the estimated densities of the projected hidden regimes as weights. For hidden Markov models, as special variant of the EM algorithm is proposed (called \emph{the forward-backward} or \emph{Baum-Welch} alogorithm \citet{Baum1970}.   The Baum-Welch algorithm will find the parameters that maximize the probability of observing the sequence of carry-trade returns.  
 
-\subsection{Investgations using HMM}
-THere are a number of problems that can be solved.  This section may help explain the algo that is used. Otherwise, it may be discarded.  The essential steps are:  firstly, identif the probability of the observed sequence given the chosen HMM; take that sequence and fit the best possible HMM.  There should, I think, be an iteration between the two. 
-
-Once a system can be described as HMM, three problems can be solved. 
-\begin{enumerate}
-\item finding the probability of an observed sequence given a HMM (evaluation)
-\item finding the sequence of hidden states that most probably generated the obsered sequence (decoding)
-\item generating a HMM given a sequencde of observed observations (learning)
-\end{enumerate}
-
-\subsubsection{Evaluation}
-There are a number of HMM with sets of $(\pi, A, B)$ tripples, which HMM geneated the given sequence?  For example, there may be 'summer model' and a 'winter model' and it may then be possible to determine the season from the seaweed sequence. The \emph{Forward algorithm} is used to calculate the probability of an observation sequence given a particular HMM and hence the most probable HMM.  
-
-It may be that there are different models for fixed and floating exchange rates. 
-\subsubsection{Decoding}
-It is most usual to find the hidden states that generated the observed sequence.  Finding the hidden states is important because they are not directly observable.  A blind hermit may feel the seaweed but cannot see the weather. The \emph{Viterbi algorithm}.  This could also be used to determine the syntactic class of words (noune, verb etc) from the words themselves.  
-
-What is the probability of the observed sequence given the HMM? This can evaluate risk - crash? 
-
-\subsubsection{Learning}
-This is the most difficult task.  Take a set of observations and fit the most probable HMM . The \emph{Forward-backward algorithm} is used when the A and B matrices are not directly (empirically) measurable.  
-
-\subsubsection{Forward Algorithm}
-With three states, three observations and the parameters of the model known, the aim is to find the most likely hidden sequence.  It would be possible to find each possible sequence and sum the probabilities.  
+In other words, using a set of parameters for a HMM ($\theta = (\pi, A, B)$ estimate teh probability ofobtaining the sequence of carry-returns; now 
 
 
+\section{Use of HMM}
+A frequence probems in estimating economic models is that the parameters do not tend to be stable over time.  A HMM with a number of regimes can be used to model a range of cases that can span a simple transition from one state to another where through a range of regimes towards the exteme where there may be time-varying parameters (TVP).  
+
+\citet{Hamilton1989} uses this method to model postwar US GNP as a two-regime system that shifts from periods of positive to negative growth. The parameters of an ARIMA representation of US GNP shift between the two regimes so that there is a 3\% decline in the US growth rate during a recession.  
+%\emph{The peso problem} describes a range of cases where there is a large, descrete shift or \emph{jump} in the system.  This is particularly relevant to the carry-trade as one explanation for the evidence of a breakdown in UIP is that exchange rate expectations cannot be modeled by taking the average of past realisations. 
 
 
+%The raw model just assume that there are three states with random allocation of the starting values.  However, the initial estimates of the regime parameters can come from the estimates made in the doctorate using the crash and caution identification from the VIX; the initial estimates of the priobabilities of each state can come from the percentage of each state in the final version of the model that is run without initial estimates.  
 
-\subsection{The algo}
-The \emph{Viterbi algrithm} will create a matrix v that will contain the probability of each regime, given the type of return that is evident. This is computed from the product of the transition matrix, which gives the probability of transfering to the currnt regime from the previous regime, and the maximum value of V in row i-1.  For each state, there will be a probability which is the product of the probability of seeing the regime given the returns and the most likely state in the previous period and the probability of the state given the return \begin{verbatim}v[i,l] <-  statelprobnucleotidei * max(v[(i-1),] * transitionmatrix[,l])\end{verbatim} which is line 45 of viterbi.R
+%I think that $\theta_1$ on page 4 of the depmixS4 vignette is the parameter that nees to be set. 
 
-Expectations-Maximisation (EM) algorithm. 
+%At the top of page 10 of the vignette, there is an example of how the transition matrix may be augmented by a model.  I do not understand this fuilly, but it may be possible to link the transition to the VIX index.  Obviously, there is some risk of circularity here. Anyway, it may be useful to compare the difference. 
 
-
-\section{How the HMM is used}
-Peso
-Some history, 
-Some examples from genetriics and speech....
-
-The raw model just assume that there are three states with random allocation of the starting values.  However, the initial estimates of the regime parameters can come from the estimates made in the doctorate using the crash and caution identification from the VIX; the initial estimates of the priobabilities of each state can come from the percentage of each state in the final version of the model that is run without initial estimates.  
-
-I think that $\theta_1$ on page 4 of the depmixS4 vignette is the parameter that nees to be set. 
-
-it woould be useful to see which of the two models works best: the standard idea of high risk and crash or the Minsky model.  
-
-In the case of the PLNUSD (actually PLNEUR) it seems from the derived transition matrix and the information criteria as if the two-regime model has a better fit than the three regime model. 
-
-At the top of page 10 of the vignette, there is an example of how the transition matrix may be augmented by a model.  I do not understand this fuilly, but it may be possible to link the transition to the VIX index.  Obviously, there is some risk of circularity here. Anyway, it may be useful to compare the difference. 
-
-Second page of the model.  There will be overlaps that need to be cut out and re-written. 
-
-
-
-
-Economics and finance
-Hamilton
+Other GNP examples.  Stock market examples....
 
 The second paper (on rating agencies - incuded in the "other" folder.  Uses the mixture model against the alternative of a pure Markov chain. In the pure Markov chain, the future depends only on the present.  However, with the mixture model, the future depends on the past.  This means that it is impant to know which of the latent sub-groups the firm is in as this will tell you more about the probability of default.  This knowledge will be based on the whole sample of ratings. There are A and Q processs.  What determines whether the rating evolves according to A or Q?  It appears to be partly the result of the industry.  The wholesale and retail trades are the most dynamic. There is clearly a hetrogeneity that is ignored by the standard Markov model of rating migration. 
 
 As such, it may be possible to make a comparison of developed and less developed finncial systems or fixed and floating systems.  How do they differ?  What does this tell us about how vulnerble the systems are?  
 
+%Agn Timmerman (2011)
+%Looking at how abrupt changes in regime can lead to changes in the way that the system works.  The different regimes can be associated with different underlying distribution of returns.  This can allow the understanding of the non-liner and non--normal distribution within  normal or linear framework.  At the extreme, the regime switch model can incorporate a \emph{jump model} with one change, and can also be associated with time-varying parameter models that have a large number of regimes.
 
-Agn Timmerman (2011)
-Looking at how abrupt changes in regime can lead to changes in the way that the system works.  The different regimes can be associated with different underlying distribution of returns.  This can allow the understanding of the non-liner and non--normal distribution within  normal or linear framework.  At the extreme, the regime switch model can incorporate a \emph{jump model} with one change, and can also be associated with time-varying parameter models that have a large number of regimes.
+%The broad framework for the method is to model a discrete state $s_t \in %\{0,1,\dots k \}$
+%\begin{equation}
+%y_t = \mu_{s_t} + \phi_{s_t} y_{t-1} + \sigma_{s_t} \varepsilon_t, \quad %\varepsilon_t \sim iid(0,1) 
+%\end{equation}
 
-The broad framework for the method is to model a discrete state $s_t \in \{0,1,\dots k \}$
-\begin{equation}
-y_t = \mu_{s_t} + \phi_{s_t} y_{t-1} + \sigma_{s_t} \varepsilon_t, \quad \varepsilon_t \sim iid(0,1) 
-\end{equation}
+%The process governing the underlying regime must also be defined. 
 
-The process governing the underlying regime must also be defined. 
+%\begin{equation}
+%Pr(s_t = 0| s_{t-1} = 0) = p_{00} \quad \text{and} \quad Pr(s_t = 1| s_{t%-1} = 1) = p_{11}
+%\end{equation}
 
-\begin{equation}
-Pr(s_t = 0| s_{t-1} = 0) = p_{00} \quad \text{and} \quad Pr(s_t = 1| s_{t-1} = 1) = p_{11}
-\end{equation}
-
-More generally, the transition could be time-varying and could be dependent on the time spent in the regime.  See Durland and McCurdy (1994) for example of the probbilities  in the transition matrix being related to time. The longer the systemm has remained in the build phase, the greater the risk of crash.  Remember that the crash phase is a period when there is risk of a sharp reversal.  
+%More generally, the transition could be time-varying and could be dependent on the time spent in the regime.  See Durland and McCurdy (1994) for example of the probbilities  in the transition matrix being related to time. The longer the systemm has remained in the build phase, the greater the risk of crash.  Remember that the crash phase is a period when there is risk of a sharp reversal.  
 
 See Diebold, Lee and Weinbch (1994) for examples where the transition probabilities depend on some other state variables.  For example, the interest rate spread.   Could the VIX index or other factors be used?  Vix index would indicate heightened international tension as one element that affects the probability of transforming from one state to the next.  An elevated VIX is an indication of the heightened international risk premium.  This may increase the probability that the regime switches from carry build to crash.  This is a theme that could be related to the bubble bursting so any information that improves the ability to identify bubbles bursting would be beneficial.  
 
 
-  There are two states of the world:  crisis and moderation.  If the system is in a crisis, it stays there with probability p; it switches to moderation with probability $1-p$.  If in moderation, the system stays there with a probability q and switches to crisis with probability $1-q$.  If the probabilities change over time, there is no longer a \emph{homogenous Markov Chain}. Ghysels has a seasonal dummy for the probabilities that represent the months or quarters.  
+%There are two states of the world:  crisis and moderation.  If the system is in a crisis, it stays there with probability p; it switches to moderation with probability $1-p$.  If in moderation, the system stays there with a probability q and switches to crisis with probability $1-q$.  If the probabilities change over time, there is no longer a \emph{homogenous Markov Chain}. Ghysels has a seasonal dummy for the probabilities that represent the months or quarters.  
 
 Can the probabilities change over time?  This may be the result of changes in the resilience of the financial system. 
 \href{http://members.home.nl/jeroenvermunt/dias2010.pdf}{Mixture Hidden Markov Models} Hidden models help to calafify the regime under which securities trade. Model takes into account the unobserved hetrogeneity across time. This could could be extended to space (for different countries).  Is it possible to estimate a panel? 
@@ -312,8 +281,6 @@ Can the probabilities change over time?  This may be the result of changes in th
 Can the systemm be used to compare to fixed and floating exchange rates. 
 
 The use of the regime-switch allows the transition from one regime to another to be the result of something that is more than just a deterministic process. There are a number of ways that this model could be expanded.  Dueker has a model where the degrees of freedom from a Student-t distribution change with the regime.  
-
-
 
 \section{Analysis of Results}
 \subsection{Data}
@@ -324,10 +291,7 @@ The data are calculated as follows
 \begin{equation}\label{eqref:carryprofit}
 P1MEURHUF_t = \frac{(1 + HUF1M_t)^{\frac{1}{12}} \times EURHUF_t }{(1 + EUR1M_t)^{\frac{1}{12}} \times EURHUF_{t+1M}}
 \end{equation}
-
-where $HUF1M_t$ is the 1 month Hungarian Forint deposit rate at time t, $EUR1M_t$ is the 1-month euro denominated deposit rate at time t, $EURHUF_t$ is the exchange rate in terms of  Hungarian Forint required for one euro at time t and  $EURHUF_{t+1M}$ is the spot rate in 1 month's time.  This is fundamentally the same as \citep{BrunnermeierCarry}.
-
-where the forward rate is calculated as
+where $HUF1M_t$ is the 1 month Hungarian Forint deposit rate at time t, $EUR1M_t$ is the 1-month euro denominated deposit rate at time t, $EURHUF_t$ is the exchange rate in terms of  Hungarian Forint required for one euro at time t and  $EURHUF_{t+1M}$ is the spot rate in 1 month's time.  This is fundamentally the same as \citep{BrunnermeierCarry}. The forward rate is calculated as
 
 \begin{equation}\label{eqref:forward}
 EURHUF_t^{f1m} = \frac{(1 + HUF1M_t)^{\frac{1}{12}} \times EURHUF_t }{(1 + EUR1M_t)^{\frac{1}{12}}}
@@ -335,20 +299,18 @@ EURHUF_t^{f1m} = \frac{(1 + HUF1M_t)^{\frac{1}{12}} \times EURHUF_t }{(1 + EUR1M
 
 where  $EURHUF_t^{f1m}$ is the 1 month forward rate for euro in terms of Hungarian Forint at time t, $HUF1M_t$ is 1 month Hungarian Forint deposit rate, $EUR1M_t$ is the 1 month Euro deposit rate and $EURHUF_t$ is the current rate of Euro in terms of Hungarian currency.  The code for the calculation is in the function \lstinline{forp} in the package \lstinline{prepareR}. This will create a sample of carry-trade profits from an array of CEE investment currencies relative to standrd funding currencies.   The ISK, TRY and NOK are used as reference.  One month and 3 month carries are created.  It would be possible to have shorter time periods for the carry-trade.   This would require the addition of the appropriate times series for LIBOR or deposit rates.  
 
-\subsection{Results}
-Running the Raw.R file, lines 22 to 24
-\begin{lstlisting}
-mod <- depmix(PPLNUSD ~ 1, nstates = 3, data = da)
- set.seed(3)
-fm2 <- fit(mod, verbose = FALSE)
-depmixS4::summary(fm2)
-\end{lstlisting}
+%\subsection{Results}
+%Running the Raw.R file, lines 22 to 24
+%\begin{lstlisting}
+%mod <- depmix(PPLNUSD ~ 1, nstates = 3, data = da)
+% set.seed(3)
+%fm2 <- fit(mod, verbose = FALSE)
+%depmixS4::summary(fm2)
+%\end{lstlisting}
 
-gives the results
- 
- 
 The parameters of the 2 regime model are given in Table \ref{tabref:2StateProb}.  They show....
 
+Table needs to be updated. 
 
 \begin{landscape}
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
@@ -389,42 +351,45 @@ The parameters of the 2 regime model are given in Table \ref{tabref:2StateProb}.
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
 % Tue Jul 08 11:45:17 2014
 \begin{table}[ht]
+\caption{Mean and Standard Deviation of 3 Regime Model}
 \centering
-\begin{tabular}{rrrrrrrrrrrr}
+\begin{tabular}{llrrrrrrrrrrrrr}
   \hline
- & HUF & PLN & CZK & RON & RUB & TRY & BGN & NOK & ISK & UAH & HRK \\ 
+ Funding&Regime& & HUF & PLN & CZK & RON & RUB & TRY & BGN & NOK & ISK & UAH & HRK & Mean\\ 
   \hline
-1 & 0.9952 & 1.0004 & 0.9953 & 1.0008 & 0.9957 & 1.0071 & 1.0074 & 1.0028 & 1.0033 & 1.0028 & 1.0030 \\ 
-  2 & 0.1119 & 0.0398 & 0.0873 & 0.0341 & 0.0782 & 0.0328 & 0.0426 & 0.0469 & 0.0100 & 0.0372 & 0.0201 \\ 
-  3 & 1.0225 & 1.0731 & 1.0460 & 1.0573 & 1.0375 & 1.0222 & 1.0130 & 1.1187 & 1.0106 & 1.0140 & 1.0187 \\ 
-  4 & 0.0490 & 0.0342 & 0.0441 & 0.0403 & 0.0212 & 0.0667 & 0.0217 & 0.0206 & 0.0572 & 0.0215 & 0.0512 \\ 
-  5 & 0.9719 & 0.9672 & 0.9786 & 0.9956 & 0.9933 & 0.8915 & 1.0028 & 0.9020 & 0.9386 & 0.9671 & 0.9971 \\ 
-  6 & 0.0518 & 0.1109 & 0.0389 & 0.0874 & 0.0233 & 0.1057 & 0.0860 & 0.0669 & 0.1791 & 0.1132 & 0.0823 \\ 
-  7 & 0.9934 & 1.0093 & 1.0017 & 1.0077 & 1.0012 & 0.9996 & 1.0045 & 1.0004 & 0.9743 & 1.0025 & 1.0006 \\ 
-  8 & 0.0271 & 0.0290 & 0.0475 & 0.0063 & 0.0043 & 0.0788 & 0.0190 & 0.0049 & 0.0226 & 0.0044 & 0.0120 \\ 
-  9 & 1.0297 & 1.0665 & 1.0354 & 1.0085 & 1.0060 & 1.0213 & 1.0190 & 1.0078 & 1.0130 & 1.0119 & 1.0194 \\ 
-  10 & 0.0223 & 0.0218 & 0.0060 & 0.0252 & 0.0109 & 0.0282 & 0.0353 & 0.0308 & 0.0290 & 0.0128 & 0.0282 \\ 
-  11 & 0.9918 & 0.9450 & 0.9942 & 1.0012 & 1.0004 & 0.9990 & 0.9712 & 0.9378 & 0.9558 & 0.9788 & 0.9773 \\ 
-  12 & 0.0727 & 0.0543 & 0.0194 & 0.0518 & 0.0407 & 0.0296 & 0.0340 & 0.0332 & 0.1136 & 0.0737 & 0.0359 \\ 
-  13 & 1.0025 & 0.9907 & 1.0017 & 1.0019 & 0.0000 & 0.9956 & 1.0005 & 0.9925 & 0.9949 & 1.0023 & 1.0004 \\ 
-  14 & 0.0161 & 0.0164 & 0.0230 & 0.0107 & 0.0000 & 0.0173 & 0.0012 & 0.0441 & 0.0202 & 0.0335 & 0.0102 \\ 
-  15 & 1.0383 & 1.0217 & 1.0050 & 1.0261 & 0.0000 & 1.0396 & 1.0015 & 1.0090 & 1.0153 & 1.0063 & 1.0134 \\ 
-  16 & 0.0131 & 0.0193 & 0.0103 & 0.0182 & 0.0000 & 0.0201 & 0.0096 & 0.0118 & 0.0313 & 0.0105 & 0.0122 \\ 
-  17 & 0.9946 & 0.9817 & 0.9910 & 0.9854 & 0.0000 & 0.9943 & 0.9941 & 0.9851 & 0.9750 & 0.9817 & 0.9885 \\ 
-  18 & 0.0491 & 0.0504 & 0.0425 & 0.0362 & 0.0000 & 0.0735 & 0.0345 & 0.0142 & 0.0801 & 0.0916 & 0.0388 \\ 
-  19 & 1.0119 & 1.0101 & 1.0108 & 1.0100 & 1.0030 & 1.0041 & 1.0023 & 1.0092 & 0.9688 & 0.9984 & 1.0021 \\ 
-  20 & 0.0440 & 0.0330 & 0.0235 & 0.0226 & 0.0651 & 0.0858 & 0.0147 & 0.0382 & 0.1037 & 0.0215 & 0.0131 \\ 
-  21 & 1.0149 & 1.0626 & 1.0555 & 1.0671 & 1.0102 & 1.0460 & 1.0307 & 1.0115 & 1.0128 & 1.0311 & 1.0315 \\ 
-  22 & 0.0225 & 0.0150 & 0.0274 & 0.0189 & 0.0193 & 0.0213 & 0.0144 & 0.0074 & 0.0361 & 0.0329 & 0.0089 \\ 
-  23 & 0.9985 & 0.9638 & 0.9837 & 0.9632 & 0.9610 & 0.9886 & 0.9977 & 0.9266 & 0.9471 & 0.8649 & 1.0019 \\ 
-  24 & 0.0671 & 0.0768 & 0.0505 & 0.0454 & 0.0041 & 0.0287 & 0.0491 & 0.0530 & 0.0038 & 0.0684 & 0.0482 \\ 
+  \hline
+\multirow{6}{*}{EUR}&\multirow{2}{*}{Caution}&Mean & 0.9952 & 1.0004 & 0.9953 & 1.0008 & 0.9957 & 1.0071 & 1.0074 & 1.0028 & 1.0033 & 1.0028 & 1.0030 & 1.0021\\ 
+  &&S-Dev & 0.1119 & 0.0398 & 0.0873 & 0.0341 & 0.0782 & 0.0328 & 0.0426 & 0.0469 & 0.0100 & 0.0372 & 0.0201 & 0.0559\\ 
+  & \multirow{2}{*}{Build} & Mean & 1.0225 & 1.0731 & 1.0460 & 1.0573 & 1.0375 & 1.0222 & 1.0130 & 1.1187 & 1.0106 & 1.0140 & 1.0187 &1.0390 \\
+  && S-Dev & 0.0490 & 0.0342 & 0.0441 & 0.0403 & 0.0212 & 0.0667 & 0.0217 & 0.0206 & 0.0572 & 0.0215 & 0.0512 & 0.0454\\ 
+  & \multirow{2}{*}{Crash} & Mean & 0.9719 & 0.9672 & 0.9786 & 0.9956 & 0.9933 & 0.8915 & 1.0028 & 0.9020 & 0.9386 & 0.9671 & 0.9971 & 0.9583\\ 
+  && S-Dev & 0.0518 & 0.1109 & 0.0389 & 0.0874 & 0.0233 & 0.1057 & 0.0860 & 0.0669 & 0.1791 & 0.1132 & 0.0823 & 0.0843\\ 
+\hline
+\multirow{6}{*}{USD}& \multirow{2}{*}{Caution} & Mean   & 0.9934 & 1.0093 & 1.0017 & 1.0077 & 1.0012 & 0.9996 & 1.0045 & 1.0004 & 0.9743 & 1.0025 & 1.0006 & 1.0000\\ 
+  && S-Dev & 0.0271 & 0.0290 & 0.0475 & 0.0063 & 0.0043 & 0.0788 & 0.0190 & 0.0049 & 0.0226 & 0.0044 & 0.0120 & 0.0311\\ 
+  & \multirow{2}{*}{Build} & Mean & 1.0297 & 1.0665 & 1.0354 & 1.0085 & 1.0060 & 1.0213 & 1.0190 & 1.0078 & 1.0130 & 1.0119 & 1.0194 & 1.0215\\ 
+  && S-Dev & 0.0223 & 0.0218 & 0.0060 & 0.0252 & 0.0109 & 0.0282 & 0.0353 & 0.0308 & 0.0290 & 0.0128 & 0.0282 & 0.0231 \\ 
+  & \multirow{2}{*}{Crash} & Mean & 0.9918 & 0.9450 & 0.9942 & 1.0012 & 1.0004 & 0.9990 & 0.9712 & 0.9378 & 0.9558 & 0.9788 & 0.9773 & 0.9782\\ 
+  && S-Dev & 0.0727 & 0.0543 & 0.0194 & 0.0518 & 0.0407 & 0.0296 & 0.0340 & 0.0332 & 0.1136 & 0.0737 & 0.0359 & 0.0515\\ 
+\hline
+\multirow{6}{*}{CHF}& \multirow{2}{*}{Caution} & Mean& 1.0025 & 0.9907 & 1.0017 & 1.0019 & 0.0000 & 0.9956 & 1.0005 & 0.9925 & 0.9949 & 1.0023 & 1.0004 & 0.9983\\ 
+  && S-Dev & 0.0161 & 0.0164 & 0.0230 & 0.0107 & 0.0000 & 0.0173 & 0.0012 & 0.0441 & 0.0202 & 0.0335 & 0.0102 & 0.0245\\ 
+  & \multirow{2}{*}{Build} &  Mean & 1.0383 & 1.0217 & 1.0050 & 1.0261 & 0.0000 & 1.0396 & 1.0015 & 1.0090 & 1.0153 & 1.0063 & 1.0134 & 1.0150\\ 
+  && S-Dev & 0.0131 & 0.0193 & 0.0103 & 0.0182 & 0.0000 & 0.0201 & 0.0096 & 0.0118 & 0.0313 & 0.0105 & 0.0122 & 0.0194\\ 
+  & \multirow{2}{*}{Crash} & Mean & 0.9946 & 0.9817 & 0.9910 & 0.9854 & 0.0000 & 0.9943 & 0.9941 & 0.9851 & 0.9750 & 0.9817 & 0.9885 & 0.9842 \\ 
+  &&S-Dev & 0.0491 & 0.0504 & 0.0425 & 0.0362 & 0.0000 & 0.0735 & 0.0345 & 0.0142 & 0.0801 & 0.0916 & 0.0388 & 0.0472\\ 
+\hline
+\multirow{6}{*}{CHF}& \multirow{2}{*}{Caution} & Mean & 1.0119 & 1.0101 & 1.0108 & 1.0100 & 1.0030 & 1.0041 & 1.0023 & 1.0092 & 0.9688 & 0.9984 & 1.0021 & 1.0028\\ 
+  && S-Dev& 0.0440 & 0.0330 & 0.0235 & 0.0226 & 0.0651 & 0.0858 & 0.0147 & 0.0382 & 0.1037 & 0.0215 & 0.0131 & 0.0400\\ 
+  & \multirow{2}{*}{Build} & Mean & 1.0149 & 1.0626 & 1.0555 & 1.0671 & 1.0102 & 1.0460 & 1.0307 & 1.0115 & 1.0128 & 1.0311 & 1.0315 & 1.0364\\ 
+  && S-Dev & 0.0225 & 0.0150 & 0.0274 & 0.0189 & 0.0193 & 0.0213 & 0.0144 & 0.0074 & 0.0361 & 0.0329 & 0.0089 & 0.0205\\ 
+  & \multirow{2}{*}{Crash} & Mean & 0.9985 & 0.9638 & 0.9837 & 0.9632 & 0.9610 & 0.9886 & 0.9977 & 0.9266 & 0.9471 & 0.8649 & 1.0019 & 0.9636 \\ 
+  && S-Dev& 0.0671 & 0.0768 & 0.0505 & 0.0454 & 0.0041 & 0.0287 & 0.0491 & 0.0530 & 0.0038 & 0.0684 & 0.0482 & 0.0491\\ 
    \hline
 \end{tabular}
-\caption{Mean and Standard Deviation of 3 Regime Model}
 \label{tabref:3StateProb}
 \end{table}
 \end{landscape}
-
 What is really needed here in the results are:
 \begin{itemize}
 \item A table with all the returns from the two or three regimes (using different bases).  Retruns can be compared in each of the regimes (which are similar, which are different? 
@@ -434,45 +399,157 @@ What is really needed here in the results are:
 \end{itemize}
  
   
-The allocation of the regimes is based on two principles:  the crash should have the lowest returns and the build should have the highert; the order of increasing financial fragility should be preserved.  
+\subsubsection{HUFEUR}
+There are very large differences between the returns that are achieved in each of these regimes: in the period of caution, UIP holds; in the period when specualtive postitions are in place, a return of 7\% is achieved for little addtiional risk; in the crash there is an average loss of just less than 4\% and an increase in risk. 
 
-In this case, the only profitable trades are those in the period of build.  However, unsually, this is also the time of greatest risk (if risk is defined as the standared deviation of these returns).  
+\begin{centering}
+ \begin{tabular}{l c c c}
+ & Caution & Build & Crash \\
+ \hline
+ Mean & 1.0004 & 1.0731 & 0.9672\\
+ St-Dev & 0.0398 & 0.0342 & 0.1109\\
+ \end{tabular}
+ \end{centering}
 
-The transion matrix is 
+The transition matrix is less consistent with the FIH:  it is possible to move from a regime of caution to one of crash; from build, it is more likely that there will be a return to caution than a crash; the crash can return to building without moving to the cautious phase.   
 
  \begin{centering}
  \begin{tabular}{l c c c}
- & to Build & to Crash & to Fear\\
- From Build & 0.83 & 0.00 & 0.17\\
- from Crash & 0.00 & 0.40 & 0.60\\
- from Fear & 0.55 & 0.10 & 0.34
+ & to Caution & to Build & to Crash\\
+ \hline
+ from Caution & 0.7474 & 0.1913 & 0.0513\\
+ from Build & 0.7515 & 0.2485 & 0.0000\\
+ from Crash & 0.0000 & 0.2214 & 0.7786
+ \end{tabular}
+ \end{centering}
+
+\subsubsection{HUFCHF}
+The level of risk in the carry trade funded by CHF is lower than that when the EUR is used.  The difference between the perild of crash and caution is quite modest in terms of average returns but is concetrated on the level of risk.  
+
+\begin{centering}
+ \begin{tabular}{l c c c}
+ & Caution & Build & Crash \\
+ \hline
+ Mean & 1.0025 & 1.0521 & 0.9946\\
+ St-Dev & 0.0161 & 0.0131 & 0.0491\\
+ \end{tabular}
+ \end{centering}
+
+Once the crash, characterised as the more volatile period, begins, the regime is likely to be maintained.  This may mean that a transition model better represents the evolutin of financial instability in this market. It requires a transfer function to represent a step increase in risk. 
+
+ \begin{centering}
+ \begin{tabular}{l c c c}
+ & to Caution & to Build & to Crash\\
+ \hline
+ from Caution & 0.9105 & 0.0521 & 0.0374\\
+ from Build & 0.6652 & 0.3348 & 0.0000\\
+ from Crash & 0.0000 & 0.0807 & 0.9193
  \end{tabular}
  \end{centering}
  
-We need to look at these matrices to identify how realisetic the model is. 
 
-This is rather encouraging as the probability of trasfering from one state to another is consistent with Minsky:  during the building phase, the building continues with an 83\% probability, there is a small chance of a crash and some chance of a move directly to fear; one in the crash, the regime remains there or moves to fear; once in fear, there is some chance of a move to building and some chance that things remain in fear.  Fear does not usually lead to a crash. 
+subsubsection{HUFJPY}
+The level of risk is the key differential between the carry trade profits that are achieved in each of the regimes.  The returns that are achieved are fairly modest but the risk is much higher in the period when there is a crash.   
+
+\begin{centering}
+ \begin{tabular}{l c c c}
+ & Caution & Build & Crash \\
+ \hline
+ Mean & 1.0119 & 1.0149 & 0.9985\\
+ St-Dev & 0.0440 & 0.0225 & 0.0671\\
+ \end{tabular}
+ \end{centering}
+
+Once the crash, characterised as the more volatile period, begins, the regime is likely to be maintained.  This may mean that a transition model better represents the evolutin of financial instability in this market. It requires a transfer function to represent a step increase in risk. 
+
+ \begin{centering}
+ \begin{tabular}{l c c c}
+ & to Caution & to Build & to Crash\\
+ \hline
+ from Caution & 0.0001 & 0.9732 & 0.0267\\
+ from Build & 0.8552 & 0.1448 & 0.0000\\
+ from Crash & 0.0215 & 0.0000 & 0.9785
+ \end{tabular}
+ \end{centering}
+ \subsubsection{PLNEUR}
+Again, the data from the transition matrix suggests that it may be better to model this as a step increase in risk that happens after the financial crisis.  it may be that the system can be characterised as having either four or six regimes divided into pre and post financial crisis periods. 
+
+\begin{centering}
+ \begin{tabular}{l c c c}
+ & Caution & Build & Crash \\
+ \hline
+ Mean & 0.9952 & 1.0255 & 0.9719\\
+ St-Dev & 0.1119 & 0.0490 & 0.0518\\
+ \end{tabular}
+ \end{centering}
+
+It is encouraigng that the transition matrix suggests that it is most likely that regimes remain where they are.  If there is a state of "caution", there is 85\% probability that the state will remian cautious; there is just less than 15\% chance that there will be a switch to a regime when speculative positions are built.  Once in the "Build" regime, there is just over 95\% chance that this will be maintained and there is a 4\% chance that there will be a crash.  
+
+ \begin{centering}
+ \begin{tabular}{l c c c}
+ & to Caution & to Build & to Crash\\
+ \hline
+ from Caution & 0.8531 & 0.1469 & 0.0000\\
+ from Build & 0.0000 & 0.9569 & 0.0431\\
+ from Crash & 0.2726 & 0.0000 & 0.7274
+ \end{tabular}
+ \end{centering}
+ 
+\subsubsection{RONEUR}
+The differences between the carry-trade returns that are achieved in these three regimes are relatively modest.  A return of just less than 6\% is achieved in the period when speculative positions are being build.  The periods of caution and crash are not much different, though there is some increase in risk in the crash phase. 
+
+\begin{centering}
+ \begin{tabular}{l c c c}
+ & Caution & Build & Crash \\
+ \hline
+ Mean & 1.0007 & 1.0569 & 0.9956\\
+ St-Dev & 0.0341 & 0.0404 & 0.0874\\
+ \end{tabular}
+ \end{centering}
+
+The periods of caution and crash predominate. However, once the crash phase is established, it is mantained.  It would be interesting to see the proportion of time that is spent in each of these regimes.  
+
+ \begin{centering}
+ \begin{tabular}{l c c c}
+ & to Caution & to Build & to Crash\\
+ \hline
+ from Caution & 0.7474 & 0.1913 & 0.0513\\
+ from Build & 0.7515 & 0.2485 & 0.0000\\
+ from Crash & 0.0000 & 0.2214 & 0.7786
+ \end{tabular}
+ \end{centering}
+
+\subsubsection{ISKEUR}
+There are large losses and high risk in the perild of crash.  There are very small return and low risk in the period of caution. 
 
 
-\section{Results}
-Three regimes can be identified: number one, the cautious period; number two, the time when carry positions are being built; number three, the crash.  This works for PLNUSD, HUFEUR. 
+\begin{centering}
+ \begin{tabular}{l c c c}
+ & Caution & Build & Crash \\
+ \hline
+ Mean & 1.0033 & 1.0106 & 0.9386\\
+ St-Dev & 0.0100 & 0.0572 & 0.1791\\
+ \end{tabular}
+ \end{centering}
 
-The R files work as follows: prepare.R loads the data and creates the profits function; Raw(test).R will test data. 
+The crash seems to come from a position of caution.  The figure suggest that it is difficult to distinguish between the periods of caution and build.  This may be a case where the two-regime model provides a better fit. 
 
-\subsection{PLNUSD}
-For the 1-month PLN-USD carry-trade sample, a three stage HMM is fitted.  The parameters of the models are 
-
-\begin{tabular}{l | l l}
-State & Mean & SD \\
-\hline
-State 1 & 1.0109 & 0.0309\\
-State 2 & 0.9317 & 0.0486\\
-State 3 & 1.040982 & 0.0432\\
-\end{tabular}
-
+ \begin{centering}
+ \begin{tabular}{l c c c}
+ & to Caution & to Build & to Crash\\
+ \hline
+ from Caution & 0.3476 & 0.5951 & 0.0573\\
+ from Build & 0.0947 & 0.9053 & 0.0000\\
+ from Crash & 0.2089 & 0.0000 & 0.7911
+ \end{tabular}
+ \end{centering}
+ 
+ 
+ 
 \begin{figure}[h!]
 \centering
-\includegraphics[scale = .80]{../Figures/2RegProb/PLNCZKEUR.pdf}
+\caption{PLN and CZK 1m EUR funded carry profit}
+\includegraphics[scale = .75]{../Figures/2RegProb/PLNCZKEUR.pdf}
 \end{figure}
 
 \begin{figure}[h!]
