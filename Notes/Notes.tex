@@ -76,7 +76,7 @@ For example, \citet{BrunnermeierCarry} analyses a sample of carry trades and fin
 \subsection{The instability cycle}
 The aim of this study is to understand more about the evolution of internatonal financial instability by studying the carry trade in a number of European transition and emerging economies. There are two related areas of interest:  the factors that trigger a crash, reversal or sudden-stop; the way that the financial system evolves to the point where the crash is likely to take place.  There have been a number of attempts to identify levels of finacial risk.  This has clearly become even more of an issue since the financial crisis.  For example, \citet{IFCMeasure}.  The IMF have developed a range of \emph{Financial Soundness Indications} (IMF 2006).     Also - Hawkins and Klau (2000), Nelson and Perli (2005) and Gray et al (2007).  There are six main strands:  the real sector, including fiscal position and inflation; the corporate sector, specifically the level of debt and overseas exposure; the ability of the household sector to weather downturns; the external sector, including the foreign exchange position and the capital account; the financial sector; finacial markets. 
 
-%A number of studies applied the early warning indicator methods initially developed in the literature for currency and balance of payments crises to banking crises. Earlier work includes, among others, Calvo et al (1993), Eichengreen et al (1996), Turner and Goldstein (1996) Frankel and Rose (1996). Demirgüç-Kunt and Detragiache (1997) use a multivariate Logit approach to identify determinants of banking crises in a large panel of developing and industrialised countries: slow GDP growth and high inflation, vulnerability to sudden capital outflows, low liquidity in the banking sector, a high share of credit to the private sector, past credit growth, explicit deposit insurance and weak institutions. Kaminsky and Reinhardt (1999) identify early warning indicators of twin (banking and balance of payments) crises, such as credit and equity prices, by looking at the ability of such variables to predict crises 12 or 24 months ahead, while minimising the noise3  to signal ratio. Borio and Lowe (2002) and Borio and Drehmann (2009) build on the techniques developed by Kaminsky and Reinhardt (1999). Like the latter, they define threshold values for the indicators, but unlike them, they look at cumulative processes rather than just growth rates over one year, they use ex ante information (ie information which was available to the policymaker prior to the crisis) and, for the first time, they consider combinations of indicators and look at multiple time horizons. BIS Goodhart 2006%
+%A number of studies applied the early warning indicator methods initially developed in the literature for currency and balance of payments crises to banking crises. Earlier work includes, among others, Calvo et al (1993), Eichengreen et al (1996), Turner and Goldstein (1996) Frankel and Rose (1996). Demirgüç-Kunt and Detragiache (1997) use a multivariate Logit approach to identify determinants of banking crises in a large panel of developing and industrialised countries: slow GDP growth and high inflation, vulnerability to sudden capital outflows, low liquidity in the banking sector, a high share of credit to the private sector, past credit growth, explicit deposit insurance and weak institutions. Kaminsky and Reinhardt (1999) identify early warning indicators of twin (banking and balance of payments) crises, such as credit and equity prices, by looking at the ability of such variables to predict crises 12 or 24 months a, while minimising the noise3  to signal ratio. Borio and Lowe (2002) and Borio and Drehmann (2009) build on the techniques developed by Kaminsky and Reinhardt (1999). Like the latter, they define threshold values for the indicators, but unlike them, they look at cumulative processes rather than just growth rates over one year, they use ex ante information (ie information which was available to the policymaker prior to the crisis) and, for the first time, they consider combinations of indicators and look at multiple time horizons. BIS Goodhart 2006%
 
 However, While measuring debt-to-equity ratios and the scale of bank lending may provide some indication about the regime that is in place, this is imprecise and it is clear that financial services business evolve in ways that make loan counting  inadequate.The recent financial crisis showed that innovations like \emph{Collateralised Debt Obligations (CDO)} can allow an increase in debt that does not directly in bank lending. There are two ways to try to identify the regimes: use external indicators such as the VIX index or other indications of domestic economic or political uncertaintly; use the internatl structure of the data to identify the periods through which the financial system  is evolving.  
 
@@ -356,7 +356,7 @@ Table needs to be updated.
 \begin{tabular}{llrrrrrrrrrrrrr}
   \hline
  Funding&Regime& & HUF & PLN & CZK & RON & RUB & TRY & BGN & NOK & ISK & UAH & HRK & Mean\\ 
-  \hline
+ \hline
   \hline
 \multirow{6}{*}{EUR}&\multirow{2}{*}{Caution}&Mean & 0.9952 & 1.0004 & 0.9953 & 1.0008 & 0.9957 & 1.0071 & 1.0074 & 1.0028 & 1.0033 & 1.0028 & 1.0030 & 1.0021\\ 
   &&S-Dev & 0.1119 & 0.0398 & 0.0873 & 0.0341 & 0.0782 & 0.0328 & 0.0426 & 0.0469 & 0.0100 & 0.0372 & 0.0201 & 0.0559\\ 
@@ -390,6 +390,7 @@ Table needs to be updated.
 \label{tabref:3StateProb}
 \end{table}
 \end{landscape}
+
 What is really needed here in the results are:
 \begin{itemize}
 \item A table with all the returns from the two or three regimes (using different bases).  Retruns can be compared in each of the regimes (which are similar, which are different? 
@@ -399,6 +400,94 @@ What is really needed here in the results are:
 \end{itemize}
  
   
+\subsubsection{HUFEUR}
+There are very large differences between the returns that are achieved in each of these regimes: in the period of caution, UIP holds; in the period when specualtive postitions are in place, a return of 7\% is achieved for little addtiional risk; in the crash there is an average loss of just less than 4\% and an increase in risk. 
+
+\begin{centering}
+ \begin{tabular}{l c c c}
+ & Caution & Build & Crash \\
+ \hline
+ Mean & 1.0004 & 1.0731 & 0.9672\\
+ St-Dev & 0.0398 & 0.0342 & 0.1109\\
+ \end{tabular}
+ \end{centering}
+
+The transition matrix is less consistent with the FIH:  it is possible to move from a regime of caution to one of crash; from build, it is more likely that there will be a return to caution than a crash; the crash can return to building without moving to the cautious phase.   
+
+ \begin{centering}
+ \begin{tabular}{l c c c}
+ & to Caution & to Build & to Crash\\
+ \hline
+ from Caution & 0.7474 & 0.1913 & 0.0513\\
+ from Build & 0.7515 & 0.2485 & 0.0000\\
+ from Crash & 0.0000 & 0.2214 & 0.7786
+ \end{tabular}
+ \end{centering}
+
+\subsubsection{HUFCHF}
+The level of risk in the carry trade funded by CHF is lower than that when the EUR is used.  The difference between the perild of crash and caution is quite modest in terms of average returns but is concetrated on the level of risk.  
+
+\begin{centering}
+ \begin{tabular}{l c c c}
+ & Caution & Build & Crash \\
+ \hline
+ Mean & 1.0025 & 1.0521 & 0.9946\\
+ St-Dev & 0.0161 & 0.0131 & 0.0491\\
+ \end{tabular}
+ \end{centering}
+
+Once the crash, characterised as the more volatile period, begins, the regime is likely to be maintained.  This may mean that a transition model better represents the evolutin of financial instability in this market. It requires a transfer function to represent a step increase in risk. 
+
+ \begin{centering}
+ \begin{tabular}{l c c c}
+ & to Caution & to Build & to Crash\\
+ \hline
+ from Caution & 0.9105 & 0.0521 & 0.0374\\
+ from Build & 0.6652 & 0.3348 & 0.0000\\
+ from Crash & 0.0000 & 0.0807 & 0.9193
+ \end{tabular}
+ \end{centering}
+=======
+Here are some examples of the returns that are acheived in each of the states and the transition matrix that goes along with them.  
+
+ 
+subsubsection{HUFJPY}
+The level of risk is the key differential between the carry trade profits that are achieved in each of the regimes.  The returns that are achieved are fairly modest but the risk is much higher in the period when there is a crash.   
+
+\begin{centering}
+ \begin{tabular}{l c c c}
+ & Caution & Build & Crash \\
+ \hline
+ Mean & 1.0119 & 1.0149 & 0.9985\\
+ St-Dev & 0.0440 & 0.0225 & 0.0671\\
+ \end{tabular}
+ \end{centering}
+
+Once the crash, characterised as the more volatile period, begins, the regime is likely to be maintained.  This may mean that a transition model better represents the evolutin of financial instability in this market. It requires a transfer function to represent a step increase in risk. 
+
+ \begin{centering}
+ \begin{tabular}{l c c c}
+ & to Caution & to Build & to Crash\\
+ \hline
+ from Caution & 0.0001 & 0.9732 & 0.0267\\
+ from Build & 0.8552 & 0.1448 & 0.0000\\
+ from Crash & 0.0215 & 0.0000 & 0.9785
+ \end{tabular}
+ \end{centering}
+ \subsubsection{PLNEUR}
+Again, the data from the transition matrix suggests that it may be better to model this as a step increase in risk that happens after the financial crisis.  it may be that the system can be characterised as having either four or six regimes divided into pre and post financial crisis periods. 
+
+\begin{centering}
+ \begin{tabular}{l c c c}
+ & Caution & Build & Crash \\
+ \hline
+ Mean & 0.9952 & 1.0255 & 0.9719\\
+ St-Dev & 0.1119 & 0.0490 & 0.0518\\
+ \end{tabular}
+ \end{centering}
+
+It is encouraigng that the transition matrix suggests that it is most likely that regimes remain where they are.  If there is a state of "caution", there is 85\% probability that the state will remian cautious; there is just less than 15\% chance that there will be a switch to a regime when speculative positions are built.  Once in the "Build" regime, there is just over 95\% chance that this will be maintained and there is a 4\% chance that there will be a crash.  
+
 \subsubsection{HUFEUR}
 There are very large differences between the returns that are achieved in each of these regimes: in the period of caution, UIP holds; in the period when specualtive postitions are in place, a return of 7\% is achieved for little addtiional risk; in the crash there is an average loss of just less than 4\% and an increase in risk. 
 
@@ -516,6 +605,31 @@ The periods of caution and crash predominate. However, once the crash phase is e
  from Caution & 0.7474 & 0.1913 & 0.0513\\
  from Build & 0.7515 & 0.2485 & 0.0000\\
  from Crash & 0.0000 & 0.2214 & 0.7786
+ \end{tabular}
+ \end{centering}
+
+\subsubsection{ISKEUR}
+There are large losses and high risk in the perild of crash.  There are very small return and low risk in the period of caution. 
+
+
+\begin{centering}
+ \begin{tabular}{l c c c}
+ & Caution & Build & Crash \\
+ \hline
+ Mean & 1.0033 & 1.0106 & 0.9386\\
+ St-Dev & 0.0100 & 0.0572 & 0.1791\\
+ \end{tabular}
+ \end{centering}
+
+The crash seems to come from a position of caution.  The figure suggest that it is difficult to distinguish between the periods of caution and build.  This may be a case where the two-regime model provides a better fit. 
+
+ \begin{centering}
+ \begin{tabular}{l c c c}
+ & to Caution & to Build & to Crash\\
+ \hline
+ from Caution & 0.3476 & 0.5951 & 0.0573\\
+ from Build & 0.0947 & 0.9053 & 0.0000\\
+ from Crash & 0.2089 & 0.0000 & 0.7911
  \end{tabular}
  \end{centering}
 
