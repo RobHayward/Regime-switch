@@ -1,12 +1,8 @@
 # Extract the transition matrix and tabulate.
 # This works for one.  Now need to loop
-#summary(fm)
-#getpars(fm)
-#trans2 <- matrix(getpars(fm)[3:6], ncol = 2, byrow = TRUE)
-#trans2
 i = "PLN"
 #for(i in Inv){
-#list4["EUR"][i]["pars"]
+list4["EUR"][i]["pars"]
 #list4$EUR$PLN$pars
 states <- matrix(list4$JPY$HUF$pars[13:18], nrow = 2)
 trans <- matrix(list4$JPY$HUF$pars[4:12], nrow = 3, byrow = TRUE)
@@ -34,7 +30,7 @@ rownames(trans3) <- c("From Caution", "From Build", "From Crash")
 round(states2, digits = 4)
 round(trans3, digits = 4)
 
-
+# I do not think that the rest is needed.  Check.  
 
 # This works for levels, but not for matrix. 
 # for(i in inv){

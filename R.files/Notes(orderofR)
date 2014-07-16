@@ -3,6 +3,10 @@ Use prepare2.R first. This contains the functions to download the data and the f
 
 Use Raw.R to carry out the HMM analysis. It will also add a column of 1s for the USD.  This is an example of what can be done. 
 
+"table2"" is a table of two-stage return parameters for one funding currency when used with Test2State.R and delivers each funding currency into the "funding" vector when used with "2StageFundTab.R" 
+
+2StteProp.R will calculate the probbility of being in each state, add these probabilities and the dates tht the system is in each regime to the list2 and will cocatonate the dates into a list for all the crash regimes (assessed by the states with the lowest returns). 
+
 The 3StageFundTab.R will loop through funding currencies to calculate profits against each of the investment currencies.  The EEK and LVL do not work.  The RUB does not work against the CHF.  
 
 Trans.R will create tables of the regime parameters and transition matrix parameters. 

@@ -86,7 +86,7 @@ list2$HUF$posterior$Date <- index(a$profit)
 i = "UAH"
 # Change this for 1 month EUR funded carry
 title <- paste("Profits from ", i, "-", "EUR", "1M", sep= "")
-pdf("Figures/2RegProb/HRKUAHEUR.pdf", paper= "a4", title = "HRK-EUR and 
+#pdf("Figures/2RegProb/HRKUAHEUR.pdf", paper= "a4", title = "HRK-EUR and 
     UAH-EUR Carry")
 par(mfcol = c(3,2))
 plot(list2[[i]]$profit, main = title, ylab = "Profits", xlab = "Date")
@@ -97,5 +97,5 @@ plot(list2[[i]]$posterior$S1 ~ list2[[i]]$posterior$Date,
 plot(list2[[i]]$posterior$S2 ~ list2[[i]]$posterior$Date, type = 'l',  
      main = "Probability of State Crash", ylab = "Probability", xlab = "Date")
 # The following line will save a pdf in Figures for use
-dev.off()
+#dev.off()
 

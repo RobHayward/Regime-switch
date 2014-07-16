@@ -13,7 +13,7 @@ rownames(table) <- c("mean1", "SD1", "mean2", "sd2")
 colnames(table) <- inv
 for(i in inv){
   # EUR 1 month
-  a <- forp(i, "EUR", 1)
+  a <- forp(i, j, 1)
   profit <- a$data$p
   mod2 <- depmix(profit ~ 1, nstates = 2, data = da)
   fm2 <- fit(mod2, verbose = FALSE)
@@ -43,7 +43,20 @@ funding[[j]] <- table2
 }
 str(funding)
 head(funding$EUR)
-table3 <- rbind(funding$EUR, funding$USD, funding$CHF, funding$JPY)
-regimetable <- xtable(table3, digits = 4)
+table2 <- rbind(funding$EUR, funding$USD, funding$CHF, funding$JPY)
+table2 <- cbind(table2, rowMeans(table2))
+table2
+colnames(table2) <- c(inv, "Mean")
+regimetable <- xtable(table2, digits = 4)
 regimetable
 table2
+#------------------------------------------------------------------
+# Now want to find average for fixed and floating exchange rates
+# vector of currency regimes for inv.  1 is fixed, 2 is mixed, 3 is floating
+# adapted from Hayward (2013) and  IMF (2009)
+inv
+fxregime <- c(2, 3, 3, 2, 2, 3, 1, 3, 3, 2, 2, 0)
+table2 <- rbind(table2, fxregime)
+meanfloat <- rowMeans(table2[,which(table2[17,] == 3)])
+meanfix <- rowMeans(table2[,which(table2[17,] == 2)])
+meanfloat - meanfix

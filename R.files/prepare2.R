@@ -33,3 +33,5 @@ forp <- function(fx, b, m){
 #Test it
 # a <- forp("HUF", "EUR", 1)
 # head(a$data)
+rm(USD)
+# get rid of vector or ones. 

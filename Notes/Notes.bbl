@@ -25,10 +25,25 @@ Azaraidis, C. \harvardand\ Smith, B.  \harvardyearleft 1998\harvardyearright ,
   `Financial intermediation and regime switching in busiess cycles', {\em
   American Economic Review} {\bf 88},~516 -- 536.
 
+\harvarditem[Baele et~al.]{Baele, Bekaert, Inghelbrecht \harvardand\
+  Wei}{2014}{FTS}
+Baele, L., Bekaert, G., Inghelbrecht, K. \harvardand\ Wei, M.  \harvardyearleft
+  2014\harvardyearright , `Flights to safety', {\em Finance and Economics
+  Discussion Series} {\bf 2014}(46).
+\newline\harvardurl{http://www.federalreserve.gov/pubs/feds/2014/201446/201446abs.html}
+
 \harvarditem{Balke}{2000}{Balke}
 Balke, N.~S.  \harvardyearleft 2000\harvardyearright , `Credit and economic
   acivity: Creddit regimes and nonlinear propogation of shocks', {\em The
   Review of Economics and Statistics} {\bf 82}(2),~344 -- 349.
+
+\harvarditem[Baum et~al.]{Baum, Petrie, Soules \harvardand\
+  Weiss}{1970}{Baum1970}
+Baum, L.~E., Petrie, T., Soules, G. \harvardand\ Weiss, N.  \harvardyearleft
+  1970\harvardyearright , `A maximization technique occuring in the statistical
+  analysis of probabilistic functions of markov chains', {\em The Annals of
+  Mathematical Statistics} {\bf 41}(1).
+\newline\harvardurl{http://projecteuclid.org/euclid.aoms/1177697196}
 
 \harvarditem{Berglof}{2010}{EBRD}
 Berglof, E.  \harvardyearleft 2010\harvardyearright , Recovery and reform,
@@ -74,11 +89,6 @@ Ceruttie, E., Claessens, S. \harvardand\ Ratnovski, L.  \harvardyearleft
   2014\harvardyearright , `Global liquiity and drivers of cross-border bank
   flows', {\em IMF Working Paper} {\bf 14}(69).
 
-\harvarditem{{\em Cross-border banking and global liquidity}}{2014}{Bruno2014}
-{\em Cross-border banking and global liquidity}  \harvardyearleft
-  2014\harvardyearright .
-\newblock mimeo, Princeton University.
-
 \harvarditem[Dempster et~al.]{Dempster, Laird \harvardand\
   Rubin}{1977}{dempster1977maximum}
 Dempster, A.~P., Laird, N.~M. \harvardand\ Rubin, D.~B.  \harvardyearleft
@@ -105,6 +115,11 @@ Fisher, I.  \harvardyearleft 1933\harvardyearright , `The debt-deflation theory
   \harvardyearleft 2011\harvardyearright , Quarterly Focus~Q1, Oesterreichische
   {N}atonal {B}ank.
 
+\harvarditem{Frydman \harvardand\ Schuermann}{2008}{frydman2008credit}
+Frydman, H. \harvardand\ Schuermann, T.  \harvardyearleft 2008\harvardyearright
+  , `Credit rating dynamics and markov mixture models', {\em Journal of Banking
+  \& Finance} {\bf 32}(6),~1062--1075.
+
 \harvarditem{Gabor}{2011}{Gabor}
 Gabor, D.  \harvardyearleft 2011\harvardyearright , {\em Central Banking and
   Financialization: A {R}omanian account of how {E}astern {E}urope became
@@ -114,6 +129,10 @@ Gabor, D.  \harvardyearleft 2011\harvardyearright , {\em Central Banking and
 Gadanecz, B. \harvardand\ Jayaram, K.  \harvardyearleft 2008\harvardyearright ,
   Measures of financial stability - a review, {\em in} `Proceedings of the IFC
   COnfernece on Measuring Financial Innovation and its impact', Vol.~31.
+
+\harvarditem{Gorton}{2012}{Gorton2013}
+Gorton, G.~B.  \harvardyearleft 2012\harvardyearright , {\em Misunderstanding
+  Financial Crises: Why we don't see them coming}, OUP, Oxford.
 
 \harvarditem{Groen \harvardand\ Peck}{2014}{NYFedtaper}
 Groen, J. \harvardand\ Peck, R.  \harvardyearleft 2014\harvardyearright , `Risk
@@ -125,15 +144,48 @@ Habib, M. \harvardand\ Stracca, L.  \harvardyearleft 2012\harvardyearright ,
   `Getting beyond carry trade: What makes a safe haven currency?', {\em Journal
   of International Economics} {\bf 87}(1),~50 -- 64.
 
-\harvarditem{Karel~Mertens}{2013}{MertensSVAR}
-Karel~Mertens, M. O.~R.  \harvardyearleft 2013\harvardyearright , `The dynamic
-  effects of personal and coroprate income tax changes in the united states',
-  {\em American Economic Review} {\bf 103}(4),~1212 -- 1247.
-\newline\harvardurl{http://dx.doi.org/10.1257/aer.103.4.1212}
+\harvarditem{Hamilton}{1989}{Hamilton1989}
+Hamilton, J.~D.  \harvardyearleft 1989\harvardyearright , `A new approach to
+  the economic analysis of nonstationary time series and the business cycle',
+  {\em Econometrica} {\bf 52}(2),~357 -- 384.
+
+\harvarditem{Hayward}{2013}{Hayward2013}
+Hayward, R.  \harvardyearleft 2013\harvardyearright , Towards a model of
+  speculation in the forign exchange market, PhD thesis, University of Brighton
+  Business School.
+
+\harvarditem{Jurek}{2007}{JurekCrash}
+Jurek, J.  \harvardyearleft 2007\harvardyearright , `Crash-neutral currency
+  carry trades', {\em AFA Atlanta Meetings Paper} .
 
 \harvarditem{Krugman}{2000}{KrugmanSS}
 Krugman, P., ed.  \harvardyearleft 2000\harvardyearright , {\em Currency
   Crises}, University of Chicago Press, Chicago.
+
+\harvarditem{Minsky}{1975}{MinskyKeynes}
+Minsky, H.~P.  \harvardyearleft 1975\harvardyearright , {\em John Maynard
+  Keynes}, Columbia University Press, NY.
+
+\harvarditem{Minsky}{1986}{MinskyStabilising}
+Minsky, H.~P.  \harvardyearleft 1986\harvardyearright , {\em Stabilizing an
+  Unstable Economy}, Yale University Press.
+
+\harvarditem{Minsky}{1992}{MinskyFIH}
+Minsky, H.~P.  \harvardyearleft 1992\harvardyearright , The financial
+  instability hypothesis, {\em in} M.~S. P.~Arestis, ed., `Handbook of Radical
+  Political Economy', Edward Elgar, Aldershot.
+
+\harvarditem{Minsky}{1995}{MinskyLongerWaves}
+Minsky, H.~P.  \harvardyearleft 1995\harvardyearright , `Longer waves in
+  financial relations: Financial factors in the more severe depressions {II}',
+  {\em Journal of Economic Issues} {\bf 29}(1).
+
+\harvarditem[Mishra et~al.]{Mishra, Moriyama \harvardand\
+  N'Diaye}{2014}{Tapering}
+Mishra, P., Moriyama, K. \harvardand\ N'Diaye, P.~M.  \harvardyearleft
+  2014\harvardyearright , `Impact of fed tapering announcements on emerging
+  markets', {\em IMF Working Paper} {\bf 14}(109).
+\newline\harvardurl{http://www.imf.org/external/pubs/cat/longres.aspx?sk=41655.0}
 
 \harvarditem{Reinhart \harvardand\ Rogoff}{2009}{ReinhartRogoff}
 Reinhart, C. \harvardand\ Rogoff, K.  \harvardyearleft 2009\harvardyearright ,
@@ -156,5 +208,11 @@ Schwartz, H. \harvardand\ Simons, A.  \harvardyearleft 1991\harvardyearright ,
 Tversky, A. \harvardand\ Kahneman, D.  \harvardyearleft 1973\harvardyearright ,
   `Availability: A heuristic for judging frequency and probability', {\em
   Cognitive Psychology} {\bf 5}(2),~207 -- 232.
+
+\harvarditem{Visser \harvardand\ Speekenbrink}{2010}{depmixS4}
+Visser, I. \harvardand\ Speekenbrink, M.  \harvardyearleft
+  2010\harvardyearright , `{depmixS4}: An {R} package for hidden markov
+  models', {\em Journal of Statistical Software} {\bf 36}(7),~1--21.
+\newline\harvardurl{http://www.jstatsoft.org/v36/i07/}
 
 \end{thebibliography}

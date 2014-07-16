@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.19)  2 JUL 2014 11:42
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.19)  16 JUL 2014 14:26
 entering extended mode
 **Notes.tex
 ("C:\Users\Toshiba\Google Drive\Research\GIT\Regime-Switch\Notes\Notes.tex"
@@ -512,6 +512,9 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen158
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip48
@@ -524,14 +527,14 @@ LaTeX Info: Redefining \cite on input line 694.
 \lst@gtempboxa=\box58
 \lst@token=\toks30
 \lst@length=\count122
-\lst@currlwidth=\dimen158
+\lst@currlwidth=\dimen159
 \lst@column=\count123
 \lst@pos=\count124
-\lst@lostspace=\dimen159
-\lst@width=\dimen160
+\lst@lostspace=\dimen160
+\lst@width=\dimen161
 \lst@newlines=\count125
 \lst@lineno=\count126
-\lst@maxwidth=\dimen161
+\lst@maxwidth=\dimen162
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
@@ -594,7 +597,7 @@ Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen162
+\@linkdim=\dimen163
 \Hy@linkcounter=\count129
 \Hy@pagecounter=\count130
 
@@ -622,8 +625,8 @@ Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4653.
 \Fld@menulength=\count133
-\Field@Width=\dimen163
-\Fld@charsize=\dimen164
+\Field@Width=\dimen164
+\Fld@charsize=\dimen165
 Package hyperref Info: Hyper figures OFF on input line 5773.
 Package hyperref Info: Link nesting OFF on input line 5778.
 Package hyperref Info: Hyper index ON on input line 5781.
@@ -672,13 +675,13 @@ ABD: EveryShipout initializing macros
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count139
-\scratchdimen=\dimen165
+\scratchdimen=\dimen166
 \scratchbox=\box60
 \nofMPsegments=\count140
 \nofMParguments=\count141
 \everyMPshowfont=\toks31
 \MPscratchCnt=\count142
-\MPscratchDim=\dimen166
+\MPscratchDim=\dimen167
 \MPnumerator=\count143
 \makeMPintoPDFobject=\count144
 \everyMPtoPDFconversion=\toks32
@@ -704,89 +707,213 @@ LaTeX Info: Redefining \nameref on input line 19.
 
 [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4] [5]
-Overfull \hbox (18.1777pt too wide) in paragraph at lines 81--82
-\OT1/cmr/m/n/12 uid-ity and rel-a-tively at-trac-tive in-vest-ment op-poprtu-ni
--ties in emerg-ing economies.
- []
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
 
-[6] [7] [8]
-Missing character: There is no ; in font nullfont!
- [9]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 172.
+Package natbib Warning: Citation `Obstfeld2013' on page 4 undefined on input li
+ne 62.
 
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+
+Package natbib Warning: Citation `Bruno2013' on page 4 undefined on input line 
+62.
+
+[4] [5] [6] [7] [8] [9]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 175.
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 172.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 175.
+ [10]
+Missing character: There is no ; in font nullfont!
+ [11]
+[12
 
-[10
 
-
-] [11] [12] [13]
-Overfull \hbox (54.60022pt too wide) in paragraph at lines 276--276
-[]\OT1/cmtt/m/n/12 v[i,l] <-  statelprobnucleotidei * max(v[(i-1),] * transitio
-nmatrix[,l]) 
- []
-
-[14] [15] [16]
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 347.
-
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
-File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 347.
-
-[17] [18
-
-]
-Overfull \hbox (3.78299pt too wide) in paragraph at lines 399--432
+] [13] [14]
+Overfull \hbox (95.03387pt too wide) in paragraph at lines 356--382
  [][] 
  []
 
-[19] <../Figures/2RegProb/PLNCZKEUR.pdf, id=322, 597.23125pt x 844.15375pt>
+[15
+
+] [16
+
+]
+Overfull \hbox (93.56721pt too wide) in paragraph at lines 398--432
+ [][] 
+ []
+
+[17]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../Figures/2RegProb/PLNCZKEUR.pdf, id=314, 597.23125pt x 844.15375pt>
 File: ../Figures/2RegProb/PLNCZKEUR.pdf Graphic file (type pdf)
 
 <use ../Figures/2RegProb/PLNCZKEUR.pdf>
-Package pdftex.def Info: ../Figures/2RegProb/PLNCZKEUR.pdf used on input line 4
-65.
-(pdftex.def)             Requested size: 477.78564pt x 675.32391pt.
+Package pdftex.def Info: ../Figures/2RegProb/PLNCZKEUR.pdf used on input line 5
+11.
+(pdftex.def)             Requested size: 447.92233pt x 633.11375pt.
 
-Overfull \hbox (87.78564pt too wide) in paragraph at lines 465--466
+Overfull \hbox (57.92233pt too wide) in paragraph at lines 511--512
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 83.32391pt on input line 466.
+LaTeX Warning: Float too large for page by 62.78038pt on input line 512.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[20
+<../Figures/3RegProb/PLNCZKEUR.pdf, id=315, 597.23125pt x 844.15375pt>
+File: ../Figures/3RegProb/PLNCZKEUR.pdf Graphic file (type pdf)
+
+<use ../Figures/3RegProb/PLNCZKEUR.pdf>
+Package pdftex.def Info: ../Figures/3RegProb/PLNCZKEUR.pdf used on input line 5
+16.
+(pdftex.def)             Requested size: 477.78564pt x 675.32391pt.
+
+Overfull \hbox (87.78564pt too wide) in paragraph at lines 516--517
+ [][] 
+ []
 
 
+LaTeX Warning: Float too large for page by 83.32391pt on input line 517.
 
-] <../Figures/2RegProb/ISKTRYEUR.pdf, id=327, 597.23125pt x 844.15375pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../Figures/2RegProb/ISKTRYEUR.pdf, id=316, 597.23125pt x 844.15375pt>
 File: ../Figures/2RegProb/ISKTRYEUR.pdf Graphic file (type pdf)
 
 <use ../Figures/2RegProb/ISKTRYEUR.pdf>
-Package pdftex.def Info: ../Figures/2RegProb/ISKTRYEUR.pdf used on input line 4
-95.
+Package pdftex.def Info: ../Figures/2RegProb/ISKTRYEUR.pdf used on input line 5
+21.
 (pdftex.def)             Requested size: 477.78564pt x 675.32391pt.
 
-Overfull \hbox (87.78564pt too wide) in paragraph at lines 495--496
+Overfull \hbox (87.78564pt too wide) in paragraph at lines 521--522
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 83.32391pt on input line 496.
+LaTeX Warning: Float too large for page by 83.32391pt on input line 522.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[21] ("C:\Users\Toshiba\Google Drive\Research\GIT\Regime-Switch\Notes\Notes.bbl
+<../Figures/3RegProb/ISKTRYEUR.pdf, id=317, 597.23125pt x 844.15375pt>
+File: ../Figures/3RegProb/ISKTRYEUR.pdf Graphic file (type pdf)
+
+<use ../Figures/3RegProb/ISKTRYEUR.pdf>
+Package pdftex.def Info: ../Figures/3RegProb/ISKTRYEUR.pdf used on input line 5
+26.
+(pdftex.def)             Requested size: 477.78564pt x 675.32391pt.
+
+Overfull \hbox (87.78564pt too wide) in paragraph at lines 526--527
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 83.32391pt on input line 527.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../Figures/2RegProb/RONHUFEUR.pdf, id=318, 597.23125pt x 844.15375pt>
+File: ../Figures/2RegProb/RONHUFEUR.pdf Graphic file (type pdf)
+
+<use ../Figures/2RegProb/RONHUFEUR.pdf>
+Package pdftex.def Info: ../Figures/2RegProb/RONHUFEUR.pdf used on input line 5
+31.
+(pdftex.def)             Requested size: 477.78564pt x 675.32391pt.
+
+Overfull \hbox (87.78564pt too wide) in paragraph at lines 531--532
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 83.32391pt on input line 532.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../Figures/3RegProb/RONHUFEUR.pdf, id=319, 597.23125pt x 844.15375pt>
+File: ../Figures/3RegProb/RONHUFEUR.pdf Graphic file (type pdf)
+
+<use ../Figures/3RegProb/RONHUFEUR.pdf>
+Package pdftex.def Info: ../Figures/3RegProb/RONHUFEUR.pdf used on input line 5
+36.
+(pdftex.def)             Requested size: 477.78564pt x 675.32391pt.
+
+Overfull \hbox (87.78564pt too wide) in paragraph at lines 536--537
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 83.32391pt on input line 537.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../Figures/2RegProb/HRKUAHEUR.pdf, id=320, 597.23125pt x 844.15375pt>
+File: ../Figures/2RegProb/HRKUAHEUR.pdf Graphic file (type pdf)
+
+<use ../Figures/2RegProb/HRKUAHEUR.pdf>
+Package pdftex.def Info: ../Figures/2RegProb/HRKUAHEUR.pdf used on input line 5
+41.
+(pdftex.def)             Requested size: 477.78564pt x 675.32391pt.
+
+Overfull \hbox (87.78564pt too wide) in paragraph at lines 541--542
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 83.32391pt on input line 542.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../Figures/3RegProb/HRKUAHEUR.pdf, id=321, 597.23125pt x 844.15375pt>
+File: ../Figures/3RegProb/HRKUAHEUR.pdf Graphic file (type pdf)
+
+<use ../Figures/3RegProb/HRKUAHEUR.pdf>
+Package pdftex.def Info: ../Figures/3RegProb/HRKUAHEUR.pdf used on input line 5
+46.
+(pdftex.def)             Requested size: 477.78564pt x 675.32391pt.
+
+Overfull \hbox (87.78564pt too wide) in paragraph at lines 546--547
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 83.32391pt on input line 547.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[18
+
+
+]
+File: ../Figures/2RegProb/ISKTRYEUR.pdf Graphic file (type pdf)
+ <use ../Figures/2RegProb/ISKTRYEUR.pdf>
+Package pdftex.def Info: ../Figures/2RegProb/ISKTRYEUR.pdf used on input line 5
+63.
+(pdftex.def)             Requested size: 477.78564pt x 675.32391pt.
+
+Overfull \hbox (87.78564pt too wide) in paragraph at lines 563--564
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 83.32391pt on input line 564.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[19] ("C:\Users\Toshiba\Google Drive\Research\GIT\Regime-Switch\Notes\Notes.bbl
 "
 Underfull \hbox (badness 1014) in paragraph at lines 4--8
 []\OT1/cmr/m/n/12 Ahmed, S. and Zlate, A. (2014), `Cap-i-tal flows to emerg-ing
@@ -805,54 +932,69 @@ Overfull \hbox (39.30322pt too wide) in paragraph at lines 10--16
 2014/whd/eng/pdf/wreo0414.pdf 
  []
 
-[22] [23]
-Underfull \hbox (badness 10000) in paragraph at lines 109--112
+[20]
+Overfull \hbox (19.5642pt too wide) in paragraph at lines 30--34
+\OT1/cmr/bx/n/12 URL: \OT1/cmr/m/it/12 http://www.federalreserve.gov/pubs/feds/
+2014/201446/201446abs.html 
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 138--141
 \OT1/cmr/bx/n/12 URL: \OT1/cmr/m/it/12 http://libertystreeteconomics.newyorkfed
 .org/2014/03/risk-
  []
 
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 522.
- [24] [25 <C:/Users/Toshiba/Google Drive/Research/GIT/Regime-Switch/Figures/2Re
-gProb/PLNCZKEUR.pdf>] [26 <C:/Users/Toshiba/Google Drive/Research/GIT/Regime-Sw
-itch/Figures/2RegProb/ISKTRYEUR.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 522.
+[22])
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 588.
+[23] [24 <C:/Users/Toshiba/Google Drive/Research/GIT/Regime-Switch/Figures/2Reg
+Prob/PLNCZKEUR.pdf>] [25 <C:/Users/Toshiba/Google Drive/Research/GIT/Regime-Swi
+tch/Figures/3RegProb/PLNCZKEUR.pdf>] [26 <C:/Users/Toshiba/Google Drive/Researc
+h/GIT/Regime-Switch/Figures/2RegProb/ISKTRYEUR.pdf>] [27 <C:/Users/Toshiba/Goog
+le Drive/Research/GIT/Regime-Switch/Figures/3RegProb/ISKTRYEUR.pdf>] [28 <C:/Us
+ers/Toshiba/Google Drive/Research/GIT/Regime-Switch/Figures/2RegProb/RONHUFEUR.
+pdf>] [29 <C:/Users/Toshiba/Google Drive/Research/GIT/Regime-Switch/Figures/3Re
+gProb/RONHUFEUR.pdf>] [30 <C:/Users/Toshiba/Google Drive/Research/GIT/Regime-Sw
+itch/Figures/2RegProb/HRKUAHEUR.pdf>] [31 <C:/Users/Toshiba/Google Drive/Resear
+ch/GIT/Regime-Switch/Figures/3RegProb/HRKUAHEUR.pdf>] [32]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 588.
 
 ("C:\Users\Toshiba\Google Drive\Research\GIT\Regime-Switch\Notes\Notes.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 522.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 522.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 588.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 588.
 Package rerunfilecheck Info: File `Notes.out' has not changed.
-(rerunfilecheck)             Checksum: 57894D06B2EDE7FBC00B02E82B7B08FA;1358.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 522.
+(rerunfilecheck)             Checksum: 5127E31363730A54EC3D97E039A9B1D3;809.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 588.
  ) 
 Here is how much of TeX's memory you used:
- 17672 strings out of 494045
- 334205 string characters out of 3145963
- 454127 words of memory out of 3000000
- 20550 multiletter control sequences out of 15000+200000
- 11630 words of font info for 42 fonts, out of 3000000 for 9000
+ 17736 strings out of 494045
+ 335851 string characters out of 3145963
+ 461036 words of memory out of 3000000
+ 20603 multiletter control sequences out of 15000+200000
+ 11461 words of font info for 41 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 56i,13n,69p,1759b,1102s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,13n,69p,1505b,652s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/
 Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Notes.pdf (26 pages, 326026 bytes).
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Notes.pdf (32 pages, 396193 bytes).
 PDF statistics:
- 443 PDF objects out of 1000 (max. 8388607)
- 100 named destinations out of 1000 (max. 500000)
- 287 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 510 PDF objects out of 1000 (max. 8388607)
+ 108 named destinations out of 1000 (max. 500000)
+ 245 words of extra memory for PDF output out of 10000 (max. 10000000)
 
