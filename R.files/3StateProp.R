@@ -46,12 +46,12 @@ list3[["CZK"]]$prop3
 list3[["CZK"]]$rank
 list3[[i]]$rank[1]
 
-prop[[i]][1]
-list3[[i]]$prop[1]
-list3[["HUF"]]$pars[13:18]
-list3[["HUF"]]$posterior$state
+prop[[i]][2]
+list3[[i]]$prop[3]
+list3[[i]]$pars[13:18]
+list3[[i]]$posterior$state
 round(table(list3[["HUF"]]$posterior$state)/
-                              length(list3[["HUF"]]$posterior$state), digits = 4)[3]
+                              length(list3[["HUF"]]$posterior$state), digits = 4)[1]
 
 order(rank(list3[[i]]$pars[c(13, 15, 17)]))[2]
 # Now extract the dates and proportions and relate to regime. 

@@ -45,10 +45,6 @@ Baum, L.~E., Petrie, T., Soules, G. \harvardand\ Weiss, N.  \harvardyearleft
   Mathematical Statistics} {\bf 41}(1).
 \newline\harvardurl{http://projecteuclid.org/euclid.aoms/1177697196}
 
-\harvarditem{Berglof}{2010}{EBRD}
-Berglof, E.  \harvardyearleft 2010\harvardyearright , Recovery and reform,
-  Transition report, EBRD.
-
 \harvarditem{Bernanke \harvardand\ Gertler}{1989}{BernankeGertlerAgency}
 Bernanke, B. \harvardand\ Gertler, M.  \harvardyearleft 1989\harvardyearright ,
   `Agency costs, net worth and business fluctuations', {\em American Economic
@@ -78,6 +74,11 @@ Brunnermeier, M. \harvardand\ Pedersen, L.  \harvardyearleft
   2009\harvardyearright , `Market liquidity and funding liquidity', {\em Review
   of Financial Studies} {\bf 22}(6),~2201 -- 2238.
 
+\harvarditem{Bruno \harvardand\ Shin}{2014}{Bruno2014}
+Bruno, V. \harvardand\ Shin, H.~S.  \harvardyearleft 2014\harvardyearright ,
+  Cross-border banking and global liquidity.
+\newblock mimeo, Princeton University.
+
 \harvarditem{Calvo}{1998}{CalvoSS}
 Calvo, G.~A.  \harvardyearleft 1998\harvardyearright , `Capital flows and
   capital-market crises {:} the simple economics of sudden stops', {\em Journal
@@ -89,12 +90,22 @@ Ceruttie, E., Claessens, S. \harvardand\ Ratnovski, L.  \harvardyearleft
   2014\harvardyearright , `Global liquiity and drivers of cross-border bank
   flows', {\em IMF Working Paper} {\bf 14}(69).
 
+\harvarditem{{Chicago Board of Trade}}{2009}{VIX}
+{Chicago Board of Trade}  \harvardyearleft 2009\harvardyearright , `The vix
+  white paper'.
+\newline\harvardurl{http://www.cboe.com/micro/vix/vixwhite.pdf}
+
 \harvarditem[Dempster et~al.]{Dempster, Laird \harvardand\
   Rubin}{1977}{dempster1977maximum}
 Dempster, A.~P., Laird, N.~M. \harvardand\ Rubin, D.~B.  \harvardyearleft
   1977\harvardyearright , `Maximum likelihood from incomplete data via the em
   algorithm', {\em Journal of the Royal Statistical Society. Series B
   (Methodological)} pp.~1--38.
+
+\harvarditem{Diamond}{2012}{Diamond}
+Diamond, R.~V.  \harvardyearleft 2012\harvardyearright , `Vix as a variance
+  swap'.
+\newline\harvardurl{http://ssrn.com/abstract=2030292}
 
 \harvarditem{Dornbusch \harvardand\ Werner}{1995}{DornbuschSS}
 Dornbusch, R. \harvardand\ Werner, A.  \harvardyearleft 1995\harvardyearright ,
@@ -109,26 +120,10 @@ Fisher, I.  \harvardyearleft 1932\harvardyearright , {\em Booms and
 Fisher, I.  \harvardyearleft 1933\harvardyearright , `The debt-deflation theory
   of great depressions', {\em Econometrica} {\bf 1}(4),~337--357.
 
-\harvarditem{{\em Focus on European Economic Integration: Foreign Currency
-  Loans}}{2011}{ONBcarry}
-{\em Focus on European Economic Integration: Foreign Currency Loans}
-  \harvardyearleft 2011\harvardyearright , Quarterly Focus~Q1, Oesterreichische
-  {N}atonal {B}ank.
-
 \harvarditem{Frydman \harvardand\ Schuermann}{2008}{frydman2008credit}
 Frydman, H. \harvardand\ Schuermann, T.  \harvardyearleft 2008\harvardyearright
   , `Credit rating dynamics and markov mixture models', {\em Journal of Banking
   \& Finance} {\bf 32}(6),~1062--1075.
-
-\harvarditem{Gabor}{2011}{Gabor}
-Gabor, D.  \harvardyearleft 2011\harvardyearright , {\em Central Banking and
-  Financialization: A {R}omanian account of how {E}astern {E}urope became
-  subprime}, Studies in Economic transition, Palgrave, New York.
-
-\harvarditem{Gadanecz \harvardand\ Jayaram}{2008}{IFCMeasure}
-Gadanecz, B. \harvardand\ Jayaram, K.  \harvardyearleft 2008\harvardyearright ,
-  Measures of financial stability - a review, {\em in} `Proceedings of the IFC
-  COnfernece on Measuring Financial Innovation and its impact', Vol.~31.
 
 \harvarditem{Gorton}{2012}{Gorton2013}
 Gorton, G.~B.  \harvardyearleft 2012\harvardyearright , {\em Misunderstanding
@@ -197,6 +192,7 @@ Rey, H.  \harvardyearleft 2013\harvardyearright , Dilemma not trilemma. the
   global financial cycle and monetary policy independence, {\em in}
   `Proceedings of the Federal Reseve Bank of Kansas City Economic Symposium in
   Jackson Hole'.
+\newline\harvardurl{http://www.kansascityfed.org/publicat/sympos/2013/2013rey.pdf}
 
 \harvarditem{Schwartz \harvardand\ Simons}{1991}{Schwartzavailability}
 Schwartz, H. \harvardand\ Simons, A.  \harvardyearleft 1991\harvardyearright ,

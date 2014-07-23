@@ -54,3 +54,5 @@ plot(pst3[,4] ~ pst2$Date, type = 'l', main = "Probability in State 3: Caution")
 # dev.off()
 # This all set up to run through the currency paris to 
 # extract the results. 
+# Test rank
+
