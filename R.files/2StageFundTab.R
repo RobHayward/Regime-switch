@@ -5,12 +5,12 @@ inv <- c("HUF", "PLN", "CZK", "RON", "RUB", "TRY", "BGN",
          "NOK", "ISK", "UAH", "HRK")
 fund <- c("EUR", "USD", "CHF", "JPY")
 funding <- list(c(fund))
-for(j in fund){
-# create a matrix for the parameters of the two models
 list2 <- list(c(inv))
 table <- matrix(1, nrow = 4, ncol = length(inv))
 rownames(table) <- c("mean1", "SD1", "mean2", "sd2") 
 colnames(table) <- inv
+for(j in fund){
+# create a matrix for the parameters of the two models
 for(i in inv){
   # EUR 1 month
   a <- forp(i, j, 1)
@@ -21,9 +21,10 @@ for(i in inv){
   table[2,i] <- getpars(fm2)[8]
   table[3,i] <- getpars(fm2)[9]
   table[4,i] <- getpars(fm2)[10]
-  list2[[i]] <- list(pars = getpars(fm2), logLik(fm2), 
-                     posterior = posterior(fm2), profit = a$profit)
-  list2[[i]]$posterior$Date <- index(list2[[i]]$profit)
+  list2[[j]][[i]] <- list(pars = getpars(fm2), ll = logLik(fm2), 
+                     AIC = AIC(fm2), BIC = BIC(fm2), posterior = posterior(fm2), 
+                          profit = a$profit)
+  list2[[j]][[i]]$posterior$Date <- index(list2[[j]][[i]]$profit)
 }
 # table 2 will order the state by size of the return (highest first for "calm")
 table2 <- matrix(1, nrow = 4, ncol = length(inv))
@@ -65,4 +66,16 @@ print(fm2)
 AIC(fm2)
 BIC(fm2)
 logLik(fm2)
+str(list2[["EUR"]][["PLN"]])
+# create a table for the criteria
+# This is being built for all the criteria that will determine the best model
+critable2 <- matrix(1, nrow = length(inv), ncol = 3)
+rownames(critable2) <- inv
+colnames(critable2) <- c("LL", "AIC", "BIC")
+for(i in inv){
+  critable2[i, 1] <- list2[["EUR"]][[i]]$ll
+  critable2[i, 2] <- list2[["EUR"]][[i]]$AIC
+  critable2[i, 3] <- list2[["EUR"]][[i]]$BIC
+}
+critable2
 ---------------------------------------------------------

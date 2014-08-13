@@ -1,3 +1,4 @@
+# rm(list = ls())
 require(depmixS4)
 set.seed(3)
 # EEK and LVL do not seem to work. Is it the NAs? 
@@ -27,7 +28,8 @@ for(i in inv){
   table[4,i] <- getpars(fm3)[16]
   table[5,i] <- getpars(fm3)[17]
   table[6,i] <- getpars(fm3)[18]
-  list3[[i]] <- list(pars = getpars(fm3), logLik(fm3), 
+  list3[[i]] <- list(pars = getpars(fm3), LL = logLik(fm3), 
+                     AIC = AIC(fm3), BIC = BIC(fm3),
                      posterior = posterior(fm3), profit = a$profit)
   list3[[i]]$posterior$Date <- index(list3[[i]]$profit)
 }
@@ -72,3 +74,17 @@ table4
 colnames(table4) <- c(inv, "Mean")
 regimetable <- xtable(table4, digits = 4)
 regimetable
+# ------------------------
+str(list4)
+critable3 <- matrix(1, nrow = length(inv), ncol = 3)
+rownames(critable3) <- inv
+colnames(critable3) <- c("LL", "AIC", "BIC")
+for(i in inv){
+  critable3[i, 1] <- list4[["EUR"]][[i]]$LL
+  critable3[i, 2] <- list4[["EUR"]][[i]]$AIC
+  critable3[i, 3] <- list4[["EUR"]][[i]]$BIC
+}
+critable3
+# Combine tables 2 and 3.  
+
+inv
