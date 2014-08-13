@@ -60,3 +60,9 @@ table2 <- rbind(table2, fxregime)
 meanfloat <- rowMeans(table2[,which(table2[17,] == 3)])
 meanfix <- rowMeans(table2[,which(table2[17,] == 2)])
 meanfloat - meanfix
+#-------------
+print(fm2)
+AIC(fm2)
+BIC(fm2)
+logLik(fm2)
+---------------------------------------------------------

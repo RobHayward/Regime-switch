@@ -16,7 +16,7 @@ Alexander~Klemm, A.~M. \harvardand\ Sosa, S.  \harvardyearleft
 
 \harvarditem{Avdjiev \harvardand\ Zeng}{2014}{Avdjiev2014}
 Avdjiev, S. \harvardand\ Zeng, Z.  \harvardyearleft 2014\harvardyearright ,
-  `Creidt growth, monetary policy, and economic activity in a three-regime tvar
+  `Credit growth, monetary policy, and economic activity in a three-regime tvar
   model', {\em BIS Working Papers} (449).
 \newline\harvardurl{http://www.bis.org/publ/work449.htm}
 
@@ -120,6 +120,16 @@ Fisher, I.  \harvardyearleft 1932\harvardyearright , {\em Booms and
 Fisher, I.  \harvardyearleft 1933\harvardyearright , `The debt-deflation theory
   of great depressions', {\em Econometrica} {\bf 1}(4),~337--357.
 
+\harvarditem{Froot \harvardand\ Frankel}{1989}{FrootFrankelFDB}
+Froot, K. \harvardand\ Frankel, J.~A.  \harvardyearleft 1989\harvardyearright ,
+  `Forward discount bias: Is it an exchange rate risk premium?', {\em Quarterly
+  Journal of Economics} {\bf 6},~139 -- 161.
+
+\harvarditem{Froot \harvardand\ Thaler}{1990}{FrootAnomolies}
+Froot, K. \harvardand\ Thaler, R.  \harvardyearleft 1990\harvardyearright ,
+  `Anomolies: Foreign exchange', {\em The Journal of Economic Perspectives}
+  {\bf 4}(3),~179 -- 192.
+
 \harvarditem{Frydman \harvardand\ Schuermann}{2008}{frydman2008credit}
 Frydman, H. \harvardand\ Schuermann, T.  \harvardyearleft 2008\harvardyearright
   , `Credit rating dynamics and markov mixture models', {\em Journal of Banking
@@ -134,11 +144,6 @@ Groen, J. \harvardand\ Peck, R.  \harvardyearleft 2014\harvardyearright , `Risk
   aversion, global asset prices, and fed tightening signals'.
 \newline\harvardurl{http://libertystreeteconomics.newyorkfed.org/2014/03/risk-aversion-global-asset-prices-and-fed-tightening-signals-.html}
 
-\harvarditem{Habib \harvardand\ Stracca}{2012}{HabibStracca}
-Habib, M. \harvardand\ Stracca, L.  \harvardyearleft 2012\harvardyearright ,
-  `Getting beyond carry trade: What makes a safe haven currency?', {\em Journal
-  of International Economics} {\bf 87}(1),~50 -- 64.
-
 \harvarditem{Hamilton}{1989}{Hamilton1989}
 Hamilton, J.~D.  \harvardyearleft 1989\harvardyearright , `A new approach to
   the economic analysis of nonstationary time series and the business cycle',
@@ -148,6 +153,11 @@ Hamilton, J.~D.  \harvardyearleft 1989\harvardyearright , `A new approach to
 Hayward, R.  \harvardyearleft 2013\harvardyearright , Towards a model of
   speculation in the forign exchange market, PhD thesis, University of Brighton
   Business School.
+
+\harvarditem{Hodrick}{1987}{Hodrick1987}
+Hodrick, R.  \harvardyearleft 1987\harvardyearright , {\em The Empirical
+  Evidence on the Efficiency of Forward and Futures Foreign Exchange Markets},
+  Harwood, New York.
 
 \harvarditem{Jurek}{2007}{JurekCrash}
 Jurek, J.  \harvardyearleft 2007\harvardyearright , `Crash-neutral currency
@@ -182,6 +192,11 @@ Mishra, P., Moriyama, K. \harvardand\ N'Diaye, P.~M.  \harvardyearleft
   markets', {\em IMF Working Paper} {\bf 14}(109).
 \newline\harvardurl{http://www.imf.org/external/pubs/cat/longres.aspx?sk=41655.0}
 
+\harvarditem{Rabiner}{1989}{rabiner1989tutorial}
+Rabiner, L.  \harvardyearleft 1989\harvardyearright , `A tutorial on hidden
+  markov models and selected applications in speech recognition', {\em
+  Proceedings of the IEEE} {\bf 77}(2),~257--286.
+
 \harvarditem{Reinhart \harvardand\ Rogoff}{2009}{ReinhartRogoff}
 Reinhart, C. \harvardand\ Rogoff, K.  \harvardyearleft 2009\harvardyearright ,
   {\em This Time is Different: Eight Centuries of Financial Folly}, Princeton
@@ -199,6 +214,18 @@ Schwartz, H. \harvardand\ Simons, A.  \harvardyearleft 1991\harvardyearright ,
   `Ease of retrival as information {:}another look at the availability
   heuristic', {\em Journal of Personality and Social Psychology} {\bf
   6}(2),~195 -- 202.
+
+\harvarditem[Spronk et~al.]{Spronk, Vershoor \harvardand\
+  Zwinkels}{2013}{SpronkEER}
+Spronk, R., Vershoor, W.~F. \harvardand\ Zwinkels, R.~C.  \harvardyearleft
+  2013\harvardyearright , `Carry trade and foreign exchange rate puzzles', {\em
+  European Economic Review} {\bf 60},~17--31.
+
+\harvarditem{{\em Trilemmas and Tradeoffs - Living with Financial
+  Globalization}}{2014}{Obstfeld2014}
+{\em Trilemmas and Tradeoffs - Living with Financial Globalization}
+  \harvardyearleft 2014\harvardyearright .
+\newblock mimeo, University of Berkeley.
 
 \harvarditem{Tversky \harvardand\ Kahneman}{1973}{KTAvailability}
 Tversky, A. \harvardand\ Kahneman, D.  \harvardyearleft 1973\harvardyearright ,
