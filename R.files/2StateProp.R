@@ -30,6 +30,7 @@ list2[[i]]$dates1 <- list2[[i]]$posterior$Date[which(list2[[i]]$posterior$state 
 list2[[i]]$dates2 <- list2[[i]]$posterior$Date[which(list2[[i]]$posterior$state == 2)]
 }
 str(list2)
+# I am not sure about crashdates.  This ranks on prop2 vs prop1.  Is that right? 
 crashdate2R <- list(c(inv))
 for(i in inv){
   if(list2[[i]]$prop2 > list2[[i]]$prop1){

@@ -40,9 +40,9 @@ prop[[i]][3] <- list3[[i]]$prop[list3[[i]]$rank[3]]
 }
 str(prop)
 # This is a test.
-list3[["CZK"]]$prop[3]
-list3[["CZK"]]$prop2
-list3[["CZK"]]$prop3
+list3[["HUF"]]$prop[3]
+list3[["HUF"]]$prop[2]
+list3[["HUF"]]$prop[1]
 list3[["CZK"]]$rank
 list3[[i]]$rank[1]
 
@@ -53,10 +53,11 @@ list3[[i]]$posterior$state
 round(table(list3[["HUF"]]$posterior$state)/
                               length(list3[["HUF"]]$posterior$state), digits = 4)[1]
 
-order(rank(list3[[i]]$pars[c(13, 15, 17)]))[2]
+order(rank(list3[[i]]$pars[c(13, 15, 17)]))[1]
 # Now extract the dates and proportions and relate to regime. 
 order(rank(list3[["HUF"]]$pars[c(13, 15, 17)]))
 list3[["HUF"]]$pars[o[1] + 12]
+# I do not understand what that o is.  I guess it is a mistake.
 crashdate3R <- list(c(inv))
 for(i in inv){
   if(list3[[i]]$prop2 > list3[[i]]$prop1){
@@ -65,6 +66,7 @@ for(i in inv){
     crashdate3R[[i]] <- list3[[i]]$dates2
   }
 }
+str(list3[["HUF"]]$prop)
 str(crashdate3R)
 # list of mode dates
 crashvector2R <- as.Date(unlist(crashdate3R[inv]))

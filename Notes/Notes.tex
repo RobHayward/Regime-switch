@@ -358,8 +358,38 @@ where  $EURHUF_t^{f1m}$ is the 1 month forward rate for euro in terms of Hungari
 %depmixS4::summary(fm2)
 %\end{lstlisting}
 
+Table \ref{tabref:AM} summarises the data for the two and three regime models.  The two-stage models is slightly preferred in all cases when the information criteria are used.  However, three carry-return regimes are identified and the structure of these regimes is consistent with the evolution of finacial instability according to the Minsky formula.  See Table \ref{tabref:statemod}.  There is a regime, associated with the term "caution" here, where there is minimal deviation from uncovered interest parity and a standard deviation that suggests a modertate level of risk; there is a regime where carry profits are possible and where the standard definition of finacial risk is relatively low, this is termed the "build" regime as it is associated with the building of carry-trade positions; there is also a regime that is here called "crash", where there are losses on carry-trade trades and a high level of risk. 
 
-The parameters of the 3 regime model are given in Table \ref{tabref:3StateProb}.  They show the mean and standard deviation of the carry-trade returns for each of the 3 regimes against each of the main funding currencies.  There are a number of general characteristics that can be taken from the average figures in the final column that are consistent with the evolution of financial instability along the lines set out by Minsky.  The While the crash has the smallest return by construction, this is associated with the largest risk as measured by the standard deviation. The average loss during the crash for carry-trade funded by Euro is a little more than 4\%  the regime where carry trade 
+Table \ref{tabref:3statetrans} presents the proportion of the sample for which the system is estimated to be in each of the regimes (first column) and the estimates for the transition matrix (the next three columns).  According to the theory, the crash regime should be relatively rare but it is less clear what the proportion of caution and build should represent.  The relative proportions of these two regimes may imply something about the level of financial fragility.  Poland, Czech Republic, Romania, Bulgaria and Croatia show evidence that is consistent with the FIH: the crash is relatively rare and there is a balance of caution and build.  For Hungary and Turkey there is a relatively large proportion of the sample in the crash regime and the three regimes are relatively balanced, suggesting repeated periods of crisis.  For Norway, Iceland and croatia, the proportion of time that is spent in the caution regime is relatively small, suggesting that these may be better modelled as a 2-regime system.  
+
+For the transition probabilities and the FIH it should be most likely that system remains in the same state and there should be a gradual evolution from caution through build to crash.  For Hungary, Poland and the Czech Republic, these conditions are largely achieved.  Roumania is not far away.  However, the system oscillates between caution and build and very occasionally switches to crash from caution.  This may suggest rather unexpected shocks that do not come from a building of positions or that a two-regime model would be more appropriate. The Russian system is very likely to remain in a cautious phase but once there is a switch to building this can very likely cause a crash.  Again, a two-system model may be more appropriate. For Turkey, the crashes, like other regimes, are persistent.  While it appears that the three-stage models is appropriate, it does not appear to evolve but rather jump from one state to another.  This may be more consistent with discrete shifts in domestic economic and political regimes. Ukrain oscillates between crash and caution while the build phase in Croatia does not last for very long, suggesting in each case that a two-regime model may be more appropriate. 
+
+
+\begin{landscape}
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrrrrrrrrrrrr}
+  \hline
+  Currency & LL & AIC & BIC & LL & AIC & BIC & Reg & Prop & Trans & ER & FD & Count\\
+HUF &215.4701 &-416.9401 &-395.1142 &217.6150 &-407.2299 &-363.5780 &3&X&3&2&2&3\\
+PLN &225.8122 &-437.6245 &-415.7985 &228.4117 &-428.8233 &-385.1714 &3&3&3&3&2&3\\
+CZK &220.6852 &-427.3704 &-405.5444 &221.8127 &-415.6254 &-371.9735 &3&3&3&3&2&3\\
+RON &244.4053 &-474.8107 &-452.9847 &246.1900 &-464.3799 &-420.7280 &3&3&X&2&2&2\\
+RUB &290.8843 &-567.7686 &-545.9426 &293.9748 &-559.9496 &-516.2977 &3&x&x&2&2&2\\
+TRY &227.4988 &-440.9976 &-419.2137 &231.8855 &-435.7710 &-392.2032 &3&X&X&3&3&3\\
+BGN &234.1591 &-454.3182 &-432.4922 &235.6048 &-443.2095 &-399.5576 &3&3&X&1&1&2\\
+NOK &231.5610 &-449.1219 &-427.2959 &237.7119 &-447.4237 &-403.7718 &3&3&X&3&2&3\\
+ISK &239.1186 &-464.2373 &-442.4113 &245.2098 &-462.4197 &-418.7678 &3&X&X&3&2&2\\
+UAH &328.6822 &-643.3644 &-621.5385 &332.1975 &-636.3950 &-592.7431 &3&X&X&2&3&3\\
+HRK &223.6834 &-433.3668 &-411.8844 &225.6572 &-423.3143 &-380.3497 &3&3&X&2&2&2\\
+\end{tabular}
+\caption{Analysis of appropriate model}
+\label{tabref:AM}
+\end{table}
+\end{landscape}
+
+
+The parameters of the 3 regime model are given in Table \ref{tabref:3statemod}.  They show the mean and standard deviation of the carry-trade returns for each of the 3 regimes against each of the main funding currencies.  There are a number of general characteristics that can be taken from the average figures in the final column that are consistent with the evolution of financial instability along the lines set out by Minsky.  The While the crash has the smallest return by construction, this is associated with the largest risk as measured by the standard deviation. The average loss during the crash for carry-trade funded by Euro is a little more than 4\%  the regime where carry trade 
 
 
 \begin{landscape}
@@ -402,15 +432,16 @@ The parameters of the 3 regime model are given in Table \ref{tabref:3StateProb}.
    \hline
 \end{tabular}
 \caption{Mean and Standard Deviation of 3 Regime Model}
-\label{tabref:3StateProb}
+\label{tabref:3statemod}
 \end{table}
 \end{landscape}
 
-Table \ref{tabref:3StateTrans} shows the estimated probability of switching from one state to another in the three state model.  This is the estimation of Equation \ref{eqref:m3}.  The first column is the  the starting regime (either "Caution", "Build" or "Crash"), each element of the vector is the estimated probability of switching from one regime to another. In the top left corner it is the estimated probability of staying in the regime of "Caution" when the system is already in the "Caution" regime.  This is 85\%.  The element adjacent to the right would show the estimated probability that the carry trade funded by EUR for Hungarian Forint switches from a regime of caution to one where speculative positions are being build.  This is estimated at 15\%.  It is not considered likely that the system will switch from caution to crash.  
+Table \ref{tabref:3statetrans} shows the estimated probability of switching from one state to another in the three state model.  This is the estimation of Equation \ref{eqref:m3}.  The first column is the  the starting regime (either "Caution", "Build" or "Crash"), each element of the vector is the estimated probability of switching from one regime to another. In the top left corner it is the estimated probability of staying in the regime of "Caution" when the system is already in the "Caution" regime.  This is 85\%.  The element adjacent to the right would show the estimated probability that the carry trade funded by EUR for Hungarian Forint switches from a regime of caution to one where speculative positions are being build.  This is estimated at 15\%.  It is not considered likely that the system will switch from caution to crash.  
 
 Looking at the details of the transition matrix, the estimate of the Hungarian system suggests that things remain cautious or in the building phase for most of the time.  However, there is a small probability of a crash once building has taken place. once the crash is in place, it will last a while before moving back to caution. This is consistent with the 3-stage FIH evolution of financial regimes. 
 
 For Poland there is a similar system to Hungary.  However, the crash comes from the position of caution.  A crash can jump back to the building of speculative positions.  This is less consistent with the FIH hypothesis. For Czech, there is a small chance of a switch from caution to the building of speculative positions and a small chance that this will spillover into a crash. Once in a position of building speculative positions, the crash is quite likely.  For Romania, the crash is a rare event that may evolve out of a period of caution. This is a case where the two stage regime may be a better representation of what is going on. 
+
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
 % Wed Jul 16 12:55:27 2014
 \begin{table}[!h]
@@ -434,6 +465,10 @@ For Poland there is a similar system to Hungary.  However, the crash comes from 
 \multirow{3}{*}{RON}& From Caution & 0.21 & 0.74 & 0.24 & 0.02 \\ 
    & From Build & 0.64 & 0.72 & 0.28 & 0.00 \\ 
    & From Crash & 0.15 & 0.00 & 0.03 & 0.97 \\ 
+\hline
+\multirow{3}{*}{RUB}& From Caution & 0.08 & 0.98 & 0.02 & 0.00 \\ 
+   & From Build & 0.24 & 0.00 & 0.54 & 0.45 \\ 
+   & From Crash & 0.68 & 0.02 & 0.26 & 0.72 \\ 
 \hline
 \multirow{3}{*}{TRY}  & From Caution & 0.43 & 0.89 & 0.00 & 0.11 \\ 
    & From Build & 0.27 & 0.07 & 0.93 & 0.00 \\ 
@@ -461,7 +496,7 @@ For Poland there is a similar system to Hungary.  However, the crash comes from 
    \hline
 \end{tabular}
 \caption{Transition probabilities funded with EUR}
-\label{tabref:3StateTrans}
+\label{tabref:3statetrans}
 \end{table}
 
 
