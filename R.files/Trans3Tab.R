@@ -4,7 +4,7 @@
 # trans
 # transtab <- matrix(1, nrow = 3, ncol = 3)
 # statesvec <- matrix(1, nrow = 2, ncol = 3)
-inv <- c("HUF", "PLN", "CZK", "RON",  "TRY", "BGN", 
+inv <- c("HUF", "PLN", "CZK", "RON",  "RUB", "TRY", "BGN", 
          "NOK", "ISK", "UAH", "HRK")
 transmatrixlist <- list(c(inv))
 for(i in inv){
@@ -35,7 +35,7 @@ transmatrixlist[[i]] <- list(states = round(states2, digits = 4), trans =
 str(transmatrixlist)
 
 # Inva - Take out "HUF".  There must be a more elegant way. 
-inva <- c("PLN", "CZK", "RON",  "TRY", "BGN", 
+inva <- c("PLN", "CZK", "RON",  "RUB", "TRY", "BGN", 
          "NOK", "ISK", "UAH", "HRK")
 transformtable <- transmatrixlist[["HUF"]]$trans
 for(i in inva){

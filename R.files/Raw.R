@@ -11,20 +11,29 @@ library(xts)
 # The aim is to identify the bull and bear markets. 
 # First set up the model (mod). This is a model 
 # of the log return with two states. Then fit the model.   
+# scale
+da$VIX <- scale(da$VIX)
 set.seed(3)
-mod2 <- depmix(PPLNEUR ~ 1, nstates = 2, data = da)               
-mod3 <- depmix(PPLNEUR ~ 1, nstates = 3, data = da)
+mod1 <- depmix(PPLNEUR ~ 1, nstates = 1, data = da)
+mod2 <- depmix(PPLNEUR ~ 1, nstates = 2, data = da, family = gaussian(), 
+               transition = ~ scale(VIX))               
+mod3 <- depmix(PPLNEUR ~ 1, nstates = 3, data = da, family = gaussian(), 
+               transition = ~ scale(VIX))
 # it is possible to set the staring values at this point. 
 # trstart = transition start.
 # instart = prior probabilities
 # respstart = paramters of the response model. This is the most likely
 # to be useful here from the VIX model in the doctorate. 
+fm1 <- fit(mod1, verbose = TRUE)
 fm2 <- fit(mod2, verbose = TRUE)
 fm3 <- fit(mod3, verbose = TRUE)
+fm1
 fm2
 fm3
+depmixS4::summary(fm1)
 depmixS4::summary(fm2)
 depmixS4::summary(fm3)
+llratio(fm2, fm3)
 # state 1 Build carry
 # State 2 Crash
 # State 3 Caution

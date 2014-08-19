@@ -21,7 +21,7 @@ plot(as.ts(speed[1:168,]), main = "Speed-accuracy trade-off")
 library("depmixS4")
 data("speed")
 set.seed(1)
-mod <- depmix(response = rt ~ 1, data = speed, nstates = 2,
+mod <- depmix(response = rt ~ Pacc, data = speed, nstates = 2,
               trstart = runif(4))
 
 
@@ -47,10 +47,14 @@ summary(fm)
 ### code chunk number 7: depmixS4.Rnw:569-573
 ###################################################
 set.seed(1)
-mod <- depmix(rt ~ 1, data = speed, nstates = 2, family = gaussian(),
+mod <- depmix(list(rt ~ Pacc, corr ~ Pacc), data = speed, nstates = 2, 
+              family = list(gaussian(), multinomial())) 
+head(speed)      
+mod1 <- depmix(rt ~ 1, data = speed, nstates = 2, family = gaussian(),
               transition = ~ scale(Pacc), instart = runif(2)) 
 fm <- fit(mod, verbose = FALSE, emc=em.control(rand=FALSE)) 
-
+fm1 <- fit(mod1, verbose = FALSE, emc=em.control(rand=FALSE))
+summary(fm)
 # The scale function will (by default) take the mean and divide by the 
 # standard deviaton to standardise. 
 ###################################################
@@ -67,12 +71,13 @@ mod <- depmix(list(rt ~ 1,corr ~ 1), data = speed, nstates = 2,
               family = list(gaussian(), multinomial("identity")),
               transition = ~ scale(Pacc), instart = runif(2))
 fm <- fit(mod, verbose = FALSE, emc=em.control(rand=FALSE))
-
+glm
 
 ###################################################
 ### code chunk number 10: depmixS4.Rnw:609-610
 ###################################################
-summary(fm, which = "response")
+summary(fm)
+, which = "response")
 
 
 ###################################################
@@ -109,7 +114,7 @@ fm1 <- setpars(mod, pars)
 conpat <- c(0, 0, rep(c(0, 1), 4), 1, 1, 0, 0, 1, 1, 1, 1)
 conpat[6] <- conpat[10] <- 2
 fm2 <- fit(fm1, equal = conpat)
-
+summary(fm2)
 
 ###################################################
 ### code chunk number 15: depmixS4.Rnw:763-772

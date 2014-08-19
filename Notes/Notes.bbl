@@ -14,28 +14,12 @@ Alexander~Klemm, A.~M. \harvardand\ Sosa, S.  \harvardyearleft
   pp.~37 -- 46.
 \newline\harvardurl{http://www.imf.org/external/pubs/ft/reo/2014/whd/eng/pdf/wreo0414.pdf}
 
-\harvarditem{Avdjiev \harvardand\ Zeng}{2014}{Avdjiev2014}
-Avdjiev, S. \harvardand\ Zeng, Z.  \harvardyearleft 2014\harvardyearright ,
-  `Credit growth, monetary policy, and economic activity in a three-regime tvar
-  model', {\em BIS Working Papers} (449).
-\newline\harvardurl{http://www.bis.org/publ/work449.htm}
-
-\harvarditem{Azaraidis \harvardand\ Smith}{1998}{Azaraidis}
-Azaraidis, C. \harvardand\ Smith, B.  \harvardyearleft 1998\harvardyearright ,
-  `Financial intermediation and regime switching in busiess cycles', {\em
-  American Economic Review} {\bf 88},~516 -- 536.
-
 \harvarditem[Baele et~al.]{Baele, Bekaert, Inghelbrecht \harvardand\
   Wei}{2014}{FTS}
 Baele, L., Bekaert, G., Inghelbrecht, K. \harvardand\ Wei, M.  \harvardyearleft
   2014\harvardyearright , `Flights to safety', {\em Finance and Economics
   Discussion Series} {\bf 2014}(46).
 \newline\harvardurl{http://www.federalreserve.gov/pubs/feds/2014/201446/201446abs.html}
-
-\harvarditem{Balke}{2000}{Balke}
-Balke, N.~S.  \harvardyearleft 2000\harvardyearright , `Credit and economic
-  acivity: Creddit regimes and nonlinear propogation of shocks', {\em The
-  Review of Economics and Statistics} {\bf 82}(2),~344 -- 349.
 
 \harvarditem[Baum et~al.]{Baum, Petrie, Soules \harvardand\
   Weiss}{1970}{Baum1970}
@@ -45,34 +29,11 @@ Baum, L.~E., Petrie, T., Soules, G. \harvardand\ Weiss, N.  \harvardyearleft
   Mathematical Statistics} {\bf 41}(1).
 \newline\harvardurl{http://projecteuclid.org/euclid.aoms/1177697196}
 
-\harvarditem{Bernanke \harvardand\ Gertler}{1989}{BernankeGertlerAgency}
-Bernanke, B. \harvardand\ Gertler, M.  \harvardyearleft 1989\harvardyearright ,
-  `Agency costs, net worth and business fluctuations', {\em American Economic
-  Review} {\bf 79}(1),~14 -- 31.
-
-\harvarditem[Bernanke et~al.]{Bernanke, Gertler \harvardand\
-  Gilchrist}{1996}{BernankeGertler}
-Bernanke, B., Gertler, M. \harvardand\ Gilchrist, S.  \harvardyearleft
-  1996\harvardyearright , `The financial accelerator and the flight to
-  quality', {\em Review of Economics and Statistics} {\bf 78}(1),~1 -- 15.
-
-\harvarditem[Bernanke et~al.]{Bernanke, Gertler \harvardand\
-  Gilchrist}{1999}{Bernanke1999chapter}
-Bernanke, B., Gertler, M. \harvardand\ Gilchrist, S.  \harvardyearleft
-  1999\harvardyearright , Chapter 21 the financial accelerator in a
-  quantitative business cycle framework, {\em in} `Handbook of Macroeconomics',
-  Vol.~1, pp.~1341--1393.
-
 \harvarditem[Brunnermeier et~al.]{Brunnermeier, Nagel \harvardand\
   Pedersen}{2008}{BrunnermeierCarry}
 Brunnermeier, M., Nagel, S. \harvardand\ Pedersen, L.  \harvardyearleft
   2008\harvardyearright , `Carry trades and currency crashes', {\em NBER
   Working Papers} (14473).
-
-\harvarditem{Brunnermeier \harvardand\ Pedersen}{2009}{BrunnermeierLiquidity}
-Brunnermeier, M. \harvardand\ Pedersen, L.  \harvardyearleft
-  2009\harvardyearright , `Market liquidity and funding liquidity', {\em Review
-  of Financial Studies} {\bf 22}(6),~2201 -- 2238.
 
 \harvarditem{Bruno \harvardand\ Shin}{2014}{Bruno2014}
 Bruno, V. \harvardand\ Shin, H.~S.  \harvardyearleft 2014\harvardyearright ,
@@ -112,13 +73,15 @@ Dornbusch, R. \harvardand\ Werner, A.  \harvardyearleft 1995\harvardyearright ,
   `Currenc crises and collapses', {\em Brookings Papers in Economic Activity}
   {\bf 1995}(2),~219 -- 293.
 
-\harvarditem{Fisher}{1932}{FisherBD}
-Fisher, I.  \harvardyearleft 1932\harvardyearright , {\em Booms and
-  Depressions: Some First Principles}, Adelphi, New York.
+\harvarditem{Dueker}{1997}{dueker1997markov}
+Dueker, M.~J.  \harvardyearleft 1997\harvardyearright , `Markov switching in
+  garch processes and mean-reverting stock-market volatility', {\em Journal of
+  Business \& Economic Statistics} {\bf 15}(1),~26--34.
 
-\harvarditem{Fisher}{1933}{FisherDD}
-Fisher, I.  \harvardyearleft 1933\harvardyearright , `The debt-deflation theory
-  of great depressions', {\em Econometrica} {\bf 1}(4),~337--357.
+\harvarditem{Evans}{1996}{evans199621}
+Evans, M.~D.  \harvardyearleft 1996\harvardyearright , `21 peso problems: Their
+  theoretical and empirical implications', {\em Handbook of statistics} {\bf
+  14},~613--646.
 
 \harvarditem{Froot \harvardand\ Frankel}{1989}{FrootFrankelFDB}
 Froot, K. \harvardand\ Frankel, J.~A.  \harvardyearleft 1989\harvardyearright ,
@@ -135,14 +98,16 @@ Frydman, H. \harvardand\ Schuermann, T.  \harvardyearleft 2008\harvardyearright
   , `Credit rating dynamics and markov mixture models', {\em Journal of Banking
   \& Finance} {\bf 32}(6),~1062--1075.
 
-\harvarditem{Gorton}{2012}{Gorton2013}
-Gorton, G.~B.  \harvardyearleft 2012\harvardyearright , {\em Misunderstanding
-  Financial Crises: Why we don't see them coming}, OUP, Oxford.
-
 \harvarditem{Groen \harvardand\ Peck}{2014}{NYFedtaper}
 Groen, J. \harvardand\ Peck, R.  \harvardyearleft 2014\harvardyearright , `Risk
   aversion, global asset prices, and fed tightening signals'.
 \newline\harvardurl{http://libertystreeteconomics.newyorkfed.org/2014/03/risk-aversion-global-asset-prices-and-fed-tightening-signals-.html}
+
+\harvarditem{Hamilton}{1988}{hamilton1988rational}
+Hamilton, J.~D.  \harvardyearleft 1988\harvardyearright ,
+  `Rational-expectations econometric analysis of changes in regime: An
+  investigation of the term structure of interest rates', {\em Journal of
+  Economic Dynamics and Control} {\bf 12}(2),~385--423.
 
 \harvarditem{Hamilton}{1989}{Hamilton1989}
 Hamilton, J.~D.  \harvardyearleft 1989\harvardyearright , `A new approach to
@@ -167,24 +132,6 @@ Jurek, J.  \harvardyearleft 2007\harvardyearright , `Crash-neutral currency
 Krugman, P., ed.  \harvardyearleft 2000\harvardyearright , {\em Currency
   Crises}, University of Chicago Press, Chicago.
 
-\harvarditem{Minsky}{1975}{MinskyKeynes}
-Minsky, H.~P.  \harvardyearleft 1975\harvardyearright , {\em John Maynard
-  Keynes}, Columbia University Press, NY.
-
-\harvarditem{Minsky}{1986}{MinskyStabilising}
-Minsky, H.~P.  \harvardyearleft 1986\harvardyearright , {\em Stabilizing an
-  Unstable Economy}, Yale University Press.
-
-\harvarditem{Minsky}{1992}{MinskyFIH}
-Minsky, H.~P.  \harvardyearleft 1992\harvardyearright , The financial
-  instability hypothesis, {\em in} M.~S. P.~Arestis, ed., `Handbook of Radical
-  Political Economy', Edward Elgar, Aldershot.
-
-\harvarditem{Minsky}{1995}{MinskyLongerWaves}
-Minsky, H.~P.  \harvardyearleft 1995\harvardyearright , `Longer waves in
-  financial relations: Financial factors in the more severe depressions {II}',
-  {\em Journal of Economic Issues} {\bf 29}(1).
-
 \harvarditem[Mishra et~al.]{Mishra, Moriyama \harvardand\
   N'Diaye}{2014}{Tapering}
 Mishra, P., Moriyama, K. \harvardand\ N'Diaye, P.~M.  \harvardyearleft
@@ -197,11 +144,6 @@ Rabiner, L.  \harvardyearleft 1989\harvardyearright , `A tutorial on hidden
   markov models and selected applications in speech recognition', {\em
   Proceedings of the IEEE} {\bf 77}(2),~257--286.
 
-\harvarditem{Reinhart \harvardand\ Rogoff}{2009}{ReinhartRogoff}
-Reinhart, C. \harvardand\ Rogoff, K.  \harvardyearleft 2009\harvardyearright ,
-  {\em This Time is Different: Eight Centuries of Financial Folly}, Princeton
-  University Press, Princeton.
-
 \harvarditem{Rey}{2013}{Rey2013}
 Rey, H.  \harvardyearleft 2013\harvardyearright , Dilemma not trilemma. the
   global financial cycle and monetary policy independence, {\em in}
@@ -209,11 +151,10 @@ Rey, H.  \harvardyearleft 2013\harvardyearright , Dilemma not trilemma. the
   Jackson Hole'.
 \newline\harvardurl{http://www.kansascityfed.org/publicat/sympos/2013/2013rey.pdf}
 
-\harvarditem{Schwartz \harvardand\ Simons}{1991}{Schwartzavailability}
-Schwartz, H. \harvardand\ Simons, A.  \harvardyearleft 1991\harvardyearright ,
-  `Ease of retrival as information {:}another look at the availability
-  heuristic', {\em Journal of Personality and Social Psychology} {\bf
-  6}(2),~195 -- 202.
+\harvarditem{Schaller \harvardand\ Norden}{1997}{schaller1997regime}
+Schaller, H. \harvardand\ Norden, S.~V.  \harvardyearleft 1997\harvardyearright
+  , `Regime switching in stock market returns', {\em Applied Financial
+  Economics} {\bf 7}(2),~177--191.
 
 \harvarditem[Spronk et~al.]{Spronk, Vershoor \harvardand\
   Zwinkels}{2013}{SpronkEER}
@@ -226,11 +167,6 @@ Spronk, R., Vershoor, W.~F. \harvardand\ Zwinkels, R.~C.  \harvardyearleft
 {\em Trilemmas and Tradeoffs - Living with Financial Globalization}
   \harvardyearleft 2014\harvardyearright .
 \newblock mimeo, University of Berkeley.
-
-\harvarditem{Tversky \harvardand\ Kahneman}{1973}{KTAvailability}
-Tversky, A. \harvardand\ Kahneman, D.  \harvardyearleft 1973\harvardyearright ,
-  `Availability: A heuristic for judging frequency and probability', {\em
-  Cognitive Psychology} {\bf 5}(2),~207 -- 232.
 
 \harvarditem{Visser \harvardand\ Speekenbrink}{2010}{depmixS4}
 Visser, I. \harvardand\ Speekenbrink, M.  \harvardyearleft
