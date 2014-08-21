@@ -56,6 +56,12 @@ Ceruttie, E., Claessens, S. \harvardand\ Ratnovski, L.  \harvardyearleft
   white paper'.
 \newline\harvardurl{http://www.cboe.com/micro/vix/vixwhite.pdf}
 
+\harvarditem[Demeterfi et~al.]{Demeterfi, Derman, Kamal \harvardand\
+  Zou}{1999}{GoldmanVol}
+Demeterfi, K., Derman, E., Kamal, M. \harvardand\ Zou, J.  \harvardyearleft
+  1999\harvardyearright , `More than you ever wanted to know about volatility
+  swaps', {\em Goldman Sachs Quantitative Strategies Research Notes} .
+
 \harvarditem[Dempster et~al.]{Dempster, Laird \harvardand\
   Rubin}{1977}{dempster1977maximum}
 Dempster, A.~P., Laird, N.~M. \harvardand\ Rubin, D.~B.  \harvardyearleft
@@ -132,12 +138,35 @@ Jurek, J.  \harvardyearleft 2007\harvardyearright , `Crash-neutral currency
 Krugman, P., ed.  \harvardyearleft 2000\harvardyearright , {\em Currency
   Crises}, University of Chicago Press, Chicago.
 
+\harvarditem{Minsky}{1975}{MinskyKeynes}
+Minsky, H.~P.  \harvardyearleft 1975\harvardyearright , {\em John Maynard
+  Keynes}, Columbia University Press, NY.
+
+\harvarditem{Minsky}{1986}{MinskyStabilising}
+Minsky, H.~P.  \harvardyearleft 1986\harvardyearright , {\em Stabilizing an
+  Unstable Economy}, Yale University Press.
+
+\harvarditem{Minsky}{1992}{MinskyFIH}
+Minsky, H.~P.  \harvardyearleft 1992\harvardyearright , The financial
+  instability hypothesis, {\em in} M.~S. P.~Arestis, ed., `Handbook of Radical
+  Political Economy', Edward Elgar, Aldershot.
+
+\harvarditem{Minsky}{1995}{MinskyLongerWaves}
+Minsky, H.~P.  \harvardyearleft 1995\harvardyearright , `Longer waves in
+  financial relations: Financial factors in the more severe depressions {II}',
+  {\em Journal of Economic Issues} {\bf 29}(1).
+
 \harvarditem[Mishra et~al.]{Mishra, Moriyama \harvardand\
   N'Diaye}{2014}{Tapering}
 Mishra, P., Moriyama, K. \harvardand\ N'Diaye, P.~M.  \harvardyearleft
   2014\harvardyearright , `Impact of fed tapering announcements on emerging
   markets', {\em IMF Working Paper} {\bf 14}(109).
 \newline\harvardurl{http://www.imf.org/external/pubs/cat/longres.aspx?sk=41655.0}
+
+\harvarditem{Obstfeld}{2014}{Obstfeld2014}
+Obstfeld, M.  \harvardyearleft 2014\harvardyearright , Trilemmas and tradeoffs
+  - living with financial globalization.
+\newblock mimeo, University of Berkeley.
 
 \harvarditem{Rabiner}{1989}{rabiner1989tutorial}
 Rabiner, L.  \harvardyearleft 1989\harvardyearright , `A tutorial on hidden
@@ -161,17 +190,5 @@ Schaller, H. \harvardand\ Norden, S.~V.  \harvardyearleft 1997\harvardyearright
 Spronk, R., Vershoor, W.~F. \harvardand\ Zwinkels, R.~C.  \harvardyearleft
   2013\harvardyearright , `Carry trade and foreign exchange rate puzzles', {\em
   European Economic Review} {\bf 60},~17--31.
-
-\harvarditem{{\em Trilemmas and Tradeoffs - Living with Financial
-  Globalization}}{2014}{Obstfeld2014}
-{\em Trilemmas and Tradeoffs - Living with Financial Globalization}
-  \harvardyearleft 2014\harvardyearright .
-\newblock mimeo, University of Berkeley.
-
-\harvarditem{Visser \harvardand\ Speekenbrink}{2010}{depmixS4}
-Visser, I. \harvardand\ Speekenbrink, M.  \harvardyearleft
-  2010\harvardyearright , `{depmixS4}: An {R} package for hidden markov
-  models', {\em Journal of Statistical Software} {\bf 36}(7),~1--21.
-\newline\harvardurl{http://www.jstatsoft.org/v36/i07/}
 
 \end{thebibliography}

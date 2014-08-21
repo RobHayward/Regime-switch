@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.19)  18 AUG 2014 16:15
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.19)  21 AUG 2014 09:13
 entering extended mode
 **Notes.tex
 ("C:\Users\Toshiba\Google Drive\Research\GIT\Regime-Switch\Notes\Notes.tex"
@@ -659,6 +659,12 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 
 LaTeX Warning: Label `tabref:comptab' multiply defined.
 
+
+LaTeX Warning: Label `tabref:comptab' multiply defined.
+
+
+LaTeX Warning: Label `tabref:comptab' multiply defined.
+
 )
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
@@ -710,243 +716,234 @@ LaTeX Info: Redefining \nameref on input line 19.
 
 [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4] [5]
 
-Package natbib Warning: Citation `GoldmanVo' on page 2 undefined on input line 
-41.
+LaTeX Warning: Reference `figref:HMM' on page 6 undefined on input line 167.
 
-[2] [3] [4]
-Overfull \hbox (1.27974pt too wide) in paragraph at lines 101--102
-\OT1/cmr/m/n/12 asym-met-ric ef-fects; [][]Dueker[][] ([][]1997[][]) anal-y-ses
- the change in stock mar-ket volatil-
- []
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 170.
 
-[5] [6] [7]
-Missing character: There is no ; in font nullfont!
- [8]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 229.
-
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 229.
-
-[9
-
-
-] [10] [11]
-Overfull \hbox (1.13965pt too wide) in paragraph at lines 326--327
-$\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ; A; B\OT1/cmr/m/n/12 )$ so that $\OML/cmm/
-m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 O\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 
-\OT1/cmr/m/n/12 )$ is lo-cally mamimised us-ing the Baum-Welch method. 
- []
-
-[12] [13] [14] [15] [16
-
-] [17
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 170.
+Missing character: There is no ; in font nullfont!
+ [6] [7] [8]
+[9] [10] [11] [12] [13] [14
 
 ]
-Overfull \hbox (93.56721pt too wide) in paragraph at lines 475--509
+Overfull \hbox (57.37729pt too wide) in paragraph at lines 513--530
  [][] 
  []
 
-[18]
+[15
 
-LaTeX Warning: Reference `eqref:m3' on page 19 undefined on input line 514.
 
+] [16
+
+]
+Overfull \hbox (95.03387pt too wide) in paragraph at lines 547--573
+ [][] 
+ []
+
+[17
+
+]
+
+LaTeX Warning: Reference `eqref:m3' on page 18 undefined on input line 664.
+
+[18
+
+]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[19
-
-
-] [20] [21]
-Overfull \hbox (95.03387pt too wide) in paragraph at lines 599--625
- [][] 
- []
-
-[22
-
-] <../Figures/2RegProb/PLNCZKEUR.pdf, id=302, 597.23125pt x 844.15375pt>
+[19] <../Figures/2RegProb/PLNCZKEUR.pdf, id=298, 597.23125pt x 844.15375pt>
 File: ../Figures/2RegProb/PLNCZKEUR.pdf Graphic file (type pdf)
 
 <use ../Figures/2RegProb/PLNCZKEUR.pdf>
-Package pdftex.def Info: ../Figures/2RegProb/PLNCZKEUR.pdf used on input line 6
-39.
+Package pdftex.def Info: ../Figures/2RegProb/PLNCZKEUR.pdf used on input line 7
+53.
 (pdftex.def)             Requested size: 447.92233pt x 633.11375pt.
 
-Overfull \hbox (57.92233pt too wide) in paragraph at lines 639--640
+Overfull \hbox (57.92233pt too wide) in paragraph at lines 753--754
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 62.78038pt on input line 640.
+LaTeX Warning: Float too large for page by 62.78038pt on input line 754.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../Figures/3RegProb/PLNCZKEUR.pdf, id=303, 597.23125pt x 844.15375pt>
+<../Figures/3RegProb/PLNCZKEUR.pdf, id=299, 597.23125pt x 844.15375pt>
 File: ../Figures/3RegProb/PLNCZKEUR.pdf Graphic file (type pdf)
 
 <use ../Figures/3RegProb/PLNCZKEUR.pdf>
-Package pdftex.def Info: ../Figures/3RegProb/PLNCZKEUR.pdf used on input line 6
-44.
+Package pdftex.def Info: ../Figures/3RegProb/PLNCZKEUR.pdf used on input line 7
+58.
 (pdftex.def)             Requested size: 477.78564pt x 675.32391pt.
 
-Overfull \hbox (87.78564pt too wide) in paragraph at lines 644--645
+Overfull \hbox (87.78564pt too wide) in paragraph at lines 758--759
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 83.32391pt on input line 645.
+LaTeX Warning: Float too large for page by 83.32391pt on input line 759.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../Figures/2RegProb/ISKTRYEUR.pdf, id=304, 597.23125pt x 844.15375pt>
+<../Figures/2RegProb/ISKTRYEUR.pdf, id=300, 597.23125pt x 844.15375pt>
 File: ../Figures/2RegProb/ISKTRYEUR.pdf Graphic file (type pdf)
 
 <use ../Figures/2RegProb/ISKTRYEUR.pdf>
-Package pdftex.def Info: ../Figures/2RegProb/ISKTRYEUR.pdf used on input line 6
-49.
+Package pdftex.def Info: ../Figures/2RegProb/ISKTRYEUR.pdf used on input line 7
+63.
 (pdftex.def)             Requested size: 477.78564pt x 675.32391pt.
 
-Overfull \hbox (87.78564pt too wide) in paragraph at lines 649--650
+Overfull \hbox (87.78564pt too wide) in paragraph at lines 763--764
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 83.32391pt on input line 650.
+LaTeX Warning: Float too large for page by 83.32391pt on input line 764.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../Figures/3RegProb/ISKTRYEUR.pdf, id=305, 597.23125pt x 844.15375pt>
+<../Figures/3RegProb/ISKTRYEUR.pdf, id=301, 597.23125pt x 844.15375pt>
 File: ../Figures/3RegProb/ISKTRYEUR.pdf Graphic file (type pdf)
 
 <use ../Figures/3RegProb/ISKTRYEUR.pdf>
-Package pdftex.def Info: ../Figures/3RegProb/ISKTRYEUR.pdf used on input line 6
-54.
+Package pdftex.def Info: ../Figures/3RegProb/ISKTRYEUR.pdf used on input line 7
+68.
 (pdftex.def)             Requested size: 477.78564pt x 675.32391pt.
 
-Overfull \hbox (87.78564pt too wide) in paragraph at lines 654--655
+Overfull \hbox (87.78564pt too wide) in paragraph at lines 768--769
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 83.32391pt on input line 655.
+LaTeX Warning: Float too large for page by 83.32391pt on input line 769.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../Figures/2RegProb/RONHUFEUR.pdf, id=306, 597.23125pt x 844.15375pt>
+<../Figures/2RegProb/RONHUFEUR.pdf, id=302, 597.23125pt x 844.15375pt>
 File: ../Figures/2RegProb/RONHUFEUR.pdf Graphic file (type pdf)
 
 <use ../Figures/2RegProb/RONHUFEUR.pdf>
-Package pdftex.def Info: ../Figures/2RegProb/RONHUFEUR.pdf used on input line 6
-59.
+Package pdftex.def Info: ../Figures/2RegProb/RONHUFEUR.pdf used on input line 7
+73.
 (pdftex.def)             Requested size: 477.78564pt x 675.32391pt.
 
-Overfull \hbox (87.78564pt too wide) in paragraph at lines 659--660
+Overfull \hbox (87.78564pt too wide) in paragraph at lines 773--774
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 83.32391pt on input line 660.
+LaTeX Warning: Float too large for page by 83.32391pt on input line 774.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../Figures/3RegProb/RONHUFEUR.pdf, id=307, 597.23125pt x 844.15375pt>
+<../Figures/3RegProb/RONHUFEUR.pdf, id=303, 597.23125pt x 844.15375pt>
 File: ../Figures/3RegProb/RONHUFEUR.pdf Graphic file (type pdf)
 
 <use ../Figures/3RegProb/RONHUFEUR.pdf>
-Package pdftex.def Info: ../Figures/3RegProb/RONHUFEUR.pdf used on input line 6
-64.
+Package pdftex.def Info: ../Figures/3RegProb/RONHUFEUR.pdf used on input line 7
+78.
 (pdftex.def)             Requested size: 477.78564pt x 675.32391pt.
 
-Overfull \hbox (87.78564pt too wide) in paragraph at lines 664--665
+Overfull \hbox (87.78564pt too wide) in paragraph at lines 778--779
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 83.32391pt on input line 665.
+LaTeX Warning: Float too large for page by 83.32391pt on input line 779.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../Figures/2RegProb/HRKUAHEUR.pdf, id=308, 597.23125pt x 844.15375pt>
+<../Figures/2RegProb/HRKUAHEUR.pdf, id=304, 597.23125pt x 844.15375pt>
 File: ../Figures/2RegProb/HRKUAHEUR.pdf Graphic file (type pdf)
 
 <use ../Figures/2RegProb/HRKUAHEUR.pdf>
-Package pdftex.def Info: ../Figures/2RegProb/HRKUAHEUR.pdf used on input line 6
-69.
+Package pdftex.def Info: ../Figures/2RegProb/HRKUAHEUR.pdf used on input line 7
+83.
 (pdftex.def)             Requested size: 477.78564pt x 675.32391pt.
 
-Overfull \hbox (87.78564pt too wide) in paragraph at lines 669--670
+Overfull \hbox (87.78564pt too wide) in paragraph at lines 783--784
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 83.32391pt on input line 670.
+LaTeX Warning: Float too large for page by 83.32391pt on input line 784.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../Figures/3RegProb/HRKUAHEUR.pdf, id=309, 597.23125pt x 844.15375pt>
+<../Figures/3RegProb/HRKUAHEUR.pdf, id=305, 597.23125pt x 844.15375pt>
 File: ../Figures/3RegProb/HRKUAHEUR.pdf Graphic file (type pdf)
 
 <use ../Figures/3RegProb/HRKUAHEUR.pdf>
-Package pdftex.def Info: ../Figures/3RegProb/HRKUAHEUR.pdf used on input line 6
-74.
+Package pdftex.def Info: ../Figures/3RegProb/HRKUAHEUR.pdf used on input line 7
+88.
 (pdftex.def)             Requested size: 477.78564pt x 675.32391pt.
 
-Overfull \hbox (87.78564pt too wide) in paragraph at lines 674--675
+Overfull \hbox (87.78564pt too wide) in paragraph at lines 788--789
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 83.32391pt on input line 675.
+LaTeX Warning: Float too large for page by 83.32391pt on input line 789.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[20]
 File: ../Figures/2RegProb/ISKTRYEUR.pdf Graphic file (type pdf)
-<use ../Figures/2RegProb/ISKTRYEUR.pdf>
-Package pdftex.def Info: ../Figures/2RegProb/ISKTRYEUR.pdf used on input line 6
-86.
+ <use ../Figures/2RegProb/ISKTRYEUR.pdf>
+Package pdftex.def Info: ../Figures/2RegProb/ISKTRYEUR.pdf used on input line 8
+00.
 (pdftex.def)             Requested size: 477.78564pt x 675.32391pt.
 
-Overfull \hbox (87.78564pt too wide) in paragraph at lines 686--687
+Overfull \hbox (87.78564pt too wide) in paragraph at lines 800--801
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 83.32391pt on input line 687.
+LaTeX Warning: Float too large for page by 83.32391pt on input line 801.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[23
-
-] [24] [25 <C:/Users/Toshiba/Google Drive/Research/GIT/Regime-Switch/Figures/2R
-egProb/PLNCZKEUR.pdf>] [26 <C:/Users/Toshiba/Google Drive/Research/GIT/Regime-S
-witch/Figures/3RegProb/PLNCZKEUR.pdf>] [27 <C:/Users/Toshiba/Google Drive/Resea
-rch/GIT/Regime-Switch/Figures/2RegProb/ISKTRYEUR.pdf>] [28 <C:/Users/Toshiba/Go
-ogle Drive/Research/GIT/Regime-Switch/Figures/3RegProb/ISKTRYEUR.pdf>]
-[29 <C:/Users/Toshiba/Google Drive/Research/GIT/Regime-Switch/Figures/2RegProb/
-RONHUFEUR.pdf>] [30 <C:/Users/Toshiba/Google Drive/Research/GIT/Regime-Switch/F
-igures/3RegProb/RONHUFEUR.pdf>] [31 <C:/Users/Toshiba/Google Drive/Research/GIT
-/Regime-Switch/Figures/2RegProb/HRKUAHEUR.pdf>] [32 <C:/Users/Toshiba/Google Dr
-ive/Research/GIT/Regime-Switch/Figures/3RegProb/HRKUAHEUR.pdf>] [33]
-Overfull \hbox (15.04417pt too wide) in paragraph at lines 736--753
+[21] [22] [23 <C:/Users/Toshiba/Google Drive/Research/GIT/Regime-Switch/Figures
+/2RegProb/PLNCZKEUR.pdf>] [24 <C:/Users/Toshiba/Google Drive/Research/GIT/Regim
+e-Switch/Figures/3RegProb/PLNCZKEUR.pdf>] [25 <C:/Users/Toshiba/Google Drive/Re
+search/GIT/Regime-Switch/Figures/2RegProb/ISKTRYEUR.pdf>] [26 <C:/Users/Toshiba
+/Google Drive/Research/GIT/Regime-Switch/Figures/3RegProb/ISKTRYEUR.pdf>]
+[27 <C:/Users/Toshiba/Google Drive/Research/GIT/Regime-Switch/Figures/2RegProb/
+RONHUFEUR.pdf>] [28 <C:/Users/Toshiba/Google Drive/Research/GIT/Regime-Switch/F
+igures/3RegProb/RONHUFEUR.pdf>] [29 <C:/Users/Toshiba/Google Drive/Research/GIT
+/Regime-Switch/Figures/2RegProb/HRKUAHEUR.pdf>] [30 <C:/Users/Toshiba/Google Dr
+ive/Research/GIT/Regime-Switch/Figures/3RegProb/HRKUAHEUR.pdf>] [31]
+Overfull \hbox (15.04417pt too wide) in paragraph at lines 850--867
  [][] 
  []
 
-[34
+[32
 
-] ("C:\Users\Toshiba\Google Drive\Research\GIT\Regime-Switch\Notes\Notes.bbl"
+] [33
+
+
+] [34
+
+] [35
+
+]
+("C:\Users\Toshiba\Google Drive\Research\GIT\Regime-Switch\Notes\Notes.bbl"
 Underfull \hbox (badness 1014) in paragraph at lines 4--8
 []\OT1/cmr/m/n/12 Ahmed, S. and Zlate, A. (2014), `Cap-i-tal flows to emerg-ing
  mar-ket
@@ -970,26 +967,24 @@ Overfull \hbox (19.5642pt too wide) in paragraph at lines 19--23
 2014/201446/201446abs.html 
  []
 
-[35
+[36
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 102--105
+Underfull \hbox (badness 10000) in paragraph at lines 108--111
 \OT1/cmr/bx/n/12 URL: \OT1/cmr/m/it/12 http://libertystreeteconomics.newyorkfed
 .org/2014/03/risk-
  []
 
-[36])
+[37])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 933.
+ [38]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 933.
 
-Package natbib Warning: There were undefined citations.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 762.
-[37]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 762.
- ("C:\Users\Toshiba\Google Drive\Research\GIT\Regime-Switch\Notes\Notes.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 762.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 762.
+("C:\Users\Toshiba\Google Drive\Research\GIT\Regime-Switch\Notes\Notes.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 933.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 933.
 Package rerunfilecheck Info: File `Notes.out' has not changed.
-(rerunfilecheck)             Checksum: 1DDE847DD77C21540601E2A9BA1C976B;565.
+(rerunfilecheck)             Checksum: EDD1E59535DBC21C51F652E179B5DEB4;563.
 
 
 LaTeX Warning: There were undefined references.
@@ -997,16 +992,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 762.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 933.
  ) 
 Here is how much of TeX's memory you used:
  17712 strings out of 494045
- 335314 string characters out of 3145963
- 460631 words of memory out of 3000000
- 20575 multiletter control sequences out of 15000+200000
- 12390 words of font info for 44 fonts, out of 3000000 for 9000
+ 335357 string characters out of 3145963
+ 451761 words of memory out of 3000000
+ 20570 multiletter control sequences out of 15000+200000
+ 12082 words of font info for 43 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 56i,13n,69p,1725b,652s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,13n,69p,1726b,615s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/P
@@ -1025,9 +1020,9 @@ ts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
 type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmti12.pfb>
-Output written on Notes.pdf (37 pages, 419925 bytes).
+Output written on Notes.pdf (38 pages, 418020 bytes).
 PDF statistics:
- 510 PDF objects out of 1000 (max. 8388607)
- 110 named destinations out of 1000 (max. 500000)
+ 525 PDF objects out of 1000 (max. 8388607)
+ 115 named destinations out of 1000 (max. 500000)
  221 words of extra memory for PDF output out of 10000 (max. 10000000)
 
