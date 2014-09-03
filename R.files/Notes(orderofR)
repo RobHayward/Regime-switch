@@ -33,7 +33,7 @@ table2 has calm and crisis.
 list has a list of the calm and crisis returns
 list2 has parameters and Loglikelihood
 
-Use slot.names(???) to get the slots for an S4 object.
+Use getSlots() or slotNames(???) to get the slots for an S4 object.
 http://stackoverflow.com/questions/4713968/r-what-are-slots
 http://stackoverflow.com/questions/4143611/sources-on-s4-objects-methods-and-programming-in-r
 
