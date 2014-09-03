@@ -44,6 +44,8 @@ da$Date[which(posterior(fm2)[,1] == 2)]
 da$Date[which(posterior(fm3)[,1] == 1)]
 getpars(fm2)
 getpars(fm3)[13]
+pst1 <- posterior(fm)
+pst1
 pst2 <- posterior(fm2)
 pst3 <- posterior(fm3)
 --------------------------------

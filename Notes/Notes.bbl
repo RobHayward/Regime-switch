@@ -1,10 +1,18 @@
 \begin{thebibliography}{xx}
 
+\harvarditem{Agresti}{2014}{agresti2014categorical}
+Agresti, A.  \harvardyearleft 2014\harvardyearright , {\em Categorical data
+  analysis}, John Wiley \& Sons.
+
 \harvarditem{Ahmed \harvardand\ Zlate}{2014}{Ahmed2014}
 Ahmed, S. \harvardand\ Zlate, A.  \harvardyearleft 2014\harvardyearright ,
   `Capital flows to emerging market economies: A brave new world?', {\em
   Journal of International Money and Finance} (0),~--.
 \newline\harvardurl{http://www.sciencedirect.com/science/article/pii/S0261560614000928}
+
+\harvarditem{Akaike}{1981}{AIC}
+Akaike, H.  \harvardyearleft 1981\harvardyearright , `Likelihood of a model and
+  information criteria', {\em Journal of Econometrics} {\bf 16}(1),~3--14.
 
 \harvarditem{Alexander~Klemm \harvardand\ Sosa}{2014}{IMFLatam}
 Alexander~Klemm, A.~M. \harvardand\ Sosa, S.  \harvardyearleft
@@ -25,7 +33,7 @@ Baele, L., Bekaert, G., Inghelbrecht, K. \harvardand\ Wei, M.  \harvardyearleft
   Weiss}{1970}{Baum1970}
 Baum, L.~E., Petrie, T., Soules, G. \harvardand\ Weiss, N.  \harvardyearleft
   1970\harvardyearright , `A maximization technique occuring in the statistical
-  analysis of probabilistic functions of markov chains', {\em The Annals of
+  analysis of probabilistic functions of {M}arkov chains', {\em The Annals of
   Mathematical Statistics} {\bf 41}(1).
 \newline\harvardurl{http://projecteuclid.org/euclid.aoms/1177697196}
 
@@ -45,6 +53,20 @@ Calvo, G.~A.  \harvardyearleft 1998\harvardyearright , `Capital flows and
   capital-market crises {:} the simple economics of sudden stops', {\em Journal
   of Applied Economcs} {\bf 1}.
 
+\harvarditem[Calvo et~al.]{Calvo, Izquierdo \harvardand\
+  Mejia}{2004}{calvo2004empirics}
+Calvo, G.~A., Izquierdo, A. \harvardand\ Mejia, L.-F.  \harvardyearleft
+  2004\harvardyearright , On the empirics of sudden stops: the relevance of
+  balance-sheet effects, Technical report, National Bureau of Economic
+  Research.
+
+\harvarditem{Cavallo \harvardand\ Frankel}{2008}{Cavallo20081430}
+Cavallo, E.~A. \harvardand\ Frankel, J.~A.  \harvardyearleft
+  2008\harvardyearright , `Does openness to trade make countries more
+  vulnerable to sudden stops, or less? using gravity to establish causality',
+  {\em Journal of International Money and Finance} {\bf 27}(8),~1430 -- 1452.
+\newline\harvardurl{http://www.sciencedirect.com/science/article/pii/S0261560607001180}
+
 \harvarditem[Ceruttie et~al.]{Ceruttie, Claessens \harvardand\
   Ratnovski}{2014}{Cerutti2014}
 Ceruttie, E., Claessens, S. \harvardand\ Ratnovski, L.  \harvardyearleft
@@ -52,7 +74,7 @@ Ceruttie, E., Claessens, S. \harvardand\ Ratnovski, L.  \harvardyearleft
   flows', {\em IMF Working Paper} {\bf 14}(69).
 
 \harvarditem{{Chicago Board of Trade}}{2009}{VIX}
-{Chicago Board of Trade}  \harvardyearleft 2009\harvardyearright , `The vix
+{Chicago Board of Trade}  \harvardyearleft 2009\harvardyearright , `The {VIX}
   white paper'.
 \newline\harvardurl{http://www.cboe.com/micro/vix/vixwhite.pdf}
 
@@ -85,9 +107,9 @@ Dueker, M.~J.  \harvardyearleft 1997\harvardyearright , `Markov switching in
   Business \& Economic Statistics} {\bf 15}(1),~26--34.
 
 \harvarditem{Evans}{1996}{evans199621}
-Evans, M.~D.  \harvardyearleft 1996\harvardyearright , `21 peso problems: Their
-  theoretical and empirical implications', {\em Handbook of statistics} {\bf
-  14},~613--646.
+Evans, M.~D.  \harvardyearleft 1996\harvardyearright , `21 {P}eso problems:
+  Their theoretical and empirical implications', {\em Handbook of statistics}
+  {\bf 14},~613--646.
 
 \harvarditem{Froot \harvardand\ Frankel}{1989}{FrootFrankelFDB}
 Froot, K. \harvardand\ Frankel, J.~A.  \harvardyearleft 1989\harvardyearright ,
@@ -134,6 +156,11 @@ Hodrick, R.  \harvardyearleft 1987\harvardyearright , {\em The Empirical
 Jurek, J.  \harvardyearleft 2007\harvardyearright , `Crash-neutral currency
   carry trades', {\em AFA Atlanta Meetings Paper} .
 
+\harvarditem{Kahneman \harvardand\ Tversky}{1979}{Kahneman1979Prospect}
+Kahneman, D. \harvardand\ Tversky, A.  \harvardyearleft 1979\harvardyearright ,
+  `Prospect theory: An analysis of decision under risk', {\em Econometrica}
+  {\bf 47}(2),~263--291.
+
 \harvarditem{Krugman}{2000}{KrugmanSS}
 Krugman, P., ed.  \harvardyearleft 2000\harvardyearright , {\em Currency
   Crises}, University of Chicago Press, Chicago.
@@ -141,10 +168,6 @@ Krugman, P., ed.  \harvardyearleft 2000\harvardyearright , {\em Currency
 \harvarditem{Minsky}{1975}{MinskyKeynes}
 Minsky, H.~P.  \harvardyearleft 1975\harvardyearright , {\em John Maynard
   Keynes}, Columbia University Press, NY.
-
-\harvarditem{Minsky}{1986}{MinskyStabilising}
-Minsky, H.~P.  \harvardyearleft 1986\harvardyearright , {\em Stabilizing an
-  Unstable Economy}, Yale University Press.
 
 \harvarditem{Minsky}{1992}{MinskyFIH}
 Minsky, H.~P.  \harvardyearleft 1992\harvardyearright , The financial
@@ -159,7 +182,7 @@ Minsky, H.~P.  \harvardyearleft 1995\harvardyearright , `Longer waves in
 \harvarditem[Mishra et~al.]{Mishra, Moriyama \harvardand\
   N'Diaye}{2014}{Tapering}
 Mishra, P., Moriyama, K. \harvardand\ N'Diaye, P.~M.  \harvardyearleft
-  2014\harvardyearright , `Impact of fed tapering announcements on emerging
+  2014\harvardyearright , `Impact of {F}ed tapering announcements on emerging
   markets', {\em IMF Working Paper} {\bf 14}(109).
 \newline\harvardurl{http://www.imf.org/external/pubs/cat/longres.aspx?sk=41655.0}
 
@@ -168,10 +191,10 @@ Obstfeld, M.  \harvardyearleft 2014\harvardyearright , Trilemmas and tradeoffs
   - living with financial globalization.
 \newblock mimeo, University of Berkeley.
 
-\harvarditem{Rabiner}{1989}{rabiner1989tutorial}
-Rabiner, L.  \harvardyearleft 1989\harvardyearright , `A tutorial on hidden
-  markov models and selected applications in speech recognition', {\em
-  Proceedings of the IEEE} {\bf 77}(2),~257--286.
+\harvarditem{Odean}{1998}{odean1998volume}
+Odean, T.  \harvardyearleft 1998\harvardyearright , `Volume, volatility, price,
+  and profit when all traders are above average', {\em The Journal of Finance}
+  {\bf 53}(6),~1887--1934.
 
 \harvarditem{Rey}{2013}{Rey2013}
 Rey, H.  \harvardyearleft 2013\harvardyearright , Dilemma not trilemma. the
@@ -190,5 +213,11 @@ Schaller, H. \harvardand\ Norden, S.~V.  \harvardyearleft 1997\harvardyearright
 Spronk, R., Vershoor, W.~F. \harvardand\ Zwinkels, R.~C.  \harvardyearleft
   2013\harvardyearright , `Carry trade and foreign exchange rate puzzles', {\em
   European Economic Review} {\bf 60},~17--31.
+
+\harvarditem{Visser \harvardand\ Speekenbrink}{2010}{depmixS4}
+Visser, I. \harvardand\ Speekenbrink, M.  \harvardyearleft
+  2010\harvardyearright , `{depmixS4}: An {R} package for {H}idden {M}arkov
+  {M}odels', {\em Journal of Statistical Software} {\bf 36}(7),~1--21.
+\newline\harvardurl{http://www.jstatsoft.org/v36/i07/}
 
 \end{thebibliography}
