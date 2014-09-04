@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.19)  2 SEP 2014 15:02
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.19)  4 SEP 2014 09:09
 entering extended mode
 **Notes.tex
 ("C:\Users\Toshiba\Google Drive\Research\GIT\Regime-Switch\Notes\Notes.tex"
@@ -805,7 +805,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 632.
  ) 
 Here is how much of TeX's memory you used:
  17745 strings out of 494045
- 335461 string characters out of 3145963
+ 335457 string characters out of 3145963
  455126 words of memory out of 3000000
  20617 multiletter control sequences out of 15000+200000
  12922 words of font info for 46 fonts, out of 3000000 for 9000
@@ -829,7 +829,7 @@ nts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmti12.pfb>
-Output written on Notes.pdf (23 pages, 328419 bytes).
+Output written on Notes.pdf (23 pages, 328107 bytes).
 PDF statistics:
  439 PDF objects out of 1000 (max. 8388607)
  101 named destinations out of 1000 (max. 500000)

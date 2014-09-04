@@ -4,7 +4,7 @@
 library(depmixS4) 
 library(xtable)
 set.seed(3)
-compare_model <- function(inv, )
+# eventually want to create a function compare_model <- function(inv, )
 inv <- c("HUF", "PLN", "CZK", "RON",  "RUB", "BGN", 
          "NOK", "ISK", "UAH", "HRK", "TRY")
 col <- c("AIC1", "ACI2", "AIC3", "AIC4", "LR42",  "LR42p", "LR43", 
@@ -13,8 +13,8 @@ col <- c("AIC1", "ACI2", "AIC3", "AIC4", "LR42",  "LR42p", "LR43",
 #"AIC3", "BIC3", "LR31", "LR31p", "LR32", "LR32p")
 complist2 <- matrix(NA, nrow = length(inv), ncol = length(col), 
                    dimnames = list(inv, col))
-i = "HRK"
-# for(i in inv){
+# i = "HRK"
+for(i in inv){
 tempfile <- forp(i, "EUR", 1)
 tempfx <- tempfile$data$p
 mod1 <- depmix(tempfx ~ 1, nstates = 1, data = da)

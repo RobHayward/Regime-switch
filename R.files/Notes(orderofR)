@@ -5,6 +5,10 @@ Use Raw.R to carry out the HMM analysis. It will also add a column of 1s for the
 
 Compare_Mod.R will calculate the LR and AIC stats to compare the models. 
 
+2StageFundingTab.R will create the list with the variables for all the currencies and all the funds. List2 has parameters and dates etc.  
+
+PlotProbReg.R will make the plot of returns and probability of being in each stage. 
+
 
 "table2"" is a table of two-stage return parameters for one funding currency when used with Test2State.R and delivers each funding currency into the "funding" vector when used with "2StageFundTab.R" 
 

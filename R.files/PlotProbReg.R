@@ -1,4 +1,4 @@
-# PLot probility
+# PLot carry-retruns and the probability of being in a regime. 
 library(depmixS4) 
 set.seed(3)
 inv <- c( "RON",  "RUB", "BGN", 
@@ -20,14 +20,13 @@ i = "HUF"
 #    selection = 2
 #  }
 pst <- posterior(fm)
-pst
 pst$Date <- index(tempfx)
-pdf("Figures/HUFEUR.pdf", paper= "a4", title = "HUF-EUR Carry")
+pdf("Figures/HUFEUR2.pdf", paper= "a4r", title = "HUF-EUR Carry")
 title <- paste(i, " carry log returns", sep = "")
 par(mfrow = c(3,1))
 plot(tempfx, main = title, type = 'l')
 abline(h = 1)
-plot(pst[,1] ~ pst$Date, type = 'l', main = "Probability in State 1: Caution")
-plot(pst[,2] ~ pst$Date, type = 'l', main = "Probability in State 2: Crash")
+plot(pst[,2] ~ pst$Date, type = 'l', main = "Probability in State 1: Caution")
+plot(pst[,3] ~ pst$Date, type = 'l', main = "Probability in State 2: Crash")
 dev.off()
-plot(pst[,1] + pst[,2])
+
