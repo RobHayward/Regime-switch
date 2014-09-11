@@ -22,6 +22,7 @@ for(i in inv){
                      posterior = posterior(fm2), profit = a$profit)
   list2[[i]]$posterior$Date <- index(list2[[i]]$profit)
 }
+#----------------------------------------
 # table 2 will order the state by size of the return (highest first for "calm")
 table2 <- matrix(1, nrow = 4, ncol = length(inv))
 rownames(table2) <- c("Calm", "SD1", "Crash", "sd2") 
@@ -36,6 +37,7 @@ for(i in inv){
    table2[3:4, i] <- table[3:4, i]
  }
 }
+# This will group the retruns into a table for all the funding currencies. 
 2stageEURtable <- table2
 2stageUSDtable <- table2
 2stageCHFtable <- table2

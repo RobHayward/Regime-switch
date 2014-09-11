@@ -15,7 +15,7 @@
 \setbeamertemplate{items}[square]
 
 % Title and author information
-\title{Carry-trade and transission}
+\title{Carry-trade and transition}
 \author{Rob Hayward and Jens H\"{o}lscher}
 
 
@@ -32,14 +32,14 @@
 \section{Introduction}
 \begin{frame}{Introduction}
 \begin{itemize}[<+-| alert@+>]
-\item There has been a substantial inflow of capital to transition economies sicne the 2007-08 financial crisis
-\item There are three factors that could encouage a reversal
+\item There has been a substantial inflow of capital to transition economies since the 2007-08 financial crisis
+\item There are three factors that could encourage a reversal
 \begin{itemize}[<+-| alert@+>]
 \item US monetary policy
 \item International risk aversion
 \item International liquidity
 \end{itemize}
-\item This paper seeks to assess their relative importance
+\item This research seeks to understand more about how financial instability evolves and to assess the relative importance of these factors.
 \end{itemize}
 \end{frame}
 
@@ -47,11 +47,16 @@
 
 \section{Literature}
 \begin{frame}{Literature}
-There are three international factors that can affect internatioanl capital flows
+Literature on \emph{Sudden Stops} tried to understand financial turmoil that ran from Mexico, through Asia and into Russia and Latin America.
 \begin{itemize}[<+-| alert@+>]
-\item US monetary policy
-\item International risk aversion
-\item International liquidity
+\item Calvo (1998, 1999)
+\end{itemize}
+\pause
+Renewed interest, particularly after May 2013
+\begin{itemize}
+\item Ahmed (2014) Panel student of Gross and Net capital flows
+\item Baele et al. (2014) Look at causes of Flight-to-Safety  
+\item Ceruttie et al. (2014) Measure global liquidity 
 \end{itemize}
 \end{frame}
 
@@ -59,11 +64,11 @@ There are three international factors that can affect internatioanl capital flow
 Attempts to take advantage of the breakdown in uncovered interest parity
 \begin{block}{}
 \begin{equation}\label{eqref:carry}
-z_{t+1} \equiv (i^* - i) -\Delta s_{t+1}
+y_{t+1} \equiv (i^* - i) -\Delta s_{t+1}
 \end{equation}
 \pause
 \end{block}
-Where $z_{t+1}$ are the profits from the carry trade, $i^* - i$ is the interest rate differential (overseas less home) and $\Delta s_{t+1}$ is the change in the exchange rate.    
+Where $y_{t+1}$ are the profits from the carry trade, $i^* - i$ is the interest rate differential (overseas less home) and $\Delta s_{t+1}$ is the change in the exchange rate.    
 \end{frame}
 
 
@@ -124,7 +129,7 @@ The HMM has three components: $\pi, A, B$ where,
 \item The response model: $P(Y_t| S_t, \theta_{resp})$ $(B)$
 \end{itemize}
 \pause
-Where there are $n$ states or regimes; $y_t$ are the observed carry-trade return; and $\theta_{prior}$, $\theta_{trans}$ and  $\theta_{resp}$ are the parameters of the prior, transition and response models respectively.
+Where there are $n$ states or regimes; $y_t$ are the observed carry-trade returns; and $\theta_{prior}$, $\theta_{trans}$ and  $\theta_{resp}$ are the parameters of the prior, transition and response models respectively.
 \end{frame}
 
 \begin{frame}{Transition matrix}
@@ -138,8 +143,8 @@ P(S_t = 1|S_{t-1}=2),  & P(S_t = 2|S_{t-1}=2)
 For Hungary, it is 
 \begin{equation*}
 \begin{bmatrix}
-0.75,  & 0.25\\
-0.95,  & 0.05
+0.88,  & 0.12\\
+0.42,  & 0.58
 \end{bmatrix}
 \end{equation*}
 \end{frame}
@@ -147,7 +152,7 @@ For Hungary, it is
 % Note that this frame uses the multirow and the [fixup] argument to push the 
 % names of the rows up so that they are not covered by the horizontal lines
 \begin{frame}{Response}
-For the base case, a linear response is modelled as
+For the simple two-regime case, a linear response is modelled as
 \begin{equation*}
 y_t = \beta_0 + \sum_{i=1}^{i=n}S_{i,t} + \varepsilon_t
 \end{equation*}
@@ -175,15 +180,15 @@ For, Hungary Poland, Romania and Czech, there are the following results.
 \item 2 Regime $y_t = \beta_1 + \sum_{i=1}^{i=n}S_{i,t} + \varepsilon_t, \quad n = 2$ (M2) 
 \item 3 Regime $y_t = \beta_1 + \sum_{i=1}^{i=n}S_{i,t} + \varepsilon_t, \quad n = 3$ (M3)
 \item 2 Regime Z response $y_t = \beta_1 + \beta_2 Z_t + \varepsilon_t$ (M4)
-\item 2 Regime Z transition $y_t = \beta_t + \sum_{i=1}^{i=n}S_{i,t} + \varepsilon_t, \quad n = 2$ (M5) 
+\item 2 Regime Z transition $y_t = \beta_t + \sum_{i=1}^{i=n}(S_{i,t}|z_t) + \varepsilon_t, \quad n = 2$ (M5) 
 \begin{itemize}
-\item transition model $log(a_{ij})/ a_{i1} = \alpha_j +\beta_{j,z_t}$
+\item transition model $log(a_{ij}/ a_{i1}) = \alpha_j +\beta_{j}z_t$
 \end{itemize}
 \end{enumerate}
 \end{frame}
 
 \begin{frame}{Transition and risk aversion}
-The VIX is scaled to have a mean of zero and Sd of 1.  
+The VIX is scaled to have a mean of zero and S-dev of 1.  
 \begin{center}
 \rowcolors{1}{OliveGreen!20}{OliveGreen!5}
 \begin{tabular}{rrrrrrr}
@@ -199,15 +204,19 @@ The VIX is scaled to have a mean of zero and Sd of 1.
 The probability of switching to a crash once in a state of calm.
 \end{frame}
 
+\begin{frame}{Calm and Crash probabilities}
+\includegraphics<1>[width=12cm, height=9cm]{"../Figures/HUFEUR2"}
+\end{frame}
 
 \section{Next steps}
 \begin{frame}{Next Steps}
 \begin{itemize}[<+-| alert@+>]
-\item Repeat this for US monetary policy and international liqudity
+\item Repeat this for US monetary policy and international liquidity
 \begin{itemize}
 \item US short-term interest rate, TED spread.  LSAP?
 \end{itemize}
-\item Assess the relative importance of these factors
+\item Common factors and common dates
+\item The preferred model for each country
 \end{itemize}
 \end{frame}
 
@@ -215,72 +224,22 @@ The probability of switching to a crash once in a state of calm.
 
 \begin{frame}[allowframebreaks]{Bibliography}
   \begin{thebibliography}{10}    
-  \beamertemplatebookbibitems
-  \bibitem{Autor19901}
-    A.~Autor.
-    \newblock {\em Introduction to Giving Presentations}.
-    \newblock Klein-Verlag, 1990.
   \beamertemplatearticlebibitems
-  \bibitem{Jemand2000}
-    S.~Jemand.
-    \newblock On this and that.
-    \newblock {\em Journal of This and That}, 2(1):50--100, 2000.
+  \bibitem{Calvo}
+    G.~Calvo.
+    \newblock Capital flows and capital market crisis: the simple economics of sudden stops
+    \newblock {\em Journal of Applied Economics}, 1(1):34--54, 1998.
+  \bibitem{Ahmed}
+    S.~Ahmed and A. Zlate.
+    \newblock Capital flows to emerging economies: A brave new world?
+    \newblock {\em Journal of International Money and Finance}, 2014.
+  \bibitem{Hamilton}
+    J.D.~Hamilton.
+    \newblock Rational expectations: Econometric analysis of changes in regime
+    \newblock {\em Journal of Economic Dynamics and Control}, 12(2):385--423, 1988.
+  
   \end{thebibliography}
 \end{frame}
 \end{document}
 
 
-
-
-
-
-%================================
-\begin{itemize}[<+-| alert@+>]
-\begin{center}
-\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
- \begin{tabular}{l r r r r r}
-Series & Units & Mean & Median &  Max & Min \\
-\hline
-RTWI & index & 91.24 & 89.26 & 115.96 & 78.44 \\
-CNB & \% GDP & 6.00 & 5.07 & 15.97 & -0.84\\
-CNE & \% GDP & 0.23 & -0.00 & 3.28 & -1.81  \\
-CNFDI & \% GDP & -0.67 & -1.29 & 8.91 & -11.48\\
-COT & \% GDP & 0.88 & 8.32 & 4.47 & -1.27 \\
-SPREAD &  pp & -0.20 & -0.07 & 3.38 & -4.99  \\
-S1 &  NC/OI & 47.0 & 3.00 & 70.0 & -69.0\\
-\hline
-\end{tabular}
-\end{center}
-\end{frame}
-
-\begin{frame}
-%\includegraphics<1>[width=12cm, height=8cm]{ts}
-\end{frame}
-
-\begin{frame}{Vector Auto Regression}
-\structure{Structural Equation}
-$Bx_{t}=\Gamma_{0}+\Gamma_{1}x_{t-1}+\epsilon_{t}$
-\pause
-
-\begin{block}{}
-Where: $x_t$ is a vector of endogenous variables; matrix $B$ contains the coefficients for the contemporaneous relationships between the endogenous variables; $\Gamma_0$ contains exogenous variables such as a constant, trend or seasonal; $\epsilon$ is a vector of errors that are assumed to IID; and $\Gamma_1$ are the parameters to be estimated. 
-\end{block}
-\pause
-\end{frame}
-
-\begin{frame}{Impulse Response Functions}
-What is the effect of an innovation or shock? 
-\begin{equation}
-x_t=\mu+\sum_{i=0}^{i=n}\frac{A_t^i}{1-b_{12}b_{21}}
-\begin{bmatrix} 1 & -b_{12} \\ -b_{21} & 1
-\end{bmatrix}
-\end{equation}
-For n periods
-\end{frame}
-
-\begin{frame}{References}
-\textbf{Lyons and Evans} (2002), 'Order Flow and Exchange Rate Dynamics', \emph{Journal of Political Economy}, 110 (1)\\
-\textbf{Kouri and Porter} (1974), 'International Capital Flows and Portfolio Equilibrium', \emph{Journal of Political Economy}, 82\\
-\textbf{Sims} (1980), 'Macroeconomics and Reality', \emph{Econometrica} 48(1)
-\end{frame}
-\end{document}

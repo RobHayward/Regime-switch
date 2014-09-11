@@ -1,4 +1,3 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.6.18)  3 SEP 2014 13:19
 entering extended mode
 **Notes.tex
 (C:\Users\rh49\Projects\Regime-Switch\Notes\Notes.tex
@@ -805,10 +804,17 @@ Package rerunfilecheck Info: File `Notes.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 632.
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  17858 strings out of 493921
  337080 string characters out of 3144879
  449378 words of memory out of 3000000
  20728 multiletter control sequences out of 15000+200000
+=======
+ 17745 strings out of 494045
+ 335457 string characters out of 3145963
+ 455126 words of memory out of 3000000
+ 20617 multiletter control sequences out of 15000+200000
+>>>>>>> 9aa7d1ac7446c9e983d7584f75ba86feaca21e0d
  12922 words of font info for 46 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  56i,13n,69p,1742b,613s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -830,7 +836,11 @@ nts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmti12.pfb>
+<<<<<<< HEAD
 Output written on Notes.pdf (23 pages, 328083 bytes).
+=======
+Output written on Notes.pdf (23 pages, 328107 bytes).
+>>>>>>> 9aa7d1ac7446c9e983d7584f75ba86feaca21e0d
 PDF statistics:
  439 PDF objects out of 1000 (max. 8388607)
  101 named destinations out of 1000 (max. 500000)

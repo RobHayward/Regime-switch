@@ -2,10 +2,11 @@
 # This works for one.  Now need to loop
 i = "PLN"
 #for(i in Inv){
-list4["EUR"][i]["pars"]
+# use list4 for 3 stage
+list2[[i]]["pars"]
 #list4$EUR$PLN$pars
-states <- matrix(list4$JPY$HUF$pars[13:18], nrow = 2)
-trans <- matrix(list4$JPY$HUF$pars[4:12], nrow = 3, byrow = TRUE)
+states <- matrix(list2$HUF$pars[7:10], nrow = 2)
+trans <- matrix(list2$HUF$pars[3:6], nrow = 2, byrow = TRUE)
 #states <- matrix(1:6, nrow = 2)
 states
 #trans <- matrix(1:9, nrow = 3, byrow = TRUE)
