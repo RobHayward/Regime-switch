@@ -1,0 +1,11 @@
+Notes
+========================================================
+
+These are some notes from the Economic Systems Journal *http://www.sciencedirect.com/science/journal/09393625/38/1*(http://www.sciencedirect.com/science/journal/09393625/38/1)
+
+This is a symbosium on challenges to financial stability in central and eastern Europe. There is focus on the importance of credit growth. The importance of foreign currency loans was central to CEE. Fidrmuc, Crespo Cuaresma and Hake analyse 21 studies and find that supply factors are the most important. 
+
+* paper * (http://ac.els-cdn.com/S0939362513000927/1-s2.0-S0939362513000927-main.pdf?_tid=54dbb99e-380e-11e4-87bd-00000aab0f6c&acdnat=1410259673_0c2494e7ae3d46030151b2ff8755c2af)
+
+Egert and Kocenda show how the exchange rate affects capital flows.  GARCH model shows that exchange rates of CEE are sensitive to macroeconomic news. Crisis influences the currencies.  They react more to the central bank in the crisis.  
+
