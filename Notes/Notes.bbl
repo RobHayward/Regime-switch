@@ -53,13 +53,6 @@ Calvo, G.~A.  \harvardyearleft 1998\harvardyearright , `Capital flows and
   capital-market crises {:} the simple economics of sudden stops', {\em Journal
   of Applied Economcs} {\bf 1}(1),~34 -- 54.
 
-\harvarditem[Calvo et~al.]{Calvo, Izquierdo \harvardand\
-  Mejia}{2004}{calvo2004empiric}
-Calvo, G.~A., Izquierdo, A. \harvardand\ Mejia, L.-F.  \harvardyearleft
-  2004\harvardyearright , On the empiric of sudden stops: the relevance of
-  balance-sheet effects, Technical report, National Bureau of Economic
-  Research.
-
 \harvarditem{Cavallo \harvardand\ Frankel}{2008}{Cavallo20081430}
 Cavallo, E.~A. \harvardand\ Frankel, J.~A.  \harvardyearleft
   2008\harvardyearright , `Does openness to trade make countries more
@@ -126,6 +119,11 @@ Frydman, H. \harvardand\ Schuermann, T.  \harvardyearleft 2008\harvardyearright
   , `Credit rating dynamics and markov mixture models', {\em Journal of Banking
   \& Finance} {\bf 32}(6),~1062--1075.
 
+\harvarditem{Garcia}{1998}{garcia1998asymptotic}
+Garcia, R.  \harvardyearleft 1998\harvardyearright , `Asymptotic null
+  distribution of the likelihood ratio test in markov switching models', {\em
+  International Economic Review} pp.~763--788.
+
 \harvarditem{Groen \harvardand\ Peck}{2014}{NYFedtaper}
 Groen, J. \harvardand\ Peck, R.  \harvardyearleft 2014\harvardyearright , `Risk
   aversion, global asset prices, and fed tightening signals'.
@@ -141,6 +139,11 @@ Hamilton, J.~D.  \harvardyearleft 1988\harvardyearright ,
 Hamilton, J.~D.  \harvardyearleft 1989\harvardyearright , `A new approach to
   the economic analysis of nonstationary time series and the business cycle',
   {\em Econometrica} {\bf 52}(2),~357 -- 384.
+
+\harvarditem{Hansen}{1992}{hansen1992likelihood}
+Hansen, B.~E.  \harvardyearleft 1992\harvardyearright , `The likelihood ratio
+  test under nonstandard conditions: testing the markov switching model of
+  gnp', {\em Journal of applied Econometrics} {\bf 7}(S1),~S61--S82.
 
 \harvarditem{Hayward}{2013}{Hayward2013}
 Hayward, R.  \harvardyearleft 2013\harvardyearright , Towards a model of
@@ -196,6 +199,13 @@ Odean, T.  \harvardyearleft 1998\harvardyearright , `Volume, volatility, price,
   and profit when all traders are above average', {\em The Journal of Finance}
   {\bf 53}(6),~1887--1934.
 
+\harvarditem{Psaradakis \harvardand\ Spagnolo}{2003}{citeulike:13372807}
+Psaradakis, Z. \harvardand\ Spagnolo, N.  \harvardyearleft
+  2003\harvardyearright , `On the determination of the number of regimes in
+  {M}arkov-switching autoregressive models', {\em Journal of Time Series
+  Analysis} {\bf 24}(2),~237--252.
+\newline\harvardurl{http://dx.doi.org/10.1111/1467-9892.00305}
+
 \harvarditem{Rey}{2013}{Rey2013}
 Rey, H.  \harvardyearleft 2013\harvardyearright , Dilemma not trilemma. the
   global financial cycle and monetary policy independence, {\em in}
@@ -207,6 +217,13 @@ Rey, H.  \harvardyearleft 2013\harvardyearright , Dilemma not trilemma. the
 Schaller, H. \harvardand\ Norden, S.~V.  \harvardyearleft 1997\harvardyearright
   , `Regime switching in stock market returns', {\em Applied Financial
   Economics} {\bf 7}(2),~177--191.
+
+\harvarditem[Smith et~al.]{Smith, Naik \harvardand\ Tsai}{2006}{Smith2006553}
+Smith, A., Naik, P.~A. \harvardand\ Tsai, C.-L.  \harvardyearleft
+  2006\harvardyearright , `Markov-switching model selection using
+  kullback–leibler divergence', {\em Journal of Econometrics} {\bf
+  134}(2),~553 -- 577.
+\newline\harvardurl{http://www.sciencedirect.com/science/article/pii/S0304407605001557}
 
 \harvarditem[Spronk et~al.]{Spronk, Vershoor \harvardand\
   Zwinkels}{2013}{SpronkEER}

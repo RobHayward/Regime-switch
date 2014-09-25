@@ -1,17 +1,18 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.19)  25 SEP 2014 17:40
 entering extended mode
 **Notes.tex
-(C:\Users\rh49\Projects\Regime-Switch\Notes\Notes.tex
+("C:\Users\Toshiba\Google Drive\Research\GIT\Regime-Switch\Notes\Notes.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
 croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
@@ -438,41 +439,41 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \rot@float@box=\box55
 \rot@mess@toks=\toks24
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2013/01/14 v2.14 AMS math features
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
+Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip45
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks25
 \ex@=\dimen149
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen150
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count108
-LaTeX Info: Redefining \frac on input line 210.
+LaTeX Info: Redefining \frac on input line 211.
 \uproot@=\count109
 \leftroot@=\count110
-LaTeX Info: Redefining \overline on input line 306.
+LaTeX Info: Redefining \overline on input line 307.
 \classnum@=\count111
 \DOTSCASE@=\count112
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
 \Mathstrutbox@=\box56
 \strutbox@=\box57
 \big@size=\dimen151
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \macc@depth=\count113
 \c@MaxMatrixCols=\count114
 \dotsspace@=\muskip10
@@ -493,8 +494,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \multlinegap=\skip46
 \multlinetaggap=\skip47
 \mathdisplay@stack=\toks29
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
 Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
@@ -551,7 +552,7 @@ File: listings.cfg 2007/02/22 1.4 listings configuration
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
-Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+Package: hyperref 2012/05/13 v6.82q Hypertext links for LaTeX
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
 Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
@@ -597,9 +598,6 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
-Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
-)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
@@ -608,41 +606,40 @@ Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 \Hy@pagecounter=\count130
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
-File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2012/05/13 v6.82q Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count131
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 4319.
-Package hyperref Info: Hyper figures OFF on input line 4443.
-Package hyperref Info: Link nesting OFF on input line 4448.
-Package hyperref Info: Hyper index ON on input line 4451.
-Package hyperref Info: Plain pages OFF on input line 4458.
-Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Option `colorlinks' set `true' on input line 3941.
+Package hyperref Info: Hyper figures OFF on input line 4062.
+Package hyperref Info: Link nesting OFF on input line 4067.
+Package hyperref Info: Hyper index ON on input line 4070.
+Package hyperref Info: Plain pages OFF on input line 4077.
+Package hyperref Info: Backreferencing OFF on input line 4082.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4688.
+Package hyperref Info: Bookmarks ON on input line 4300.
 \c@Hy@tempcnt=\count132
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen164
+LaTeX Info: Redefining \url on input line 4653.
 \Fld@menulength=\count133
-\Field@Width=\dimen165
-\Fld@charsize=\dimen166
-Package hyperref Info: Hyper figures OFF on input line 6295.
-Package hyperref Info: Link nesting OFF on input line 6300.
-Package hyperref Info: Hyper index ON on input line 6303.
-Package hyperref Info: backreferencing OFF on input line 6310.
-Package hyperref Info: Link coloring ON on input line 6313.
-Package hyperref Info: Link coloring with OCG OFF on input line 6320.
-Package hyperref Info: PDF/A mode OFF on input line 6325.
-LaTeX Info: Redefining \ref on input line 6365.
-LaTeX Info: Redefining \pageref on input line 6369.
+\Field@Width=\dimen164
+\Fld@charsize=\dimen165
+Package hyperref Info: Hyper figures OFF on input line 5773.
+Package hyperref Info: Link nesting OFF on input line 5778.
+Package hyperref Info: Hyper index ON on input line 5781.
+Package hyperref Info: backreferencing OFF on input line 5788.
+Package hyperref Info: Link coloring ON on input line 5791.
+Package hyperref Info: Link coloring with OCG OFF on input line 5798.
+Package hyperref Info: PDF/A mode OFF on input line 5803.
+LaTeX Info: Redefining \ref on input line 5843.
+LaTeX Info: Redefining \pageref on input line 5847.
 \Hy@abspage=\count134
 \c@Item=\count135
 \c@Hfootnote=\count136
@@ -651,7 +648,7 @@ LaTeX Info: Redefining \pageref on input line 6369.
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
-File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+File: hpdftex.def 2012/05/13 v6.82q Hyperref driver for pdfTeX
 \Fld@listcount=\count137
 \c@bookmark@seq@number=\count138
 
@@ -662,7 +659,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip50
 )
-(C:\Users\rh49\Projects\Regime-Switch\Notes\Notes.aux)
+("C:\Users\Toshiba\Google Drive\Research\GIT\Regime-Switch\Notes\Notes.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
@@ -682,13 +679,13 @@ ABD: EveryShipout initializing macros
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count139
-\scratchdimen=\dimen167
+\scratchdimen=\dimen166
 \scratchbox=\box61
 \nofMPsegments=\count140
 \nofMParguments=\count141
 \everyMPshowfont=\toks31
 \MPscratchCnt=\count142
-\MPscratchDim=\dimen168
+\MPscratchDim=\dimen167
 \MPnumerator=\count143
 \makeMPintoPDFobject=\count144
 \everyMPtoPDFconversion=\toks32
@@ -697,7 +694,7 @@ ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box62
 Package hyperref Info: Link coloring ON on input line 19.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
-Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
@@ -708,54 +705,60 @@ LaTeX Info: Redefining \ref on input line 19.
 LaTeX Info: Redefining \pageref on input line 19.
 LaTeX Info: Redefining \nameref on input line 19.
 
-(C:\Users\rh49\Projects\Regime-Switch\Notes\Notes.out)
-(C:\Users\rh49\Projects\Regime-Switch\Notes\Notes.out)
+("C:\Users\Toshiba\Google Drive\Research\GIT\Regime-Switch\Notes\Notes.out")
+("C:\Users\Toshiba\Google Drive\Research\GIT\Regime-Switch\Notes\Notes.out")
 \@outlinefile=\write4
- [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4] [5] [6]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 181.
+[1
 
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4] [5]
+[6]
+
+Package natbib Warning: Citation `calvo2004empiric' on page 7 undefined on inpu
+t line 172.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 184.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 181.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 184.
 Missing character: There is no ; in font nullfont!
  [7] [8] [9]
-[10] [11] [12] [13
+[10] [11] [12] [13] [14
 
 
 ]
-Overfull \hbox (95.03387pt too wide) in paragraph at lines 458--493
+Overfull \hbox (95.03387pt too wide) in paragraph at lines 467--502
 [] 
  []
 
-[14] [15
+[15] [16
 
 
-] [16] [17
+] [17] [18
 
 
-] <../Figures/HUFEUR.pdf, id=326, 597.23125pt x 844.15375pt>
+] <../Figures/HUFEUR.pdf, id=348, 597.23125pt x 844.15375pt>
 File: ../Figures/HUFEUR.pdf Graphic file (type pdf)
 
 <use ../Figures/HUFEUR.pdf>
-Package pdftex.def Info: ../Figures/HUFEUR.pdf used on input line 602.
+Package pdftex.def Info: ../Figures/HUFEUR.pdf used on input line 611.
 (pdftex.def)             Requested size: 418.05902pt x 590.9036pt.
 
-Overfull \hbox (28.05902pt too wide) in paragraph at lines 602--603
+Overfull \hbox (28.05902pt too wide) in paragraph at lines 611--612
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 25.73691pt on input line 604.
+LaTeX Warning: Float too large for page by 25.73691pt on input line 613.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[18] (C:\Users\rh49\Projects\Regime-Switch\Notes\Notes.bbl
+[19] ("C:\Users\Toshiba\Google Drive\Research\GIT\Regime-Switch\Notes\Notes.bbl
+"
 Underfull \hbox (badness 1014) in paragraph at lines 8--12
 []\OT1/cmr/m/n/12 Ahmed, S. and Zlate, A. (2014), `Cap-i-tal flows to emerg-ing
  mar-ket
@@ -773,51 +776,64 @@ Overfull \hbox (39.30322pt too wide) in paragraph at lines 18--24
 2014/whd/eng/pdf/wreo0414.pdf 
  []
 
-[19]
+[20]
 Overfull \hbox (19.5642pt too wide) in paragraph at lines 27--31
 \OT1/cmr/bx/n/12 URL: \OT1/cmr/m/it/12 http://www.federalreserve.gov/pubs/feds/
 2014/201446/201446abs.html 
  []
 
 
-Overfull \hbox (16.20308pt too wide) in paragraph at lines 64--69
+Overfull \hbox (16.20308pt too wide) in paragraph at lines 57--62
 \OT1/cmr/bx/n/12 URL: \OT1/cmr/m/it/12 http://www.sciencedirect.com/science/art
 icle/pii/S0261560607001180 
  []
 
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 130--133
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 128--131
 \OT1/cmr/bx/n/12 URL: \OT1/cmr/m/it/12 http://libertystreeteconomics.newyorkfed
 .org/2014/03/risk-
  []
 
-[21])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 632.
- [22] [23 <C:/Users/rh49/Projects/Regime-Switch/Figures/HUFEUR.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 632.
+[22]
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
 
-(C:\Users\rh49\Projects\Regime-Switch\Notes\Notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 632.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 632.
+Underfull \hbox (badness 1888) in paragraph at lines 222--227
+\OT1/cmr/m/n/12 se-lec-tion us-ing kull-back-leibler di-ver-gence', \OT1/cmr/m/
+it/12 Jour-nal of Econo-met-rics
+ []
+
+
+Overfull \hbox (16.20308pt too wide) in paragraph at lines 222--227
+\OT1/cmr/bx/n/12 URL: \OT1/cmr/m/it/12 http://www.sciencedirect.com/science/art
+icle/pii/S0304407605001557 
+ []
+
+[23])
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 641.
+[24] [25 <C:/Users/Toshiba/Google Drive/Research/GIT/Regime-Switch/Figures/HUFE
+UR.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 641.
+
+("C:\Users\Toshiba\Google Drive\Research\GIT\Regime-Switch\Notes\Notes.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 641.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 641.
 Package rerunfilecheck Info: File `Notes.out' has not changed.
-(rerunfilecheck)             Checksum: F89427049C3C998DD1AAE763700EA0F8;755.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 632.
+(rerunfilecheck)             Checksum: 34D38CEA237FEFF83A74BAB0845814D7;813.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 641.
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 17858 strings out of 493921
- 337080 string characters out of 3144879
- 449378 words of memory out of 3000000
- 20728 multiletter control sequences out of 15000+200000
-=======
- 17745 strings out of 494045
- 335457 string characters out of 3145963
- 455126 words of memory out of 3000000
- 20617 multiletter control sequences out of 15000+200000
->>>>>>> 9aa7d1ac7446c9e983d7584f75ba86feaca21e0d
+ 17761 strings out of 494045
+ 335805 string characters out of 3145963
+ 455181 words of memory out of 3000000
+ 20627 multiletter control sequences out of 15000+200000
  12922 words of font info for 46 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 56i,13n,69p,1742b,613s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 715 hyphenation exceptions out of 8191
+ 56i,13n,69p,1767b,613s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/
@@ -836,13 +852,9 @@ nts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmti12.pfb>
-<<<<<<< HEAD
-Output written on Notes.pdf (23 pages, 328083 bytes).
-=======
-Output written on Notes.pdf (23 pages, 328107 bytes).
->>>>>>> 9aa7d1ac7446c9e983d7584f75ba86feaca21e0d
+Output written on Notes.pdf (25 pages, 335839 bytes).
 PDF statistics:
- 439 PDF objects out of 1000 (max. 8388607)
- 101 named destinations out of 1000 (max. 500000)
- 202 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 467 PDF objects out of 1000 (max. 8388607)
+ 107 named destinations out of 1000 (max. 500000)
+ 210 words of extra memory for PDF output out of 10000 (max. 10000000)
 
