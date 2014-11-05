@@ -1,5 +1,34 @@
 Notes
 ========================================================
+## Banks capital flows and financial crisis
+[Fed paper on capital flows](http://www.federalreserve.gov/econresdata/ifdp/2014/files/ifdp1121.pdf).  Important that models be able to capture the non-linear nature of financial crisis. Important is the role of financial intermediation. this model has banks with occasional leverage constraints.  There are occasional constraints as well as regular business cycles. Agency issues can retrict bank ability to borrow in the short-term debt market.  There is empirical evidece that rapid credit expansion is frequently financed by overseas borrowing. See Mendoza and Terrones (2012) and Bruno and Shinn (2012). Other papers looking at the cycle of boom and bust with credit are Gournichas and Obstfeld (2012) and Schularick and Taylor (2012). Bianchi (2010), Mendoza (2010), Bianchi and Mendoza (2013), Benigno (2012) and Schmitt-Grohe and Uribe (2011) have Nonlinear Stochastic Dynamic General Equilibrium models that switch between normal times and crisis. Most of these models impose exogenous collateral constraints. Here there is an endogenous agency problem.  
+
+## India
+India was one of the countries that was most affected by the *tapering talk*.  There is more here on [Vox EU](http://www.voxeu.org/article/impact-fed-s-exit-india).  There is a link to Eichengreen and Gupta (2014) that assesses the effect of the tapering on exchange rates, reserves and equity prices. 
+
+
+## A new taxonomy of sudden stops
+Notes from *A New Taxonomy of sudden stops* it is in [Citulike](http://www.citeulike.org/pdf//user/RobHayward/article/13405794/990575/1-s20-S0261560614001600-main.pdf?expires=1414145894&hash=BAF93D382E369D1392457F86A39BD1DAA4CCF0BA).  It distringuishes between gross and net flows. 1980s there was interest in *Starts in Gross Capital Outflows*.  Amongst the writers are Cuddington (1986) and Dooley (1986). In the 1990s attention turned to *Sudden Stops*.  This looked at an abrupt reversal of net flows. These were associated with current account and real exchange rate adjustment that had a major effect on output. Calvo (1998), Calvo, Izquiredo and Mejia (2004) and (2008) and Guidotti Struzenegger and Villar (2004) and Calvallo and Frenkel (2008). Now attention has turned back to gross flows and the relationship between gross and net flows. Cowan and De Gregorio (2007), Calderon and Kubota (2013), Rothenberg and Warnock (2011), Forbes and Warnock (2012) and Alberola, Erce and Serena (2012) look at the role of Gross flows in determining Sudden Stops. These papers argue that Sudden Stops may be driven by external and country ideosyncratic features and by the difference in the behaviour of domestic and external residents. Powell, Ratha and Mohapatra (2002) argue that Gross Outflows and Inflows are strongly associated and that they may Granger-cause each other causing viscious and virtuous cycles between capital flows and macroeconomic variables. 
+
+The aim is to propose a taxonomy of Sudden Stops by exploring the simultaneous roles of gross inflows, gross outflows and net flows.
+
+Borio and Disyatat (2011) have a useful discussion of role of international banks and banking flows.  However, Bruno and Shin 2012a and 2012b have emphasises the potential disruption that can be caused by changes in gross flows even if there is no net effect. THere is a report from the Committee on International Economic Policy Research (2012) that assesses the potential disruption that can be caused by debt-creating cross-border flows (i.e. banking flow) during period of forced de-leverage. 
+
+A Sudden Stop can be defined as a fall in net inflows (say relative to trend as in Calvo and Majia (2004) or gross flows (such as a fall in gross inflows or an increase in gross outflows as in Forbes and Warnock (2012). 
+
+The definition here is from Calvo and Majia (2004) where the sudden stop is defined as the flow falls below one standard deviation of its historical mean (conditional on its subsequent fall to 2 standard deviations below the mean).  Here the algorithm is applied to each series. The effect of the Sudden Stop on the GDP and the RER (10 quarters before and 10 quarters after) is assessed. 
+
+The main finding is that the effect on GDP Is most intense when there are sudden stops to SSION (gross inflows, gross outflow and net flows) and SSIN (Gross inflow and net).  SSO (Gross out), SSON (Gross out and net) and SSN (net flows) are not statistically significant. ** Important**
+
+SSI requires a substantial sale of domestic assets by non-residnets; SSO requires a substantial purchase of overseas assets by residents. The former is likely to affect the liquiity and leverage of domestic households and firms. The latter may be fuelled by overseas opportunities as much as domestic concerns. 
+
+Are bank flows more disruptive than pure portoflio flows?  They may lead to forced deleveraging. The capital flows are broken down into sub-type. The flows can be categorised as either *direct*, *portfolio* or *other*.  The *other* are part of the bank flow. Therefore there is DIR (direct investment in reporting economy), PIL (portfolio investment in liabilities) and OIR (other investment in liabilities); DIA (direct investment abroad), PIA (portfolio investment abroad) and OIA (other investment abroad). 
+
+> "It stands out from the table that the episodes associated with changes in "other investment" - both assets (OIA, liasbilities (OIL) and net (OIN) -- account for the largest share of all episodes across all types of Sudden Stops"
+(p.23)
+>
+
+## Mixture model
 These are from Wikipedia [http://en.wikipedia.org/wiki/Mixture_model](Mixture Model).  Probabilistic model where there are subpopulations. This is based on a mixture distribution. There are N random variables that relate to a distribution with K components. The mixture weights sum to one. There are K sets of parameters specificying the distribution (such as mean and variance for a normal distribution). The mixture weights are the same as the *factor loadings* (see [http://en.wikipedia.org/wiki/Factor_analysis](Wikipdeia on factor analysis) ).  There may be something in that to answer the question about how many regimes to choose. 
 
 These are some notes from the Economic Systems Journal [http://www.sciencedirect.com/science/journal/09393625/38/1](http://www.sciencedirect.com/science/journal/09393625/38/1)
