@@ -6,6 +6,8 @@ Notes
 
 [Bruno and Shin, Capital Flows, Cross-broder banking and global liquidity](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.296.5090&rep=rep1&type=pdf), builds on the general equilibrium framework of Geanakopolos (1997, 2009) and Fostel and Geanokopolos (2008, 2012). Gorton (2007, 2009)  and Gorton and Metrick (2010) have shed light on the modern bank run where increased collateral requirements ("haircuts") reduce the capacity to borrow. This model combines the procyclicaity of leverage with the interaction between global and local banks. This has already been documented by Cetorelli and Goldberg (2009, 2010). Forbes and Warnock (2011) find that the VIX can explain international capital flows.  This is explained by the VIX being a mirror of banks VaR. 
 
+The model deals with the interaction between global banks with access to internationl money markets and domestic banks. The cost of funds will increase flow from global to local. 
+
 The transmission of financial conditons across borders is often referred to as *global liquidity*.  When global banks apply more lenient conditions on local banks, more lenient credit conditions are transferred to the local economy. This framework suggests that global liquidity can be measured by aggregate cross boarder lending through the banking system. 
 
 
