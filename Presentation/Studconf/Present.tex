@@ -16,7 +16,7 @@
 
 % Title and author information
 \title{Carry-trade and transition}
-\author{Rob Hayward and Jens H\"{o}lscher}
+\author{Rob Hayward}
 
 
 \begin{document}
@@ -30,7 +30,53 @@
 \end{frame}
 
 \section{Introduction}
-\begin{frame}{Introduction}
+\begin{frame}{The carry-trade}
+Attempts to take advantage of the breakdown in uncovered interest parity
+\begin{block}{}
+\begin{equation*}\label{eqref:carry}
+y_{t+1} \equiv (i^* - i) -\Delta s_{t+1}
+\end{equation*}
+\pause
+\end{block}
+Where $y_{t+1}$ are the profits from the carry trade, $i^* - i$ is the interest rate differential (overseas less home) and $\Delta s_{t+1}$ is the change in the exchange rate.    
+\end{frame}
+
+\begin{frame}{Failure of UIP}
+\begin{block}{}
+\begin{equation*}
+E[\Delta s_t] = \alpha + \beta (i^* - i) + \varepsilon
+\end{equation*}
+\end{block}
+\pause
+Where $E[s_t]$ is the expected change in the exchange rate; $i$ is the domestic interest rate; $i^*$ is the overseas interest rate; $f_s$ is the forward rate. 
+\begin{block}{}
+\begin{equation*}
+\Delta s_t = \alpha + \beta f_s + \varepsilon
+\end{equation*}
+\end{block}
+\end{frame}
+
+\begin{frame}{Risk}
+The explanation assumes that there is risk
+\pause
+\begin{block}{}
+\begin{equation*}
+\Delta s_t = i^* - i + rp
+\end{equation*}
+\end{block}
+\pause
+Where $rp$ is the risks premium
+\end{frame}
+
+\begin{frame}{VIX index}
+\includegraphics<1>[width=12cm, height=9cm]{"../../Figures/VIX"}
+\end{frame}
+
+\begin{frame}{Calm and Crisis}
+\includegraphics<1>[width=12cm, height=9cm]{"../../Figures/hist4"}
+\end{frame}
+
+\begin{frame}{Capital flows}
 \begin{itemize}[<+-| alert@+>]
 \item There has been a substantial inflow of capital to transition economies since the 2007-08 financial crisis
 \item There are three factors that could encourage a reversal
@@ -43,37 +89,26 @@
 \end{itemize}
 \end{frame}
 
-
-
 \section{Literature}
 \begin{frame}{Literature}
 Literature on \emph{Sudden Stops} tried to understand financial turmoil that ran from Mexico, through Asia and into Russia and Latin America.
+\pause
 \begin{itemize}[<+-| alert@+>]
 \item Calvo (1998, 1999)
 \end{itemize}
 \pause
 Renewed interest, particularly after May 2013
 \begin{itemize}
-\item Ahmed (2014) Panel student of Gross and Net capital flows
+\item Ahmed (2014) Panel of Gross and Net capital flows
 \item Baele et al. (2014) Look at causes of Flight-to-Safety  
 \item Ceruttie et al. (2014) Measure global liquidity 
 \end{itemize}
 \end{frame}
 
-\begin{frame}{The carry-trade}
-Attempts to take advantage of the breakdown in uncovered interest parity
-\begin{block}{}
-\begin{equation}\label{eqref:carry}
-y_{t+1} \equiv (i^* - i) -\Delta s_{t+1}
-\end{equation}
-\pause
-\end{block}
-Where $y_{t+1}$ are the profits from the carry trade, $i^* - i$ is the interest rate differential (overseas less home) and $\Delta s_{t+1}$ is the change in the exchange rate.    
-\end{frame}
 
 
 \section{The model}
-\begin{frame}{Hidden Markov Chain}
+\begin{frame}{Hidden Markov Model}
 \begin{figure}
 \begin{tikzpicture}[scale = 0.6, transform shape]
 \tikzstyle{decision} = [circle, draw, minimum height = 8mm, 
@@ -205,18 +240,18 @@ The probability of switching to a crash once in a state of calm.
 \end{frame}
 
 \begin{frame}{Calm and Crash probabilities}
-\includegraphics<1>[width=12cm, height=9cm]{"../Figures/HUFEUR2"}
+\includegraphics<1>[width=12cm, height=9cm]{"../../Figures/HUFEUR2"}
 \end{frame}
 
 \section{Next steps}
 \begin{frame}{Next Steps}
 \begin{itemize}[<+-| alert@+>]
-\item Repeat this for US monetary policy and international liquidity
+\item Repeat this for US monetary policy, international liquidity and availability of credit
 \begin{itemize}
-\item US short-term interest rate, TED spread.  LSAP?
+\item US short-term interest rate, TED spread, credit
 \end{itemize}
 \item Common factors and common dates
-\item The preferred model for each country
+\item Real time country risk factor
 \end{itemize}
 \end{frame}
 
