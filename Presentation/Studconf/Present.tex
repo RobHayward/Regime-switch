@@ -32,11 +32,11 @@
 \section{Introduction}
 \begin{frame}{The carry-trade}
 Attempts to take advantage of the breakdown in uncovered interest parity
+\pause
 \begin{block}{}
 \begin{equation*}\label{eqref:carry}
-y_{t+1} \equiv (i^* - i) -\Delta s_{t+1}
+y_{t+1} = \frac{(i^* - i)}{\Delta s_{t+1}}
 \end{equation*}
-\pause
 \end{block}
 Where $y_{t+1}$ are the profits from the carry trade, $i^* - i$ is the interest rate differential (overseas less home) and $\Delta s_{t+1}$ is the change in the exchange rate.    
 \end{frame}
@@ -61,11 +61,27 @@ The explanation assumes that there is risk
 \pause
 \begin{block}{}
 \begin{equation*}
-\Delta s_t = i^* - i + rp
+\Delta s_t = i^* - i - rp
 \end{equation*}
 \end{block}
 \pause
 Where $rp$ is the risks premium
+\end{frame}
+
+\begin{frame}{Peso effects}
+If $s_t$ is the exchange rate, the peg is state $s^0$ with the probability of a discrete devaluation to $s^1$ of $\pi$, the expected depreciation is
+\begin{block}{}
+\begin{equation*}
+E[s_{t+1}|\Omega_t] = \pi_ts^1 + (1 - \pi_t)s^0
+\end{equation*}
+\end{block}
+\pause
+Unless there is a devaluation, the disappointment will always be 
+\begin{block}{}
+\begin{equation*}
+E[s_{t+1}|\Omega_t]  - s^0  = \pi_t(s^1 - s^0)
+\end{equation*}
+\end{block}
 \end{frame}
 
 \begin{frame}{VIX index}
@@ -73,7 +89,7 @@ Where $rp$ is the risks premium
 \end{frame}
 
 \begin{frame}{Calm and Crisis}
-\includegraphics<1>[width=12cm, height=9cm]{"../../Figures/hist4"}
+\includegraphics<1>[width=12cm, height=9cm]{"../../Figures/hist1a"}
 \end{frame}
 
 \begin{frame}{Capital flows}
@@ -159,6 +175,7 @@ returns};
 \begin{frame}{Three components of HMM}
 The HMM has three components: $\pi, A, B$ where,
 \begin{itemize}[<+-| alert@+>]
+\pause
 \item The prior model: $P(S_1 = n| \theta_{prior})$ $(\pi)$
 \item The transition model: $P(S_t| S_{t-1}, \theta_{trans})$ $(A)$
 \item The response model: $P(Y_t| S_t, \theta_{resp})$ $(B)$
