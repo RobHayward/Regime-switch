@@ -11,13 +11,16 @@ library(xts)
 # The aim is to identify the bull and bear markets. 
 # First set up the model (mod). This is a model 
 # of the log return with two states. Then fit the model.   
-# scale
-da$VIX <- scale(da$VIX)
+# scale.  Is next line needed if the scale is done in function as below?
+#da$VIX <- scale(da$VIX)
+# These are now set up to create 5 models
 set.seed(3)
 mod1 <- depmix(PPLNEUR ~ 1, nstates = 1, data = da)
-mod2 <- depmix(PPLNEUR ~ 1, nstates = 2, data = da, family = gaussian(), 
+mod2 <- depmix(PPLNEUR ~ 1, nstates = 2, data = da, family = gaussian())
+mod2a <- depmix(PPLNEUR ~ 1, nstates = 2, data = da, family = gaussian(), 
                transition = ~ scale(VIX))               
-mod3 <- depmix(PPLNEUR ~ 1, nstates = 3, data = da, family = gaussian(), 
+mod3 <- depmix(PPLNEUR ~ 1, nstates = 3, data = da, family = gaussian())
+mod3a <- depmix(PPLNEUR ~ 1, nstates = 3, data = da, family = gaussian(), 
                transition = ~ scale(VIX))
 # it is possible to set the staring values at this point. 
 # trstart = transition start.
@@ -26,13 +29,19 @@ mod3 <- depmix(PPLNEUR ~ 1, nstates = 3, data = da, family = gaussian(),
 # to be useful here from the VIX model in the doctorate. 
 fm1 <- fit(mod1, verbose = TRUE)
 fm2 <- fit(mod2, verbose = TRUE)
+fm2a <- fit(mod2a, verbose = TRUE)
 fm3 <- fit(mod3, verbose = TRUE)
+fm3a <- fit(mod3a, verbose = TRUE)
 fm1
 fm2
+fm2a
 fm3
+fm3a
 depmixS4::summary(fm1)
 depmixS4::summary(fm2)
+depmixS4::summary(fm2a)
 depmixS4::summary(fm3)
+depmixS4::summary(fm3a)
 llratio(fm2, fm3)
 # state 1 Build carry
 # State 2 Crash
@@ -44,10 +53,10 @@ da$Date[which(posterior(fm2)[,1] == 2)]
 da$Date[which(posterior(fm3)[,1] == 1)]
 getpars(fm2)
 getpars(fm3)[13]
-pst1 <- posterior(fm)
-pst1
 pst2 <- posterior(fm2)
+pst2
 pst3 <- posterior(fm3)
+pst3
 --------------------------------
   # The following line will save a pdf in Figures for use
 # pdf("Figures/PLNUSD.pdf", paper= "a4", title = "PLN-USD Carry")

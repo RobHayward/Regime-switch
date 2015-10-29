@@ -1,6 +1,7 @@
 # This will compare the likelihoods of the models.
 # rm(list = ls())
 # Use prepare2.R to load data and function "forp"
+# or source("R.files/prepare2.R")
 library(depmixS4) 
 library(xtable)
 set.seed(3)
