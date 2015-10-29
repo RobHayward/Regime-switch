@@ -1,20 +1,33 @@
 # rm(list = ls())
-# Use file that has been created by prepare2.R to load data and function "forp"
-assign(a$title, forp("PLN", "EUR", 1))
-# The following function will estimate the mixed model.  There are two regimes
-# This works with PHUFEUR.  Now try PPLNUSD
+# download data to da and load prepare2.R function to create forwards and carry profits.
+# source("R.files/Package_perparation/prepare2.R)
+# load packages 
 require(depmixS4)
-#-------------------------------
 library(TTR)
 library(xts)
+#-------------------------------
+inv <- c("HUF", "PLN", "CZK", "RON",  "RUB", "BGN", 
+         "NOK", "ISK", "UAH", "HRK", "TRY")
+for(i in inv){
+  temp <- forp(i, "EUR", 1)
+  # "assign" will assign an appropriate name to the list created by prepare2.R.  
+  assign(temp$title, temp)
+}
+#---------------------------------
 # The aim is to identify the bull and bear markets. 
 # First set up the model (mod). This is a model 
 # of the log return with two states. Then fit the model.   
-# scale.  Is next line needed if the scale is done in function as below?
-#da$VIX <- scale(da$VIX)
+# scale.  
 # These are now set up to create 5 models
+i = "HUF"
 set.seed(3)
-mod1 <- depmix(PPLNEUR ~ 1, nstates = 1, data = da)
+for(i in inv){
+  tempdata <- paste(i, "EUR1", sep = "")
+# get function will return the object rather than the string
+  temp <- depmix(get(tempdata)$data$p ~ 1, nstates = 1, data = get(tempdata)$data)
+# Maybe called the temp by its name but no need?????
+assign(paste("M1", temp, sep = ""), temp)
+}
 mod2 <- depmix(PPLNEUR ~ 1, nstates = 2, data = da, family = gaussian())
 mod2a <- depmix(PPLNEUR ~ 1, nstates = 2, data = da, family = gaussian(), 
                transition = ~ scale(VIX))               
