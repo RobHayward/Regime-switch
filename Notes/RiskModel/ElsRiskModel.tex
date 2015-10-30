@@ -1,0 +1,91 @@
+\documentclass[preprint,12pt,authoryear]{elsarticle}
+%\graphicspath{{./Figures/}} % Specifies the directory where pictures are stored
+%\usepackage[dcucite]{harvard}
+% \documentclass[final,1p,times,authoryear]{elsarticle}
+%\documentclass[final,1p,times,twocolumn,authoryear]{elsarticle}
+%\documentclass[final,3p,times,authoryear]{elsarticle}
+%\documentclass[final,3p,times,twocolumn,authoryear]{elsarticle}
+%\documentclass[final,5p,times,authoryear]{elsarticle}
+%\documentclass[final,5p,times,twocolumn,authoryear]{elsarticle}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{pdflscape}
+\usepackage{appendix}
+\usepackage[flushleft]{threeparttable}
+\usepackage{multirow}
+%\usepackage[comma, sort&compress]{natbib}% Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+\usepackage{graphicx}
+%\bibliographystyle{plainnat}
+\bibliographystyle{agsm}
+\usepackage[colorlinks = true, citecolor = blue, linkcolor = blue]{hyperref}
+%\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+%\renewcommand[\harvardurl]{URL: \url}
+ \usepackage{listings}
+  \usepackage{tikz}
+ \usetikzlibrary{arrows,positioning}
+ \usepackage{color}
+ %\graphicspath{{../Pictures/}}
+\definecolor{mygrey}{gray}{0.95}
+\lstset{backgroundcolor=\color{mygrey}}
+\begin{document}
+\begin{frontmatter}
+\title{The risk of sudden stop}
+\author{Rob Hayward\footnote{University of Brighton Business School, Lewes Road, Brighton, BN2 4AT; Telephone 01273 642586.  rh49@brighton.ac.uk.}}
+
+\begin{abstract}
+If       
+\end{abstract}
+\begin{keyword}
+JEL classification: ; risk, hidden-Markov-model, carry-trade, foreign exchange.
+\end{keyword}
+
+\end{frontmatter}
+\section*{Introduction}
+\section*{Predicting sudden stops}
+\section*{Hidden Markove Model}
+\section*{Results}
+
+\begin{landscape}
+% latex table generated in R 3.0.1 by xtable 1.7-1 package
+% Fri Oct 30 12:43:54 2015
+% latex table generated in R 3.0.1 by xtable 1.7-1 package
+% Fri Oct 30 13:31:26 2015
+% model selection added by hand. 
+\begin{table}[ht]
+\begin{threeparttable}
+\centering
+\begin{tabular}{rrrrrrrrrrrrrr}
+  \hline
+ & AIC1 & AIC2 & AIC3 & AIC4 & LR21 & LR21p & LR31 & LR31p & LR41 & LR41p & LR43 & LR43p& Model \\ 
+  \hline
+HUF & -404.69 & -402.70 & -416.94 & -406.16 & 0.00 & 0.9526 & 22.25 & 0.0005 & 25.47 & 0.0006 & 3.22 & 0.8637 & 3\\ 
+  PLN & -423.98 & -422.03 & -437.62 & -428.82 & 0.05 & 0.8188 & 23.65 & 0.0003 & 28.84 & 0.0002 & 5.20 & 0.6357 &3\\ 
+  CZK & -427.23 & -425.25 & -427.37 & -419.18 & 0.02 & 0.8927 & 10.14 & 0.0714 & 15.95 & 0.0256 & 5.81 & 0.5621 &NC \\ 
+  RON & -456.02 & -454.42 & -474.81 & -464.39 & 0.40 & 0.5276 & 28.79 & 0.0000 & 32.37 & 0.0000 & 3.58 & 0.8264 & 3\\ 
+  RUB & -456.02 & -521.18 & -567.77 & -559.95 & 67.16 & 0.0000 & 121.75 & 0.0000 & 127.93 & 0.0000 & 6.18 & 0.5188 & 2\\ 
+  BGN & -404.69 & -449.98 & -454.32 & -443.21 & 47.29 & 0.0000 & 59.63 & 0.0000 & 62.52 & 0.0000 & 2.90 & 0.8945 & 2\\ 
+  NOK & -453.92 & -452.02 & -449.12 & -457.93 & 0.10 & 0.7576 & 5.20 & 0.3922 & 28.01 & 0.0002 & 22.81 & 0.0018 &4 \\ 
+  ISK & -453.92 & -452.02 & -464.24 & -462.42 & 0.10 & 0.7576 & 20.31 & 0.0011 & 32.50 & 0.0000 & 12.18 & 0.0947 &  4\\ 
+  UAH & -572.87 & -571.47 & -643.36 & -636.39 & 0.59 & 0.4416 & 80.49 & 0.0000 & 87.52 & 0.0000 & 7.03 & 0.4257 &3\\ 
+  HRK & -431.55 & -429.58 & -433.37 & -426.58 & 0.03 & 0.8579 & 11.82 & 0.0373 & 19.03 & 0.0081 & 7.22 & 0.4068 &3\\ 
+  TRY & -431.05 & -429.06 & -441.00 & -432.58 & 0.00 & 0.9572 & 19.95 & 0.0013 & 25.53 & 0.0006 & 5.58 & 0.5895 &3\\ 
+   \hline
+\end{tabular}
+\begin{tablenotes}
+\small
+\item The table shows the Akaike Information Criterion and the Log-likelihood test for each of the four models.  
+\end{tablenotes}
+\end{threeparttable}
+\caption{Carry-trade model evaluation} 
+\label{tabref:ctme}
+\end{table}
+\end{landscape}
+
+
+\section*{Discussion}
+%Future work.  Policy implications. 
+\bibliography{../../myrefs}
+
+\end{document}
+
