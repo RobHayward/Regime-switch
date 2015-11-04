@@ -1,7 +1,8 @@
-# This wiAIC compare the likelihoods of the models.
+# This wiAIC compare the AIC and the likelihoods of the models.
 # rm(list = ls())
 # Use prepare2.R to load data and function "forp"
 # or source("R.files/prepare2.R")
+# this is a table in teh file.
 library(depmixS4) 
 library(xtable)
 set.seed(3)
@@ -42,7 +43,7 @@ complist2[i, 9] <- round(llratio(fm4, fm1)@value, 2)
 complist2[i, 10] <- round(1-pchisq(llratio(fm4, fm1)@value, llratio(fm4, fm3)@df), 4)
 complist2[i, 11] <- round(llratio(fm4, fm3)@value, 2)
 complist2[i, 12] <- round(1-pchisq(llratio(fm4, fm3)@value, llratio(fm4, fm3)@df), 4)
-#}
+}
 complist2
 #---------
 complist2
@@ -50,7 +51,7 @@ comptab2 <- xtable(complist2, caption = "US rate model table", label =
                      "tabref:comptab", digits = c(0, 2, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4))
 comptab2
 -----------------
-  # This will not now work.  This is the transiation matrix when there is 
+  # This will not now work.  This is the transiation matrix when used.
 fm3@transition[[1]]@x
 a <- fm3@transition[[2]]@parameters[[1]][3]
 b <- fm3@transition[[2]]@parameters[[1]][4]

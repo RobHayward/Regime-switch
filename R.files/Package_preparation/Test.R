@@ -1,9 +1,5 @@
 # create dummy variables
 source("R.files/Package_preparation/FW.R")
-D1 <- rep(0, length(da$VIX))
-D1 <- da$D1[which(da$VIX >= quantile(da$VIX, 0.80)),]          
-
-
 # get the object not the string. 
 currency <- ls(pattern = "???EUR1")
 for(i in currency){
@@ -40,7 +36,12 @@ for(i in 1:length(da$TED)){
     da$D3[i] = 0
   }
 }
-a <- forp("TRK", "EUR", 1)
+#------Test regression of extreme.  Use D1, D2 or D3 or all together. 
+# None seem to be significant
+  a <- forp("TRK", "EUR", 1)
 eq1 <- lm(a$profit ~ da$D2)
 summary(eq1)
-
+#----------------------------------
+# The dates for capital mobility and crisis are in the file Data/RR_data.xls
+# This looks at capital flows and banking crises
+# Find list of key dates. From 
