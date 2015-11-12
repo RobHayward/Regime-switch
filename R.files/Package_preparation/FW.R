@@ -1,10 +1,4 @@
-#rm(list = ls())
-require(zoo) # for lagging series
-da <- read.csv("Data/CEEUIP.csv", header = TRUE, stringsAsFactors = FALSE)
-da$Date <- as.Date(da$Date, format = "%d/%m/%Y")
-# add USD
-USD <- rep(1, length.out = nrow(da))
-da$USD <- USD
+source("R.files/Package_preparation/LoadData.R")
 # fx is the investent currency, base is base currency and m is the timeframe
 # currency can come from inv list, base from base list, m = c(1, 3)
 forp <- function(fx, b, m){
@@ -25,6 +19,3 @@ forp <- function(fx, b, m){
             title = title)
   return(g)
 }
-
-rm(USD)
-# get rid of vector or ones. 

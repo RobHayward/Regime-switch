@@ -1,5 +1,9 @@
 # create dummy variables
 source("R.files/Package_preparation/FW.R")
+par(mfrow = (c(2,1)))
+CrisisEvolution("HUF", "EUR", 1, 2, "2002-10-31", "2003-12-31")
+CrisisEvolution("RON", "EUR", 1, 2, "2002-10-31", "2003-12-31")
+CrisProb("PLN", "EUR", 1, 2, "2000-01-01", "2003-06-30")
 # get the object not the string. 
 currency <- ls(pattern = "???EUR1")
 for(i in currency){
