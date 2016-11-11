@@ -1,0 +1,8 @@
+1) First run the LoadData.R file.
+2) FWR will create the function forp to calculate the forward and probability
+3) forp requres fx b and m for finance currency, base currency and maturity respectively
+4) forp outputs a list g comprised of daz (the data), fx, b, M, and the profit from a carry investment. 
+5) Compare_Mod.R will create the tabke of AIC and log-likelihood ratios.  Not complete. 
+6) CrisisProb.R will assess the probability of a crisis on a specific date. There is an error.  The idea is that it takes 
+   data to a particular point and claculates the probability of crisis.
+7) 

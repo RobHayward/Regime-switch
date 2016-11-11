@@ -1,4 +1,4 @@
-# This wiAIC compare the AIC and the likelihoods of the models.
+# This will compare the AIC and the likelihoods of the models.
 # rm(list = ls())
 # Use prepare2.R to load data and function "forp"
 # or source("R.files/prepare2.R")
@@ -16,7 +16,7 @@ col <- c("AIC1", "AIC2", "AIC3", "AIC4", "LR21",  "LR21p", "LR31",
 complist2 <- matrix(NA, nrow = length(inv), ncol = length(col), 
                    dimnames = list(inv, col))
 for(i in inv){
- i = "TRY"
+# i = "TRY"
 tempfile <- forp(i, "EUR", 1)
 tempfx <- tempfile$data$p
 mod1 <- depmix(tempfx ~ 1, nstates = 1, data = da)
@@ -52,6 +52,7 @@ comptab2 <- xtable(complist2, caption = "US rate model table", label =
 comptab2
 -----------------
   # This will not now work.  This is the transiation matrix when used.
+  # Not even sure what I was trying to do here.  
 fm3@transition[[1]]@x
 a <- fm3@transition[[2]]@parameters[[1]][3]
 b <- fm3@transition[[2]]@parameters[[1]][4]

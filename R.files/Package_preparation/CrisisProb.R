@@ -28,3 +28,4 @@ mat2 <- matrix(vec[c(6, 5, 3, 4)], nrow = 2, byrow = TRUE)
 return(mat2[1, 2])
 }
 
+
