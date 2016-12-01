@@ -23,7 +23,7 @@
 \date{\today}
 \maketitle
 \begin{abstract}
-International financial crises disproportionately affect emerging economies.  These crises are frequently the result of the unwinding of carry-trade positions.  The carry-trade is the attempt to take advantage of the breakdown of uncovered interest parity by borrowing low interest rate currencies, exchanging for higher rate currencies and taking the interest rate differential less the depreciation of the investment currency against the funding unit.  If there is fear that the investment currency will depreciation, this can trigger a sudden-stop or reversal of inbound capital flows as funds seek to exit the carry position before the collapse.  A Hidden Markov Model uses the observed returns from the carry-trade to estimate the unknown probability of a shift from a state of financial stability to one of instability. This model is then used to assess the way that rising risk aversion affects the probability of a financial crisis. While the Czech Republic,  Hungary and Bulgaria are very sensitive to international financial conditions, Poland and Romania are relatively immune.  
+International financial crises are a major threat to emerging and transition economies.  These crises are frequently the result of the unwinding of carry-trade positions.  The carry-trade is the attempt to take advantage of the breakdown of uncovered interest parity by borrowing low interest rate currencies, exchanging for higher rate currencies and taking the interest rate differential less the depreciation of the investment currency against the funding unit.  If there is fear that the investment currency will depreciation, this can trigger a sudden-stop or reversal of inbound capital flows as funds seek to exit the carry position before the collapse.  A Hidden Markov Model uses the observed returns from the carry-trade to estimate the unknown probability of a shift from a state of financial stability to one of instability. This model is then used to assess the way that rising risk aversion affects the probability of a financial crisis. While the Czech Republic,  Hungary and Bulgaria are very sensitive to international financial conditions, Poland and Romania are relatively immune.  
 \end{abstract}
 
 \section{Introduction}
@@ -601,7 +601,7 @@ To be completed
 
 %Maximise $P(O \lambda)$, where $\lambda = (\pi, A, B)$.  The probability of observing sequence O for a given set of parameters.  The easiest way of doing this is to calculate the probability for each of the possible state sequences.  Consider one such sequence, $Q = q_1 q_2 \dots q_T$, the probability of the observed sequence for the state sequence Q is $P(O|Q \lambda) = \prod_{t = 1}^T P(O_t|q_t, \lambda)$.  If the observations are independent, this probability $P(O|Q \lambda)$ is equal to the probability of observing the outcome given the state, $b_{q_1}(O_1)\dot b_{q_2} (O_2) \dots b_{q_T}(O_T)$.  At each step, the forward variable $\alpha_t(i) = P(O_1 O_2 \dots O_t, q_t = S_i|\lambda)$ is calculated as the product of the sum of all the probability of each state for the previous period and the probability of transition from each of those states to the current as well as the product of being in this state given the observable. $\alpha_t(i)$ is the joint probability that observation is seen and state is achieved. 
 
-\bibliography{../../../myrefsbackup}
+\bibliography{../../../myrefs}
 
 
 
