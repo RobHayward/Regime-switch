@@ -78,7 +78,7 @@ The aim here is to assess how vulnerable contries are to a financial crisis, to 
 
 \section{The Hidden Markov Model}\label{secref:HMM}
 \subsection{The evolution of financial instability}
-International financial risk and the carry-trade are beset by \emph{peso problems}. Peso problems are cases where there is  potential for discrete shifts in the distribution of variables.  This can affect expectations, risk-premia and asset pricing models. In \citet{evans199621}, for example, if $s_t$ is the log of US dollars in terms of Mexican peso and the peso is fixed at 0.08 dollars with information set $\Omega_t$, this is state $s^0$ with a expected probability $\pi$ at time $t$, which is a fixed period ahead, that there will be a discrete exchange rate adjustment to $s^1$, the expected depreciation is 
+International financial risk and the carry-trade are beset by \emph{peso problems}. Peso problems are cases where there is  potential for a discrete shift in the value of assets.  These problems can affect expectations, risk-premia and asset pricing. In \citet{evans199621}, for example, if $s_t$ is the log of US dollars in terms of Mexican peso and the peso is fixed at 0.08 dollars with information set $\Omega_t$, this is state $s^0$ with a expected probability $\pi$ at time $t$, which is a fixed period ahead, that there will be a discrete exchange rate adjustment to $s^1$, the expected depreciation is 
 \begin{equation}
 E[s_{t+1}|\Omega_t] = \pi_ts^1 + (1 - \pi_t)s^0
 \end{equation}
@@ -167,7 +167,7 @@ Expectations are continually confounded though they are not formed in an irratio
 
 
 \subsection{The HMM model}
-Though {\citet{CalvoSS} defines the sudden stop as a one movement of net capital flows to two standard deviations from the mean and a return to one standard deviation from the mean, a financial crisis is hard to define.  In situations like this where the underlying financial regimes are not observable, the Markov model is not sufficient to fully describe the process. It may nonetheless be possible to identify a probabilistic relationship between something that is observable and that which is to be defined.  In this case, the carry-trade returns are observable and are used to identify the underlying financial regime.  This is described as a \emph{Hidden Markov Model (HMM)}. 
+A financial crisis is not observable and is hard to define \footnote{Though \citet{CalvoSS} defines the sudden stop as a one movement of net capital flows to two standard deviations from the mean and a return to one standard deviation from the mean.}.  In situations like this where the underlying financial regimes are not observable, the Markov model is not sufficient to fully describe the process. It may nonetheless be possible to identify a probabilistic relationship between something that is observable and that which is to be defined.  In this case, the carry-trade returns are observable and are used to identify the underlying financial regime.  This is described as a \emph{Hidden Markov Model (HMM)}. 
 
 Figure \ref{figref:HMM2} gives an overview of the system.  The HMM has three components: $\pi, A, B$ where,
 
@@ -338,7 +338,7 @@ It is also to iterate backwards to assess the probability that a particular sequ
 The probability of being in state $S_i$ at time t is given by 
 
 \begin{equation}
-\gamma_t(i) = \frac{\alpha_t(i)\beta_t(i)}{P(Y|\lambda})
+\gamma_t(i) = \frac{\alpha_t(i)\beta_t(i)}{P(Y|\lambda)}
 \end{equation}
 
 Solving
@@ -367,14 +367,14 @@ will maximise the number of correct states.
 
 \section{Analysis of Results}\label{secref:res}
 \subsection{Data}
-The data are a sample of carry-trades from investments in Emerging European countries that have been compiled from exchange rate and interest rate data for the period from January 2000 to December 2013.  They show a sample of possible carry-trades that could have been conducted. 
+The data are a sample of potenital carry-trades from investments in Emerging European countries that have been compiled from exchange rate and interest rate data for the period from January 2000 to December 2013.  They show a sample of possible carry-trades that could have been conducted. 
 
 The carry trade profits are calculated as follows
 
 \begin{equation}\label{eqref:carryprofit}
 P1MEURHUF_t = \frac{(1 + HUF1M_t)^{\frac{1}{12}} \times EURHUF_t }{(1 + EUR1M_t)^{\frac{1}{12}} \times EURHUF_{t+1M}}
 \end{equation}
-where $HUF1M_t$ is the 1 month Hungarian Forint deposit rate at time t, $EUR1M_t$ is the 1-month euro denominated deposit rate at time t, $EURHUF_t$ is the exchange rate in terms of  Hungarian Forint required for one euro at time t and  $EURHUF_{t+1M}$ is the spot rate in 1 month's time.  This is the same as \citep{BrunnermeierCarry}. When uncovered interest parity (UIP) holds, $P1MEURHUF_t$ is equal to one.  
+where $HUF1M_t$ is the 1 month Hungarian Forint deposit rate at time t, $EUR1M_t$ is the 1-month euro denominated deposit rate at time t, $EURHUF_t$ is the exchange rate in terms of  Hungarian Forint required for one euro at time t and  $EURHUF_{t+1M}$ is the spot rate in 1 month's time.  This is the same as \citep{BrunnermeierCarry}. When uncovered interest parity (UIP) holds, $P1MEURHUF_t$ is equal to one.  The data are from the IMF International Finacial Statistics database. 
 
 \subsection{Model Comparison}
 Three initial models of financial stability are assessed: 
