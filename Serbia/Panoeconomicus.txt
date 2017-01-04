@@ -1,0 +1,207 @@
+INSTRUCTIONS
+Panoeconomicus is an economic quarterly with a general orientation. We publish original scientific papers, scientific reviews, preliminary reports, conference papers, professional papers and
+book reviews. Only original papers not previously published or simultaneously submitted for
+publishing elsewhere, should be submitted. Submitted papers need to be prepared according to
+the Panoeconomicus instructions for authors.
+Authors should adhere strictly to the author instructions for submission. Papers that do
+not adhere to the instructions will not enter the reviewing process.
+The authors should state the funding source for the research presented in the paper in a footnote on the first page.
+Papers must be submitted in Microsoft Word format, using Times New Roman font (size 10,5
+regular), in Latin alphabet, normal character spacing and single paragraph spacing (before: 0
+pt, after: 0 pt, line spacing: single). Page setup:
+- Paper size: C5 (16 cm x 23 cm).
+- Margins: top 2 cm; bottom 1,5 cm; left 1,65 cm; right 1,65 cm.
+- Indentation: left 0 cm, right 0 cm, special: first line, 1 cm.
+- Alignment: justified.
+Paper title and author(s). Title should be as concise as possible. Author’s name and institution
+should follow the title. Behind the name of the author(s), a footnote should be inserted containing e-mail address(es) of the author(s), as well as an identification (by an asterisk) for the corresponding author. The papers should be submitted by a maximum of three authors for the
+current issues and four authors for the special issues of the journal.
+Summary. Summary, with the length of 50-150 words, should be at the beginning of the paper.
+At the end of the summary, key words should be included (up to five key words). At least one
+classification code to the Classification System for the Journal Articles, as used by the Journal
+of Economic Literature (JEL), should be included.
+Reference to individuals in the text should include the first name, middle initial, and last
+name on first reference. Subsequent references should include last name only. Do NOT use
+titles such as Mister, Doctor, Professor, etc. For example: Alan S. Blinder (2006) [first reference], Blinder (2006) [subsequently].
+Organizations or governmental agencies in the text. On first references use the full name
+followed by the abbreviation in parentheses. Subsequent references should use abbreviation
+only. For example: Social Science Research Council (SSRC) [first reference], SSRC [subsequently].
+Reference to articles and books in the text. Give full name (first name, middle initial, and last
+name) of author(s) and year of publication in the first citation, with page number(s) where appropriate. For example: Glenn Firebaugh (1999) [first reference]; Firebaugh (1999) [subsequently]; Andrea Boltho and Gianni Toniolo (1999) [first reference], Boltho and Toniolo (1999)
+[subsequently]; Albert Berry, François Bourguignon, and Christian Morrisson (1983) [first reference], Berry, Bourguignon, and Morrisson (1983) [subsequently]. When more than one work by
+the same author is cited, give the last name of author and year of publication in parentheses for
+each subsequent citation. When listing a string of references within the text, arrange first in
+chronological order, then alphabetically within years. If there are four or more authors, refer to
+the first author, followed by et al. and the year; for example: Stefan Fölster et al. (1998). If there
+is more than one publication referred to in the same year by the author(s), use the year and a,
+b, etc. (example: 1997a, b). References to authors in the text must exactly match those in the
+Reference section.
+
+Quotations. Any quotation, regardless of its length, needs to be followed by reference including page number. For any quotation longer than 350 characters, an author must have written
+approval by copy rights owner that needs to be enclosed.
+Tables, charts, and pictures. Tables must be made in Word or a Word compatible format
+(tables should be transferred into Word format). Same data may not be presented both in tables
+and charts. Every table, chart, or picture should be appropriately numbered and named, e.g.:
+Table 2 The Reliability of the Variables.
+Figures, graphs, pictures, etc. will not be redrawn by the publisher; they should be high-quality
+GRAYSCALE graphics (please, do NOT use colors): vector drawings with text converted to
+curves (cdr, ai) or 300 dpi bitmaps (jpg, tiff). Please do not supply any graphics copied from a
+website, as the resolution will be too low. Each picture, figure, graph, etc. should be in a separate file.
+Tables, pictures, graphs, formulas, etc. should NOT extend beyond the margins. The maximum
+space available for tables, figures, pictures, graphs, etc. is 12,5 cm (width) x 18 cm (height).
+If an illustration from a printed source is used, written authorization from the copyright owner is
+required. Sources should be placed below tables, charts, and pictures. References in the
+source are used in the same way as in the text. If the tables, charts, and figures are author calculations, reviews or estimations, that should also be emphasized.
+Statistics. The results of statistical tests need to be provided in the following form: F (1.9)
+=25.35; p<.001 or similar. Lower number of conventional P levels should be stated (e.g.: .05,
+.01, .001). Formulas should be created using Microsoft Equation Editor. The maximum width of
+formulas should not exceed 12 cm.
+References. Panoeconomicus use AEA rules for references. Reference section must be single-spaced, beginning on a new page following the text, giving full information. Use full names
+of authors or editors using initials only if that is the usage of the particular author/editor. List all
+author/editors up to/ including 10 names. Authors of articles and books and material without
+specific authors or editors, such as government documents, bulletins, or newspapers, are to be
+listed alphabetically. All references in the Reference section should be referenced (included) in
+the text.
+The DOI number should be added at the end of each paper used in reference, if available.
+Please use the following link to look up this information:http://www.crossref.org/guestquery/
+For example:
+Arestis, Philip, Carolina Troncoso Baltar, and Daniela Magalhães Prates. 2016. “Brazilian
+Economic Performance since the Emergence of the Great Recession: The Effects of Income
+Distribution on Consumption.”Panoeconomicus, 63(2): 157-174.
+http://dx.doi.org/10.2298/PAN1602157A
+Appendix. In the appendix, only those descriptions of material that would be useful for readers
+to understand, evaluate, or revise research should be provided.
+Footnotes and abbreviations. Footnotes should be avoided. If necessary, references in the
+footnotes should be used in the same way as in the text. Abbreviations should also be avoided,
+except from exceptionally usual. The abbreviations stated in tables and pictures should be explained.
+Reviews and publishing. All papers are anonymously reviewed by two anonymous reviewers.
+On the basis of reviews, editorial staff make decision on paper publishing and inform author
+about it.
+
+Language editing. Authors whose first language is not English should ask a native speaker to
+proofread the manuscript before the submission. There are also a number of services that provide mentoring, advice and copyediting to support authors unfamiliar with writing academic
+research papers for publication in international journals. Authors are encouraged to make the
+use of services such as SPi if necessary.
+
+AEA PUBLICATIONS SAMPLE REFERENCES
+Journal Articles
+A) Published Articles
+Author Last name, First name. Year. “Article Title.” Journal Title, Volume (Issue number if applicable): Page numbers.
+Example: Acemoglu, Daron. 2002. “Technical Change, Inequality, and the Labor Market.”
+Journal of Economic Literature, 40(1): 7–72.
+In the case of two authors, only the first author’s name is inverted and a comma must be placed
+before and after the first author’s first name or initials. Use “and” between the two author’(s’)
+names.
+Example: Baker, George, Robert Gibbons, and Kevin J. Murphy. 2002. “Relational Contracts and the Theory of the Firm.” Quarterly Journal of Economics, 117(1): 39–84.
+B) Forthcoming Articles
+Example: Bikhchandani, Sushil, and Joseph M. Ostroy. Forthcoming. “Ascending Price
+Vickery Auctions.” Games and Economic Behavior.
+
+Books
+A) One Author
+Author Last name, First name. Year. Title of Book. City of publication: Publisher.
+Example: Friedman, Thomas L. 2005. The World Is Flat: A Brief History of the Twenty-First
+Century. New York: Farrar, Straus and Giroux.
+B) Two Authors
+Example: Helpman, Elhanan, and Paul Krugman. 1985. Market Structure and Foreign Trade:
+Increasing Returns, Imperfect Competition, and the International Economy. Cambridge, MA:
+MIT Press.
+C) Chapter in a Book
+Author Last name, First name. Year. “Chapter or Article Title.” In Book Title, followed by ed.
+And editor’(s’) names if appropriate, and page number(s). City of publication: Publisher.
+Example: Freeman, Richard B. 1993. “How Much Has Deunionization Contributed to the Rise
+in Male Earnings Equality?” In Uneven Tide: Rising Income Inequality in America, ed. Sheldon
+Danzinger and Peter Gottschalk, 133–63. New York: Russell Sage Foundation.
+
+D) Reprint or Modern Editions
+When emphasizing the earlier date: Author Last name, First name. Earlier printing date. Title.
+City of publication: Publisher, Later date.
+
+Example 1: Rawls, John. 1971. A Theory of Justice. Cambridge, MA: Harvard University
+Press, 1999.
+When emphasizing the later date: Author Last name, First name. Title. City of publication: Publisher, (Orig. pub. date).
+Example 2: Rawls, John. 1999. A Theory of Justice. Cambridge, MA: Harvard University
+Press, (Orig. pub. 1971).
+E) Editions Other Than the First
+When an edition other than the first is used or cited, the number or description of the edition
+follows the title in the listing.
+Example: Strunk, Willliam, Jr., and E. B. White. 2000. The Elements of Style. 4th ed. New
+York: Allyn and Bacon.
+
+Multivolume Works
+Multivolume works include works such as encyclopedias, multivolume works published over
+several years, and multivolume works published in a single year. Below are a few examples.
+Example 1: Kohama, Hirohisa, ed. 2003. Asian Development Experience. Vol. 1, External
+Factors in Asian Development. Singapore: Institute of Southeast Asian Studies.
+Example 2: Kusuoka, Shigeo, and Akira Yamazaki, ed. 2006. Advances in Mathematical
+Economics. Vol. 8. New York: Springer.
+Example 3: Mokyr, Joel, ed. 2003. The Oxford Encyclopedia of Economic History. 5 Vols. Oxford: Oxford University Press.
+
+Unpublished Papers
+A) Working Papers
+Only papers appearing as part of an institutions’ working papers series should be classified as
+working papers. These should always include a specific working paper number as assigned by
+the institution. Author Last name, First name. Year. “Title.” Type of Working Paper (such as
+institution, working series title) and number.
+Example 1: Ausubel, Lawrence M. 1997. “An Efficient Ascending-Bid Auction for Multiple Objects.” University of Maryland Faculty Working Paper 97–06.
+
+Example 2: Heidhues, Paul, and Botond Koszegi. 2005. “The Impact of Consumer Loss
+Aversion on Pricing.” Centre for Economic Policy Research Discussion Paper 4849.
+B) Lectures and Papers Presented at Meetings
+Author Last name, First name. Year. “Title.” Paper presented at followed by meeting name,
+place, and city where lecture/meeting took place.
+
+Example 1: Romer, Christina D., and David H. Romer. 2006.“The Evolution of Economic Understanding and Postwar Stabilization Policy.” Paper presented at the Rethinking Stabilization
+Policy Federal Reserve Bank of Kansas Symposium, Jackson Hole, WY.
+Example 2: Goldin, Claudia. 2006. “The Quiet Revolution That Transformed Women’s Employment, Education, and Family.” Paper presented at the annual meeting of the Allied Social
+Science Associations, Boston.
+C) Unpublished Papers
+When a paper has not been published but can be found on the Web (such as the author’s Web
+site or the university Web site), use the following format: Author Last name, First name. Year.
+“Title.” Web address. Please provide a URL that links to the full text of the article.
+Example 1: Zeitzewitz, Eric. 2006. “How Widespread Was Late Trading in Mutual Funds.”
+http:// facultygsb.stanford.edu/zitzewitz.
+Example 2: Factiva. 2006. “Blogging and your Corporate Reputation: Part One -Listen to the
+Conversation.”
+http://www.factiva.com/collateral/download_brchr.asp?node=menuElem1506#white.
+When a paper has not been published and does not appear on a Web site (such as the author’s
+Web site or university Web site), use the following format: Author Last name, First name. Year.
+“Title.” Unpublished.
+Example 3: Acemoglu, Daron, Pol Atras, and Elhanan Helpman. 2006. “Contracts and
+Technology Adoption.” Unpublished.
+D) Theses and Dissertations
+Author Last name, First name. Year. “Title.” PhD diss. University.
+Example: Nash, John. 1950. “Non-Cooperative Games.” PhD diss. Princeton University.
+
+Web Sites
+This is to reference research done on a Web site. If you are looking to reference a specific article, document, lecture, speech, etc., see the sample reference for those types of documents.
+Web Site Name. Year accessed. Publisher/Company. URL (access date).
+Example 1: Factiva. 2006. Dow Jones Reuters Business Interactive LLC.
+www.factiva.com (accessed June 5, 2006).
+Example 2: Biography Resource Center. 2006. Thomas Gale.
+http://www.galegroup.com/BiographyRC/ (accessed September 25, 2006).
+
+Newspapers, Online Dictionaries, Encyclopedias, and Reference
+Works
+Because newspapers, online dictionaries, encyclopedias, and databases are continuously updated, they should be cited as a footnote in the text. It should NOT be included in the reference
+
+list. The note should always include an access date along with the URL. If possible, use the
+appropriate URL for the site entry rather than the general URL.
+If you are citing the definition for "nepotism" in the Merriam-Webster Online Dictionary, use
+http://www.m-w.com/dictionary/nepotism rather than http://www.m-w.coml.
+
+Magazine Articles
+A) Authored Articles
+Author Last name, First name. Year. “Title.” Magazine. Month or date, page number(s).
+Example: Belkin, Lisa. 2003. "The Opt-out Revolution." New York Times Magazine.
+October 26, 23-32.
+B) Nonauthored Articles
+Magazine. Year. “Title,” Month or date, page numbers.
+Example: The Economist. 1991. “The Ins and Outs of Outsourcing ," August 31, 54-56.
+
+Online Magazine Articles
+Author Last name, First name. Year. "Title." Magazine, date. URL.
+Example: Becker, Gary S. 1993. "The Evidence against Blacks Doesn't Prove Bias."
+Business Week, April 19. http://bwarchive.businessweek.com/index.jsp.
+
+
