@@ -1,3 +1,21 @@
 These are notes about the Serbian paper. 
 
+Data
+The data is monthly data that runs from January 1990 to December 2015.  The data come from the IMF Internatioanl Financial statistics.  THe exchange rate data is monthly average and the interest rate data is lending rate for the month or, in the case of Croatia and Tyrkey, the money market rate.  
 
+A function called 'forp' is created to calculate the profits from a carry trade that will borrow funding currency (US dollars, Euro or Swiss franc) and use the proceeds to purchase the investment currency for specified periods of time.  The investment currencies are Albania (AL), Bosnia-Hertzogovina (BA), Greece (GR), Croatia (HR), Serbia (RS), Russia (RU), Solvenia (SI), Turkey (TR) and Ukrain (UA).  
+
+Once the time series of profit data have been collected, it is possible to look at the proits from the carry-trade in times series and distribution. The time series will show periods where profits are volatulity and where large losses are made, the histogram will show how far the istribution conforms to the expected skewed distribution.
+
+The Compare_Mod.R file will compare the models.  The models are 
+
++ Constant model with one regime
++ VIX determines the slope, one regime
++ Constant model wtih two regimes
++ Constant model wtih three regimes
+
+The main findings are that:
+
++ Croatia and Russia are the only cases where the VIX index adds explanatory power to the mean-model, 
++ The two-regime model is superiod to the one-regime model for all countries apart from Bosnia-Hertzogovinia. However, here the three-regime model is superior to the one and two regime models
++ For all countries other than Greece and Albania, the three=regime modelwas superiod to the two regime model.  

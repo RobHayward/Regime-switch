@@ -6,7 +6,8 @@ set.seed(3)
 # eventuaAICy want to create a function compare_model <- function(inv, )
 inv <- c("AL", "BA", "GR", "HR",  "RS", "RU", 
          "SI", "TR", "UA")
-col <- c("EU", "US")
+col <- c("AIC1", "AIC2", "AIC3", "AIC4", "LR21",  "LR21p", "LR31", 
+         "LR31p", "LR41", "LR41p", "LR43", "LR43p")
 # this is added to the line above for 3 stage model.
 #"AIC3", "BIC3", "LR31", "LR31p", "LR32", "LR32p")
 complist2 <- matrix(NA, nrow = length(inv), ncol = length(col), 
