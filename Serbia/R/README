@@ -3,6 +3,7 @@
 3) FW.R will create the function forp to calculate the forward and probability
 4) forp requres fx b and m for finance currency, base currency and maturity respectively. These can be found in da.  
 5) forp outputs a list g comprised of daz (the data), fx, b, M, and the profit from a carry investment. 
-6) Compare_Mod.R will create the table of AIC and log-likelihood ratios.  Not complete. 
-7) CrisisProb.R will assess the probability of a crisis on a specific date. There is an error.  The idea is that it takes data to a particular point and claculates the probability of crisis at that date.
-8) 
+6) Compare_Mod.R will create the table of AIC and log-likelihood ratios.  This can be completed funding currency at a time (using i = xxx) as the Albanian three-regime model did not wirk.  
+7) CrisisProb.R will assess the probability of a crisis on a specific date. There is an error.  The idea is that it takes data to a particular point and claculates the probability of crisis at that date. I will not use this but I may return at a later date. 
+8) Now I need to get the probabilities as ViX changes.  This is a new model and we need to extract the probability of switching from calm to crisis as VIX moves from mean level to plus and minus its standard deviation. 
+Crisis.Prob does work. It will give the probability of crisis at a particular point. It can be used to estimate a probability of crisis at each point in time.  
