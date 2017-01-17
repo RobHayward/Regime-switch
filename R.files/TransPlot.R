@@ -6,7 +6,9 @@ inv <- c("HUF", "PLN", "CZK", "RON", "RUB", "TRY", "BGN",
 col <- c("-3sd", "-2sd", "-1sd", "Mean", "+1sd","+2sd", "+3sd")
 complist2 <- matrix(NA, nrow = length(inv), ncol = length(col), 
                    dimnames = list(inv, col))
-i = "NOK"
+# = "NOK"
+# add the x values for the computation of the exogenous shock
+x <- seq(-3, 3, 1)
 for(i in inv){
   tempfile <- forp(i, "EUR", 1)
   tempfx <- tempfile$data$p

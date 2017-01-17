@@ -89,7 +89,7 @@ i = "UAH"
 # Change this for 1 month EUR funded carry
 title <- paste("Profits from ", i, "-", "EUR", "1M", sep= "")
 #pdf("Figures/2RegProb/HRKUAHEUR.pdf", paper= "a4", title = "HRK-EUR and 
-    UAH-EUR Carry")
+#    UAH-EUR Carry")
 par(mfcol = c(3,2))
 plot(list2[[i]]$profit, main = title, ylab = "Profits", xlab = "Date")
 abline(h = 1)

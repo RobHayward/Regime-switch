@@ -21,7 +21,7 @@ mod2 <- depmix(tempfx ~ VIX, nstates = 1, data = da)
 mod3 <- depmix(tempfx ~ 1, nstates = 2, data = da)
 mod4 <- depmix(tempfx ~ 1, nstates = 3, data = da)
 # mod4 <- depmix(tempfx ~ 1, nstates = 2, data = da, transition = ~ scale(VIX))               
-#mod3 <- depmix(tempfx ~ USD1MD, nstates = 3, data = da, transition = ~ scale(VIX))
+mod3 <- depmix(tempfx ~ VIX, nstates = 3, data = da, transition = ~ scale(VIX))
 # mod3 <- depmix(tempfx ~ 1, nstates = 3, data = da, transition = ~ scale(VIX))
 fm1 <- fit(mod1, verbose = TRUE)
 fm2 <- fit(mod2, verbose = TRUE, emcontrol = em.control(maxit = 1000))
@@ -43,13 +43,12 @@ complist2[i, 12] <- round(1-pchisq(llratio(fm4, fm3)@value, llratio(fm4, fm3)@df
 }
 complist2
 #---------
-complist2
 comptab2 <- xtable(complist2, caption = "US rate model table", label = 
                      "tabref:comptab", digits = c(0, 2, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4))
 comptab2
 -----------------
-  # This will not now work.  This is the transiation matrix when used.
-  # Not even sure what I was trying to do here.  
+  # This will calculate the probability of switch conditional on deviation of 
+  # deviation of the exogenous from its mean
 fm3@transition[[1]]@x
 a <- fm3@transition[[2]]@parameters[[1]][3]
 b <- fm3@transition[[2]]@parameters[[1]][4]
@@ -59,6 +58,6 @@ y <- 1/(1+exp(-ya))
 exp
 plot(x, y, type = 'l', xlab = "Standard deviations from mean", 
      ylab = "Probability", main = "Transition Probabililty")
-llratio(fm3, fm2)
+llratioratio(fm3, fm2)
 comptab2
 summary(fm2)
