@@ -4,10 +4,10 @@
 4) forp requres fx b and m for finance currency, base currency and maturity respectively. These can be found in da.  
 5) forp outputs a list g comprised of daz (the data), fx, b, M, and the profit from a carry investment. 
 6) Compare_Mod.R will create the table of AIC and log-likelihood ratios.  This can be completed funding currency at a time (using i = xxx) as the Albanian three-regime model did not work.  
-
+6.1) Compare_Mod2.R will compare modesl with the conditional transition.  Albania and Greece are compared to 2 regime-transition and the others are compared to the 3-regime transition.  Only VIX is used.  Seems that interest rates are wrong way round. 
 6.5) Now try to create the table of regime probabilities.  These are under construction in Copyof3StageFundTab.R  The two should be easy as there are only 2 countries. The three stage table is createed in the file called CopyOf3StageFundTab.R and the results are in M3S.csv.  
 
-6.6) No need to look at the way that VIX rates and Ted affect the transiaton probabilities.  
+6.6) Now need to look at the way that VIX rates and Ted affect the transiaton probabilities. This has been set up in TransProb3s.R  Not sure that the loop works but I think that the key components do.  
 
 6.7) Now create the probabilities given exogenous with TransPlot.R
 

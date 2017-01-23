@@ -12,10 +12,10 @@ x <- seq(-3, 3, 1)
 for(i in inv){
   tempfile <- forp(i, "EUR", 1)
   tempfx <- tempfile$data$p
-mod <- depmix(tempfx ~ 1, nstates = 2, transition = ~ scale(VIX), 
+mod <- depmix(tempfx ~ 1, nstates = 2, transition = ~ scale(USD1MD), 
                data = da)               
 fm <- fit(mod, verbose = TRUE, emcontrol = em.control(maxit = 1000))
-if(getpars(fm)[7] > getpars(fm)[9]){
+if(getpars(fm)[11] > getpars(fm)[13]){
     # select state 1 parameters
   selection = 1
 } else {
@@ -35,16 +35,14 @@ for(j in seq(1, 7, 1)){
 }
 }
 complist2
-summary(fm)
-fm
-fm2
-summary(fm2)
-1 -(1/(1+exp(-7.800554 + (-4.278683 * 3))))
-
-
-comptab2 <- xtable(complist, caption = "US rate model table", label = 
+# now create the latex.  Change the title for each save as txt. 
+comptab2 <- xtable(complist2, caption = "Transition probabilities conditional 
+                   on international risk aversion", label = 
                      "tabref:comptab", digits = c(2, 4, 4, 4, 4, 4, 4, 4))
 comptab2
+write.csv(complist2, './Data/1MD.csv')
+#--------------------
+# This does not look that interesting at the moment
 par(mfrow = c(2,1))
 for(i in 1:2){
 a <- fm@transition[[i]]@parameters[[1]][3]

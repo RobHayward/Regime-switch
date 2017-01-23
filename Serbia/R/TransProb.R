@@ -13,7 +13,7 @@ inv <- c("AL", "BA", "GR", "HR",  "RS", "RU",
 #comptab2 <- xtable(complist2, caption = "US rate model table", label = 
 #      "tabref:comptab", digits = c(0, 2, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4))
 #for(i in inv){
-i = "AL"
+#i = "AL"
 col <- c("-3sd", "-2sd", "-1sd", "Mean", "+1sd","+2sd", "+3sd")
 complist2 <- matrix(NA, nrow = length(inv), ncol = length(col), 
                    dimnames = list(inv, col))
@@ -23,10 +23,10 @@ x <- seq(-3, 3, 1)
 for(i in inv){
   tempfile <- forp(i, "US", 1)
   tempfx <- tempfile$data$p
-mod <- depmix(tempfx ~ 1, nstates = 2, transition = ~ scale(US1M), 
+mod <- depmix(tempfx ~ 1, nstates = 2, transition = ~ scale(VIX), 
                data = da)               
 fm <- fit(mod, verbose = TRUE, emcontrol = em.control(maxit = 1000))
-if(getpars(fm)[7] > getpars(fm)[9]){
+if(getpars(fm)[11] > getpars(fm)[13]){
     # select state 1 parameters
   selection = 1
 } else {
@@ -46,7 +46,7 @@ for(j in seq(1, 7, 1)){
 }
 }
 complist2
-write.csv(complist2, './Serbia/Data/TwoRegCondSwitchc.csv')
+write.csv(complist2, './Serbia/Data/TwoRegCondSwitch.csv')
 summary(fm)
 fm
 #---------------------------------------
