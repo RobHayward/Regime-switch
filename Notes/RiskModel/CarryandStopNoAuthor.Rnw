@@ -19,7 +19,7 @@
 \begin{document}
 %\renewcommand[\harvardurl]{URL: \url}
 \title{Carry-trade, sudden stops and instability in emerging markets}
-\author{Rob Hayward\footnote{University of Brighton Business School, Lewes Road, Brighton, BN2 4AT; Telephone 01273 642586.  rh49@brighton.ac.uk.} and Jens H\"{o}lscher\footnote{Bournemouth University, Executive Business Centre, 89 Holdenhurst Road, Bournemouth, BH8 8EB; Telephone 01}}  
+%\author{Rob Hayward\footnote{University of Brighton Business School, Lewes Road, Brighton, BN2 4AT; Telephone 01273 642586.  rh49@brighton.ac.uk.} and Jens H\"{o}lscher\footnote{Bournemouth University, Executive Business Centre, 89 Holdenhurst Road, Bournemouth, BH8 8EB; Telephone 01}}  
 \date{\today}
 \maketitle
 \begin{abstract}
