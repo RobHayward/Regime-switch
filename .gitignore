@@ -2,7 +2,7 @@
 .Rhistory
 .RData
 .synctex.gz
-.log
+*.log
 .pdf
 .bbl
 *pdf
@@ -10,3 +10,5 @@
 *xlsx
 *.docx
 *LoadData.R
+*.sty
+*concordance.tex

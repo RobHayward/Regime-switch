@@ -1,54 +1,4 @@
-\documentclass[12pt, a4paper, oneside]{article}\usepackage[]{graphicx}\usepackage[]{color}
-%% maxwidth is the original width if it is less than linewidth
-%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
-\makeatletter
-\def\maxwidth{ %
-  \ifdim\Gin@nat@width>\linewidth
-    \linewidth
-  \else
-    \Gin@nat@width
-  \fi
-}
-\makeatother
-
-\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
-\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
-\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
-\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
-\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
-\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
-\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
-\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
-\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
-\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
-\let\hlipl\hlkwb
-
-\usepackage{framed}
-\makeatletter
-\newenvironment{kframe}{%
- \def\at@end@of@kframe{}%
- \ifinner\ifhmode%
-  \def\at@end@of@kframe{\end{minipage}}%
-  \begin{minipage}{\columnwidth}%
- \fi\fi%
- \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
- \colorbox{shadecolor}{##1}\hskip-\fboxsep
-     % There is no \\@totalrightmargin, so:
-     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
- \MakeFramed {\advance\hsize-\width
-   \@totalleftmargin\z@ \linewidth\hsize
-   \@setminipage}}%
- {\par\unskip\endMakeFramed%
- \at@end@of@kframe}
-\makeatother
-
-\definecolor{shadecolor}{rgb}{.97, .97, .97}
-\definecolor{messagecolor}{rgb}{0, 0, 0}
-\definecolor{warningcolor}{rgb}{1, 0, 1}
-\definecolor{errorcolor}{rgb}{1, 0, 0}
-\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
-
-\usepackage{alltt} % Paper size, default font size and one-sided paper
+\documentclass[12pt, a4paper, oneside]{article} % Paper size, default font size and one-sided paper
 %\usepackage[dcucite]{harvard}
 \usepackage{tikz}
 %\usetikzlibrary{shapes, shadows, arrows}
@@ -56,8 +6,8 @@
 \usepackage{amsmath}
 %\usepackage{setspace}
 \usepackage{pdflscape}
-\usepackage[flushleft]{threeparttable}
-\usepackage{multirow}
+%\usepackage[flushleft]{threeparttable}
+%\usepackage{multirow}
 \usepackage[comma, sort&compress]{natbib}% Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
 \usepackage{graphicx}
 \graphicspath{{./Figures/}} % Specifies the directory where pictures are stored
@@ -66,15 +16,14 @@
 \bibliographystyle{agsm}
 \usepackage[colorlinks = true, citecolor = blue, linkcolor = blue]{hyperref}
 %\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
 %\renewcommand[\harvardurl]{URL: \url}
-\title{Carry-trade, sudden stops and instability in emerging markets}
+\title{UIP: a two-regime approach}
 \author{Rob Hayward\footnote{University of Brighton Business School, Lewes Road, Brighton, BN2 4AT; Telephone 01273 642586.  rh49@brighton.ac.uk.} and Jens H\"{o}lscher\footnote{Bournemouth University, Executive Business Centre, 89 Holdenhurst Road, Bournemouth, BH8 8EB; Telephone 01}}  
 \date{\today}
 \maketitle
 \begin{abstract}
-International financial crises are a major threat to emerging and transition economies.  These crises are frequently the result of the unwinding of carry-trade positions.  The carry-trade is the attempt to take advantage of the breakdown of uncovered interest parity by borrowing low interest rate currencies, exchanging for higher rate currencies and taking the interest rate differential less the depreciation of the investment currency against the funding unit.  If there is fear that the investment currency will depreciation, this can trigger a sudden-stop or reversal of inbound capital flows as funds seek to exit the carry position before the collapse.  A Hidden Markov Model uses the observed returns from the carry-trade to estimate the unknown probability of a shift from a state of financial stability to one of instability. This model is then used to assess the way that rising risk aversion affects the probability of a financial crisis. While the Czech Republic,  Hungary and Bulgaria are very sensitive to international financial conditions, Poland and Romania are relatively immune.  
+There are many explanations for the common observations that exchange rate prices deviate from uncovered interest parity (UIP).  This paper adds to the evidence that a risk premium may be present by assessing UIP in a range of Central and Eastern European countries (CEE). A Hidden Markov Model is used to identify two regimes for most of the exhange rates analysed.  It appears that these two regimes can be characterised as either periods of 'calm' or periods of 'crisis. The level of international risk aversion and changes in US interest rates affect the probability of switching from one regime to the other. This model is then used to assess the way that rising risk aversion affects the probability of a currency crisis. While the Czech Republic,  Hungary and Bulgaria are very sensitive to international financial conditions, Poland and Romania are relatively immune.  
 
 \emph{JEL classifications:} C34, F31, F32, G01; 
 \emph{Key words:} financial crisis, hidden-Markov model, sudden-stop, carry-trade
@@ -83,26 +32,10 @@ International financial crises are a major threat to emerging and transition eco
 \end{abstract}
 
 \section{Introduction}
-As the size of international capital flow has increased in absolute terms and relative to the expansion of the trade in goods and services, it has also become subject to less regulatory constraint. Economic authorities in emerging economies have struggled with financial instability that has an international source.  An inflow of capital from abroad may appear attractive but its arrival can inflate the price of goods and assets; it can shape institutions, economic development and political opinion; and the inflows can disappear even more swiftly than they arrive.  %Transition and emerging economies have been particularly affected by international financial crises.  %The financial systems of transition and emerging economies are less developed than those of the the international finance centres and therefore there is scope in these countries for the financial sector to increase in size and relative to overall level of economic activity.  This process can attract financial entities from more developed economies. \citet{ONBcarry} and \citet{EBRD} survey the expansion of Euro area banks into the Central and Eastern European trasition economies; \citet{Gabor} discusses the political economy of this \emph{financialization} where the financial system expands to new sections of the economy.  
+It is frequently found that exchange rates deviate substantially from uncovered interest partity (UIP).  See (list of references).  Explanations for this usually identify the institutional frictions (list of references), the modelling of expectations (list) or a risk premium as the most likely explanation.  This paper contributes to the understanding of the role of a risk premium by analysing UIP deviations in a range of CEE countriesand dividing the deviations into two categories: those where the high-yield currency does not depcreciate (or even appreciates) against the lower interest rate unit and those where the high-yield currency falls much more than would be anticipated by UIP.  In the first case, the conditions are favourable for inflow of capital to the higher interest rate unit.  It would be possible to make profitable carry-trades where funds are borrowing in the lower rate unit currency, transferred into the higher rate unit for the same period as the borrowing and then exchange bdack and repaid at the end of the period. These are likely to be periods of relative calm in the foreign exchange market. In the second case, these carry-trades would lose money and the relatively sharp depreciation of the high yield currency would more associated with exchange rate crisis. The first regimemight be called the period of 'calm' and is a much more common occurance. The second period is rare and could be called 'crisis'.
 
-%Bernanke speaking to Joint Economic Committee on 22-May-13.  Speaking about moderating asset purchase, but not yet. 
-%http://www.federalreserve.gov/newsevents/testimony/bernanke20130522a.htm
-
-International financial conditions in the immediate aftermath of the 2007-08 Global Financial Crisis (GFC) have fuelled the growth of investments in transition and emerging economies by providing large amount of funding-currency liquidity in the financial systems of developed economies.  However, any steps towards \emph{normalisation} of monetary policy in developed nations have encouraged flow reversal and have raised concern about the financial stability of merging economies.  There are three  potential triggers for such a reversal:  US monetary policy, international risk aversion and international liquidity. 
-
-We used a Hidden Markov Model (HMM) to determine financial conditions from carry-trade returns. In most cases, a model with two regimes explains the data better than those with one or three.  We estimated a transition matrix that identifies the probability of switching from a position of calm to one of financial crisis. We also estimated the transitional matrix probabilities conditional on the level of international risk, US interest rates and banking liquidity.  This is used to identify the way that these factors affect the vulnerability of countries to international shocks.    % Need to link this to the use of risk factors (portfolio country risk).    
-  
-\section{Financial crisis and sudden stops}
-  International financial crises have been a frequent impediment to emerging economy development.  Globalisation of financial markets encourages capital to move from one opportunity to another. The term \emph{sudden stop} has been used to express the shock that is suffered once these capital flows are reversed, see \citet{DornbuschSS}, \citet{CalvoSS} and \citet{KrugmanSS}.    %The gradual increase in risk followed by a sharp reversal lends itself to a model that takes more than one regime. %There is a focus on the factors that may make a country more or less vulnerable to sudden-stops with debate over the role that openness to trade \citet{Cavallo20081430} and overseas banking liabilities pose from \citet{calvo2004empiric}.   
- 
-  Following the Global Financial Crisis (GFC) the flow of finance to emerging economies has accelerated as a consequence of liquidity stoked by quantitative easing in key financial centres and by relatively attractive emerging market investment opportunities.  However, since the first hints that this expansionary monetary policy Would be cut back were made by Fed Chairman Bernanke in May 2013, flows have evolved into an ebb and flow that is influenced by domestic and international events.  Three major international factors have been identified as increased US interest rates, elevated international risk aversion and funding conditions in international banks. These factors seem to have as much effect on emerging economy vulnerability as the individual circumstances of the emerging states.  As a consequence,  rising international risk aversion, higher interest rates and cutbacks in liquidity have been added to the role that openness to trade (\citet{Cavallo20081430}) and overseas banking liabilities (\citet{calvo2004empiric}) pose to emerging economy stability.   
-
-The relative importance of each of these three international factors has come under recent investigation.  \citet{Cerutti2014} ask three questions:  what drives global liquidity; where does the global liquidity cycle originate; how can the recipient countries manage exposure to global liquidity?  They conclude that while the US drives the global liquidity cycle through its monetary policy, other financial centres (particularly in European) affect the financial cycle through the conditions of their banks. Their work suggests that global liquidity is affected by global financial conditions rather than monetary policy.
-
-%\href{http://www.federalreserve.gov/pubs/feds/2014/201446/201446abs.html}{Fed Paper} 
-Flight-to-Safety (FTS) is the term used to describe capital flows towards international financial centres and relatively safe assets, \citet{FTS} discover that FTS are relatively rare events. Their study of of 23 countries finds that most of the events are country specific. They characterise only 25\% of the events as "global", which means that they are associated with an increase in the VIX index and the TED spread.\footnote{The VIX is an index of implied volatility on options from the S\&P 500 index.  It is commonly used as a measure of international risk aversion as it signals increased demand by fund managers for option protection of their equity portfolio.  See \citet{VIX}, \citet{GoldmanVol} and \citet{Diamond} for fuller details.The TED spread is the spread between the treasury bill and the Euro-dollar rate.  It is used as a market measure of perceived credit risk of financial institutions as it records the risk premium that investors require to lend to banks relative to the risk-free rate.}   %These FTS eposodes are also associated with lower levels of consumer sentiment, appreciation of the  Yen, Swiss franc and US dollar funding currencies. %Financial, basic materials and industrial industries under-perform in FTS periods while telecoms outperform; money market instruments, corproate bonds and commodity prices (other than precious metals) face abnormal negative returns, hedge funds (particularly "event-driven" display negative FTS beta.  Liquidity deteriorates on FTS days in bond and equity markets. Economic growth and inflation decline in the year after a FTS event. 
-
-%\href{http://www.imf.org/external/pubs/cat/longres.aspx?sk=41655.0}{IMF:  Impact of Fed tapering annoncement on emerging markets}.  
+\section{Literature}
+Two exogenous international international factors that may increase the risk of a currency crisis have been identified as increased US interest rates, elevated international risk aversion and funding conditions in international banks. These factors seem to have as much effect on emerging economy vulnerability as the individual circumstances of the emerging states.  Flight-to-Safety (FTS) is the term used to describe capital flows towards international financial centres and relatively safe assets, \citet{FTS} discover that FTS are relatively rare events. Their study of of 23 countries finds that most of the events are country specific. They characterise only 25\% of the events as "global", which means that they are associated with an increase in the VIX index and the TED spread.\footnote{The VIX is an index of implied volatility on options from the S\&P 500 index.  It is commonly used as a measure of international risk aversion as it signals increased demand by fund managers for option protection of their equity portfolio.  See \citet{VIX}, \citet{GoldmanVol} and \citet{Diamond} for fuller details.The TED spread is the spread between the treasury bill and the Euro-dollar rate.  It is used as a market measure of perceived credit risk of financial institutions as it records the risk premium that investors require to lend to banks relative to the risk-free rate.}   
 
 Consistent with the evidence of an interplay between monetary policy and international risk, and between domestic and international factors, \citet{Ahmed2014} run a multivariate panel of gross and net capital flows before and after the financial crisis, showing that economic growth, interest rate differentials and the level of global risk appetite are all important determinants of private capital flows to emerging markets.  They also suggest that capital flows have been more sensitive to interest rate differentials since the financial crisis of 2007-08. There is also some evidence that quantitative easing has had some effect on capital flows. 
 
@@ -117,20 +50,7 @@ The flow of international bank lending is more difficult to measure but seems to
 \citet{NYFedtaper} consider the effect of changes in global risk aversion on the carry-trade.  They find that the initial signal from the US central bank in Fed Chairman Bernanke's May 22 2013 testimony to Congress coincide with an increase in global risk aversion which affected global asset prices. %They use the approach presented by \citet{MertensSVAR} to estimate the effect of policy changes by using a two-stage least squares appraoch to identify the SVAR model of asset price changes.  
 By identifying the performance of exchange rates without a change in risk aversion, they suggest that nearly half of the depreciation of a basket of 45 carry-trade currencies with the largest one-month interest rate relative to a basket of the US dollar and other equally low rate currencies is explained by this increased risk aversion. Nearly all the decline in Emerging market equities is attributable to the increase in risk aversion.
 
-There is evidence that the international financial cycle is increasingly global.  See \citet{Rey2013}, \citet{Obstfeld2014} and \citet{Bruno2014} for example.  %\href{http://www.voxeu.org/article/primer-global-liquidity}{VOX: GLobal Financial Liquidity}. 
-There is evidence the correlation of cross-border credit growth has risen since the 1990s and that funds increasingly flow from the financial centres to the rest of the world. For \citet{Cerutti2014}, credit and liquidity contractions in  the US, Euro zone, UK and Japan affect the rest of the world.   This is what they call \emph{global funding liquidity}, a feature that affects financial conditions globally by transferring credit supply in financial centre economies through the provision of cross-border credit.
-
-The aim here is to assess how vulnerable countries are to a financial crisis, to model this as a regime-switch and to quantify how far changes in international risk factors can alter the probability of a financial crisis in individual countries.  This can then be used to help understand some of the factors that may increase risk of financial crisis.  The rest of this paper proceeds as follows: the Section \ref{secref:HMM} presents the model; Section \ref{secref:res} presents the results; Section \ref{secred:con}
-
-
-%Do the next two paragraphs set up the dicotomy between the domestic factors and the international (flight-to-quality) factors?  THere are a range of facts:  EM debt rose from 650bn in 2001 to 6.9tn in 2013 according to BIS data.  
-
-%\subsection{The instability cycle}
-%The aim of this study is to understand more about the evolution of internatonal financial instability by studying the carry-trade in a number of European transition and emerging economies. There are two related areas of interest:  the factors that trigger a crash, reversal or sudden-stop; the way that the financial system evolves to the point where the crash is likely to take place.  There have been a number of attempts to identify levels of finacial risk.  This has clearly become even more of an issue since the financial crisis.  For example, \citet{IFCMeasure}.  The IMF have developed a range of \emph{Financial Soundness Indications} (IMF 2006).     Also - Hawkins and Klau (2000), Nelson and Perli (2005) and Gray et al (2007).  There are six main strands:  the real sector, including fiscal position and inflation; the corporate sector, specifically the level of debt and overseas exposure; the ability of the household sector to weather downturns; the external sector, including the foreign exchange position and the capital account; the financial sector; finacial markets. 
-
-%A number of studies applied the early warning indicator methods initially developed in the literature for currency and balance of payments crises to banking crises. Earlier work includes, among others, Calvo et al (1993), Eichengreen et al (1996), Turner and Goldstein (1996) Frankel and Rose (1996). Demirgüç-Kunt and Detragiache (1997) use a multivariate Logit approach to identify determinants of banking crises in a large panel of developing and industrialised countries: slow GDP growth and high inflation, vulnerability to sudden capital outflows, low liquidity in the banking sector, a high share of credit to the private sector, past credit growth, explicit deposit insurance and weak institutions. Kaminsky and Reinhardt (1999) identify early warning indicators of twin (banking and balance of payments) crises, such as credit and equity prices, by looking at the ability of such variables to predict crises 12 or 24 months a, while minimising the noise3  to signal ratio. Borio and Lowe (2002) and Borio and Drehmann (2009) build on the techniques developed by Kaminsky and Reinhardt (1999). Like the latter, they define threshold values for the indicators, but unlike them, they look at cumulative processes rather than just growth rates over one year, they use ex ante information (ie information which was available to the policymaker prior to the crisis) and, for the first time, they consider combinations of indicators and look at multiple time horizons. BIS Goodhart 2006%
-
-%However, While measuring debt-to-equity ratios and the scale of bank lending may provide some indication about the regime that is in place, this is imprecise and it is clear that financial services business evolve in ways that make loan counting  inadequate.The recent financial crisis showed that innovations like \emph{Collateralised Debt Obligations (CDO)} can allow an increase in debt that does not directly in bank lending. 
+ 
 
 \section{The Hidden Markov Model}\label{secref:HMM}
 \subsection{The evolution of financial instability}
@@ -143,31 +63,31 @@ Therefore, the difference between the realised and expected rate is
 s^0 - E[s_{t+1}|\Omega_t] = \pi_t(s^0 - s^1)
 \end{equation}
 
-%A common problem in estimating economic models is that the parameters do not tend to be stable over time.  A HMM can be used to model a range of cases that can span a simple transition from one state to another, switching between multiple regimes with varying parameters towards the extreme where the number of regimes mean that system is close to having time-varying parameters (TVP).  
+
 
 Expectations are continually confounded though they are not formed in an irrational way. In these cases, modelling that identifies the two regimes and the probability of switching between them will help to capture the non-linear nature of the relationship and will allow a range of cases that can span a simple transition from one state to another to an extreme of multiple states where parameters are close to time-varying.  
 
-%This may be addressed through a \emph{theshold model}. 
+
 
 \citet{hamilton1988rational} used a Hidden Markov Model (HMM) to incorporate discrete changes in expectations about Fed policy to make a closer match between the expectations theory and the term structure of interest rates.  This technique assumes that there are hidden or unobserved regimes and that the adjustment from one state to another is governed by a set of probabilities.  \citet{Hamilton1989} also analysed the performance of postwar US GNP with adjustments from periods of positive to negative growth. The regime shift is modelled as a first-order Markov process.  In other words, state $S_t$ depends only on the previous state $S_{t-1}$, with given probabilities that the state will switch or remain unchanged.  The parameters of an ARIMA representation of US GNP shift between the two regimes so that in periods of recession the underlying growth rate is three percentage points lower than it is during the expansionary period.   
-%\emph{The peso problem} describes a range of cases where there is a large, descrete shift or \emph{jump} in the system.  This is particularly relevant to the carry-trade as one explanation for the evidence of a breakdown in UIP is that exchange rate expectations cannot be modeled by taking the average of past realisations. 
 
 
-%The raw model just assume that there are three states with random allocation of the starting values.  However, the initial estimates of the regime parameters can come from the estimates made in the doctorate using the crash and caution identification from the VIX; the initial estimates of the priobabilities of each state can come from the percentage of each state in the final version of the model that is run without initial estimates.  
 
-%I think that $\theta_1$ on page 4 of the depmixS4 vignette is the parameter that nees to be set. 
 
-%At the top of page 10 of the vignette, there is an example of how the transition matrix may be augmented by a model.  I do not understand this fuilly, but it may be possible to link the transition to the VIX index.  Obviously, there is some risk of circularity here. Anyway, it may be useful to compare the difference. 
+
+
+
+
 
 
 \citet{schaller1997regime} extend the Hamilton model to assess stock returns in two regimes, uncovering strong evidence of regime-switching between bull and bear markets in the mean and variance of US stock returns.  They also find that that the response of stock returns to the price-dividend ratio is asymmetric as adjustment is much swifter during the bull market phase; \citet{dueker1997markov} use a model that switches from periods of low to high volatility. Markov models switching models are also typically used to understand the evolution of credit risk.  A transition matrix with probabilities derived empirically provides the expectation that a rating will change from one level to another.  This can be rolled forward to assess the likelihood of a default and used to incorporate credit risk in the valuation of bonds.  As an extension of this,  \citet{frydman2008credit} use a \emph{mixture model}, where the underlying probabilities of adjustment come from two underlying sub-models of company type, against the alternative of a pure Markov chain. The observed rating changes relate to two different underlying Markov chains representing the evolution of credit ratings.  There is a heterogeneity that seems to depend upon the industry.  For example, ratings of firms in the retail and wholesale trade sectors tend to be more dynamic than the others. 
 
 
-%Agn Timmerman (2011)
-%Looking at how abrupt changes in regime can lead to changes in the way that the system works.  The different regimes can be associated with different underlying distribution of returns.  This can allow the understanding of the non-liner and non--normal distribution within  normal or linear framework.  At the extreme, the regime switch model can incorporate a \emph{jump model} with one change, and can also be associated with time-varying parameter models that have a large number of regimes.
 
-%The broad framework for the method is to model a discrete state $s_t \in %\{0,1,\dots k \}$
-%\begin{equation}
+
+
+
+
 %y_t = \mu_{s_t} + \phi_{s_t} y_{t-1} + \sigma_{s_t} \varepsilon_t, \quad %\varepsilon_t \sim iid(0,1) 
 %\end{equation}
 
@@ -669,7 +589,7 @@ In most of the cases studied here, the two-regime model is superior to the three
 
 %Maximise $P(O \lambda)$, where $\lambda = (\pi, A, B)$.  The probability of observing sequence O for a given set of parameters.  The easiest way of doing this is to calculate the probability for each of the possible state sequences.  Consider one such sequence, $Q = q_1 q_2 \dots q_T$, the probability of the observed sequence for the state sequence Q is $P(O|Q \lambda) = \prod_{t = 1}^T P(O_t|q_t, \lambda)$.  If the observations are independent, this probability $P(O|Q \lambda)$ is equal to the probability of observing the outcome given the state, $b_{q_1}(O_1)\dot b_{q_2} (O_2) \dots b_{q_T}(O_T)$.  At each step, the forward variable $\alpha_t(i) = P(O_1 O_2 \dots O_t, q_t = S_i|\lambda)$ is calculated as the product of the sum of all the probability of each state for the previous period and the probability of transition from each of those states to the current as well as the product of being in this state given the observable. $\alpha_t(i)$ is the joint probability that observation is seen and state is achieved. 
 
-\bibliography{../../../myrefs}
+\bibliography{../../myrefs}
 
 
 
