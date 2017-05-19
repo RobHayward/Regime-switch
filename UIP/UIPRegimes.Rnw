@@ -35,6 +35,41 @@ There are many explanations for the common observations that exchange rate price
 It is frequently found that exchange rates deviate substantially from uncovered interest partity (UIP).  See (list of references).  Explanations for this usually identify the institutional frictions (list of references), the modelling of expectations (list) or a risk premium as the most likely explanation.  This paper contributes to the understanding of the role of a risk premium by analysing UIP deviations in a range of CEE countriesand dividing the deviations into two categories: those where the high-yield currency does not depcreciate (or even appreciates) against the lower interest rate unit and those where the high-yield currency falls much more than would be anticipated by UIP.  In the first case, the conditions are favourable for inflow of capital to the higher interest rate unit.  It would be possible to make profitable carry-trades where funds are borrowing in the lower rate unit currency, transferred into the higher rate unit for the same period as the borrowing and then exchange bdack and repaid at the end of the period. These are likely to be periods of relative calm in the foreign exchange market. In the second case, these carry-trades would lose money and the relatively sharp depreciation of the high yield currency would more associated with exchange rate crisis. The first regimemight be called the period of 'calm' and is a much more common occurance. The second period is rare and could be called 'crisis'.
 
 \section{Literature}
+Engel has a follow-up to the Hodrick survey of the UIP literature from 1987.  The change in the future exchange rate is usually negatively related to the forward discount. Engel summarises the evidence as test reject the idea that the forward rate is an unbiased predictor of the future spot rate; risk premium models have not been successful in explaining the apparent bias. 
+
+There is some suggestion that peson problems, learning and irrational speculation can help to understand. This study is limited to modesl of rational expectations and a risk premium. 
+
+The forward bias puzzle rests on the empirical evidence that a regression of the forward rate on the future exchange rate is less than one and usually less than zero.  This implies two things: the risk premium should be negatively related to the expected change in the exchange rate and the variance of the risk premium should be more than the variance of the expected change in the exchange rate.  However, these conditions only apply if the risk premium can be characterised as being a linear function of forward rate and the expected exchange rate change
+
+\begin{equation}
+rp^{re} \equ f_t - E(s_{t+1})
+\end{equation}
+
+Engel offers two cases:  where the econometrician has more information that the agent (agent gradually learn the model) or where the agent has information that the econometrican does not have (the peson problem).  In each of these cases the difference should tend to zero over time. 
+
+We would look to Lewis (1994) and Evans (1995) for Peso problems; Frankel and Rose (1994) survey the literature on irrational expectations and speculative bubbles. Flood and Rose (1994) suggest that this is mostly related to floating exchange rates. They find some evidence for a peso effective in European Exchange Rate Mechanism data. 
+
+
+Engel says that the calculated risk premium is a risk premium only if there are rational expectations. For this $E(e_{t+1}) = E^m(s_{t+1})
+
+Theoretically and empicially, the calculated rational expectations risk premium has a large variance. This risk preium is the same as the ex-post return to carry-trade investments. For example, Canova and Marrinan (1993) find that the rational expectations risk premium has a large variance, serial correlation and has hetroskedasticity due to volatility clustering.  This study also highlghts the way that the risk-premum switches from positive to negative. 
+
+It is possible to assume that purchasing power parity holds or ignore the effect of prices because they are very small. 
+
+$rp^{re}$ is constructed from the bias in the forward forecast of the future exchange rate.  It is also the ex-post return on a carry-trade borrowing of low interest rate currency for investment in high interest rate currency.  If this is also a risk premium, it shuld be related to models of risk. 
+
+McCallum (1994) assume that $rp^{re}$ is a stochasitic process and ask whether there are reasonable grounds for this to be negatively correlated with $E(s_{t+1}-s_t)$. 
+
+Engel says that $rp^{re}$ could represent 'expected profit opportunities' (p148). I say these expected profit opportunities are large and highly variable. 
+
+There are a number of models that seek to assess the excess returns that are possible from an investment in the exchange rate relative to the forward rate. These are sometime called the \emph{Latent variables model}. Here the excess returns are \emph{explained} by the latent variables. The usual instruments are forward discounts. 
+
+My comment - our tests are a version of this without all the technical estimattion of excess returns.  As the time period is short, the risk-free rate is assumed to be zero and any return above that is taken as excess. 
+
+Bekaert and Hodrick (1992) consider an investment return on a strategy that goes short domstic bonds and long overseas bonds when there is a postivie Sharpe ratio.  This securres a Sharpe of 0.776.  However, this may disappear with transaction costs.  Most of these depend on a pricing kernal that will equate returns and risk (my words?).  It must meet the conditions that the covariance of the expected spot retrn and the risk premium is negative and the variance of the risk premium is greater than the expected return (p165). 
+
+Next - general equilibrium models. 
+
 Two exogenous international international factors that may increase the risk of a currency crisis have been identified as increased US interest rates, elevated international risk aversion and funding conditions in international banks. These factors seem to have as much effect on emerging economy vulnerability as the individual circumstances of the emerging states.  Flight-to-Safety (FTS) is the term used to describe capital flows towards international financial centres and relatively safe assets, \citet{FTS} discover that FTS are relatively rare events. Their study of of 23 countries finds that most of the events are country specific. They characterise only 25\% of the events as "global", which means that they are associated with an increase in the VIX index and the TED spread.\footnote{The VIX is an index of implied volatility on options from the S\&P 500 index.  It is commonly used as a measure of international risk aversion as it signals increased demand by fund managers for option protection of their equity portfolio.  See \citet{VIX}, \citet{GoldmanVol} and \citet{Diamond} for fuller details.The TED spread is the spread between the treasury bill and the Euro-dollar rate.  It is used as a market measure of perceived credit risk of financial institutions as it records the risk premium that investors require to lend to banks relative to the risk-free rate.}   
 
 Consistent with the evidence of an interplay between monetary policy and international risk, and between domestic and international factors, \citet{Ahmed2014} run a multivariate panel of gross and net capital flows before and after the financial crisis, showing that economic growth, interest rate differentials and the level of global risk appetite are all important determinants of private capital flows to emerging markets.  They also suggest that capital flows have been more sensitive to interest rate differentials since the financial crisis of 2007-08. There is also some evidence that quantitative easing has had some effect on capital flows. 
