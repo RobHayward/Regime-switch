@@ -1,3 +1,90 @@
+Engel 2014.  Handbook of international economics. 
+
+This is a survey if UIP since the last handbook of international economics in 1995. 
+
+Lambda is the deviation from UIP, the expected excess return or the foreign exchange risk premia.
+
+$\lambda_t = i^*_t + E_ts_{t+1} - s_t - i_t$
+
+There are a number of reasons why $\lambda$ may not equal zero: there may be a risk premium or a liquidty premium; there may be a deviation from rational expectations if agents use private information or have rational inattention; there could be institutional features such as capital controls or collateral constraints that may affect the relatonship. 
+
+p.37 in the discussion of the effect of central bank intervention, there is a foray into the deviation of market expectations from their rational expectations value.  This may come due to market participants following a rule of thumb when forming expectations, it may be because they are overconfident or because they have other biases.  
+
+Reitz and Taylor (2008) have a model where there are informed and uninformed traders.  The informed because increasinly less confident of their knowledge as the exchange rate deviates more from the fundamentals. Central bank intervention may increase informed traders' confidence. 
+
+Engel has a series of equiations that show that it is the $\Sigma_{j = 0}^{\inf}E\lambda_{j|+t}$ the expectation of this premium now and in the future that will determine the deviation from UIP. 
+
+Engel (2014) presents 
+
+\begin{equation}
+\lambda_t = t^* + E_ts_{t+1} - s_t - i_t = (1-b)(i_t^* -i_t)
+\end{equatiojn}
+
+as long as $b < 1$ the ex ante return on the Foreign bond ($\lambda_t$) is positive. (p40) when $i^*+t > i_t. 
+
+Burnside (2008, 2011c) take a portfolio of short-term bonds, investing outside the US when overseas rates are high and reversing when US rates are higher.  They find substantial excess returns and attractive Sharpe ratios. Other studies in this field are Lustig and Verdelhan (2007), Brunnermeier et al (2009) and Lustig et al (2011). 
+
+Jorda and Taylor (2012) find that these profits dissapear in the 2007-2008 period.  They also find that the more successful portfolios are those that are put in place once a \emph{threashold} interest rate differential is achieved. 
+
+There is a link between the carry-trade and momentum strategies.  This is investigated by Burnside et al (2006, 2011c) and by Menkoff et al. (2012b). These studies find that traditional factors such as growth of real consumption, market returns, term structure spreads and risk premia do not correlate with carr-trade profits. They also find that the carry-trade pfoits are low during period of volatility. This is interpreted to mean that high interest rate currencies are risky because they have a low payoff when a measure of global volatiolity is high. 
+
+Clarida et al. (2009) find similar results to Menkoff et al (2012).  Assessing results of high interst rates relative to low interest rate portfolios during three separate periods (high volatility, low volatility and average volatility), they find that high interest rate currencies have a high retrun when volatility is low and a low return when volatilty is high. So did I, so did I. 
+
+------------------
+There is some evidence that the deviation from UIP is less pronounced in emerging economies and over longer time perilds (see Chinn and Meredith 2004, Chinn 2006 and Alexius 2001. 
+
+The risk-adjusted profitability of the carry-trade is really just another example of the peso problem.  See Brunnemeier et al (2009), Burnside et al (2011a, 2011c), Farhi (2009), Fahri and Gabaix (2011), Gourio et al (2013). 
+
+The home investor invests $k(I^*_t - i_t - \bar{i_t})$ in overseas bonds, financed by borrowing home currency.  Here $\bar{i}$ is the mean of $i^*_t - i_t)$.    
+
+The profits from this will be 
+
+\begin{equation}
+\phi_{t+1} \eqiv (S_{t+1}/S_t)(1 + i^*i_t) - (1 + i_t)
+\end{equation}
+
+This will be the case so long as 
+
+\begin{equation}
+E(\phi_{t+1}(t^*_t - i - bar{i})) = cov(\phi_{t+1}, i^*_t - I_t) \geq 0, 
+\end{equation}
+
+This is what will be expected if the beta on equiation //// is less than one. 
+
+If there are two states of the world: state one where the profits are expected to be positive and state two where they are expected to be negative, the latter being what Brunnermeier terms the \emph{currency crash}.  See Brunnermeier 2009. 
+
+In state 1 
+
+\begin{equation}
+E(\phi_{t+1}(t^*_t - i - bar{i})) = cov(\phi_{t+1}, i^*_t - I_t) \geq 0, 
+\end{equation}
+
+In state 2
+
+\begin{equation}
+E(\phi_{t+1}(t^*_t - i - bar{i})) = cov(\phi_{t+1}, i^*_t - I_t) \leq 0, 
+\end{equation}
+
+If state 2 occures with probability $\pi$, the true expected profit from the carry-trade will be 
+
+\begin{equation}
+(1 - \pi)E_1(\phi_{t+1}(t^*_t - i - bar{i})) = \pi E_2(\phi_{t+1}(t^*_t - i - bar{i}))
+\end{equation}
+
+If the econometrician has fewer currency crashes than there are it will tend ot overstate the profits. 
+
+Burnside et al (2006, 2011a, 2011c) use data on foreign exchange options to show that once hedging of extreme events is taking into account, carry-trade profits are small. small.  In addition, the stochastic discount factor for the second period may be high enought to account for the no arbitrate condition. The conclude that the risk adjusted return to the carry trade may be very small.  
+
+Burnside, Craig and Martin Eichenbaum and Sergio Rebelo, 2008, Carry trade and momentum in currency markets, Annual Review of Financial Economics, 3, 511-588. 
+
+Burnside, Craig and Martin Eichenbaum and Isaac Kleshchlski and Sergio Rebelo, 2006, The Returns to Currency Speculation, NBER Paper no. 12489. 
+
+Burnside, Craig and Martin Eichenbaum and Issac Kleshchlski and Sergio Rebelo, 2011, Do Peso Probelms Explain Returns to the Carry Trade?, Review of Financial Studies, 24, 853-891. 
+
+Peso here is a low-probability even that does not occur in the sample. When an option cover is used to hedge against the risk of a large depreciation of the investment currency, the carry-trade profits are much reduced. The nature of the peso event for which the investors are compensated is either a large carry trade loss or a large value of the stochastic discount factor. 
+
+The carry-trade returns are not correlated with traditional risk factors.  The SDF is the stochastic discount factor that prices real-USD denominated excess returns.  The hedge removes the extreme losses from the portfolio. They argue that the postive average payoff to the unhedged carry-trade reflects peso event risk. They say that the peso event is characterised as modes negative payoffs and a large value for the stochastic discount factor.  This is a linear framework. 
+=====================
 There are a number of studies that assess the safe-haven status of currencies (including Habib and Stracca (2012) which I have. 
 
 This file is 
