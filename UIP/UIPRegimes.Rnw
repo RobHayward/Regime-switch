@@ -34,11 +34,11 @@ This paper adds to evidence that the forward-discount puzzle is at least partly 
 \section{Introduction}
 The common observation that exchange rate changes deviate systematically from the forward rate so that excess returns are available from borrowing low interest rate or funding currency for an investment in higher rate units or the investment currency is called the forward premium puzzle.   This paper explores the role that risk premia play by analysing UIP deviations in a range of CEE countries and by using a Hidden Markov Model to divide the deviations into two categories: those where the high-yield currency does not depreciate (or even appreciates) against the lower interest rate unit and those where the high-yield currency falls much more than would be anticipated by UIP.  In the first case, the conditions are favourable for inflow of capital to the higher interest rate unit.  It would be possible to make profitable carry-trades where funds are borrowed in the lower rate unit currency, transferred into the currency with the higher interest rate for the same period as the borrowing and then exchange back and repaid at the end of the period. These are likely to be periods of relative calm in the foreign exchange market. In the second case, these carry-trades would tend to lose money and the relatively sharp depreciation of the high yield currency would be associated with exchange rate crisis. The first regime might be called the period of 'calm' and is a much more common occurrence. The second period is rare and could be called 'crisis'.  The probability of switching from a calm regime to one of crisis is determined for each country and the way that these probabilities are affected by exogenous events international risk aversion and by changes in US interest rates is also analysed.  These exogenous factors increase the risk of experiencing an exchange rate crisis and can be used to compare how vulnerable each country is to an external shock. 
 
-This paper adds to the evidence that the forward premium puzzle is explained as a compensation for taking crash-risk, builds on the use of non-linear methods,  and is the first to our knowledge to make use of the Hidden Markov model to explore the non-linear nature of the risk in different periods.  The rest of this paper proceeds as follows...
+This paper adds to the evidence that the forward premium puzzle is explained as a compensation for taking crash-risk, builds on the use of non-linear methods,  and is the first to our knowledge to make use of the Hidden Markov model to explore the non-linear nature of the risk in different periods.  This paper also contributs to the literature on \emph{sudden stopds} as it provides for comparative measures of the probability that a period of calm in the foreign exchange market will switch to one of crisis and it also measures how this probability is affected by changes in interenational risk appetite and changes in US interest rates.  The rest of this paper proceeds as follows...
 %What is the research gap?  How does the paper contribute to the literature. 
 \section{Literature}
  \label{secref:UIP}
-The forward rate is the rate that currencies can be exchanged in the future.  Covered Interest Parity (CIP) asserts that, given the free flow of international capital and competitive markets,  the difference between the spot rate and the forward rate must be equal to the interest rate differential for the two currencies for the same period.    
+The forward rate today is the rate that currencies can be exchanged in the future.  Covered Interest Parity (CIP) asserts that, given the free flow of international capital and competitive markets,  the difference between the spot rate and the forward rate must be equal to the interest rate differential for the two currencies for the same period.    
 
 \begin{equation}
 \frac{F_{t, j}}{S_t} \times (1 + i_{t,j}^*) = (1 + i_{t,j})  
@@ -59,7 +59,7 @@ Therefore,
 \frac{F_{t,j} - S_t}{S_t} = \frac{(i_{t,j} - i_{t,j}^*)}{(1 + i_{t,j}^*)} 
  \end{equation}
 
-If it is assumed that expectations are formed rationally and there are no financial frictions, the forward rate should be the best, unbiased estimate of the future spot rate and therefore, Equation \ref{eq:fw} becomes.  
+Assuming rational expectations and no financial frictions, the forward rate should be the best unbiased estimate of the future spot rate and therefore, Equation \ref{eq:fw} becomes.  
 
 \begin{equation}
 \frac{E[S_{t+j}] - S_t}{S_t} = \frac{(i_{t, j} - i_{t, j}^*)}{(1 + i_{t, j}^*)}
@@ -81,42 +81,27 @@ Assuming that CIP holds\footnote{Since the global financial crisis there is incr
 \Delta s_{t + j} = \beta_0 +\beta_1 f_{t+j} + \varepsilon
 \end{equation} 
 
-%where $\Delta s_{t + j}$ is the change in the log of the exchange rate between period t and j, $f_{t+j}$ is the forward premium expressed as the difference between the logs of the spot rate and the forward rate for period j; $\varepsilon$ is an error term, while $\beta_0$ and $\beta_1$ are the coefficients to be estimated.  If UIP holds, $\beta_0$ should be equal to zero and $\beta_1$ should be equal to one as the forward rate should be an unbiased estimate of the future exchange rate.   
+where $\Delta s_{t + j}$ is the change in the log of the exchange rate between period t and j, $f_{t+j}$ is the forward premium expressed as the difference between the logs of the spot rate and the forward rate for period j; $\varepsilon$ is an error term, while $\beta_0$ and $\beta_1$ are the coefficients to be estimated.  If UIP holds, $\beta_0$ should be equal to zero and $\beta_1$ should be equal to one as again the forward rate should be an unbiased estimate of the future exchange rate.   
 
-However, this standard test of UIP consistently finds that estimates of  $\beta_1$ are less than one.  A meta-study by Froot and Thaler found that the average of 75 published estimates had an average value of -0.88 for $\beta_1$ \citep*{FrootUIP}.   This is sometimes called the \emph{forward discount puzzle}.  See \citep{FrootUIP}, \citep{Hodrick1987},  \citep{Engel1996} and \citep{EngelHandbook} for a summary of the vast literature in this area. An investment that takes advantage of this deviation is called \emph{the carry-trade}.  Explanations for this  puzzle usually identify the institutional frictions (list of references), the modelling of expectations (list) or a risk premium as the most likely explanation.
+However, this standard test of UIP consistently finds that estimates of  $\beta_1$ are less than one.  A meta-study by Froot and Thaler found that the average of 75 published estimates had an average value of -0.88 for $\beta_1$ \citep*{FrootUIP}.   This is sometimes called the \emph{forward discount puzzle}.  See \citep{FrootUIP}, \citep{Hodrick1987},  \citep{Engel1996} and \citep{EngelHandbook} for a summary of the vast literature in this area. An investment that takes advantage of this deviation by borrowing the low interest rate funding currency for a deposit in the higher itnerest rate investment currency is called \emph{the carry-trade.  The evidence that the carry-trade is profitable is consistent with the forward discount puzzle.  
 %need further and more recent evidence here. this may be the place for the evidence and an expansion of the next paragraph.  
 
-As UIP is a key component of international financial theory, there has been a tremendous effort to understand more about this \emph{puzzle}.  Some suggest that it is the lack of stationarity in the series that causes estimation problems \citep{Engel1996} and \citep{Roll2000}; others argue that this is really an issue for developed rather than developing nations \citep{Bansal1999};  tests using 10 year bond yields indicate that the puzzle applies to the short-term but not long-term rates\citep{Chinn2004}.  There is also a wide ranging discussion over whether, once the assumption of risk-neutrality is abandoned, the apparent breakdown is the result of failing to correctly account for this risk. The last of these ideas is explored here. 
-
+As UIP is a key component of international financial theory, there has been a tremendous effort to understand this \emph{puzzle}.  Some suggest that it is the lack of stationarity in the series that causes estimation problems \citep{Engel1996} and \citep{Roll2000}; others argue that this is really an issue for developed rather than developing nations \citep{Bansal1999};  tests using 10 year bond yields indicate that the puzzle applies to the short-term but not long-term rates\citep{Chinn2004}.  It may also be associated with factors like hetrogenous market agents (reference), asymmetry of information (reference) or...other. There is also a wide ranging discussion over whether, once the assumption of risk-neutrality is abandoned, the apparent breakdown is the result of failing to correctly account for this risk. The last of these is explored here. 
 
 \subsection{Risk premium}
-If investors are risk averse, the interest differential will be equal to the expected change in the exchange rate plus an additional premium for taking risk.   In that case the negative estimate for $\beta$ could mean that investors required additional return for holding foreign currency assets and Equation \ref{eq:uip} can be augmented with a term that would account for the risk premium.  
+If investors are risk averse and form their expectations rationally, the negative estimate for $\beta$ could mean that investors required additional return for holding foreign currency assets and Equation \ref{eq:uip2} can be augmented with a term that would account for this risk premium.  
 
 \begin{equation}
 \label{eqref:fb1}
-E[\Delta s_{t + j}]= \beta_0 +\beta_1 f_{t+j} + \beta_2 rp_{t +j} + \varepsilon
+E[\Delta s_{t + j}]= \beta_0 +\beta_1 f_{t+j} + \beta_2 rp_^{re}{t +j} + \varepsilon
 \end{equation}
 
-where $rp_{t, j}$ is the risk premium at time $t$ for $j$ periods ahead.  This seemed reasonable for the original US-centric research but it means that the risk premium is on domestic assets for non-US investors and that the risk premium switched to US assets when US interest rates rose.  There are other problems with this approach. \citep{CanovaMarrinan} find that the risk premium switches from positive to negative as relative interest rates change and that the risk premium has a large variance, serial correlation and has hetroskedasticity due to volatility clustering.  Indeed, Froot shows that short rates consistently predict excess returns on a variety of assets.  For foreign exchange, stock, bond and commodity markets, a one percentage annualised increase in the short-term interest rate is associated with about a three percentage point reduction in annualised excess returns  \citep{FrootUIP}. 
+where $rp_^{re}{t, j}$ is a rational expectations risk premium at time $t$ for $j$ periods ahead.  This seemed reasonable for the original US-centric research but it means that the risk premium is on domestic assets for non-US investors.   \citep{CanovaMarrinan} find that this risk premium switches from positive to negative as relative interest rates change and that the risk premium has a large variance, serial correlation and has hetroskedasticity due to volatility clustering.  \citep{FamaUIP} finds that the variation in the risk premium is much larger than the variation in the exchange rate or the forward rate and that there is a negative correlation between the premium and the expected spot rate.  Froot finds that short rates consistently predict excess returns on a variety of assets.  For foreign exchange, stock, bond and commodity markets, a one percentage annualised increase in the short-term interest rate is associated with about a three percentage point reduction in annualised excess returns  \citep{FrootUIP}. 
+This risk premium only holds under rational expectations \citep{Engel1996}.  However, market expectations may differ from the information that is used to test Equation \ref{eq:uip2}. These can be divided into two types.  In the first case  where the econometrician has more information that the agent (the agent gradually learn the model as was the case when floating exchange rates returned in 1973) or where the agent has information that the econometrican does not have (there may be peso problems where a large depreciaton that has not prevously been recored in the data is anticipated) \citep{Engel1996}.  In each of these cases it is usual to expect that the difference should tend to zero over time as market participants or economists acquire more information.  
 
-However, the calculated risk premium is a risk premium only if there are rational expectations. For this $E(e_{t+1}) = E^m(s_{t+1})$. \citep{Engel1996}
+The risk premium must be very volatile or insufficient to explain the returns that can be achieved with the carry-trade.  One strand of the literature will seek to find explanations for the volatility in the risk premium by looking for a relationship with commmon risk factors.  There are a number of models that seek to assess the returns that are possible from an investment in the exchange rate relative to the forward rate.  Here the returns are explained by the latent variables such as the forward discounts.  \citep{Burnside2010} assess whether carry-returns are correlated with conventional risk factors like the equity risk-premium or real consumption growth and volatility indices.  They find limited correlation.\citep{McCallum} assumes that $rp^{re}$ is a stochastic process and ask whether there are reasonable grounds for this to be negatively correlated with $E(s_{t+1}-s_t)$. He concludes that this residual represents all the factors that are not in the model rather than a risk premium.   
 
- An alternative approach will consider the difference between the forward rate and the change in the exchange rate as the \emph{excess return}
-\begin{equation}
-rp^{re} \equ f_t - E(s_{t+1})
-\end{equation}
-
-Market expectations may differ from the information that is used to test Equation \ref{eq:uip2}. There may be a difference between the Engel offers two cases:  where the econometrician has more information that the agent (agent gradually learn the model) or where the agent has information that the econometrican does not have (the peso problem) \citep{Engel1996}.  In each of these cases it is usual to expect that the difference should tend to zero over time as market participants or economists acquire more information.  
-
-The alternative approaches will view the difference between the forward rate and the change in the exchange rate as either being explained by a stochastic discount factor.  There are a number of models that seek to assess the excess returns that are possible from an investment in the exchange rate relative to the forward rate. These are sometime called the \emph{Latent variables model}. Here the excess returns are \emph{explained} by the latent variables. The usual instruments are forward discounts.  \citep{Burnside2010} assess whether carry-returns are correlated with conventional risk factors like the equity risk-premium or real consumption growth and volatility indices.  They find limited correlation.\citep{McCallum} assumes that $rp^{re}$ is a stochastic process and ask whether there are reasonable grounds for this to be negatively correlated with $E(s_{t+1}-s_t)$. He concludes that this residual represents all the factors that are not in the model rather than a risk premium.   
-
-
-\subsection{Crash risk}\label{secref:crash}
-It is also possible to abandon the assumption that markets are efficient and to view the risk premium as the excess returns that are available for a carry trade.  Engel says that $rp^{re}$ could represent 'expected profit opportunities' (p148). As has been seen, these expected profit opportunities are large and highly variable. 
-
-Spronk, Vershoor and Zeinkel use a heterogeneous agent model with carry traders in addition to fundamental and chartist traders.  Traders adjust their strategy towards those that are most successful. The carry trade is built while conditions are calm.    The model is able to replicate the heavy tails, excess volatility and volatility clustering that is evident in foreign exchange rates \citep{SpronkEER}.  
-
-There are a number of studies that have assessed the skewed nature of the returns that are associated with the carry trade.  For example, \citep{BrunnermeierCarry}develop a general model of what they call \emph{crash risk}, which is due to the sudden unwinding of carry trade.  The crash happens when risk-appetite and funding-liquidity decrease. A potential carry-trade is calculated 
+Engel says that $rp^{re}$ could represent 'expected profit opportunities' (p148). As has been seen, these expected profit opportunities are large and highly variable. However, increasing attention has been paid to the nature of these returns and what that means for the risk that is being taken by investors in the carry-trade.  There are a number of studies that have assessed the skewed nature of the returns that are associated with the carry trade.  For example, \citep{BrunnermeierCarry}develop a general model of what they call \emph{crash risk}, which is due to the sudden unwinding of carry trade.  The crash happens when risk-appetite and funding-liquidity decrease. A potential carry-trade is calculated 
 
 \begin{equation}\label{eqref:carry}
 z_{t+1} \equiv (i^* - i) -\Delta s_{t+1}
@@ -124,95 +109,21 @@ z_{t+1} \equiv (i^* - i) -\Delta s_{t+1}
 
 where $z_{t+1}$ is the return in excess of the prediction of UIP as $i^*$ is the overseas three  month interest rate and $i$ is the domestic three month interest rate and $\Delta s_{s+1}$ is the change in the log of the exchange rate measured as foreign currency per US dollar \citep[pp. 8-9]{BrunnermeierCarry}.   They find that carry trades have large Sharpe Ratios, negative skewness and positive excess kurtosis.   
 
-Brunnermeier and Pedersen show how this \emph{crash risk} can be increased by the interaction of institutional features like illiquidity, margin calls and the evaporation of funding for speculator funding.  When conditions deteriorate, investors seek to exit the carry position, liquidity declines, banks become more cautious about funding speculative positions and an increase in margin requirements, together with a reduction in funding lead to spirals of selling and exaggerated price movements \citep{BrunnermeierLiquidity}.
+Brunnermeier and Pedersen show how this \emph{crash risk} can be caused by the interaction of illiquidity, margin calls and the evaporation of funding for speculation.  When conditions deteriorate, investors seek to exit the carry position, liquidity declines, banks become more cautious about funding speculative positions and an increase in margin requirements together with a reduction in funding lead to spirals of selling and exaggerated price movements \citep{BrunnermeierLiquidity}.
 
-Gabrisch and Orlowski investigate time series properties of equity markets, money market rates and exchange rates in some CEE countries using a GARCH framework to assess the nature of the disturbances in these time series.  It is clear that fat-tailed, negative-skewed distributions are a common feature of CEE financial markets.  Indeed, it appears from this study that foreign exchange shocks, such as the effects of the carry trade, translate across other financial markets \citep{GabrischOrlowski}.   
+Spronk, Vershoor and Zeinkel use a heterogeneous agent model with carry traders in addition to fundamental and chartist traders.  Traders adjust their strategy towards those that are most successful. The carry trade is built while conditions are calm.    The model is able to replicate the heavy tails, excess volatility and volatility clustering that is evident in foreign exchange rates \citep{SpronkEER}.  
 
-In order to try to quantify the value of this crash risk, Jurek has tried to quantify the expectations of something like a catastrophic risk that may be apparent in UIP by looking at the price of options that could be used to hedge a potential crash in the exchange rate. He asserts that the common finding that carry trades generate excess returns is misleading because these returns are a compensation for risk.  Though he finds that G10 carry trades for the 1990-2008 period generate Sharpe Ratios that are twice the level of the S\&P 500 equity returns, Jurek estimates that these generally disappear once the cost of option hedging of crash risk is included \citep{JurekCrash}.    This is consistent with the notion that any returns to the carry trade (see Equation \ref{eqref:carry}) are a compensation for taking crash risk rather than abnormal or excess return. 
-
-
- 
+\citep{Jurek2} tries to quantify the crash risk by using out-of-the-money put options to hedge the risk of a sharp depreciation of the investment currency.  By comparing the performance of hedged and un-hedged positions, he finds that less than one third of carry-trade excess returns can be explained by crash risk. However, concentrating on G20 countries in order to obtain option data means that this is largely a developed economy phenomenon where the liquidity risks will be lower.  \citep{Burnside2010} use a similar method and find similar results.  However, again the focus is G20 with only Austrlia, New Zealand, South Africa and Norway among the traditional carry-trade countries.  \citep{Hayward2014} investigated Central and Eastern European exchange rates and found that during periods of high iternational risk aversion the carry-trade experiences much lower returns and returns that are characterised by large-skew and kurtosis.  It appears that the returns that are available under normal or calm conditioins are a compensation for taking the risk of large losses when risk aversion rises and liquidity disappears. 
 
 \section{The Hidden Markov Model}\label{secref:HMM}
-\subsection{Markov Model}
-The approach adopted here is to assess whether carry-trade excess returns are best modelled as stemming from one or more regimes. In theory, the returns to the carry-trade would depend on whether international investors considered conditions to be calm, where they would be willing to build carry-trade exposure, or in crisis, where they would reduce positions as swiftly as possible.  A model with more than one regime is often called a \emph{mixture model} as the population of carry-trade returns are assumed to come from two or more unobserved sub-populations. As we are using time series and it is assumed that periods of calm are most likely to grouped together and that exchange rate crises come as a cluster a Markov chain can be used to model the tradition from one period to another.  As the periods of calm and crisis are not observed, this is called a \emph{Hidden Markov Model}.  
+A Markov process is a system that moves from one state to another.  The Markov chain describes the probability of moving from one set of states to another.  Markov models have been used to understand a wide range of phenomena from weather forecasting, speech regognition and internet search.  If the states that are to be explained can be observed, the probability of being in a particular state and the probabilty that there is a switch from one state to another can be taken from a sample.  However, in many cases e states cannot be observed and then the states as well as the transition probabilities must be estiimated from the data with a \emph{Hidden Marov Model} (HMM).   
 
+\citet{hamilton1988rational} used a HMM to incorporate discrete changes in expectations about Fed policy to improve the match between the expectations theory and the term structure of interest rates.  This technique assumes that there are unobserved market-expectation regimes and that the adjustment from one state to another is governed by a set of probabilities.  \citet{Hamilton1989} analysed the performance of postwar US GNP with adjustments from periods that are termed recessions to those that are called expansions. The parameters of an ARIMA representation of US GNP shift between the two regimes so that in periods of recession the underlying growth rate is three percentage points lower than it is during the expansionary period.   
 
-\citet{hamilton1988rational} used a Hidden Markov Model (HMM) to incorporate discrete changes in expectations about Fed policy to make a closer match between the expectations theory and the term structure of interest rates.  This technique assumes that there are hidden or unobserved regimes and that the adjustment from one state to another is governed by a set of probabilities.  \citet{Hamilton1989} also analysed the performance of postwar US GNP with adjustments from periods of positive to negative growth. The regime shift is modelled as a first-order Markov process.  In other words, state $S_t$ depends only on the previous state $S_{t-1}$, with given probabilities that the state will switch or remain unchanged.  The parameters of an ARIMA representation of US GNP shift between the two regimes so that in periods of recession the underlying growth rate is three percentage points lower than it is during the expansionary period.   
+\citet{schaller1997regime} used the same method to assess stock returns in two regimes, uncovering strong evidence of regime-switching between bull and bear markets in the mean and variance of US stock returns.  They also find that that the response of stock returns to the price-dividend ratio is asymmetric as adjustment is much swifter during the bull market phase; \citet{dueker1997markov} employ a HMM to that switches from periods of low to high volatility understand the evolution of US equities from calm conditions to those that are more like a crisis.
 
-
-
-
-
-
-
-
-
-
-\citet{schaller1997regime} extend the Hamilton model to assess stock returns in two regimes, uncovering strong evidence of regime-switching between bull and bear markets in the mean and variance of US stock returns.  They also find that that the response of stock returns to the price-dividend ratio is asymmetric as adjustment is much swifter during the bull market phase; \citet{dueker1997markov} use a model that switches from periods of low to high volatility. Markov models switching models are also typically used to understand the evolution of credit risk.  A transition matrix with probabilities derived empirically provides the expectation that a rating will change from one level to another.  This can be rolled forward to assess the likelihood of a default and used to incorporate credit risk in the valuation of bonds.  As an extension of this,  \citet{frydman2008credit} use a \emph{mixture model}, where the underlying probabilities of adjustment come from two underlying sub-models of company type, against the alternative of a pure Markov chain. The observed rating changes relate to two different underlying Markov chains representing the evolution of credit ratings.  There is a heterogeneity that seems to depend upon the industry.  For example, ratings of firms in the retail and wholesale trade sectors tend to be more dynamic than the others. 
-
-
-
-
-
-
-
-%y_t = \mu_{s_t} + \phi_{s_t} y_{t-1} + \sigma_{s_t} \varepsilon_t, \quad %\varepsilon_t \sim iid(0,1) 
-%\end{equation}
-
-%The process governing the underlying regime must also be defined. 
-
-%\begin{equation}
-%Pr(s_t = 0| s_{t-1} = 0) = p_{00} \quad \text{and} \quad Pr(s_t = 1| s_{t%-1} = 1) = p_{11}
-%\end{equation}
-
-%More generally, the transition could be time-varying and could be dependent on the time spent in the regime.  See Durland and McCurdy (1994) for example of the probbilities  in the transition matrix being related to time. The longer the systemm has remained in the build phase, the greater the risk of crash.  Remember that the crash phase is a period when there is risk of a sharp reversal.  
-
-%See Diebold, Lee and Iinbch (1994) for examples where the transition probabilities depend on some other state variables.  For example, the interest rate spread.   Could the VIX index or other factors be used?  Vix index would indicate heightened international tension as one element that affects the probability of transforming from one state to the next.  An elevated VIX is an indication of the heightened international risk premium.  This may increase the probability that the regime switches from carry build to crash.  This is a theme that could be related to the bubble bursting so any information that improves the ability to identify bubbles bursting would be beneficial.  
-
-
-%There are two states of the world:  crisis and moderation.  If the system is in a crisis, it stays there with probability p; it switches to moderation with probability $1-p$.  If in moderation, the system stays there with a probability q and switches to crisis with probability $1-q$.  If the probabilities change over time, there is no longer a \emph{homogenous Markov Chain}. Ghysels has a seasonal dummy for the probabilities that represent the months or quarters.  
-
-%Can the probabilities change over time?  This may be the result of changes in the resilience of the financial system. 
-%\href{http://members.home.nl/jeroenvermunt/dias2010.pdf}{Mixture Hidden Markov Models} Hidden models help to calafify the regime under which securities trade. Model takes into account the unobserved hetrogeneity across time. This could could be extended to space (for different countries).  Is it possible to estimate a panel? 
-
-%Can the systemm be used to compare to fixed and floating exchange rates. 
-
-%The use of the regime-switch allows the transition from one regime to another to be the result of something that is more than just a deterministic process. There are a number of ways that this model could be expanded.  Dueker has a model where the degrees of freedom from a Student-t distribution change with the regime.  
-
-%An alternative way to look at this would be to use a TAR mode.  
-
-%There are three main ways that the evolution of international financial risk can be modelled.  The first is through a one-off transition from calm to crisis. This represents a world there has been some major event that has transformed the system and where there has been a permanent adjustment from one regime to another.  This is a one-off switch that may be a function of political or policy changes that are permanent. For example, this could be caused by a move from a fixed exchange rate to something more variable or another type of shift in monetary policy regime.   
-
-%The second and moris a two-regime model where there is a switch between periods of calm and crisis.  This is  a relatively simple system where the interest is in the factors that can trigger an adjustment from one regime to another.  A more sophisticated version of this is the third model were there is an evolution of the system from a position of calm, through a time when speculative positions are build and then into a crash. 
-
-%The third is a more sophistocated model that would add further dynamics. 
-
-%The relatively simple model that switches between periods of calm and crisis has been discussed by \citet{DornbuschSS}, \citet{CalvoSS} and \citet{KrugmanSS}.  The term \emph{sudden stop} emphasises the importance of the inflow of international capital that takes place before the disruptive effects of reversal.  
-
-%other references 
- %Abiad, A., 2003. Early-Warning Systems: A Survey and and a Regime-Switching Approach. IMF Working Paper No.03/32. International Monetary Fund.
- %Aziz, J., Caramazza, F., Salgado, R., 2000. Currency Crises: In Search of Common Elements. IMF Working Paper No.00/67. International Monetary Fund
- %Calvo, G., 2000. Balance-of-Payments Crises in Emerging Markets: Large Capital Inflows and Sovereign Governments, in: Krugman, P. (Ed.), Currency Crises, University of Chicago Press, Chicago, Illinois,
-% \href{http://mpra.ub.uni-muenchen.de/383/}{http://mpra.ub.uni-muenchen.de/383/}
-
-%Minsky's \emph{Financial Instability Hypothesis} (FIH) presents a model of endogenous financial crisis where a period of economic calm creates the conditions for more adventurous and risky financial behaviour that increases the fragility of the system \citet{MinskyStabilising, MinskyKeynes, MinskyFIH, MinskyLongerWaves}.  Minsky identified three phases of financing:  hedge, speculative and Ponzie.  
-
-%In the first of these the system is stable as lending is not excessive, borrowers are cautious and revenues are generally sufficient to ensure that repayments of principal and interest can be made from current income.  This period may be framed by memories of past financial crisis and the economic hardships that are associated with it.  Violent economic shocks are among the range of possible outcomes that can readily be envisaged by creditors and debtors, encouraging them to be cautious and risk-averse. 
-
-%However, in the absence of economic shocks these memories of hardship fade further into the background and all parts of the economic and financial system become more prepared to take risks.  Lending becomes more speculative; decision-making gives less weight to the possibility of extreme outcomes and put more emphasis on the immediate experience of economic calm.  The increase in lending tends to improve immediate economic conditions:  business investment and consumer spending rise if lending is broad-based; asset prices will appreciate where lending is directed towards financial investment.  The increase in economic activity that comes from this expansion in credit will feedback to improve immediate economic conditions, exacerbating the sense of well-being and undermining the arguments of those preaching more cautious behaviour.  Positive feedback effects cause a non-linear relationship between credit growth and economic activity and between credit and asset prices. 
-
-%\citet{BernankeGertler}, \citet{Bernanke1999chapter} and \citet{Azaraidis} present models where there is a non-linear relationship between  the provision of credit and the level of economic activity. \citet{BernankeGertlerAgency} show how balance sheet dynamics can affect the business cycle through a reduction in the agency cost of business investments and \citet{Balke} has a non-linear model of credit shocks.  \citet{Avdjiev2014} use a three regime Threshold-Vector-Auto regression (TVAR) to identify the non-linearities in credit market shocks.  They find that credit shocks have the greatest impact when output growth is above its long-term trend. 
-
-%While credit becomes more plentiful, household and business managers become more optimistic.  There is evidence that decision-making tends to favour outcomes that are more recent, apparent or those that that can be more easily envisaged (see for example, \citet{KTAvailability} and \citet{Schwartzavailability} for some evidence on the \emph{availability heuristic} and related literature).   % more required or footnote? 
-
-%In this way, the repayment of loans becomes increasingly dependent on the continuation of above-normal economic conditions or the appreciation of asset prices.  If this process is allowed to continue, a speculative frenzy can take hold.  Economic agents are dragged into the euphoria as households compete with the conspicuous consumption of their neighbours, businesses investment expands to increase capacity and market share in the face of booming demand, while property and financial market speculators redouble their bets.  \citet{BrunnermeierLiquidity} show how the link between the availability of credit for investors and the level of liquidity in financial markets can create \emph{liquidity spirals}.   They note that the capital of speculators can drive market liquidity, risk premia and asset prices.  The ability to be able to borrow against collateral is particularly important here.  As asset prices increase, the ability to borrow against their value raises the amount of trading credit that is available.  
-
-%The conditions are now in place for the bubble to burst in a violent reversal.  \citet{FisherBD, FisherDD} explained the way that \emph{debt-deflation} could create a ricochet between the financial and real sectors of the economy with a decline in the availability of credit exacerbating the financial strain on households and business, helping to reduce household and business spending thereby raising the quantity of bad loans and the sense of caution at financial institutions. In financial markets, credit and liquidity disappear and the decline in asset value affects the ability of institutions to raise funds.  Fire sales in illiquid markets exaggerate the fall in prices. \citet{ReinhartRogoff} reveal how credit booms help to explain the breadth and depth of post-boom recessions.  The catalyst for the collapse is difficult to pin down as the build up to the excess is fragile.  See \citet{Gorton2013} and \citet{BrunnermeierLiquidity} again for financial market effects. The economic consequences are profound.  
-
-
-\subsection{The HMM model}
-A financial crisis is not observable and is hard to define \footnote{Though \citet{CalvoSS} defines the sudden stop as a one movement of net capital flows to two standard deviations from the mean and a return to one standard deviation from the mean.}.  In situations like this where the underlying financial regimes are not observable, the Markov model is not sufficient to fully describe the process. It may nonetheless be possible to identify a probabilistic relationship between something that is observable and that which is to be defined.  In this case, the carry-trade returns are observable and are used to identify the underlying financial regime.  This is described as a \emph{Hidden Markov Model (HMM)}. 
+\citep{Elliot} use a HMM for the forward premium. They find evidence against UIP and that a three regime model fits the data most effectively.  However, they only look at the GBP-USD exchange rate and do not consider factors that may affect the transition probabilities.  We aim to analyse p;otential carry-trade profits as arising from one or more regimes.  The first step is to determine whether a one, two or three regime model is the most appropriate.  A  model with more than one regime is often called a \emph{mixture model} as the population of potential carry-trade returns are assumed to come from two or more unobserved sub-populations.  
+ In this case, the carry-trade returns are observable and are used to identify the underlying financial regime.  
 
 Figure \ref{figref:HMM2} gives an overview of the system.  The HMM has three components: $\pi, A, B$ where,
 
@@ -222,7 +133,7 @@ Figure \ref{figref:HMM2} gives an overview of the system.  The HMM has three com
 \item The response model: $P(Y_t| S_t, \theta_{resp})$ $(B)$
 \end{itemize}
 
-Where there are $n$ states or regimes; $Y_t$ are the observed carry-trade returns; and $\theta_{prior}$, $\theta_{trans}$ and  $\theta_{resp}$ are the parameters of the prior, transition and response models respectively. The unobserved financial regimes are modelled as a Markov chain that switches from a period of stability to instability.  The returns to the carry-trade are more likely to take particular characteristics according to the underlying regime.   
+There are $n$ states or regimes; $Y_t$ are the observed carry-trade returns; and $\theta_{prior}$, $\theta_{trans}$ and  $\theta_{resp}$ are the parameters of the prior, transition and response models respectively. The unobserved financial regimes are modelled as a Markov chain that switches from a period of stability to instability.  The returns to the carry-trade are more likely to take particular characteristics according to the underlying regime.   
 
 
 \begin{figure}
@@ -269,58 +180,9 @@ carry-trade\\returns};
 \caption{Two-Regime Hidden Markov Model (HMM)}
 \label{figref:HMM2}
 \end{figure}
-
-
-
-
-%\begin{landscape}
-%\begin{figure}
-%\begin{tikzpicture}
-%\tikzstyle{decision} = [circle, draw, fill = yellow!30, minimum height = 8mm, 
-%  text width = 5em, text centered];
-%\tikzstyle{line} = [draw, -stealth, thick]
-%\tikzstyle{line2} = [draw, -stealth, ultra thick]
-%\tikzstyle{line3} = [draw, -stealth, dashed, thick]
-%\tikzstyle{line4} = [draw, -stealth, dotted, thick]
-%\tikzstyle{elli} = [draw, ellipse, fill = red!50, minimum height = 8mm, 
-%  text width = 5em, text centered]
-%\tikzstyle{block} = [draw, rectangle, fill = blue!30, text width = 8em, 
-%  text centered, minimum height = 15mm, node distance = 8em]
-%\node [block](Build){Build};
-%\node [block, left of  = Build, xshift = -5em] (Caution){Caution}; 
-%\node [block, right  of = Build, xshift =5em] (Crash){Crash};
-%\node [decision, below of = Build, yshift = -10em, align = center]
-%(Build2) {High Return \\ Small Risk}; 
-%\node [decision, below of = Crash, yshift = -10em](Crash2) {Loss \\ High Risk};
-%\node [decision, below of = Caution, yshift = -10em, align = center](Caution2) 
-%{Small \\ Return \\ Average \\ Risk};
-%%arrows 
-%\path [line3] (Caution) -- (Caution2);
-%\path [line3] (Build) -- (Build2);
-%\path [line3] (Crash) -- (Crash2);
-%\path [line2] (Build) -- node [yshift = 3em] {Ponzie Lending} (Crash);
-%\path [line2] (Caution) -- node [yshift = 3em]  {Speculative Lending} (Build);
-%\path [line4] (Caution) -- (Build2);
-%\path [line4] (Caution) -- (Crash2);
-%\path [line4] (Build) -- (Crash2);
-%\path [line4] (Build) -- (Caution2);
-%\path [line4] (Crash) -- (Caution2);
-%\path [line4] (Crash) -- (Build2);
-%\node [align = left, left of = Caution, xshift = -10em] {Unobserved \\ States};
-%\node [align = left, left of = Caution2, xshift = -10em] {Observed \\ Returns};
-%%\path [line] (decision1) -| node [yshift = 0.5em, 
-%% 	xshift = 8em] {YES} (process 1);
-%\path [line3] (Crash) -- (Caution); 
-% 	xshift = -8em] {NO} (process 2);
-%\end{tikzpicture}
-%\caption{Three Regime Hidden Markov Model (HMM)}
-%\label{figref:HMM3}
-%\end{figure}
-%\end{landscape}
-
 The prior or initial state probabilities give the probability that the system starts in a particular regime; the transition model is the probability of moving from one financial state to another; the response model is the relationship between the observed carry-returns and the unobserved financial regime.  
 
-The process underlying the state transitions is assumed to be a \emph{homogeneous first-order Markov process}  Therefore, the probabilities depend only on the previous state. This is an assumption that is used to simplify the estimation of the parameters. Once a starting point is given, a most likely path can be determined. 
+The process underlying the state transitions is assumed to be a \emph{homogeneous first-order Markov process}  Therefore, the transition probabilities depend only on the previous state. This is an assumption that is used to simplify the estimation of the parameters. Once a starting point is given, a most likely path can be determined. 
 
 
 The starting point of the system is given by,
@@ -338,16 +200,8 @@ P(S_t = 1|S_{t-1}=2)  & P(S_t = 2|S_{t-1}=2)
 
   Each element of the matrix shows the probability of being in a particular regime given the previous regime. This is a first-order Markov model.  The transition probabilities depend only on the previous state. This seems to be a reasonable assumption in most circumstances.  However, to assess whether the risk of a financial crisis is increased by the length of the period of stability, it would be necessary to have a higher order Markov chain, increasing the memory of the system and the computational complexity.  An alternative method would probably be more appropriate. 
 
-In estimating the multi-regime model of financial risk, it is assumed that the carry-trade returns can be characterised as a \emph{mixture model}, where each observation of the carry-trade profit is drawn from one of either two or three distinct sub-populations.   Support for this assumption is found in \citet{Hayward2013} where carry-trade returns are found to have two distinct distributions which can be characterised as \emph{calm} and \emph{crisis}, where the two periods are identified by the level of international risk aversion through the VIX index. 
+In estimating the multi-regime model of financial risk, it is assumed that the carry-trade returns can be characterised as a \emph{mixture model}, where each observation of the carry-trade profit is drawn from one of either two or three distinct sub-populations.   Support for this assumption is found in \citet{BrunnermeierCarry} and \citet{Hayward2013} where carry-trade returns are found to have two distinct distributions which can be characterised as \emph{calm} and \emph{crisis}, where the two periods are identified by the level of international risk aversion through the VIX index. 
 
-The base model assumes that carry-trade returns have a single, normal distribution. For the other models, it is assumed that there are two or more states from which the carry-trade returns are drawn and that though the regime from which each carry-return is drawn is not immediately observable, an estimate can be made of the probability that this carry-trade return would be seen in a particular state. The financial regime determines the likelihood of observing the given carry-trade return.  If carry-trade profits can be broken into two distributions, these distributions are associated with varying levels of financial stability.  
-
-%\begin{equation}
-%y_t = \beta_0 + \sum_{i=1}^{i=n}S_{i,t} + \varepsilon_t
-%\end{equation}
-%The initial analysis assess carry-trade returns as a line function of the regime. 
-%$f(y_{it}|S_t)$ is assumed to have a multivariate normal density function. This distribution is characterised by $\theta_resp = (\mu_k, \sigma_k^2)$. 
- 
 \subsection{Estimation of the parameters}
 Estimating the HMM involves determining the most likely values for the three sets of parameters in the model.  These sets of parameters are for the initial probabilities $(\pi)$, the transitional probabilities $(A)$ and the conditional probabilities that a particular return will be seen given a particular financial state $(B)$.  
 
@@ -355,7 +209,7 @@ Estimating the HMM involves determining the most likely values for the three set
 \lambda = (\pi, A_1, B_1)
 \end{equation}
 
-This estimation is done by Maximum Likelihood. As a consequence of the Markov assumption, this is a problem that can be solved with the \emph{Expectation-Maximization (EM) algorithm}.  See \citet{dempster1977maximum} and \citet{Hamilton1989} as well as \citet{depmixS4} for full details of the procedure.  This is a numerical optimisation.  There are two steps. First \emph{the expectation step} will iterate forward from the starting point using prior estimates of the three sets of parameter values  to make an initial assessment of the probability of observing each hidden regime given the model parameters.  The prior estimates of the parameters can either be drawn randomly or they can be determined by some previous information.\footnote{In this case the parameters are drawn randomly.  However, it would be possible to make initial estimates of the response model from \citet{Hayward2013} using the estimates of the carry-trade returns that are identified.}  In this way the most likely unobserved regime for each period can be calculated. A variant of the EM algorithm called \emph{the forward-backward} or \emph{Baum-Welch} algorithm \citet{Baum1970} is used.   The Baum-Welch algorithm will find the parameters that maximize the probability of observing the sequence of carry-trade returns.  
+This estimation is done by Maximum Likelihood. As a consequence of the Markov assumption, this is a problem that can be solved with the \emph{Expectation-Maximization (EM) algorithm}.  See \citet{dempster1977maximum} and \citet{Hamilton1989} as well as \citet{depmixS4} for full details of the procedure.  This is a numerical optimisation.  There are two steps. First \emph{the expectation step} will iterate forward from the starting point using prior estimates of the three sets of parameter values  to make an initial assessment of the probability of observing each hidden regime given the model parameters.  The number of regimes is given but this will be assessed the log-likelihood ratio and other information criteria.  The prior estimates of the parameters can either be drawn randomly or they can be determined by some previous information.\footnote{In this case the parameters are drawn randomly.  However, it would be possible to make initial estimates of the response model from \citet{Hayward2013} using the estimates of the carry-trade returns that are identified.}  In this way the most likely unobserved regime for each period can be calculated. A variant of the EM algorithm called \emph{the forward-backward} or \emph{Baum-Welch} algorithm \citet{Baum1970} is used.   The Baum-Welch algorithm will find the parameters that maximize the probability of observing the sequence of carry-trade returns.  
 
 For the dependent mixture model, the joint likelihood of observation $Y_{1:T}$ and the latent state $S_{1:T}$ given the model parameters is 
 \begin{equation}
@@ -368,47 +222,6 @@ Secondly, the \emph{maximisation step} then updates the most likely values for t
 
 The estimation process then iterates back and forwards between the expectation and maximisation steps until the log-likelihood of the given parameters reaches a peak. 
 
-\begin{equation} 
-log P(Y_{1:T}S_{1:T}| \theta) = log P(S_1|\theta_1) + \sum_{t=2}^T log P(S_t|S_{t-1}, \theta_2) + \sum_{t-1}^T log P(Y_t|S_t, \theta_3)
-\end{equation}
-
-It is also necessary to iterate backwards to assess the probability that a particular sequence will be observed from a point in time to the end of the sequence.  This is based on $\beta_t(i) = P(Y_{t+1}, Y_{t+2}\dots Y_T| S_t = S_i, \lambda)$. Setting the end probability as unity and inducting backwards, 
-
-% I have been asked to put more commentary in this section. 
-\begin{equation} 
-\beta_i(t) = \sum_{j = 1}^N a_{ij}b_j(Y_{t+1})\beta_{t+1}(j)
-\end{equation}
-
-The probability of being in state $S_i$ at time t is given by 
-
-\begin{equation}
-\gamma_t(i) = \frac{\alpha_t(i)\beta_t(i)}{P(Y|\lambda)}
-\end{equation}
-
-Solving
-\begin{equation}
-q_i = \text{argmax} [\gamma_t(i)], \qquad 1 \leq i \leq N, \qquad 1 \leq t \leq T  
-\end{equation}
-will maximise the number of correct states. 
-
-%However, it is possible to chose a sequence that is not only not the most likely but also not even possible.  The optimality criteria can therefore be changed to account for this.  It could be changed to maximise the number of correct pairs or triples. It would be best to maximise $P(Q, O |\lambda)$ (the equivalent of $P(Q, O| \lambda)$.  The method that is used to find the optimal sequence path is the \emph{Viterbi Algorithm}.  This is more-or-less the same as the forward algorithm but also saves the most likely sequence to a vector and uses this to estimate the most likely sequence. 
-
-%The third problem involves adjusting the model parameters to maximise the probability of the observed sequence. It is possible to chose $\lambda = (\pi, A, B)$ so that $P(O|\lambda)$ is locally minimised using the Baum-Welch method. 
-
-%There additional notes on this optimisation process. 
-
-%The Baum-Wech procedure is then used to optimise the parameters of the model.  At each point, the forward and backward sequences are combined to compute the probability that one state will be followed by another. 
-
-%\begin{equation}
-%xi_t(i,j) = P(q_t = S_t, q_{t+1} = S_j| Y, \lambda)
-%\end{equation}
-
-%This is equivalent to 
-
-%\begin{equation}
-%\xi_t(i,j) = \frac{\alpha_t(i)a_{ij}b_j(O_{t+1}\beta_{t+1}(j)}{P(O|\lambda)}
-%\end{equation}
-
 \section{Analysis of Results}\label{secref:res}
 \subsection{Data}
 The data are a sample of potential carry-trades from investments in Emerging European countries that have been compiled from exchange rate and interest rate data for the period from January 2000 to December 2013. They are taken from the IMF International Financial Statistics (IFS).  A set of potential carry-trade profits are calculated from the exchange rate and interest rate data using a small modification of the method proposed by \citep{BrunnermeierCarry},   
@@ -417,17 +230,19 @@ The data are a sample of potential carry-trades from investments in Emerging Eur
 p_t = \frac{i^*_t - i_t}{\Delta s_t}
 \end{equation} 
 
-where $i_t^*$ is the investment currency, $i_t$ is the funding currency, $\Delta s_t$ is the change in the exchange rate and $p_t$ is the gross profit for potential carry-trades without transaction costs or adjustment for risk.  \citep{Burnside2010} constructs a similar series for a panel of 10 exchange rates and finds a very small effect from plausible transaction costs and Sharpe Ratios that compare favourably with equity markets.  One month positions are calculated.    
+where $i_t^*$ is the investment currency, $i_t$ is the funding currency, $\Delta s_t$ is the change in the exchange rate and $p_t$ is the gross profit for potential carry-trades without transaction costs or adjustment for risk.  \citep{Burnside2010} constructs a similar series for a panel of 10 exchange rates and finds a very small effect from plausible transaction costs and Sharpe Ratios that compare favourably with equity markets.  One month and three month positions are calculated. Only the one month are presented here as the initial results are very similar for each time period.     
 
 \subsection{Model Comparison}
-There are four models that are applied to each of the carry-trade-profit series. 
+Initially, there are three models that are applied to each of the carry-trade-profit series. 
 \begin{itemize}
-\item Model 1 (M1) is a standard linear model $p_t = \beta_0  + \varepsilon_t$ where $p_t$ is the carry-trade-profit series, $beta_0$ is the intercept and $\varepsilon_t$ is the variation around that level.  In other words, it provides a provides a mean for the carry-trade-profit for the whole series and a calculation for how the series varies around that level. 
-\item Model 2 (M2) standard linear model with two regimes $p_t = \beta_0 + \beta_1 S_n + \varepsilon, \quad n = 1, 2$ there is a linear model with two regimes, therefore there is an average value and a standard deviation for each of the two regimes. 
-\item Model 3 (M4) standard linear model with three regimes $p_t = \beta_0 + \beta_1 S_n + \varepsilon, \quad n = 1, 2, 3$ average and standard deviations are retried for three different regimes. 
+\item Model 1 (M1) is a standard linear model $p_t = \beta_0  + \varepsilon_t$ where $p_t$ is the carry-trade-profit series, $\beta_0$ is the intercept and $\varepsilon_t$ is the variation around that level.  It provides a provides a mean and standard deviation for the potential carry-trade-profit for the whole series
+\item Model 2 (M2) standard linear model with two regimes $p_t = \beta_0 + \beta_1 S_n + \varepsilon, \quad n = 1, 2$ therefore a mean and a standard deviation of the potential carry-trade profits for each of the two regimes is produced. 
+\item Model 3 (M3) standard linear model with three regimes $p_t = \beta_0 + \beta_1 S_n + \varepsilon, \quad n = 1, 2, 3$ average and standard deviations are retried for three different regimes. 
 \end{itemize}
 
-  The models are compared using log-likelihood ratios adjusted for the number of parameters estimated and the Akaike Information Criterion (AIC).  Table \ref{tabref:comptab2} summarises the performance of the three basic models using the Akaike Information Criterion and the log-likelihood ratio test.  The models here are tested using the EUR as the funding currency.  Results for other funding currencies are very similar and are therefore not reported.  A comparison of the two-regime response models for different funding units is presented in Table \ref{tabref:2stateresponse} 
+  The models are compared using log-likelihood ratios adjusted for the number of parameters estimated and the Akaike Information Criterion (AIC).  Table \ref{tabref:comptab2} summarises the performance of the three basic models using the Akaike Information Criterion and the log-likelihood ratio test.  The models here are tested using the EUR as the funding currency.  Results for other funding currencies are very similar and are therefore not reported.  A comparison of the mean and variance for the two-regime response models for different funding units is presented in Table \ref{tabref:2stateresponse}. 
+
+ 
 
 \begin{landscape}
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
@@ -453,11 +268,15 @@ There are four models that are applied to each of the carry-trade-profit series.
 \end{table} 
 \end{landscape}
 
-The two-regime model is superior to the base model with one regime for all countries.  For the Czech Republic, there is ambiguity.  The AIC is about equal for the two models and the ratio test is 10.14, giving a $\chi^2$ p-value of 0.0714. These two cases will be investigated further below. Czech may be better assessed with just a single regime. For the other countries the two-regime model is superior.  
+Table \ref{tabref:comptab2} compares the three fundamental models with 1, 2 and 3 regimes respectively.  The aim is to find the number of regimes that provide the best fit for each of the potential carry-trade profit series.  The comparison is based on two criteria: the Akaiki Information Criteia and the Loglikelihood ratio.  In each case the test is based on the requirement that the log-likelihood ratio improve by more than would be expected with the increase in the number of explanatory variables. 
+ 
+The first three columns of Table \ref{tabref:comptab2} report the AIC for each of the three base models respectively. The next six columns show the Loglikelihood ratio test statistic and the p-value for M1 to M2, M1 to M3 and M2 to M3. The null is that the more sophisticated model (two regime rather than one) does not improve the explanatory power. The final column combines the two tests to present the model that appears to fit the data most effectively. 
 
-An analysis of the response for the two-regimes model (see Table \ref{tabref:2stateresponse} is rather encouraging as two periods that could be termed stable and unstable can be clearly identified. During the period of stability, positive returns from the carry-trade are expected while the crash experiences losses.  In all cases, the standard deviation of the crash regime is much larger than that of the period of calm.  This is consistent with the idea that crash risk is part of the explanation for the apparent breakdown in UIP.  
+The two-regime model is superior to the base model with one regime for all countries.  For the Czech Republic there is ambiguity.  The AIC is about equal for the two models and the ratio test is 10.14, giving a $\chi^2$ p-value of 0.0714. These two cases will be investigated further below. Czech may be better assessed with just a single regime. For the other countries the two-regime model is superior.  
 
-There are two other things to note.  First, the funding currency that is selected does not make much difference.   The average performance of stability and crash regimes across funding currencies (final column of Table \ref{tabref:2stateresponse}) does not differ significantly.  The rest of the results that are presented are based on EUR-funding.  Secondly, the mean and standard deviation for those countries where the Information criteria and log-likelihoods raised doubt about the two-regime also suggest that a one-regime model may be more appropriate,   For the Czech Republic, however, there remains ambiguity and uncertainty. Outside of the JPY funding, there are two clear regimes identified by the mean and standard deviations. 
+Table \ref{tabref:2stateresponse} presents the estimated response (mean and standard deviation) for each of the two-regimes model. The results are encouraging for the hypothesis that potential carry-trade profits are best modelled as two regimes where one of them is considered the period of calm where carry positioins are build and the other is considered the period of crisis where carry-trade positions will be cut back.  In the first case, the the ratio $p_t$ should be above one.  This is consistent with the estimated value of $\beta_1$ is Equation \ref{eqref2} being below one.  This should also be expected to have smaller standard deviation and les risk.  The crisis period should have a mean of less than one and a larger standard deviation to reflect the increaseed risk that is taken in this regime.  This constraint is not impose but emerges from the data in all cases.
+
+There are two other things to note.  First, the funding currency that is selected does not make much difference.   The average performance of stability and crash regimes across funding currencies (final column of Table \ref{tabref:2stateresponse}) does not differ significantly.  The rest of the results that are presented are based on EUR-funding.  Secondly, the results for the Czech Republic support the view that one regime may be a better way to model the data. Outside of the JPY funding, there are two clear regimes identified by the mean and standard deviations. 
 
 \begin{landscape}
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
@@ -502,32 +321,29 @@ This table outlines the linear response for Model Two (M2) for each of the regim
 \end{table}
 \end{landscape}
 
-\subsection{Risk aversion and financial stability}
-There are three exogenous forces identified in the literature that may influence financial stability:  US monetary policy, the level of international risk aversion and the provision of financial market liquidity.  US monetary policy is measured with the US short term interest rate (3m LIBOR),  international risk aversion is measured with the VIX index, market liquidity is measured by using the TED spread as the difference between the tbill rate and the rate that banks can borrow.   
-\subsection{Determinants of exchange rate crisis}
-Unwinding of carry-trades and exchange rate crisis can be caused by domestic or international factors.  Two exogenous international international factors that may increase the risk of a currency crisis have been identified as international risk aversion and changes in US interest rates. Flight-to-Safety (FTS) is the term used to describe capital flows towards international financial centres and relatively safe assets, \citet{FTS} discover that FTS are relatively rare events. Their study of of 23 countries finds that most of the events are country specific. They characterise only 25\% of the events as "global", which means that they are associated with an increase in the VIX index and the TED spread.\footnote{The VIX is an index of implied volatility on options from the S\&P 500 index.  It is commonly used as a measure of international risk aversion as it signals increased demand by fund managers for option protection of their equity portfolio.  See \citet{VIX}, \citet{GoldmanVol} and \citet{Diamond} for fuller details.The TED spread is the spread between the treasury bill and the euro-dollar rate.  It is used as a market measure of perceived credit risk of financial institutions as it records the risk premium that investors require to lend to banks relative to the risk-free rate.}   
+\section{Exogenous influences on regime switching probabilities}
+A sharp reversal of international capital that causs an exchange rate crisis is called a \emph{Sudden stop}. see \citet{DornbuschSS}, \citet{CalvoSS} and \citet{KrugmanSS}. Calvo  defines the sudden stop as a one movement of net capital flows to two standard deviations from the mean and a return to one standard deviation from the mean.}.   There are two  exogenous forces identified in the literature that may influence financial stability:  the level of international risk aversion and US interest rates.
 
-Consistent with the evidence of an interplay between monetary policy and international risk, and between domestic and international factors, \citet{Ahmed2014} run a multivariate panel of gross and net capital flows before and after the financial crisis, showing that economic growth, interest rate differentials and the level of global risk appetite are all important determinants of private capital flows to emerging markets.  They also suggest that capital flows have been more sensitive to interest rate differentials since the financial crisis of 2007-08. There is also some evidence that quantitative easing has had some effect on capital flows. 
+Exchange rate crisis can be caused by domestic or international factors.  \citet{FTS} find  that exogenous factors that cause sudden stops and flight-to-saftey of \emph{hard} currencies  are relatively rare events. Their study of of 23 countries finds that most of the events are country specific. They characterise only 25\% of the events as \emph{global}.
+
+Consistent with the evidence of an interplay between monetary policy and international risk, and between domestic and international factors, \citet{Ahmed2014} show that economic growth, interest rate differentials and the level of global risk appetite are all important determinants of private capital flows to emerging markets.  They also suggest that capital flows have been more sensitive to interest rate differentials since the financial crisis of 2007-08. There is also some evidence that US quantitative easing has had some effect on capital flows. 
 
 \citet{IMFLatam} use a panel vector autoregression (VAR) method to identify the influence of US monetary policy since 1990 on capital flows to 38 emerging economies, finding evidence that the end to Federal Reserve purchase of government bonds under the quantitative easing programme, while not necessarily leading to capital outflow, could generate \emph{new risk premium shocks} with investors requiring a higher rate of return and therefore lower asset prices.
 
-While the origin of international financial crisis may be international the effects may vary by asset class and country in a variety of ways.  Using daily data on exchange rates, stock prices and emerging market bonds, \citet{Tapering} find that exchange rates and bonds are less affected by international liquidity shocks than stock markets.  They also find that stronger domestic macroeconomic fundamentals, more prudent financial policy and deeper financial markets provide some insulation against US monetary policy shocks.
-
-The flow of international bank lending is more difficult to measure but seems to host most of the speculative activity.  One specific part of the range of international capital flows that has attracted particular attention because it is associated with speculation is the \emph{carry-trade}.  This is the attempt to take advantage of the break down in \emph{uncovered interest parity} (UIP).\footnote{See \citet{fama1993common}, \citet{FrootFrankelFDB} and \citet{Hayward2013} for an overview of the failure of UIP.  This provides a rationale for borrowing low interest rate currencies and investing in units with a higher return.} Most of the explanation of UIP revolve around the idea that what is supposed to be an excess return is actually a return for taking \emph{crash-risk}.  This is the small probability of a large, probably fatal, loss. This is the equivalent of the sudden-stop for the investor. The attempt to exit the investment in the emerging market causes the fall in the value of the investment currency that is to be avoided. 
-
-\citet{BrunnermeierCarry} analyse a sample of carry-trades and find that the returns are characterised by negative skew and a larger than normal risk of extreme loss; \citet{JurekCrash} assesses the cost of purchasing option protection against crash-risk and shows that the price of out-of-the-money puts covers a proportion of the excess returns that seem to be generated by the carry-trade; \citet{Hayward2013} compares carry returns in period of stable and periods of crisis (as measured by elevated levels of the VIX index).  Carry-returns are negative, skewed and fat-tailed when international risk aversion is heightened, but a more normal, positive return when conditions are stable. 
-
-\citet{NYFedtaper} consider the effect of changes in global risk aversion on the carry-trade.  They find that the initial signal from the US central bank in Fed Chairman Bernanke's May 22 2013 testimony to Congress coincide with an increase in global risk aversion which affected global asset prices. %They use the approach presented by \citet{MertensSVAR} to estimate the effect of policy changes by using a two-stage least squares appraoch to identify the SVAR model of asset price changes.  
+citet{NYFedtaper} consider the effect of changes in global risk aversion on the carry-trade.  They find that the initial signal from the US central bank in Fed Chairman Bernanke's May 22 2013 testimony to Congress coincide with an increase in global risk aversion which affected global asset prices. %They use the approach presented by \citet{MertensSVAR} to estimate the effect of policy changes by using a two-stage least squares appraoch to identify the SVAR model of asset price changes.  
 By identifying the performance of exchange rates without a change in risk aversion, they suggest that nearly half of the depreciation of a basket of 45 carry-trade currencies with the largest one-month interest rate relative to a basket of the US dollar and other equally low rate currencies is explained by this increased risk aversion. Nearly all the decline in Emerging market equities is attributable to the increase in risk aversion.
 
-Each of these forces could affect financial stability and therefore the carry-trade in two main ways:  they could have a direct linear influence or they may influence the probability of switching from one regime to another.  In the first case it could be added as an explanatory variable to the response model. For example, 
+\subsection{Additional Models}
+Two exogenous forces are to be tested here: international risk aversion and US interest rates.  Risk aversion is measured with the VIX index while US interest rate are measured as 3-month deposit\footnote{The VIX is an index of implied volatility on options from the S\&P 500 index.  It is commonly used as a measure of international risk aversion as it signals increased demand by fund managers for option protection of their equity portfolio.  See \citet{VIX}, \citet{GoldmanVol} and \citet{Diamond} for fuller details.}.   
+
+Each of these external forces could affect foreign exchange conditions and the carry-trade in two ways:  they could have a direct linear influence or they may influence the probability of switching from one regime to another.  In the first case it could be added as an explanatory variable to the simple linear response model. For example, 
 
 \begin{equation}
 \label{eqref:vix}
 y_t = \beta_0 + \beta_1 Z_t + \varepsilon
 \end{equation}
 
-where $y_t$ is the carry-trade return and $Z_t$ is the exogenous influence on financial stability. 
+where $y_t$ is the carry-trade return and $Z_t$ is the exogenous influence on financial stability (either international risk aversion or US interest rates). This is Model Four with two versions a and b to signify the effect of risk aversion and US interest rates respectively. . 
 
 In the second case, the exogenous force is used to explain the transition probabilities using a multinomial logistic regression. For the transition model (A), 
 
@@ -541,6 +357,8 @@ where $a_{ij}(t)$ is the probability that the system will be on state $i$ at tim
 log(a_{t,n = 2})/ a_{t-1, n = 1} = \beta_{0} +\beta_1 z_t 
 \end{equation}
 
+%This section on VIX and US interst rates must describe the data.
+
 State 1 is the baseline category so coefficients are set to zero for that state and the model estimates the relationship between the covariate and probability of switching to the other state. 
 
 The logistic function is 
@@ -550,6 +368,8 @@ F(z)  = \frac{1}{1 + e^{-(\beta_0 + \beta_1 z)}}
 \end{equation}
  
 giving a probability between zero and one of being in the particular state. \citet[pp.174-75]{agresti2014categorical}. 
+
+This is model 5 (M5). Again, there are two version of this model (a and b) that will denote whether the probability of switching from one state to the other is conditional on risk aversion or US interst rates. 
 
 \begin{landscape}
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
@@ -582,9 +402,9 @@ HUF & -404.69 & -402.70 & -416.94 & -419.50 & 28.80 & 0.0001 & 6.56 & 0.0377 & -
 \end{table}
 \end{landscape}
 
-Table \ref{tabref:vixcov} compares models using the VIX as a measure of international risk aversion that will affect the probability of moving from one regime to another.   Model 1 is the base model with one state and a linear relationship (M1); Model Four (M4) adds the VIX index as a response variable like Equation \ref{eqref:vix}; Model Two (M2) is the two state model; Model Five (M5) is the two-regime model with the VIX index as a logistic covariate of the transition matrix.  This means that Equation \ref{eqref:zcov} is used to estimate the probability of transferring between regimes, where $z$ is the level of the VIX index.  The AIC and log-likelihood ratios indicate that for every country Model 5 (M5) with the VIX index as an influence on the transition matrix is a better model than Model Four (M4) where the VIX directly influences carry-trade returns.  Indeed, the VIX does not seem to have a significant effect on carry-trade returns.  Column 9 gives the coefficient $\beta_1$ from a regression of Equation \ref{eqref:vix} and column 10 provides the p-value of the null hypothesis that the coefficient is equal to zero. 
+Table \ref{tabref:vixcov} compares models M4a and M5a against models M1 and M2.  Models 4a and 5a use the VIX as a measure of international risk aversion as with an explanatory variable (M4a Equation \ref{eqref:vix}) or as conditioning for the transition probability matrix (M5a Equation \ref{eqref:zcov}).  Model 1 is the base model with one state and a linear relationship (M1). There are three criteria used to judge the preferred model:the AIC, log-likelihood ratios and simple linear regression of the additioanl exogenous explanatory variable. Columns 1 to 4 report the AIC for the M1, M4a, M2 and M5a models respectively.  Columns 5 and 6 report respectively the log likelihood ratio test statistic and the p-value for Model 5 relative to Model 4a; Columns 7 and 8 do the same for the comparison of Model 5a over Model 2.  Columns 9 and 10 report the t-statistic of a line regression of the potential carry-trade profits on a constant and the VIX index and the p-value.  Column 11 idenifies the model that is most appropraite for each series according to these criteria.
 
-Columns 7 and 8 assess whether the addition of the VIX as an explanatory variable probability transition matrix as assessed in Model Five (M5) is superior to the standard two regime model (M2).  The log-likelihood ratio for this comparison is in Column 7 of the table and the $\chi^2$ p-value is in column 8.  For Russia and Turkey, it appears that the level of international risk aversion is best used explaining the probability of switching from one regime to another rather than as an explanation of the level of carry-trade profits, it also appears that the simple two-regime model is superior. 
+Model 5 is the preferred model in most cases.  For Poland, there is a litttle undertainty about whether MOdel 2 or Model 5 is better.  For Russia and Turkey, while it appears that the level of international risk aversion is best used explaining the probability of switching from one regime to another rather than as an explanation of the level of carry-trade profits, it also appears that the simple two-regime model is superior. 
 
 %\begin{landscape}
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
@@ -615,8 +435,9 @@ Columns 7 and 8 assess whether the addition of the VIX as an explanatory variabl
 \end{table}
 %\end{landscape}
 
-The use of US interest rates and the TED spread is less effective in understanding the way that the conditional probability of switching from a state of calm to one of crisis will evolve.  In a number of cases, the probability of switching to a crisis falls as the US interest rate rises or as the spread between safe (tbill) and risky (euro-dollar) rises. This is likely to be a function of the limited nature of the data. The data only go back to January 2000.  Therefore, the figures do not really include any tightening of US monetary conditions.  The major change in US interest rates has been the emergency cuts that were associated with the Global Financial Crisis (GFC). As such, it appears that there is some reverse-causality being picked up: the international financial shock that affected many of the nations covered here caused a reduction in US interest rates around the time that there had been an increase risk of financial shock (particularly given the fact that data frequency are monthly). 
-%\begin{landscape}
+Table \ref{tabref:vixtranprob} provides more detail about Model 5.  The changes in the VIX index are normalised to one standard deviation and the base probability of moving from the calm regime when there there is a good chance of achieving carry-trade profits to one of foreign exchange crisis is recorded at various levels of international risk aversion.  The average level of international risk aversion (as recored by the VIX index) is the central column labelled \emph{Mean}.  The probabiliy of switching frm a regime of calm to one of crisis is then recorded for one, two and three standard deviations above and below this mean.  These are in columns 6, 7 and 8, and 2, 3 and 4 respectively.  For example, for HUF, there is an eight percent  probability of switching from a period of calm to a period of crisis. This increases to just under 24 percent when the VIX is one standard deviation above the mean and reaches nearly eighty percent at three standard deviations above the mean. 
+
+\begin{landscape}
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
 % Fri Aug 22 14:23:21 2014
 \begin{table}[t]
@@ -654,9 +475,10 @@ Table \ref{tabref:vixcov} gives the best overview of the effect of international
 %\end{figure}
 
 \section{Conclusions}\label{secred:con}
-We have shown that a financial crisis that is caused by a \emph{sudden-stop} can be modelled as a two-regime system and we have estimated the probability that the system will switch from calm to crisis.  The two regimes are identified by the performance of a carry-trade.  When this is successful and profits are being generated, the system is in a state of calm and investors are able to take advantage of the break-down in uncovered-interest-parity (UIP).  However, when the carry-trade starts to lose money as a result of the depreciation of the investment currency relative to the funding, a self-fulfilling crisis is invoked by the attempt to exit the trade.  
+Many studies look at the carry-trade in a mechanical way to borrow the low interst rate currency and invest in that which has a higher r (see for example \citep{Jurek2} and \citet{Elliot}.  See for example \citep{Jurek2} and \citet{Elliot}.  However, in general, there much more likely to be a carry-trade where there is a substantial and sustained interest rate differential. This means that it is more likely to direct funds to emerging economies.  The exchange rates of developing economies are much more likely to suffer liquidity shocks and major depreciations.  The crash risk here likely to be more pronounced and threatening than that of developed economy exchange rates. 
+%We have shown that a financial crisis that is caused by a \emph{sudden-stop} can be modelled as a two-regime system and we have estimated the probability that the system will switch from calm to crisis.  The two regimes are identified by the performance of a carry-trade.  When this is successful and profits are being generated, the system is in a state of calm and investors are able to take advantage of the break-down in uncovered-interest-parity (UIP).  However, when the carry-trade starts to lose money as a result of the depreciation of the investment currency relative to the funding, a self-fulfilling crisis is invoked by the attempt to exit the trade.  
 
-In most of the cases studied here, the two-regime model is superior to the three-regime or one-regime model. However, the modelling is affected by the relatively short time span that has existed since the breakup of the Soviet Union and the establishment of independent countries and currencies.  The attempt to identify how international financial factors affect the probability that a country will switch from a state of calm to one of financial crisis is hindered by the lack of data that this short time span ensures.  While the measurement used for international risk aversion (the VIX index) has sufficient volatility to allow identification, the use of US interest rates and measures of banking system vulnerability are less successful.  It appears that in these cases, there are insufficient examples of rising interest rates or higher banking risk premia to allow relationships to be successfully identified.  
+%In most of the cases studied here, the two-regime model is superior to the three-regime or one-regime model. However, the modelling is affected by the relatively short time span that has existed since the breakup of the Soviet Union and the establishment of independent countries and currencies.  The attempt to identify how international financial factors affect the probability that a country will switch from a state of calm to one of financial crisis is hindered by the lack of data that this short time span ensures.  While the measurement used for international risk aversion (the VIX index) has sufficient volatility to allow identification, the use of US interest rates and measures of banking system vulnerability are less successful.  It appears that in these cases, there are insufficient examples of rising interest rates or higher banking risk premia to allow relationships to be successfully identified.  
 
 
 %Maximise $P(O \lambda)$, where $\lambda = (\pi, A, B)$.  The probability of observing sequence O for a given set of parameters.  The easiest way of doing this is to calculate the probability for each of the possible state sequences.  Consider one such sequence, $Q = q_1 q_2 \dots q_T$, the probability of the observed sequence for the state sequence Q is $P(O|Q \lambda) = \prod_{t = 1}^T P(O_t|q_t, \lambda)$.  If the observations are independent, this probability $P(O|Q \lambda)$ is equal to the probability of observing the outcome given the state, $b_{q_1}(O_1)\dot b_{q_2} (O_2) \dots b_{q_T}(O_T)$.  At each step, the forward variable $\alpha_t(i) = P(O_1 O_2 \dots O_t, q_t = S_i|\lambda)$ is calculated as the product of the sum of all the probability of each state for the previous period and the probability of transition from each of those states to the current as well as the product of being in this state given the observable. $\alpha_t(i)$ is the joint probability that observation is seen and state is achieved. 
