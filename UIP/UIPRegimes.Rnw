@@ -385,13 +385,14 @@ This table outlines the linear response for Model Two (M2) for each of the regim
 %\end{table}
   \end{sidewaystable}
 
-It is possible to look at the evolution of most likely regimes over time.  Figure \ref{figref:huf} shows the potential carry-trade profits and the two regimes for Poland.  It is clear that the Global Financial Crisis is the main regime change that takes place.  However, there are a number of smaller changes that take place. 
-%\begin{figure}[!h]
-%\centering
-%\includegraphics[scale = .50]{../../Figures/HUFEUR.pdf}
-%\caption{HUF Carry-trade probabilities}
-%\label{figref:huf}
-%\end{figure}
+It is possible to look at the evolution of most likely regimes over time.  Figure \ref{figref:pln} shows the potential carry-trade profits and the two regimes for Poland.  It is clear that the Global Financial Crisis is the main regime change that takes place.  However, there are a number of smaller changes that take place. 
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale = .50]{../Figures/PLNEUR2.pdf}
+\caption{PLN Carry-trade probabilities}
+\label{figref:pln}
+\end{figure}
 
 \section{Exogenous influences on regime switching probabilities}
 Periods of foreign exchange crisis are generally referred to as \emph{sudden stops}.  See \citet{DornbuschSS}, \citet{CalvoSS} and \citet{KrugmanSS} for more details. Calvo  defines the sudden stop as net capital flows moving two standard deviations below their mean level and subsequently returning to within one standard deviation of that point. There are a number of factors that may influence capital flows and exchange rate stability. Exchange rate crisis can be caused by domestic or international factors.  \citet{FTS} find  that exogenous factors that cause sudden stops and flight-to-safety of \emph{hard} currencies  are relatively rare events. Their study of of 23 countries finds that most of the events are country specific. They characterise only 25\% of the events as \emph{global}. However, it is the exogenous international effects that are the focus here. 
