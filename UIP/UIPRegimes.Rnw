@@ -1,4 +1,5 @@
 \documentclass[12pt, a4paper, oneside]{article} % Paper size, default font size and one-sided paper
+\usepackage{float}
 %\usepackage[dcucite]{harvard}
 \usepackage{tikz}
 %\usetikzlibrary{shapes, shadows, arrows}
@@ -32,7 +33,7 @@ This paper adds to evidence that the forward-discount puzzle is at least partly 
 \end{abstract}
 
 \section{Introduction}
-The common observation that exchange rate changes deviate systematically from the forward rate so that excess returns are available from borrowing low interest rate or funding currency for an investment in higher rate units or the investment currency is called the forward discount puzzle.   This paper uses a two-regime model to understand more about crash-risk by assessing UIP deviations in a range of CEE countries and by using a Hidden Markov Model (HMM) (HMM) (HMM) (HMM) (HMM) (HMM) (HMM) (HMM) to divide the deviations into two categories: those where the high-yield currency does not depreciate (or may even appreciate) against the lower interest rate unit and those where the high-yield currency falls much more than would be anticipated by UIP.  In the first case, the conditions are favourable for inflow of capital to the higher interest rate unit.  It would be possible to make profitable carry-trades where funds are borrowed in the lower rate unit currency, transferred into the currency with the higher interest rate for the same period as the borrowing and then exchange back and repaid at the end of the contract. These are likely to be times of relative calm in the foreign exchange market. In the second case, these carry-trades would be more likely to lose money and a sharp depreciation of the high yield currency would be associated with exchange rate crisis. 
+The common observation that exchange rate changes deviate systematically from the forward rate so that excess returns are available from borrowing low interest rate or funding currency for an investment in higher rate units or the investment currency is called the forward discount puzzle.   This paper uses a two-regime model to understand more about crash-risk by assessing UIP deviations in a range of CEE countries and by using a Hidden Markov Model (HMM) to divide the deviations into two categories: those where the high-yield currency does not depreciate (or may even appreciate) against the lower interest rate unit and those where the high-yield currency falls much more than would be anticipated by UIP.  In the first case, the conditions are favourable for inflow of capital to the higher interest rate unit.  It would be possible to make profitable carry-trades where funds are borrowed in the lower rate unit currency, transferred into the currency with the higher interest rate for the same period as the borrowing and then exchange back and repaid at the end of the contract. These are likely to be times of relative calm in the foreign exchange market. In the second case, these carry-trades would be more likely to lose money and a sharp depreciation of the high yield currency would be associated with exchange rate crisis. 
 
 The first regime might be called the period of 'calm' and is a much more common occurrence. The second period is rare and could be called 'crisis'.  We use a Hidden Markov Model to identify the probability of switching from a calm regime to one of crisis for each country and also assess the way that these probabilities are affected by exogenous events such as international risk aversion and changes in US interest rates.  These exogenous factors increase the risk of experiencing an exchange rate crisis and can be used to compare how vulnerable each country is to these type of external shocks. 
 
@@ -91,7 +92,7 @@ where $\Delta s_{t + j}$ is the change in the log of the exchange rate between p
 However, this standard test of UIP consistently finds that estimates of  $\beta_1$ are less than one.  A meta-study by Froot and Thaler found that the 75 published estimates had an average value of -0.88 for $\beta_1$ \citet*{FrootUIP}.   An investment that takes advantage of this deviation by borrowing the low interest rate funding currency for a deposit in the higher interest rate investment currency is called \emph{the carry-trade}.  The evidence that the carry-trade is profitable is consistent with the forward discount puzzle.  
 %need further and more recent evidence here. this may be the place for the evidence and an expansion of the next paragraph.  
 
-As UIP is a key component of international financial theory, there has been a tremendous effort to understand this \emph{puzzle}.  See \citet{FrootUIP}, \citet{Hodrick1987},  \citet{Engel1996} and \citet{EngelHandbook} for a summary of the vast literature in this area. ASome suggest that it is the lack of stationarity in the series that causes estimation problems \citet{Engel1996} and \citet{Roll2000}; others argue that this is really an issue for developed rather than developing nations \citet{Bansal1999};  tests using 10 year bond yields indicate that the puzzle applies to the short-term but not long-term rates\citet{Chinn2004}.  It may also be associated with factors like heterogeneous market agents (reference), asymmetry of information (reference) or peso problems. There is also a wide ranging discussion over whether, once the assumption of risk-neutrality is abandoned, the apparent breakdown is the result of failing to correctly account for this risk. The last of these is explored here. 
+As UIP is a key component of international financial theory, there has been a tremendous effort to understand this \emph{puzzle}.  See \citet{FrootUIP}, \citet{Hodrick1987},  \citet{Engel1996} and \citet{EngelHandbook} for a summary of the vast literature in this area. Some suggest that it is the lack of stationarity in the series that causes estimation problems \citet{Engel1996} and \citet{Roll2000}; others argue that this is really an issue for developed rather than developing nations \citet{Bansal1999};  tests using 10 year bond yields indicate that the puzzle applies to the short-term but not long-term rates\citet{Chinn2004}.  It may also be associated with factors like heterogeneous market agents (reference), asymmetry of information (reference) or peso problems. There is also a wide ranging discussion over whether, once the assumption of risk-neutrality is abandoned, the apparent breakdown is the result of failing to correctly account for this risk. The last of these is explored here. 
 
 \subsection{Risk premium}
 If investors are risk averse and form their expectations rationally, the negative estimate for $\beta$ could mean that investors required additional return for holding foreign currency assets and Equation \ref{eq:uip2} can be augmented with a term that would account for this \emph{risk premium.}  
@@ -225,28 +226,29 @@ The estimation process then iterates back and forwards between the expectation a
 
 \section{Analysis of Results}\label{secref:res}
 \subsection{Data}
-The data are a sample of potential carry-trades from investments in Emerging European countries that have been compiled from exchange rate and interest rate data for the period from January 2000 to December 2013. The exchange rates that are assessed are presented in Table \tabref{exrate}.  The data are taken from the IMF International Financial Statistics (IFS).  
-\begin{table}[]
+The data are a sample of potential carry-trades from investments in Emerging European countries that have been compiled from exchange rate and interest rate data for the period from January 2000 to December 2013. The exchange rates that are assessed are presented in Table \ref{tabref:exrate}.  The data are taken from the IMF International Financial Statistics (IFS).  
+
+\begin{table}[t]
 \begin{threeparttable}
 \centering
 \begin{tabular}{lrr}
   \hline
-Country & ISO Code & Exchange rate arrangement
+Country & ISO Code & Exchange rate arrangement\\
   \hline
 Bulgaria & BGN & Currency board\\
 Czech Republic & CZK & Float\\
 Croatia & HRK & Fixed peg\\
 Hungary & HUF & Float \\
 Poland & PLN & Float\\
-Roumania & RON & Managed float\\
+Romania & RON & Managed float\\
 Russia & RUB & Fixed peg\\
-Ukrain & UAH & Managed float\\
+Ukraine & UAH & Managed float\\
 Turkey & TRY & Float\\
    \hline
 \end{tabular}
 \begin{tablenotes}
 \small
-\item The table shows the exchange rates that are considered with the ISO codes that are used from this point onwards and the exchange rate regime.  The exchange rate regime is taken from the IMF Classification of Exchange Rate Arrangements and Monetary Policy Frameworks \citet{IMFregime}. In many cases there are changes to the arrangements, when that happens the summary here reflects the stance at the end of the period.  For more details see \citet{Hayward2-14}.  
+\item The table shows the exchange rates that are considered with the ISO codes that are used from this point onwards and the exchange rate regime.  The exchange rate regime is taken from the IMF Classification of Exchange Rate Arrangements and Monetary Policy Frameworks \citet{IMFregime}. In many cases there are changes to the arrangements, when that happens the summary here reflects the stance at the end of the period.  For more details see \citet{Hayward2014}.  
 \end{tablenotes}
 \caption{Countries, ISO codes and exchange rate arrangements}
 \label{tabref:exrate}
@@ -261,14 +263,15 @@ p_t = \frac{i^*_t - i_t}{\Delta s_t}
 
 where $i_t^*$ is the investment currency, $i_t$ is the funding currency, $\Delta s_t$ is the change in the exchange rate and $p_t$ is the gross profit for potential carry-trades without transaction costs or adjustment for risk.  \citet{Burnside2010} constructs a similar series for a panel of 10 exchange rates and finds a very small effect from plausible transaction costs and Sharpe Ratios that compare favourably with equity markets.  One month and three month positions are calculated. Only the one month are presented as the results do not differ significantly. 
 
-Table \ref{tabref:des} shows the descriptive statistics for the potential carry-trade profit series. 
+Table \ref{tabref:desst} shows the descriptive statistics for the potential carry-trade profit series. 
 
+\begin{sidewaystable}[p]
 % latex table generated in R 3.2.3 by xtable 1.8-2 package
 % Fri Jun  2 11:56:55 2017
-\begin{table}[]
+%\begin{table}[t]
 \begin{threeparttable}
 \centering
-\begin{tabular}{rrrrrrrrrrrr}
+\begin{tabular}{lrrrrrrrrrrr}
   \hline
  & HUF & PLN & CZK & RON & RUB & BGN & NOK & ISK & UAH & HRK & TRY \\ 
   \hline
@@ -292,7 +295,8 @@ Number & 167.00 & 167.00 & 167.00 & 167.00 & 167.00 & 167.00 & 167.00 & 167.00 &
 \caption{Descriptive statistics of potential carry-trade profits}
 \label{tabref:desst}
 \end{threeparttable}
-\end{table}
+%\end{table}
+\end{sidewaystable}
 
 \subsection{Model Comparison}
 Initially, there are three models that are applied to each of the carry-trade-profit series. 
@@ -304,10 +308,10 @@ Initially, there are three models that are applied to each of the carry-trade-pr
 
 The models are compared using the Akaike Information Criterion (AIC) and the log-likelihood ratios adjusted for the number of parameters estimated.  Table \ref{tabref:comptab2} summarises the performance of the three base models using these criteria. The models here are tested using the EUR as the funding currency.  Results for other funding currencies are very similar and are therefore not reported.  A comparison of the mean and variance for the two-regime response models for different funding units is presented in Table \ref{tabref:2stateresponse}. 
 
-\begin{landscape}
+\begin{sidewaystable}[p]
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
 % Mon Aug 18 09:06:42 2014
-\begin{table}[ht]
+%\begin{table}[ht]
 \begin{threeparttable}
 \centering
 \begin{tabular}{l|rrrrrrrrrr}
@@ -325,8 +329,8 @@ The models are compared using the Akaike Information Criterion (AIC) and the log
 \caption{Comparison of models}
 \label{tabref:comptab2}
 \end{threeparttable}
-\end{table} 
-\end{landscape}
+%\end{table} 
+\end{sidewaystable}
 
 Table \ref{tabref:comptab2} compares the three fundamental models with 1, 2 and 3 regimes respectively.  The aim is to find the number of regimes that provide the best fit for each of the potential carry-trade profit series for each country.  The comparison is based on two criteria: the Akaiki Information Criteria and the Log-likelihood ratio.  In each case the test is based on the requirement that the log-likelihood ratio improve by more than would be expected with the increase in the number of explanatory variables. 
  
@@ -338,10 +342,10 @@ Table \ref{tabref:2stateresponse} presents the estimated response (mean and stan
 
 There are two other things to note.  First, the funding currency that is selected does not make much difference.   The average performance of stability and crash regimes across funding currencies (final column of Table \ref{tabref:2stateresponse}) does not change much from the individual currencies. As a consequence, the rest of the results that are presented are based on EUR-funding.  Secondly, the results for the Czech Republic support the view that one regime may be a better way to model the data. Though two regimes can be estimated, the differences between the two does not appear to be as clear as it does for the other currencies.
 
-\begin{landscape}
+\begin{sidewaystable}[p]
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
 % Sat Jul 12 08:23:47 2014
-\begin{table}[ht]
+%\begin{table}[ht]
 \begin{threeparttable}
 \centering
 \begin{tabular}{llrrrrrrrrrrr}
@@ -378,8 +382,8 @@ This table outlines the linear response for Model Two (M2) for each of the regim
 \caption{Mean and Standard Deviation of 2 Regime Model}
 \label{tabref:2stateresponse}
 \end{threeparttable}
-\end{table}
-\end{landscape}
+%\end{table}
+  \end{sidewaystable}
 
 It is possible to look at the evolution of most likely regimes over time.  Figure \ref{figref:huf} shows the potential carry-trade profits and the two regimes for Poland.  It is clear that the Global Financial Crisis is the main regime change that takes place.  However, there are a number of smaller changes that take place. 
 %\begin{figure}[!h]
@@ -436,10 +440,10 @@ giving a probability between zero and one of being in the particular state. \cit
 
 This is Model Five (M5). There are also two version of this model (a and b) that will denote whether the probability of switching from one state to the other is conditional on risk aversion or US interest rates. 
 
-\begin{landscape}
+\begin{sidewaystable}[p]
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
 % Fri Aug 22 12:24:06 2014
-\begin{table}[]
+%\begin{table}[]
 \begin{threeparttable}
 \centering
 \begin{tabular}{rrrrrrrrrrrr}
@@ -464,8 +468,8 @@ HUF & -404.69 & -402.70 & -416.94 & -419.50 & 28.80 & 0.0001 & 6.56 & 0.0377 & -
 \caption{VIX covariate model table}
 \label{tabref:vixcov}
 \end{threeparttable}
-\end{table}
-\end{landscape}
+%\end{table}
+\end{sidewaystable}
 
 Table \ref{tabref:vixcov} compares models M4a and M5a against models M1 and M2.  Models 4a and 5a use the VIX as a measure of international risk aversion as with an explanatory variable (M4a Equation \ref{eqref:vix}) or as conditioning for the transition probability matrix (M5a Equation \ref{eqref:zcov}).  Model One (M1) the base model with one state and a linear relationship. There are three criteria used to judge the preferred model: the AIC, log-likelihood ratios and simple linear regression of the additional exogenous explanatory variable. Columns 1 to 4 report the AIC for the M1, M4a, M2 and M5a models respectively.  Columns 5 and 6 report respectively the log likelihood ratio test statistic and the p-value for Model 5 relative to Model 4a; Columns 7 and 8 do the same for the comparison of Model 5a over Model 2.  Columns 9 and 10 report the t-statistic and p-value of a line regression of the potential carry-trade profits on a constant and the VIX index and the p-value.  Column 11 identifies the model that is most appropriate for each series according to these criteria.
 
@@ -503,7 +507,6 @@ Table \ref{tabref:vixtranprob} provides more detail about Model 5.  The changes 
 
 Table \ref{tabref:vixcov} also gives the best overview of the effect of international factors in the possibility of a financial crisis.  The central column shows that when risk aversion is at an average level the probability of a crash will range from about 8\% in Hungary to around 2\% in Poland and Romania.  The 8\% reading for Czech, considered one of the pillars of stability in the region is a little surprising. This is probably a function of the analysis ending in 2013.  The probability of facing a financial shock increases quite sharply as international risk aversion rises above its average level: at two standard deviations, it is suggested that there is a 50\% chance of a financial shock in Hungary and the Czech Republic (again surprising) and a 28\% chance in Poland, Romania and Croatia. 
 
-\begin{landscape}
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
 % Fri Aug 22 14:23:21 2014
 \begin{table}[t]
@@ -520,7 +523,7 @@ Table \ref{tabref:vixcov} also gives the best overview of the effect of internat
 \end{tabular}
 \begin{tablenotes}
 \small
-\item Changes in US 1-month interest rates affect the transition probabilities.  The US 1-month interest rate has been scaled so that it has a mean of zero and a standard deviation of one.  Therefore, the central column shows the probability that the system will switch from a stable regime to one of crisis when the 1-month interest rate is at its average level.  It also shows how this probability changes are the 1-month interest rate moves one or more standard deviations above and below this average. For example, for Roumania there is a three percent chance of moving to a foreign exchange crisis when US interest rates are at their mean level.  This rises to five, nine and fifteen percent as interest rates move one, two and three standard deviations above average. .  
+\item Changes in US 1-month interest rates affect the transition probabilities.  The US 1-month interest rate has been scaled so that it has a mean of zero and a standard deviation of one.  Therefore, the central column shows the probability that the system will switch from a stable regime to one of crisis when the 1-month interest rate is at its average level.  It also shows how this probability changes are the 1-month interest rate moves one or more standard deviations above and below this average. For example, for Romania there is a three percent chance of moving to a foreign exchange crisis when US interest rates are at their mean level.  This rises to five, nine and fifteen percent as interest rates move one, two and three standard deviations above average. .  
 \end{tablenotes}
 \caption{Assessing the influence of US 1-month interest rate on financial risk} 
 \label{tabref:1mtranprob}
@@ -529,10 +532,10 @@ Table \ref{tabref:vixcov} also gives the best overview of the effect of internat
 
 Table \ref{tabref:1mtranprob} shows the conditional-transition model that is based on 1-month US interest rates.  There are only a few countries where the model works.  With Poland, the results are contrary to expectations.  As US interest rates move above average levels the risk of moving from a calm to crisis exchange rate regime is reduced.  This is probably a result of the limited span of data that is available, the fact that US interest rates were generally falling in the period and the fact that US rate cuts often follow a international financial crisis.  Romania and Russian are more conventional and show modest positive effects from increased US interest rates on the risk of suffering a financial shock.
 
-A similar analysis was carried out with the TED spread. This is the spread between tbills and eurodollar rates and is used to cature banking credit risk.  There is no case where the TED spread provides any improvement in the standard two-regime model.  Again, the failure may be a consequence of the limited data span. There is just one episode where there was a significant increase in the spread (around the time of the Lehman Brothers' bankruptcy in October 2008 where the spread reached 335bp).
+A similar analysis was carried out with the TED spread. This is the spread between tbills and eurodollar rates and is used to capture banking credit risk.  There is no case where the TED spread provides any improvement in the standard two-regime model.  Again, the failure may be a consequence of the limited data span. There is just one episode where there was a significant increase in the spread (around the time of the Lehman Brothers' bankruptcy in October 2008 where the spread reached 335bp).
 
 \section{Conclusions}\label{secred:con}
-This study extends the multiple regimes to understand the forward discount puzzle.  Potential carry-trade profits are modelled most successfully with two-regimes. There is evidence that compensation for taking the risk of switching to the crisis regime where large losses are likely is part of the explanation for the apparent breakdown in UIP. It is possible to assess how the probability of switching from a regime of exchange rate stability to one of crisis compares across countries and over time.  It is also possible to see how the probability of falling into a regime of exchangfe rate crisis is conditional on international factors - particularly international risk aversion. 
+This study extends the multiple regimes to understand the forward discount puzzle.  Potential carry-trade profits are modelled most successfully with two-regimes. There is evidence that compensation for taking the risk of switching to the crisis regime where large losses are likely is part of the explanation for the apparent breakdown in UIP. It is possible to assess how the probability of switching from a regime of exchange rate stability to one of crisis compares across countries and over time.  It is also possible to see how the probability of falling into a regime of exchange rate crisis is conditional on international factors - particularly international risk aversion. 
  
 %Many studies look at the carry-trade in a mechanical way to borrow the low interest rate currency and invest in that which has a higher r (see for example \citet{Jurek2} and \citet{Elliot}.  See for example \citet{Jurek2} and \citet{Elliot}.  However, in general, there much more likely to be a carry-trade where there is a substantial and sustained interest rate differential. This means that it is more likely to direct funds to emerging economies.  The exchange rates of developing economies are much more likely to suffer liquidity shocks and major depreciations.  The crash risk here likely to be more pronounced and threatening than that of developed economy exchange rates. 
 %We have shown that a financial crisis that is caused by a \emph{sudden-stop} can be modelled as a two-regime system and we have estimated the probability that the system will switch from calm to crisis.  The two regimes are identified by the performance of a carry-trade.  When this is successful and profits are being generated, the system is in a state of calm and investors are able to take advantage of the break-down in uncovered-interest-parity (UIP).  However, when the carry-trade starts to lose money as a result of the depreciation of the investment currency relative to the funding, a self-fulfilling crisis is invoked by the attempt to exit the trade.  
