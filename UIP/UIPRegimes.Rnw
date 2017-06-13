@@ -385,7 +385,29 @@ This table outlines the linear response for Model Two (M2) for each of the regim
 %\end{table}
   \end{sidewaystable}
 
-It is possible to look at the evolution of most likely regimes over time.  Figure \ref{figref:pln} shows the potential carry-trade profits and the two regimes for Poland.  It is clear that the Global Financial Crisis is the main regime change that takes place.  However, there are a number of smaller changes that take place. 
+The other interesting issue is the transition matrix that determines the probbility of switching from one regime to another. The most important of these is the probability that a period of stability or calm will move to one of crisis.  The other item of interest is how likely it is that the crisis persists once it starts\.footnote{The other two components (remaining in the calm regime and switching from a period of crisis to one of calm) can be calculated from these transition probabilities.}  Table \{tabref:transprob} provides these figures.
+
+\begin{table}[t]
+\begin{threeparttable}
+\centering
+\begin{tabular}{p{1cm}rrrrrrrr}
+  \hline
+& CZK & HRK & HUF & PLN & RON & RUB & TRY & UAH\\ 
+  \hline
+Crisis Probability & 0.01 & 0.50 & 0.04 & 0.04 & 0.01 & 0.01 & 0.10 & 0.01\\
+0.97 & 0.74 & 0.88 & 0.87 & 0.97 & 0.98 & 0.71 & 0.91 \\
+  \hline
+\end{tabular}
+\begin{tablenotes}
+\small
+\item  The table shows the transition probabilities for each of the countries.  The first row records the probability that a calm regime will switch to one of currency crisis; the second row shows the probability that once in the regime of currency crisis, the regime will remain in place. 
+\end{tablenotes}
+\caption{Transition probabilities}
+\label{tabref:transprob}
+\end{threeparttable}
+\end{table}
+ 
+It is also possible to look at the evolution of most likely regimes over time.  Figure \ref{figref:pln} shows the potential carry-trade profits and the two regimes for Poland.  It is clear that the Global Financial Crisis is the main regime change that takes place.  However, there are a number of smaller changes that take place. 
 
 \begin{figure}[ht]
 \centering
