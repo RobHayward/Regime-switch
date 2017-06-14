@@ -15,3 +15,12 @@ for(i in inv){
 DesTab
 tab <- xtable(DesTab)
 tab
+#--------------------------
+# Calculate the same stats for SPY
+da <- read.csv("Data/CEEUIP.csv", header = TRUE, stringsAsFactors = FALSE)
+da$Date <- as.Date(da$Date, format = "%d/%m/%Y")
+da$SPYl <- c(da$SPY[2:length(da$SPY)], rep(NA, 1))
+da$SPYr <- (da$SPY - da$SPYl)/da$SPYl
+source('./UIP/myStats.R')
+# add one to get gross returns and na.omit (not sure but it works). 
+myStats(da$SPYr +1, na.omit = TRUE)

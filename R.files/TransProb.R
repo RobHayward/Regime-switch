@@ -1,3 +1,4 @@
+# this will get the transiation probabilitoies for a two regime model
 require(depmixS4)
 set.seed(3)
 # EEK and LVL do not seem to work. Is it the NAs? 

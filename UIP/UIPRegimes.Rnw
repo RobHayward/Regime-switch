@@ -226,7 +226,7 @@ The estimation process then iterates back and forwards between the expectation a
 
 \section{Analysis of Results}\label{secref:res}
 \subsection{Data}
-The data are a sample of potential carry-trades from investments in Emerging European countries that have been compiled from exchange rate and interest rate data for the period from January 2000 to December 2013. The exchange rates that are assessed are presented in Table \ref{tabref:exrate}.  The data are taken from the IMF International Financial Statistics (IFS).  
+The data to be used are a sample of potential carry-trade investments in Emerging European countries using a variety of funding currencies that have been compiled from exchange rate and interest rate data for the period from January 2000 to December 2013. The exchange rates that are assessed are presented in Table \ref{tabref:exrate}.  The data are taken from the IMF International Financial Statistics (IFS).  
 
 \begin{table}[t]
 \begin{threeparttable}
@@ -273,24 +273,24 @@ Table \ref{tabref:desst} shows the descriptive statistics for the potential carr
 \centering
 \begin{tabular}{lrrrrrrrrrrr}
   \hline
- & HUF & PLN & CZK & RON & RUB & BGN & NOK & ISK & UAH & HRK & TRY \\ 
+ & HUF & PLN & CZK & RON & RUB & BGN & UAH & HRK & TRY & SPY\\ 
   \hline
-Number & 167.00 & 167.00 & 167.00 & 167.00 & 167.00 & 167.00 & 167.00 & 167.00 & 167.00 & 159.00 & 166.00 \\ 
-  Mean & 12.80 & 12.41 & 10.07 & 11.94 & 7.21 & 8.09 & 8.66 & 8.47 & 7.84 & 10.73 & 13.56 \\ 
-  Sharpe & 1.83 & 1.88 & 1.56 & 1.99 & 1.50 & 1.36 & 1.46 & 1.36 & 1.89 & 1.74 & 2.10 \\ 
-  Medium & 21.52 & 13.75 & 9.32 & 17.42 & 9.58 & 7.64 & 9.93 & 7.92 & 10.06 & 12.02 & 16.85 \\ 
-  StDev & 0.07 & 0.07 & 0.07 & 0.06 & 0.05 & 0.06 & 0.06 & 0.06 & 0.04 & 0.06 & 0.07 \\ 
-  Skew & -0.51 & -0.57 & -0.21 & -0.33 & -0.93 & -0.02 & -0.17 & 0.16 & -1.45 & -0.16 & -0.67 \\ 
-  SES & 0.19 & 0.19 & 0.19 & 0.19 & 0.19 & 0.19 & 0.19 & 0.19 & 0.19 & 0.19 & 0.19 \\ 
-  Kurt & 1.64 & 1.40 & 0.44 & 1.36 & 3.37 & 1.02 & 0.56 & 3.45 & 7.37 & 0.90 & 2.60 \\ 
-  SEK & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 \\ 
-  Max & 20.41 & 18.61 & 18.09 & 17.26 & 16.02 & 21.58 & 15.31 & 30.92 & 14.76 & 17.66 & 18.64 \\ 
-  Min & -25.49 & -21.84 & -19.56 & -20.75 & -21.11 & -18.88 & -20.99 & -23.80 & -21.93 & -19.03 & -26.68 \\ 
+Number & 167.00 & 167.00 & 167.00 & 167.00 & 167.00 & 167.00 & 167.00 & 159.00 & 166.00 & 167\\ 
+  Mean & 12.80 & 12.41 & 10.07 & 11.94 & 7.21 & 8.09 & 7.84 & 10.73 & 13.56 & 5.19\\ 
+  Sharpe & 1.83 & 1.88 & 1.56 & 1.99 & 1.50 & 1.36 & 1.89 & 1.74 & 2.10 & 1.28 \\ 
+  Medium & 21.52 & 13.75 & 9.32 & 17.42 & 9.58 & 7.64 & 10.06 & 12.02 & 16.85 & 8.75 \\ 
+  StDev & 0.07 & 0.07 & 0.07 & 0.06 & 0.05 & 0.06 & 0.04 & 0.06 & 0.07 & 0.05 \\ 
+  Skew & -0.51 & -0.57 & -0.21 & -0.33 & -0.93 & -0.02 & -1.45 & -0.16 & -0.67 & -0.46 \\ 
+  SES & 0.19 & 0.19 & 0.19 & 0.19 & 0.19 & 0.19 & 0.19 & 0.19 & 0.19 & 0.19\\ 
+  Kurt & 1.64 & 1.40 & 0.44 & 1.36 & 3.37 & 1.02 & 7.37 & 0.90 & 2.60 & 0.66\\ 
+  SEK & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 & 0.99\\ 
+  Max & 20.41 & 18.61 & 18.09 & 17.26 & 16.02 & 21.58 & 14.76 & 17.66 & 18.64 & 11.49\\ 
+  Min & -25.49 & -21.84 & -19.56 & -20.75 & -21.11 & -18.88 & -21.93 & -19.03 & -26.68 & -16.04\\ 
    \hline
 \end{tabular}
 \begin{tablenotes}
 \small 
-\item The table shows the descriptive statistics for the calculated potential carry-trade profits for each country. Number is the number of observations; Mean is the annualised return; Sharpe is the monthly Sharpe Ratio; Median is the median annualised return; StDev is the standard deviation; Skew is the measure of Skewness of the distribution; SES is the standard error of skewness so that a skewness that is twice this size could be considered to be statistically significant at the 5\% level; Kurt is the measure of excess kurtosis; SEK is the standard error of kurtosis; Max is the maximum return; Min is the minimum return. 
+\item The table shows the descriptive statistics for the calculated potential carry-trade profits for each country plus a comparison with the S\&P 500. Number is the number of observations; Mean is the annualised return; Sharpe is the monthly Sharpe Ratio; Median is the median annualised return; StDev is the standard deviation; Skew is the measure of Skewness of the distribution; SES is the standard error of skewness so that a skewness that is twice this size could be considered to be statistically significant at the 5\% level; Kurt is the measure of excess kurtosis; SEK is the standard error of kurtosis; Max is the maximum return; Min is the minimum return. 
 \end{tablenotes}
 \caption{Descriptive statistics of potential carry-trade profits}
 \label{tabref:desst}
@@ -301,12 +301,12 @@ Number & 167.00 & 167.00 & 167.00 & 167.00 & 167.00 & 167.00 & 167.00 & 167.00 &
 \subsection{Model Comparison}
 Initially, there are three models that are applied to each of the carry-trade-profit series. 
 \begin{itemize}
-\item Model One (M1) is a standard linear model $p_t = \beta_0  + \varepsilon_t$ where $p_t$ is the carry-trade-profit series, $\beta_0$ is the intercept and $\varepsilon_t$ is the variation around that level.  It provides a mean and standard deviation for the potential carry-trade-profit for the whole series.  These are the figures presented in Table \ref{tabref:desst}.
+\item Model One (M1) is a standard linear model $p_t = \beta_0  + \varepsilon_t$ where $p_t$ is the carry-trade-profit series, $\beta_0$ is the intercept and $\varepsilon_t$ is the variation around that level.  It provides a mean and standard deviation for the potential carry-trade-profit for the whole period.  These are the figures presented in Table \ref{tabref:desst}.
 \item Model Two (M2) is a standard linear model with two regimes $p_t = \beta_0 + \beta_1 S_n + \varepsilon, \quad n = 1, 2$ therefore a mean and a standard deviation of the potential carry-trade profits for each of the two regimes is produced.  The mean and standard deviation of the potential carry-trade profits for each regime are presented in Table \ref{tabref:2stateresponse}.
 \item Model Three (M3) is a standard linear model with three regimes $p_t = \beta_0 + \beta_1 S_n + \varepsilon, \quad n = 1, 2, 3$ average and standard deviations are retrieved for three different regimes. 
 \end{itemize}
 
-The models are compared using the Akaike Information Criterion (AIC) and the log-likelihood ratios adjusted for the number of parameters estimated.  Table \ref{tabref:comptab2} summarises the performance of the three base models using these criteria. The models here are tested using the EUR as the funding currency.  Results for other funding currencies are very similar and are therefore not reported.  A comparison of the mean and variance for the two-regime response models for different funding units is presented in Table \ref{tabref:2stateresponse}. 
+The models are compared using the Akaike Information Criterion (AIC) and the log-likelihood ratios (LLR) adjusted for the number of parameters estimated.  Table \ref{tabref:comptab2} summarises the performance of the three base models using these criteria. The models here are tested using the euro as the funding currency.  Results for other funding currencies are very similar and are therefore not reported.  A comparison of the mean and variance for the two-regime response models for different funding units is presented in Table \ref{tabref:2stateresponse}. 
 
 \begin{sidewaystable}[p]
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
@@ -340,7 +340,7 @@ The two-regime model is superior to the base model with one regime for all count
 
 Table \ref{tabref:2stateresponse} presents the estimated response (mean and standard deviation) for each of the two-regimes models. The results are encouraging for the hypothesis that potential carry-trade profits are best modelled as two regimes where one of them is considered the period of calm where carry positions are build and the other is considered the period of crisis where carry-trade positions will be cut back.  In the first case, the the ratio $p_t$ should be above one.  This is consistent with the estimated value of $\beta_1$ in Equation \ref{eq:uip2} being below one.  This should also be expected to have smaller standard deviation and less risk because exchange rate conditions are expected to be calm when carry-trade positions can be built.  The crisis period should have a mean of less than one and a larger standard deviation to reflect the increased risk that is being taken in this regime. This is when the crash risk happens.  The mean and standard deviation for the two regimes are those that are most appropriate for the data.  It is certainly possible that the regime with the lower mean could also have the smallest standard deviation.  However, this does not happen in any of the cases. 
 
-There are two other things to note.  First, the funding currency that is selected does not make much difference.   In no case does the basic result change when different funding currencies are applied. As a consequence, the rest of the results that are presented are based on EUR-funding.  Secondly, the results for the Czech Republic support the view that one regime may be a better way to model the data. Though two regimes can be estimated, the distribution of the potential carry-trade profits does not differ much between them. 
+There are two other things to note.  First, the funding currency that is selected does not make much difference.   In no case does the basic result change when different funding currencies are applied. As a consequence, the rest of the results that are presented are based on euro-funding.  Secondly, the results for the Czech Republic support the view that one regime may be a better way to model the data. Though two regimes can be estimated, the distribution of the potential carry-trade profits does not differ much between them. 
 
 \begin{sidewaystable}[p]
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
@@ -385,7 +385,7 @@ This table outlines the linear response for Model Two (M2) for each of the regim
 %\end{table}
   \end{sidewaystable}
 
-The other interesting issue is the transition matrix that determines the probbility of switching from one regime to another. The most important of these is the probability that a period of stability or calm will move to one of crisis.  The other item of interest is how likely it is that the crisis persists once it starts\.footnote{The other two components (remaining in the calm regime and switching from a period of crisis to one of calm) can be calculated from these transition probabilities.}  Table \{tabref:transprob} provides these figures.
+The other interesting issue is the transition matrix that determines the probbility of switching from one regime to another. The most important of these elements is the probability that a period of stability or calm will move to one of crisis.  The other item of interest is how likely it is that the crisis persists once it starts\footnote{The other two components (remaining in the calm regime and switching from a period of crisis to one of calm) can be calculated from these transition probabilities.}  Table \{tabref:transprob} provides these figures.
 
 \begin{table}[t]
 \begin{threeparttable}
@@ -407,7 +407,9 @@ Crisis Probability & 0.01 & 0.50 & 0.04 & 0.04 & 0.01 & 0.01 & 0.10 & 0.01\\
 \end{threeparttable}
 \end{table}
  
-It is also possible to look at the evolution of most likely regimes over time.  Figure \ref{figref:pln} shows the potential carry-trade profits and the two regimes for Poland.  It is clear that the Global Financial Crisis is the main regime change that takes place.  However, there are a number of smaller changes that take place. 
+The probabilty that a period of calm will turn into a period of crisis ranges from just one percent in the Chech Republic to as much as fifty percent in Croatia. Once a crisis has stated it persists for a while. In all cases this is estmiated at between seventy five and ninety five percent of continuation.
+
+It is also possible to look at the evolution of most likely regimes over time.  Figure \ref{figref:pln} shows the potential carry-trade profits and the two regimes for Poland.  It is clear that the Global Financial Crisis (GFC) is the main regime change that takes place.  Not surprisingly, this episode dominates the data.  This probably explains the persistance of the crisis once it starts. There are also a number of smaller mini-crises that are also evident in the turmoil after the GFC. 
 
 \begin{figure}[ht]
 \centering
@@ -419,11 +421,11 @@ It is also possible to look at the evolution of most likely regimes over time.  
 \section{Exogenous influences on regime switching probabilities}
 Periods of foreign exchange crisis are generally referred to as \emph{sudden stops}.  See \citet{DornbuschSS}, \citet{CalvoSS} and \citet{KrugmanSS} for more details. Calvo  defines the sudden stop as net capital flows moving two standard deviations below their mean level and subsequently returning to within one standard deviation of that point. There are a number of factors that may influence capital flows and exchange rate stability. Exchange rate crisis can be caused by domestic or international factors.  \citet{FTS} find  that exogenous factors that cause sudden stops and flight-to-safety of \emph{hard} currencies  are relatively rare events. Their study of of 23 countries finds that most of the events are country specific. They characterise only 25\% of the events as \emph{global}. However, it is the exogenous international effects that are the focus here. 
 
+Consistent with the evidence of an interplay between monetary policy and international risk, and between domestic and international factors, \citet{Ahmed2014} show that economic growth, interest rate differentials and the level of global risk appetite are all important determinants of private capital flows to emerging markets.  They also suggest that capital flows have been more sensitive to interest rate differentials since the financial crisis of 2007-08. There is also some evidence that US quantitative easing has had some effect on capital flows. 
+
 \citet{NYFedtaper} consider the effect of changes in global risk aversion on the carry-trade.  They find that the initial signal from the US central bank in Fed Chairman Bernanke's May 22 2013 testimony to Congress coincide with an increase in global risk aversion which affected global asset prices.  By identifying the performance of exchange rates without a change in risk aversion, they suggest that nearly half of the depreciation of a basket of 45 carry-trade currencies with the largest one-month interest rate relative to a basket of the US dollar and other equally low rate currencies is explained by this increased risk aversion. Nearly all the decline in Emerging market equities is attributable to the increase in risk aversion.
 
 \citet{IMFLatam} use a panel vector autoregression (VAR) method to identify the influence of US monetary policy since 1990 on capital flows to 38 emerging economies, finding evidence that the end to Federal Reserve purchase of government bonds under the quantitative easing programme, while not necessarily leading to capital outflow, could generate \emph{new risk premium shocks} with investors requiring a higher rate of return and therefore lower asset prices.
-
-Consistent with the evidence of an interplay between monetary policy and international risk, and between domestic and international factors, \citet{Ahmed2014} show that economic growth, interest rate differentials and the level of global risk appetite are all important determinants of private capital flows to emerging markets.  They also suggest that capital flows have been more sensitive to interest rate differentials since the financial crisis of 2007-08. There is also some evidence that US quantitative easing has had some effect on capital flows. 
 
 \subsection{Additional Models}
 This section will assess whether exogenous factors influence the potential profitability of the carry-trade or the probability of switching from a regime of foreign exchange calm to one of crisis.  Two exogenous forces are to be tested here: international risk aversion and US interest rates.  Risk aversion is measured with the VIX index while US interest rate are measured as the 3-month US dollar deposit\footnote{The VIX is an index of implied volatility on options from the S\&P 500 index.  It is commonly used as a measure of international risk aversion as it signals increased demand by fund managers for option protection of their equity portfolio.  See \citet{VIX}, \citet{GoldmanVol} and \citet{Diamond} for fuller details.}.   
@@ -443,13 +445,11 @@ In the second case, the exogenous force is used to explain the transition probab
 a_{ij}(t) = P(S_t = j|S_{t-1} = i, z)
 \end{equation}
 
-where $a_{ij}(t)$ is the probability that the system will be on state $i$ at time $t$ when it was in state $j$ in the previous period and covariate $z$ takes a particular value at time $t$.  For a two-regime model, the  estimation that is carried out is 
+where $a_{ij}(t)$ is the probability that the system will be in state $i$ at time $t$ when it was in state $j$ in the previous period and covariate $z$ takes a particular value at time $t$.  For a two-regime model, the  estimation that is carried out is 
 
 \begin{equation}
 log(a_{t,n = 2})/ a_{t-1, n = 1} = \beta_{0} +\beta_1 z_t 
 \end{equation}
-
-%This section on VIX and US interst rates must describe the data.
 
 State 1 is the baseline category so coefficients are set to zero for that state and the model estimates the relationship between the covariate and probability of switching to the other state. 
 
@@ -459,7 +459,7 @@ F(z)  = \frac{1}{1 + e^{-(\beta_0 + \beta_1 z)}}
 \label{eqref:zcov}
 \end{equation}
  
-giving a probability between zero and one of being in the particular state. \citet[pp.174-75]{agresti2014categorical}. 
+giving the estimated probability of being in the particular state conditional on having been in a particular state in the previous period \citet[pp.174-75]{agresti2014categorical}. 
 
 This is Model Five (M5). There are also two version of this model (a and b) that will denote whether the probability of switching from one state to the other is conditional on risk aversion or US interest rates. 
 
@@ -486,7 +486,7 @@ HUF & -404.69 & -402.70 & -416.94 & -419.50 & 28.80 & 0.0001 & 6.56 & 0.0377 & -
 \end{tabular}
 \begin{tablenotes}
 \small
-\item The table details the comparison of four models. Here Model  One (M1) is the base model; Model Four (M4a) adds the VIX index as a response variable (Equation \ref{eqref:vix}); Model Two (M2) is the simple response model with two regimes; Model Five (M5a) is the two-regime model with the VIX index a a logistic covariate of the transition matrix. LLR is the log-likelihood ratio with the p denoting the p-value for a $\chi^2$ distribution with degrees of freedom equal to the parameter restrictions on the base model that is being compared.  Therefore, LLR54p is the p-value for the log-likelihood ratio of Model Five on Model Four.  This assesses the performance of the two-regime model with the VIX influencing the transition values against the model where the VIX directly affects the carry-trade return. Coefficient is from Model Four.  It is the estimate of $\beta_1$ from a regression of Equation \ref{eqref:vix}; p-value is the test of the null hypothesis that $\beta_1$ is equal to zero. 
+\item The table details the comparison of four models. Here Model  One (M1) is the base model; Model Four (M4a) adds the VIX index as a response variable (Equation \ref{eqref:vix}); Model Two (M2) is the simple response model with two regimes; Model Five (M5a) is the two-regime model with the VIX index providing a logistic covariate of the transition matrix. LLR is the log-likelihood ratio with the p denoting the p-value for a $\chi^2$ distribution with degrees of freedom equal to the parameter restrictions on the base model that is being compared.  Therefore, LLR54p is the p-value for the log-likelihood ratio of Model Five on Model Four.  This assesses the performance of the two-regime model with the VIX influencing the transition values against the model where the VIX directly affects the carry-trade return. Coefficient is from Model Four.  It is the estimate of $\beta_1$ from a regression of Equation \ref{eqref:vix}; p-value is the test of the null hypothesis that $\beta_1$ is equal to zero. 
 \end{tablenotes}
 \caption{VIX covariate model table}
 \label{tabref:vixcov}
@@ -496,7 +496,7 @@ HUF & -404.69 & -402.70 & -416.94 & -419.50 & 28.80 & 0.0001 & 6.56 & 0.0377 & -
 
 Table \ref{tabref:vixcov} compares models M4a and M5a against models M1 and M2.  Models 4a and 5a use the VIX as a measure of international risk aversion as with an explanatory variable (M4a Equation \ref{eqref:vix}) or as conditioning for the transition probability matrix (M5a Equation \ref{eqref:zcov}).  Model One (M1) the base model with one state and a linear relationship. There are three criteria used to judge the preferred model: the AIC, log-likelihood ratios and simple linear regression of the additional exogenous explanatory variable. Columns 1 to 4 report the AIC for the M1, M4a, M2 and M5a models respectively.  Columns 5 and 6 report respectively the log likelihood ratio test statistic and the p-value for Model 5 relative to Model 4a; Columns 7 and 8 do the same for the comparison of Model 5a over Model 2.  Columns 9 and 10 report the t-statistic and p-value of a line regression of the potential carry-trade profits on a constant and the VIX index and the p-value.  Column 11 identifies the model that is most appropriate for each series according to these criteria.
 
-Model 5 is the preferred model in most cases.  For Poland, there is a little uncertainty about whether Model Two or Model Five is better.  As we shall seen, this is because exogenous factors do not have a major influence here. For Russia and Turkey, while it appears that the level of international risk aversion is best used explaining the probability of switching from one regime to another rather than as an explanation of the level of carry-trade profits, it also appears that the simple two-regime model is superior. 
+Model 5 is the preferred model in most cases.  For Poland, there is a little uncertainty about whether Model Two or Model Five is better.  As we shall seen, this is because exogenous factors do not have a major influence on Poland. For Russia and Turkey, while it appears that the level of international risk aversion is best used explaining the probability of switching from one regime to another rather than as an explanation of the level of carry-trade profits, it also appears that the simple two-regime model provides the best fit.
 
 %\begin{landscape}
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
@@ -558,8 +558,11 @@ Table \ref{tabref:1mtranprob} shows the conditional-transition model that is bas
 A similar analysis was carried out with the TED spread. This is the spread between tbills and eurodollar rates and is used to capture banking credit risk.  There is no case where the TED spread provides any improvement in the standard two-regime model.  Again, the failure may be a consequence of the limited data span. There is just one episode where there was a significant increase in the spread (around the time of the Lehman Brothers' bankruptcy in October 2008 where the spread reached 335bp).
 
 \section{Conclusions}\label{secred:con}
-This study extends the multiple regimes to understand the forward discount puzzle.  Potential carry-trade profits are modelled most successfully with two-regimes. There is evidence that compensation for taking the risk of switching to the crisis regime where large losses are likely is part of the explanation for the apparent breakdown in UIP. It is possible to assess how the probability of switching from a regime of exchange rate stability to one of crisis compares across countries and over time.  It is also possible to see how the probability of falling into a regime of exchange rate crisis is conditional on international factors - particularly international risk aversion. 
+This study shows how multiple regimes can be used to understand the forward discount puzzle.  Potential carry-trade profits are modelled most successfully with two-regimes. There is evidence that compensation for taking the risk of switching to the crisis regime where large losses are likely is part of the explanation for the breakdown in UIP. It is possible to assess how the probability of switching from a regime of exchange rate stability to one of crisis compares across countries and over time.  It is also possible to see how the probability of falling into a regime of exchange rate crisis is conditional on international factors - particularly international risk aversion. 
  
+The study of CEE countries is affected by the relative lack of data and the importance of the GFC.  Extending the examination to assess the way that external factors can influence the probbilty of switching from a peripod of calm to one of crisis reveals some unusual results.  External factors do not seem to have a major influence on Poland.  This seems to be the reason why the Czech Republic is more responsive to international risk aversion than Poland.  
+
+Further studies would look at a broader range of potential carry trades with more data and more vareiety in the exogenous influences. 
 %Many studies look at the carry-trade in a mechanical way to borrow the low interest rate currency and invest in that which has a higher r (see for example \citet{Jurek2} and \citet{Elliot}.  See for example \citet{Jurek2} and \citet{Elliot}.  However, in general, there much more likely to be a carry-trade where there is a substantial and sustained interest rate differential. This means that it is more likely to direct funds to emerging economies.  The exchange rates of developing economies are much more likely to suffer liquidity shocks and major depreciations.  The crash risk here likely to be more pronounced and threatening than that of developed economy exchange rates. 
 %We have shown that a financial crisis that is caused by a \emph{sudden-stop} can be modelled as a two-regime system and we have estimated the probability that the system will switch from calm to crisis.  The two regimes are identified by the performance of a carry-trade.  When this is successful and profits are being generated, the system is in a state of calm and investors are able to take advantage of the break-down in uncovered-interest-parity (UIP).  However, when the carry-trade starts to lose money as a result of the depreciation of the investment currency relative to the funding, a self-fulfilling crisis is invoked by the attempt to exit the trade.  
 
