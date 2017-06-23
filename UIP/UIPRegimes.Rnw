@@ -19,8 +19,8 @@
 %\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
 \begin{document}
 %\renewcommand[\harvardurl]{URL: \url}
-\title{UIP: a two-regime approach}
-\author{Rob Hayward\footnote{University of Brighton Business School, Lewes Road, Brighton, BN2 4AT; Telephone 01273 642586.  rh49@brighton.ac.uk.} and Jens H\"{o}lscher\footnote{Bournemouth University, Executive Business Centre, 89 Holdenhurst Road, Bournemouth, BH8 8EB; Telephone 01202 965392}}  
+\title{The Forward-Discount Puzzle in Central and Eastern Europe}
+\author{Rob Hayward\footnote{University of Brighton Business School, Lewes Road, Brighton, BN2 4AT; Telephone 01273 642586.  rh49@brighton.ac.uk.} and Jens H\"{o}lscher\footnote{Bournemouth University, Executive Business Centre, 89 Holdenhurst Road, Bournemouth, BH8 8EB}}  
 \date{\today}
 \maketitle
 \begin{abstract}
@@ -33,7 +33,7 @@ This paper adds to evidence that the forward-discount puzzle is at least in part
 \end{abstract}
 
 \section{Introduction}
-The common observation that exchange rate changes deviate systematically from the forward rate so that excess returns are available from borrowing low interest rate or funding currency for an investment in higher rate units or the investment currency is called the forward discount puzzle.   This paper uses a two-regime model to understand more about crash-risk by assessing UIP deviations in a range of CEE countries and by using a Hidden Markov Model (HMM) to divide the deviations into two categories: those where the high-yield currency does not depreciate (or may even appreciate) against the lower interest rate unit and those where the high-yield currency falls much more than would be anticipated by UIP.  In the first case, the conditions are favourable for inflow of capital to the higher interest rate unit.  It would be possible to make profitable carry-trades where funds are borrowed in the lower rate unit currency, transferred into the currency with the higher interest rate for the same period as the borrowing and then exchange back and repaid at the end of the contract. These are likely to be times of relative calm in the foreign exchange market. In the second case, these carry-trades would be more likely to lose money and a sharp depreciation of the high yield currency would be likely to be associated with exchange rate crisis. 
+The common observation that exchange rate changes deviate systematically from the forward rate so that excess returns are available from borrowing low interest rate or funding currency for an investment in higher rate units or the investment currency is called the forward discount puzzle.   This paper uses a two-regime model to understand more about crash-risk by assessing Uncovered Interest Parity (UIP) deviations in a range of CEE countries and by using a Hidden Markov Model (HMM) to divide the deviations into two categories: those where the high-yield currency does not depreciate (or may even appreciate) against the lower interest rate unit and those where the high-yield currency falls much more than would be anticipated by UIP.  In the first case, the conditions are favourable for inflow of capital to the higher interest rate unit.  It would be possible to make profitable carry-trades where funds are borrowed in the lower rate unit currency, transferred into the currency with the higher interest rate for the same period as the borrowing and then exchange back and repaid at the end of the contract. These are likely to be times of relative calm in the foreign exchange market. In the second case, these carry-trades would be more likely to lose money and a sharp depreciation of the high yield currency would be likely to be associated with exchange rate crisis. 
 
 The first regime might be called the period of 'calm' and is a much more common occurrence. The second period is rare and could be called 'crisis'.  We use a Hidden Markov Model to estimate the probability of switching from a calm regime to one of crisis for each country and to assess the way that these probabilities are affected by exogenous events such as international risk aversion and changes in US interest rates.  These exogenous factors increase the risk of experiencing an exchange rate crisis and can be used to compare how vulnerable each country is to these type of external shocks. 
 
@@ -390,12 +390,12 @@ The other interesting issue is the transition matrix that determines the probabi
 \begin{table}[t]
 \begin{threeparttable}
 \centering
-\begin{tabular}{p{1cm}rrrrrrrr}
+\begin{tabular}{p{3cm}rrrrrrrr}
   \hline
 & CZK & HRK & HUF & PLN & RON & RUB & TRY & UAH\\ 
   \hline
-Crisis Probability & 0.01 & 0.50 & 0.04 & 0.04 & 0.01 & 0.01 & 0.10 & 0.01\\
-0.97 & 0.74 & 0.88 & 0.87 & 0.97 & 0.98 & 0.71 & 0.91 \\
+Calm to Crisis & 0.01 & 0.50 & 0.04 & 0.04 & 0.01 & 0.01 & 0.10 & 0.01\\
+Remain in Crisis & 0.97 & 0.74 & 0.88 & 0.87 & 0.97 & 0.98 & 0.71 & 0.91 \\
   \hline
 \end{tabular}
 \begin{tablenotes}
