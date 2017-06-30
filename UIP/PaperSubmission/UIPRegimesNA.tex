@@ -1,4 +1,53 @@
-\documentclass[12pt, a4paper, oneside]{article} % Paper size, default font size and one-sided paper
+\documentclass[12pt, a4paper, oneside]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt} % Paper size, default font size and one-sided paper
 \usepackage{float}
 %\usepackage[dcucite]{harvard}
 \usepackage{tikz}
@@ -17,11 +66,11 @@
 \bibliographystyle{agsm}
 \usepackage[colorlinks = true, citecolor = blue, linkcolor = blue]{hyperref}
 %\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
 %\renewcommand[\harvardurl]{URL: \url}
 \title{The Forward-Discount Puzzle in Central and Eastern Europe}
-\author{Rob Hayward\footnote{University of Brighton Business School, Lewes Road, Brighton, BN2 4AT; Telephone 01273 642586.  rh49@brighton.ac.uk.} and Jens H\"{o}lscher\footnote{Bournemouth University, Executive Business Centre, 89 Holdenhurst Road, Bournemouth, BH8 8EB}}  
-\date{\today}
+
 \maketitle
 \begin{abstract}
 This paper adds to evidence that the forward-discount puzzle is at least in part explained as a compensation for taking crash-risk. A number of Central and Eastern European exchange rates are compared. A Hidden Markov Model is used to identify two regimes for most of the exchange rates.  These two regimes can be characterised as being either periods of stability or periods of instability. The level of international risk aversion and changes in US interest rates affect the probability of switching from one regime to the other. This model is then used to assess the way that these two factors affect the probability of a currency crisis. While the Czech Republic,  Hungary and Bulgaria are very sensitive to international financial conditions, Poland and Romania are relatively immune.  
@@ -412,7 +461,7 @@ It is also possible to look at the evolution of most likely regimes over time.  
 
 \begin{figure}[ht]
 \centering
-\includegraphics[scale = .50]{../Figures/PLNEUR2.pdf}
+\includegraphics[scale = .50]{../../Figures/PLNEUR2.pdf}
 \caption{PLN Carry-trade probabilities}
 \label{figref:pln}
 \end{figure}
@@ -571,7 +620,7 @@ The study of CEE countries is affected by the relative lack of data and the impo
 
 %Maximise $P(O \lambda)$, where $\lambda = (\pi, A, B)$.  The probability of observing sequence O for a given set of parameters.  The easiest way of doing this is to calculate the probability for each of the possible state sequences.  Consider one such sequence, $Q = q_1 q_2 \dots q_T$, the probability of the observed sequence for the state sequence Q is $P(O|Q \lambda) = \prod_{t = 1}^T P(O_t|q_t, \lambda)$.  If the observations are independent, this probability $P(O|Q \lambda)$ is equal to the probability of observing the outcome given the state, $b_{q_1}(O_1)\dot b_{q_2} (O_2) \dots b_{q_T}(O_T)$.  At each step, the forward variable $\alpha_t(i) = P(O_1 O_2 \dots O_t, q_t = S_i|\lambda)$ is calculated as the product of the sum of all the probability of each state for the previous period and the probability of transition from each of those states to the current as well as the product of being in this state given the observable. $\alpha_t(i)$ is the joint probability that observation is seen and state is achieved. 
 
-\bibliography{../../myrefs}
+\bibliography{../../../myrefs}
 
 
 
