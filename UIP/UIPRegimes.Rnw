@@ -131,11 +131,11 @@ where $z_{t+1}$ is the return in excess of the prediction of UIP as $i^*$ is the
 
 \citet{Elliot} use a HMM for the forward discount. They find evidence against UIP and suggest that a three regime model fits the data most effectively.  However, the study only assesses the GBP-USD exchange rate and other factors that may affect the transition probabilities are not considered.  We aim to analyse potential carry-trade profits as arising from one or more regimes.  
 
-\subsubsection{The model}
+\subsubsection{The model}\label{secref:model}
 The first step is to determine whether a one, two or three regime model is the most appropriate.  A  model with more than one regime is often called a \emph{mixture model} as the population of potential carry-trade returns are assumed to come from two or more unobserved sub-populations.  
  In this case, the carry-trade returns are observable and are used to identify the underlying exchange rate.  
 
-Figure \ref{figref:HMM2} gives an overview of the system.  The HMM has three components: $\pi, A, B$:
+The HMM has three components: $\pi, A, B$:
 
 \begin{itemize}
 \item the prior model: $P(S_1 = n| \theta_{prior})$ $(\pi)$
@@ -145,51 +145,6 @@ Figure \ref{figref:HMM2} gives an overview of the system.  The HMM has three com
 
 There are $n$ states or regimes; $Y_t$ are the observed carry-trade returns; and $\theta_{prior}$, $\theta_{trans}$ and  $\theta_{resp}$ are the parameters of the prior, transition and response models respectively. The unobserved financial regimes are modelled as a Markov chain that determines the probability of switching between two regimes.  The carry-trade returns are affected by the underlying regime and are used to estimate the probability of being in a particular regime.    
 
-
-\begin{figure}
-\begin{tikzpicture}
-\tikzstyle{decision} = [circle, draw, minimum height = 8mm, 
-  text width = 5em, text centered];
-\tikzstyle{line} = [draw, -stealth, thick]
-\tikzstyle{line2} = [draw, -stealth, ultra thick]
-\tikzstyle{line3} = [draw, -stealth, dashed, thick]
-\tikzstyle{line4} = [draw, -stealth, dotted, thick]
-%\tikzstyle{elli} = [draw, ellipse, fill = red!50, minimum height = 8mm, 
- % text width = 5em, text centered]
-\tikzstyle{block} = [draw, rectangle, text width = 8em, 
-  text centered, minimum height = 15mm, node distance = 8em]
-\node [block](Calm){stability};
-%\node [block, left of  = Build, xshift = -5em] (Calm){Calm}; 
-\node [block, right  of = Calm, xshift =5em] (Crisis){instability};
-\node [decision, below of = Calm, yshift = -10em, align = center]
-(Calm2){Large Return \\ Small Risk}; 
-\node [decision, below of = Crisis, yshift = -10em](Crisis2) {Loss \\ High Risk};
-%\node [decision, below of = Caution, yshift = -10em, align = center](Caution2) 
-%{Small \\ Return \\ Average \\ Risk};
-%arrows 
-%\path [line3] (Calm) -- (Calm);
-%\path [line3] (Crisis) -- (Crisis);
-%\path [line3] (Crash) -- (Crash2);
-\path [line2] (Calm) -- node [yshift = 3em] {Positions Built} (Crisis);
-%\path [line2] (Caution) -- node [yshift = 3em]  {Speculative Lending} (Build);
-\path [line4] (Calm) -- (Crisis2);
-\path [line4] (Crisis) -- (Calm2);
-\path [line4] (Calm) -- (Calm2);
-\path [line4] (Crisis) -- (Crisis2);
-%\path [line4] (Crash) -- (Caution2);
-%\path [line4] (Crash) -- (Build2);
-\node [align = left, left of = Calm, xshift = -10em] {Unobserved \\ 
-financial \\ states};
-\node [align = left, left of = Calm2, xshift = -10em] {Observed \\ 
-carry-trade\\returns};
-%\path [line] (decision1) -| node [yshift = 0.5em, 
-%   xshift = 8em] {YES} (process 1);
-%\path [line3] (Crash) -- (Caution); 
-% 	xshift = -8em] {NO} (process 2);
-\end{tikzpicture}
-\caption{Two-Regime Hidden Markov Model (HMM)}
-\label{figref:HMM2}
-\end{figure}
 The prior or initial state probabilities give the probability that the system starts in a particular regime; the transition model is the probability of moving from one financial state to another; the response model is the relationship between the observed carry-returns and the unobserved financial regime.  
 
 The starting point of the system is given by,
@@ -208,13 +163,7 @@ P(S_t = 1|S_{t-1}=2)  & P(S_t = 2|S_{t-1}=2)
   Each element of the matrix shows the probability of being in a particular regime given the previous regime. This is a first-order Markov model.  The transition probabilities depend only on the previous state. This seems to be a reasonable assumption in most circumstances.  However, to assess whether the risk of a financial crisis is increased by the length of the period of stability, it would be necessary to have a higher order Markov chain, increasing the memory of the system and the computational complexity.  In that case an alternative method would be more appropriate. 
 
 \subsection{Estimation of the parameters}
-Estimating the HMM involves determining the most likely values for the three sets of parameters in the model.  
-
-\begin{equation}
-\lambda = (\pi, A_1, B_1)
-\end{equation}
-
-This estimation is done by Maximum Likelihood. As a consequence of the Markov assumption, this is a problem that can be solved with the \emph{Expectation-Maximization (EM) algorithm}.  See \citet{dempster1977maximum} and \citet{Hamilton1989} as well as \citet{depmixS4} for full details of the procedure.  This is a numerical optimisation.  There are two steps. First \emph{the expectation step} will iterate forward from the starting point using prior estimates of the three sets of parameter values  to make an initial assessment of the probability of observing each hidden regime given the model parameters.  The number of regimes is given but whether this is appropriate will be determined using the log-likelihood ratio and other information criteria.  The prior estimates of the parameters can either be drawn randomly or they can be determined by some previous information.\footnote{In this case the parameters are drawn randomly.  However, it would be possible to make initial estimates of the response model from \citet{Hayward2013} using the estimates of the carry-trade returns that are identified.}  In this way the most likely unobserved regime for each period can be calculated. A variant of the EM algorithm called \emph{the forward-backward} or \emph{Baum-Welch} algorithm \citet{Baum1970} is used.   The Baum-Welch algorithm will find the parameters that maximize the probability of observing the sequence of carry-trade returns.  
+Estimating the HMM involves determining the most likely values for the three sets of parameters in the model.  This estimation is done by Maximum Likelihood. As a consequence of the Markov assumption, this is a problem that can be solved with the \emph{Expectation-Maximization (EM) algorithm}.  See \citet{dempster1977maximum} and \citet{Hamilton1989} as well as \citet{depmixS4} for full details of the procedure.  This is a numerical optimisation.  There are two steps. First \emph{the expectation step} will iterate forward from the starting point using prior estimates of the three sets of parameter values  to make an initial assessment of the probability of observing each hidden regime given the model parameters.  The number of regimes is given but whether this is appropriate will be determined using the log-likelihood ratio and other information criteria.  The prior estimates of the parameters can either be drawn randomly or they can be determined by some previous information.\footnote{In this case the parameters are drawn randomly.  However, it would be possible to make initial estimates of the response model from \citet{Hayward2013} using the estimates of the carry-trade returns that are identified.}  In this way the most likely unobserved regime for each period can be calculated. A variant of the EM algorithm called \emph{the forward-backward} or \emph{Baum-Welch} algorithm \citet{Baum1970} is used.   The Baum-Welch algorithm will find the parameters that maximize the probability of observing the sequence of carry-trade returns.  
 
 For the dependent mixture model, the joint likelihood of observation $Y_{1:T}$ and the latent state $S_{1:T}$ given the model parameters is 
 \begin{equation}
@@ -234,7 +183,7 @@ The data to be used are a sample of potential carry-trade investments in CEE cou
 \begin{table}[t]
 \begin{threeparttable}
 \centering
-\begin{tabular}{lrr}
+\begin{tabular}{p{5.7cm}rr}
   \hline
 Country & ISO Code & Exchange rate arrangement\\
   \hline
@@ -251,7 +200,7 @@ Turkey & TRY & Float\\
 \end{tabular}
 \begin{tablenotes}
 \small
-\item The table shows the exchange rates that are considered with the ISO codes that are used from this point onwards and the exchange rate regime.  The exchange rate regime is taken from the IMF Classification of Exchange Rate Arrangements and Monetary Policy Frameworks \citet{IMFregime}. In many cases there are changes to the arrangements; when that happens the summary here reflects the stance at the end of the period.  For more details see \citet{Hayward2014}.  
+\item The table shows the exchange rates that are assessed with the ISO codes that are used from this point onwards in the paper and the relevant exchange rate regime.  The exchange rate regime is taken from the IMF Classification of Exchange Rate Arrangements and Monetary Policy Frameworks \citet{IMFregime}. In many cases there are changes to the arrangements; when that happens the summary here reflects the stance at the end of the period.  For more details see \citet{Hayward2014}.  
 \end{tablenotes}
 \caption{Countries, ISO codes and exchange rate arrangements}
 \label{tabref:exrate}
@@ -266,7 +215,7 @@ p_t = \frac{i^*_t - i_t}{\Delta s_t}
 
 where $i_t^*$ is the investment currency, $i_t$ is the funding currency, $\Delta s_t$ is the change in the exchange rate and $p_t$ is the gross profit for potential carry-trades without transaction costs or adjustment for risk.  \citet{Burnside2010} constructs a similar series for a panel of 10 exchange rates and finds a very small effect from plausible transaction costs and Sharpe Ratios that compare favourably with equity markets.  One month and three month positions are calculated. Only the one month results are presented as the outcomes do not differ significantly. 
 
-Table \ref{tabref:desst} shows the descriptive statistics for the potential carry-trade profit series. The mean is the annualised potential profits for each country when funded in euro.  Though the monthly Sharpe Ratios are all above one, the significant skews (standing more than two standard errors beyond zero) and the fact that in all cases outside Bulgaria maximum losses outweigh maximum gains is consistent with risk that is not fully captured by conventional measures like standard deviation. The data also suggest that the Czech Republic is a special case and the returns are more normally distributed and there is less skew and kurtosis and this may suggest less of a carry-trade-type currency.  
+Table \ref{tabref:desst} shows the descriptive statistics for each potential carry-trade profit series. This is Model One with only one regime. The mean is the annualised potential profits for each exchange rate when funded in euro. When this is above one (as it is in all cases) strict UIP does not hold. However, though the monthly Sharpe Ratios are all above one and this conventional risk-adjusted return is above that of a passive investment in the S\&P 500 US equity index for the same period, the significant skews from these potential carry-trade profits (standing more than two standard errors beyond zero) and the fact that in all cases outside Bulgaria maximum losses outweigh maximum gains, indicate that there is some risk here that is not fully captured by conventional measures like standard deviation. The data also suggest that the Czech Republic is a special case and the returns are more normally distributed and there is less skew and kurtosis and this may suggest less of a carry-trade-type currency.  
 
 \begin{sidewaystable}[p]
 % latex table generated in R 3.2.3 by xtable 1.8-2 package
@@ -274,11 +223,11 @@ Table \ref{tabref:desst} shows the descriptive statistics for the potential carr
 %\begin{table}[t]
 \begin{threeparttable}
 \centering
-\begin{tabular}{lrrrrrrrrrrr}
+\begin{tabular}{p{5cm}rrrrrrrrrrr}
   \hline
  & HUF & PLN & CZK & RON & RUB & BGN & UAH & HRK & TRY & SPY\\ 
   \hline
-Number & 167 & 167 & 167 & 167 & 167 & 167 & 167 & 159 & 166 & 167\\ 
+Count & 167 & 167 & 167 & 167 & 167 & 167 & 167 & 159 & 166 & 167\\ 
   Mean & 12.80 & 12.41 & 10.07 & 11.94 & 7.21 & 8.09 & 7.84 & 10.73 & 13.56 & 5.19\\ 
   Sharpe & 1.83 & 1.88 & 1.56 & 1.99 & 1.50 & 1.36 & 1.89 & 1.74 & 2.10 & 1.28 \\ 
   Medium & 21.52 & 13.75 & 9.32 & 17.42 & 9.58 & 7.64 & 10.06 & 12.02 & 16.85 & 8.75 \\ 
@@ -293,7 +242,7 @@ Number & 167 & 167 & 167 & 167 & 167 & 167 & 167 & 159 & 166 & 167\\
 \end{tabular}
 \begin{tablenotes}
 \small 
-\item The table shows the descriptive statistics for the calculated potential carry-trade profits for each country plus a comparison with the S\&P 500. Number is the number of observations; Mean is the annualised return; Sharpe is the monthly Sharpe Ratio, assuming a risk-free rate of zero; Median is the median annualised return; StDev is the standard deviation; Skew is the measure of Skewness of the distribution; SES is the standard error of skewness so that a skewness that is twice this size could be considered to be statistically significant at the 5\% level; Kurt is the measure of excess kurtosis; SEK is the standard error of kurtosis; Max is the maximum return; Min is the minimum return. 
+\item The table shows the descriptive statistics for the calculated potential carry-trade profits for each country plus a comparison with the S\&P 500. Count is the number of observations; Mean is the annualised return; Sharpe is the monthly Sharpe Ratio, assuming a risk-free rate of zero; Median is the median annualised return; StDev is the standard deviation; Skew is the measure of Skewness of the distribution; SES is the standard error of skewness so that a skewness that is twice this size could be considered to be statistically significant at the 5\% level; Kurt is the measure of excess kurtosis; SEK is the standard error of kurtosis; Max is the maximum return; Min is the minimum return. 
 \end{tablenotes}
 \caption{Descriptive statistics of potential carry-trade profits}
 \label{tabref:desst}
@@ -327,7 +276,7 @@ The models are compared using the Akaike Information Criterion (AIC) and the log
 \end{tabular}
 \begin{tablenotes}
 \small
-\item Three models are initially tested.  Model One (M1) is the base model with carry-trade returns explained by a normal distribution around a linear constant; Model Two (M2) is the linear model with 2 regimes; Model Three (M3) is the linear model with 3 regimes.  AIC measures the Akaike Information index for the model identified, LLR is the log-likelihood ratio test statistics that compares the two named and nested models.  The p indicates the probability value of the $\chi^2$ test of the log-likelihood ratio with degrees of freedom equal to the number of parameter constraints of the base model.  For example LLR32p is the probability value for the ratio between Model Three (M3) and Model Two (M2).
+\item The table shows how well the potential carry-trade profit data for each exchange rate fits each of the three main models. Model One (M1) is the base model with just one regime, Model Two (M2) is the model with 2 regimes, Model Three (M3) is the model with 3 regimes.  The first three data columns show the Akaike Information index (AIC) for each model.  The lowest number is the best fit.  The next six columns are paired with a the log-likelihood ratio test statistics that compares the two named and nested models and a p-value for the $\chi^2$ probability with degrees of freedom equal to the number of parameter constraints of the base model that the log-likelihood ratio is different from one.  For example LLR21 is the log-likelihood ratio of Model One to Model Two and LLR21p is the probability value.  In column four of the first row, the LLR21 indicates that the loglikelihood ratio of a two regime to one regime model for the Hungarian florint is 22.25 and in column five the p-value shows that the two regime model is a signficant improvement over the base model. The final column summarises the information for each row by selecting the regime model that best explains the explains the data.  
 \end{tablenotes}
 \caption{Comparison of models}
 \label{tabref:comptab2}
@@ -335,13 +284,13 @@ The models are compared using the Akaike Information Criterion (AIC) and the log
 %\end{table} 
 \end{sidewaystable}
 
-Table \ref{tabref:comptab2} compares the three fundamental models with 1, 2 and 3 regimes respectively.  The aim is to find the number of regimes that provide the best fit for each of the potential carry-trade profit series for each country.  In each case the test is based on the requirement that the log-likelihood ratio improves by more than would be expected with the increase in the number of explanatory variables.  The first three columns of Table \ref{tabref:comptab2} report the AIC for each of the three base models respectively. The next six columns show the Log-likelihood ratio test statistic and the p-value for a comparison of Model One (M1) to Model Two (M2), Model One (M1) to Model Three (M3) and Model (M2) to Model Three (M3) respectively. The null is that the more sophisticated or complex model (two regime rather than one for example) does not improve the explanatory power by more than would be expected with the additional variables. The final column combines the two tests to present the model that appears to fit the data most effectively. 
+Table \ref{tabref:comptab2} compares the three fundamental models with 1, 2 and 3 regimes. These are called Model One (M1), Model Two (M2) and Model Three (M3) respectively.  The aim is to find the number of regimes that provide the best fit for each of the potential carry-trade profit series for each exchange rate.  In each case the test is based on the requirement that the log-likelihood ratio improves by more than would be expected from the increase in the number of explanatory variables.  The first three columns of Table \ref{tabref:comptab2} report the AIC for each of the three base models respectively. The next six columns show the Log-likelihood ratio test statistic and the p-value for a comparison of Model One (M1) to Model Two (M2), Model One (M1) to Model Three (M3) and Model (M2) to Model Three (M3) respectively. The null is that the more sophisticated or complex model (two regime rather than one for example) does not improve the explanatory power by more than would be expected with the additional variables. The final column combines the two tests to present the model that appears to fit the data most effectively. 
 
-The two-regime model is superior to the base model with one regime for all countries.  However, for the Czech Republic there is ambiguity.  For the Czech Republic, the null of no-improvement can be rejected at the 10\% level but not the 5\%.  The Czech Republic may be better assessed with just a single regime. This case will be investigated further below. 
+The two-regime model is superior to the base model with one regime for all countries. This indicates that the evolution of potential carry-trade profits is more easily explained as being driven by two regimes than either one or three.  Therefore it suggests that part of the explanation for the forward-discount puzzle is also due to two-regimes.  Further investigation of the potenital carry-trade profits in these two regimes shows that UIP holds during one regime and not in the other.  One exception here is the Czech Republic where the two regime model (M2) provides only modest improvement over the one regime model (M2).   The Czech Republic may be better assessed with just a single regime. This case will be investigated further below. 
 
-Table \ref{tabref:2stateresponse} presents the estimated response (mean and standard deviation) for each of the two-regime models. The results are encouraging for the hypothesis that potential carry-trade profits are best modelled as two regimes where one of them is considered the period of calm where carry positions are built and the other is considered the period of crisis where carry-trade positions will be cut back.  In the first case, the the ratio $p_t$ should be above one.  This is consistent with the estimated value of $\beta_1$ in Equation \ref{eq:uip2} being below one.  The period labelled calm should also be expected to have smaller standard deviation and less risk because exchange rate conditions are expected to be calm when carry-trade positions can be built.  The crisis period should have a mean of less than one and a larger standard deviation to reflect the increased risk that is being taken in this regime. This is when the crash risk happens.  The mean and standard deviation for the two regimes are those that are most appropriate for the data.  It is certainly possible that the regime with the lower mean could also have the smallest standard deviation.  However, this does not happen in any of the cases. 
+Table \ref{tabref:2stateresponse} presents the estimated response (mean and standard deviation) for each of the two-regime models. The regime with the highest mean is labelled \emph{stable}.  In all cases, this is also the regime with the smallest standard deviation.  This is not imposed.  It is certainly possible that the regime with the highest mean could also have the highest standard deviation.  However, this does not happen for any of the exchange rates under any of the funding regimes.  The  ther regime is lablled \emph{crash}.  The results are encouraging for the hypothesis that potential carry-trade profits are best modelled as two regimes where one of them is considered the period of calm where carry positions are built and the other is considered the period of crisis where carry-trade positions will be cut back.  In the first case, the the ratio $p_t$ should be above one.  This is equivalent with the estimated value of $\beta_1$ in Equation \ref{eq:uip2} being below one.  The period labelled calm should also be expected to have smaller standard deviation and less risk because exchange rate conditions are expected to be calm when carry-trade positions can be built.  The crisis period should have a mean of less than one and a larger standard deviation to reflect the increased risk that is being taken in this regime. This is when the crash risk happens. The results support the assertion that potential carry-trade profits are partly a compensation for taking crash risk and that this crash risk is part of the explanation for the forward-discount puzzle.    
 
-There are two other things to note.  First, the funding currency that is selected does not make much difference.   In no case does the basic result change when different funding currencies are applied. As a consequence, the rest of the results that are presented are based on euro-funding.  Secondly, the results for the Czech Republic support the view that one regime may be a better way to model the data. Though two regimes can be estimated, the distribution of the potential carry-trade profits does not differ much between the two. 
+There are two other things to note.  First, the funding currency that is selected does not make much difference.   In no case does the basic result change when different funding currencies are applied. The final column of Table \ref{tabref:2stateresponse} shows the average mean and standard deviation for each regime for each funding currency.  They are very similar. As a consequence, the rest of the results that are presented are based on euro-funding.  Secondly, the results for the Czech Republic support the view that one regime may be a better way to model the data. Though two regimes can be estimated, the distribution of the potential carry-trade profits does not differ much between the two. 
 
 \begin{sidewaystable}[p]
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
@@ -378,7 +327,7 @@ There are two other things to note.  First, the funding currency that is selecte
 \begin{tablenotes}
 \small
 \item
-This table outlines the linear response for Model Two (M2) for each of the regimes for all countries under consideration.  Stable is the label given to the regime with the highest mean return.  In all cases this is also the regime with the smallest standard deviation. This is not imposed and it is encouraging as, consistent with the idea that the carry-trade is composed of two distinct phases, it suggests that positions are built and profits are available when conditions are stable and that losses are suffered when conditions are more risky.  Figures for the Czech Republic should be treated with some caution.  The data also suggests that the funding currency does not have a major effect on the performance of the carry-trade.   
+This table outlines the linear response for Model Two (M2) for each of the two regimes for all exchange rates under consideration.  Stable is the label given to the regime with the highest mean return.  In all cases this is also the regime with the smallest standard deviation. This is not imposed and it is encouraging as it is consistent with the idea that the potential carry-trade profits in this stable regime are compensation for taking risk of large losses in the crash regime.  Results are presented for all four funding currencies.  The final column gives the average perforamnce for each funding currency.     
 \end{tablenotes}
 \caption{Mean and Standard Deviation of 2 Regime Model}
 \label{tabref:2stateresponse}
@@ -386,7 +335,9 @@ This table outlines the linear response for Model Two (M2) for each of the regim
 %\end{table}
   \end{sidewaystable}
 
-The other interesting issue is the transition matrix that determines the probability of switching from one regime to another. The most important of these elements is the probability that a period of stability or calm will move to one of crisis.  The other item of interest is how likely it is that the crisis persists once it starts\footnote{The other two components (remaining in the calm regime and switching from a period of crisis to one of calm) can be calculated from these transition probabilities.}  Table \ref{tabref:transprob} provides these figures.  The probability that a period of calm will turn into a period of crisis ranges from just one percent in the Czech Republic to as much as fifty percent in Croatia. Once a crisis has started it persists for a while. In all cases this is estimated at between seventy five and ninety five percent.
+The other interesting issue is the transition matrix that determines the probability of switching from one regime to another. The most important of these elements is the probability that a period of stability or calm will move to one of crisis.  The other item of interest is how likely it is that the crisis persists once it starts\footnote{The other two components (remaining in the calm regime and switching from a period of crisis to one of calm) can be calculated from these transition probabilities.}  Table \ref{tabref:transprob} provides these figures.  The probability that a period of calm will turn into a period of crisis ranges from just one percent in the Czech Republic to as much as fifty percent in Croatia. Once a crisis has started it persists for a while. In all cases this is estimated at between seventy five and ninety five percent. 
+
+These transition probabilities tell us something about the risk that a particular exchange rate and currency will suffer a foreign exchange crisis. In that way the probabilities can be used as a risk assessment to quantify how vulnerable a country is to an exchange rate shock. The figures evolve over time so it is possible to understand how country risk has improved or deteriorated.   It would also be possible to use these figures to assess the importance of other risk factors such as exchange rate regime, central bank arrangements and political system. 
 
 \begin{table}[t]
 \begin{threeparttable}
@@ -401,7 +352,7 @@ Remain in Crisis & 0.97 & 0.74 & 0.88 & 0.87 & 0.97 & 0.98 & 0.71 & 0.91 \\
 \end{tabular}
 \begin{tablenotes}
 \small
-\item  The table shows the transition probabilities for each of the countries.  The first row records the probability that a calm regime will switch to one of currency crisis; the second row shows the probability that once in the regime of currency crisis, the regime will remain in place. 
+\item  The table shows the transition probabilities for each of the countries.  This is the $A$ component described in Section \ref{secref:model}. The first row records the probability that a calm regime will switch to one of currency crisis; the second row shows the probability that once in the regime of currency crisis, the regime will remain in place in the next period. 
 \end{tablenotes}
 \caption{Transition probabilities}
 \label{tabref:transprob}
@@ -483,7 +434,7 @@ HUF & -404.69 & -402.70 & -416.94 & -419.50 & 28.80 & 0.0001 & 6.56 & 0.0377 & -
 \end{tabular}
 \begin{tablenotes}
 \small
-\item The table details the comparison of four models. Here Model  One (M1) is the base model; Model Four (M4a) adds the VIX index as a response variable (Equation \ref{eqref:vix}); Model Two (M2) is the simple response model with two regimes; Model Five (M5a) is the two-regime model with the VIX index providing a logistic covariate of the transition matrix. LLR is the log-likelihood ratio with the p denoting the p-value for a $\chi^2$ distribution with degrees of freedom equal to the parameter restrictions on the base model that is being compared.  Therefore, LLR54p is the p-value for the log-likelihood ratio of Model Five on Model Four.  This assesses the performance of the two-regime model with the VIX influencing the transition values against the model where the VIX directly affects the carry-trade return. Coefficient is from Model Four.  It is the estimate of $\beta_1$ from a regression of Equation \ref{eqref:vix}; p-value is the test of the null hypothesis that $\beta_1$ is equal to zero. 
+\item The table details the comparison of four models. Here Model  One (M1) is the base model with one regime; Model Four (M4a) adds the VIX index as a response variable (Equation \ref{eqref:vix}); Model Two (M2) is the simple response model with two regimes; Model Five (M5a) is the two-regime model with the VIX index providing a logistic covariate of the transition matrix. The first four columns show the Akaike Information index (AIC) for each model.  The lowest number is the best fit.  The next four columns are paired with a the log-likelihood ratio test statistics that compares the two named and nested models and a p-value for the $\chi^2$ probability with degrees of freedom equal to the number of parameter constraints of the base model that the log-likelihood ratio is different from one.  For example LLR54 is the log-likelihood ratio of Model Five to Model Four and LLR54p is the probability value.  In data column five of the first row, the LLR54 indicates that the loglikelihood ratio of M5 to M4 for the Hungarian florint is 28.80 and in column six the p-value shows that the two regime model is a signficant improvement over the base model.  The column labelled Coeff is from Model Four.  It is the estimate of $\beta_1$ from a regression of Equation \ref{eqref:vix}; p-value is the test of the null hypothesis that $\beta_1$ is equal to zero.  The final column summarises the information for each row with a preferred model. 
 \end{tablenotes}
 \caption{VIX covariate model table}
 \label{tabref:vixcov}
@@ -491,9 +442,9 @@ HUF & -404.69 & -402.70 & -416.94 & -419.50 & 28.80 & 0.0001 & 6.56 & 0.0377 & -
 %\end{table}
 \end{sidewaystable}
 
-Table \ref{tabref:vixcov} compares models M4a and M5a against models M1 and M2.  Models 4a and 5a use the VIX as a measure of international risk aversion as with an explanatory variable (M4a Equation \ref{eqref:vix}) or as conditioning for the transition probability matrix (M5a Equation \ref{eqref:zcov}).  Model One (M1) the base model with one state and a linear relationship. There are three criteria used to judge the preferred model: the AIC, log-likelihood ratios and simple linear regression of the additional exogenous explanatory variable. Columns 1 to 4 report the AIC for the M1, M4a, M2 and M5a models respectively.  Columns 5 and 6 report respectively the log likelihood ratio test statistic and the p-value for Model 5a relative to Model 4a; Columns 7 and 8 do the same for the comparison of Model 5a over Model 2.  Columns 9 and 10 report the t-statistic and p-value of a line regression of the potential carry-trade profits on a constant and the VIX index and the p-value. This is Equation \ref{eqref:vix} and the estimate is $\beta_1$.  Column 11 identifies the model that is most appropriate for each series according to these criteria.
+Table \ref{tabref:vixcov} compares models M4a and M5a against models M1 and M2.  Models 4a and 5a use the VIX as a measure of international risk aversion as an explanatory variable (M4a Equation \ref{eqref:vix}) or as conditioning for the transition probability matrix (M5a Equation \ref{eqref:zcov}).  Model One (M1) is the base model with one regime. There are three criteria used to judge the preferred model: the AIC, log-likelihood ratios and simple linear regression of the additional exogenous explanatory variable. Columns 1 to 4 report the AIC for the M1, M4a, M2 and M5a models respectively.  Columns 5 and 6 report respectively the log likelihood ratio test statistic and the p-value for Model 5a relative to Model 4a; Columns 7 and 8 do the same for the comparison of Model 5a over Model 2.  Columns 9 and 10 report the t-statistic and p-value of a line regression of the potential carry-trade profits on a constant and the VIX index and the p-value. This is Equation \ref{eqref:vix} and the estimate is $\beta_1$.  Column 11 identifies the model that is most appropriate for each series according to these criteria.
 
-Model 5 is the preferred model in most cases.  For Poland, there is a little uncertainty about whether Model Two or Model Five is better.  As we shall see, this is because exogenous factors do not have a major influence on Poland. For Russia and Turkey, while it appears that the level of international risk aversion is best used explaining the probability of switching from one regime to another rather than as an explanation of the level of carry-trade profits, it also appears that the simple two-regime model provides the best fit.
+Model 5 is the preferred model in most cases.  This is important as it indicates that not only are the potential carry-trade profits best explained by a two-regime model but that this model is mostly improved when the probability of switching from a state of calm to one of crash is determined by a measurement of international risk aversion.  It suggests that the forward-discount puzzle is at least partly explained as a compensation for taking risk and that this is most likely related to the risk that international risk aversion rises and causes an exit from risky assets like carry positions.  This is the crash that characterises exchange rate crisis.  For Poland, there is a little uncertainty about whether Model Two or Model Five is better fit for the data.  As will be discussed below, it seems that this is because exogenous factors do not have a major influence on Poland. For Russia and Turkey, while it appears that the level of international risk aversion is best used explaining the probability of switching from one regime to another rather than as an explanation of the level of carry-trade profits, it also appears that the simple two-regime model is more harmonious with the data in these cases. 
 
 %\begin{landscape}
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
