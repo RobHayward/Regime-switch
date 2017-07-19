@@ -26,9 +26,9 @@ title <- paste(i, " carry log returns", sep = "")
 par(mfrow = c(3,1))
 plot(tempfx, main = title, type = 'l')
 abline(h = 1)
-plot(pst[,3] ~ pst$Date, type = 'l', main = "Probability in State 1: Caution", 
+plot(pst[,3] ~ pst$Date, type = 'l', main = "Probability in State 1: Calm", 
      xlab = 'Date')
-plot(pst[,2] ~ pst$Date, type = 'l', main = "Probability in State 2: Crash", 
+plot(pst[,2] ~ pst$Date, type = 'l', main = "Probability in State 2: Crisis", 
      xlab = 'Date')
 dev.off()
 
